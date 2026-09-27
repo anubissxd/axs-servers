@@ -1,13 +1,15 @@
 # Karakterler (NPC'ler)
 
-| Karakter | Tür | Konum | Bağlı olduğu yer |
-|---|---|---|---|
-| [Miu](miu.md) | Kedi | -979, 68, -380 | Spawn |
-| [Çamur](camur.md) | Kedi | -1045, 71, -344 | Spawn'ın batısı |
-| [Çiftçi](ciftci.md) | İnsan | -979, 68, -371 | Spawn |
-| [Şövalye](sovalye.md) | İnsan | -988, 68, -371 | Spawn |
-| [Drondra Kralı](drondra-krali.md) | İnsan | -634, 76, -432 | Drondra Krallığı |
-| [Drondra Kraliçesi](drondra-kralicesi.md) | İnsan | -634, 76, -436 | Drondra Krallığı |
-| [Vlorya Kralı](vlorya-krali.md) | İnsan | -662, 85, -253 | Vlorya Krallığı |
-| [Granfos Kraliçesi](granfos-kralicesi.md) | İnsan | -826, 79, -485 | Granfos Krallığı |
-| [Usta Büyücü](usta-buyucu.md) | İnsan | -789, 89, -330 | Kalelerin arası |
+| Karakter | Unvan | Tür | Konum | Krallık |
+|---|---|---|---|---|
+| [Miu](miu.md) | — | Kedi | -979, 68, -380 | Caddy |
+| [Çamur](camur.md) | Kralın Kedisi | Kedi | -1045, 71, -344 | Caddy (kralı) |
+| [Çiftçi Tobias](ciftci.md) | — | İnsan | -979, 68, -371 | Caddy |
+| [Şövalye Aldric](sovalye.md) | — | İnsan | -988, 68, -371 | Caddy |
+| [Kral Vargoth](drondra-krali.md) | Drondra Kralı | İnsan | -634, 76, -432 | Drondra |
+| [Kraliçe Morvena](drondra-kralicesi.md) | Drondra Kraliçesi | İnsan | -634, 76, -436 | Drondra |
+| [Kral Kaelen](vlorya-krali.md) | Vlorya Kralı | İnsan | -662, 85, -253 | Vlorya |
+| [Kraliçe Elyndra](granfos-kralicesi.md) | Granfos Kraliçesi | İnsan | -826, 79, -485 | Granfos |
+| [Usta Büyücü](usta-buyucu.md) | — | İnsan | -789, 89, -330 | Granfos |
+
+Unvanlar oyunda ismin yanında gri-italik görünür (Easy NPC'de ayrı unvan satırı yok).

@@ -2,9 +2,11 @@
 
 - **Tür:** Kedi (easy_npc:cat)
 - **Konum:** -979, 68, -380 (spawn)
-- **Bağlı olduğu yer:** Spawn
+- **Krallık:** [Caddy](../kingdoms/caddy.md)
 - **Görevi:** Oyunculara Maceracı rank'ini verir (planlanan)
-- **Görünüş:** Özel doku: [miu_v2.png](../../../distribution/medieval-fantasy/npc-textures/miu_v2.png), gerçek kedi Miu'ya göre
+- **Poz:** Oturuyor, hareketsiz
+- **Görünüş:** Özel doku [miu_v2.png](../../../distribution/medieval-fantasy/npc-textures/miu_v2.png), gerçek kedi Miu'ya göre
+- **İlişkiler:** Çamur'un arkadaşı
 
 ## Hikâye
 
