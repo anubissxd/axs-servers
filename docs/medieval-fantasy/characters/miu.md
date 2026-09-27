@@ -16,7 +16,7 @@
 
 Sadece daha önce "Tamam." dememiş oyuncuya açılır (oyuncu etiketi: `miu_tanisti`).
 
-**D1:** "Merhaba *[oyuncu]*! Güzel bir maceraya atılmaya hazır mısın? Neyse niye soruyorum ki? Her türlü katılmak zorundasın. Emrediyorum! Miyav."
+**D1:** "Merhaba *[oyuncu]*! Güzel bir maceraya atılmaya hazır mısın? Neyse niye soruyorum ki? Her türlü atılmak zorundasın. Emrediyorum! Miyav."
 → [Devam]
 
 **D2:** "Öncelikle sen Kutsanmış bir varlıksın. Benim tarafımdan olmasa da benim kadar kudretli birisi tarafından."
