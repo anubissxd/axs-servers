@@ -15,6 +15,7 @@
 ### İlk karşılaşma
 
 Sadece daha önce "Tamam." dememiş oyuncuya açılır (oyuncu etiketi: `miu_tanisti`).
+Diyalogdan çıkılamaz: çarpı yok, ESC çalışmaz. Sadece OP'lar (`rank_admin` etiketi) her sayfada gizli **[Admin] Kapat** düğmesini görür.
 
 **D1:** "Merhaba *[oyuncu]*! Güzel bir maceraya atılmaya hazır mısın? Neyse niye soruyorum ki? Her türlü atılmak zorundasın. Emrediyorum! Miyav."
 → [Devam]
