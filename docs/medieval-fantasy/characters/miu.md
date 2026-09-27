@@ -25,6 +25,6 @@ Diyalogdan çıkılamaz: çarpı yok, ESC çalışmaz. Sadece OP'lar (`rank_admi
 
 **D3:** "Artık ölümsüzsün. En azından yarı-ölümsüzsün. Öldüğünde burada tekrar diriliyorsun. Fakat her öldüğünde benliğinden bir parça yok olup gidiyor. Dikkatli ol."
 - **[Tamam.]** → Oyuncu **Maceracı** ve **Kutsanmış** rütbelerini alır; bu konuşma bir daha açılmaz.
-- **[Niye?]** → Miu oyuncuya 10 hasar verir →
+- **[Niye?]** → Oyuncu hemen **Maceracı** ve **Kutsanmış** rütbelerini alır ve bu konuşma bir daha açılmaz; ardından Miu oyuncuya 10 hasar verir →
   **Niye:** "NE BİLEYİM BEN BE SALAK!?"
-  - **[Tamam.]** → Oyuncu **Maceracı** ve **Kutsanmış** rütbelerini alır; bu konuşma bir daha açılmaz.
+  - **[Tamam.]** → Diyalog kapanır. (Vuruş diyaloğu kesse bile rütbeler zaten verilmiştir.)
