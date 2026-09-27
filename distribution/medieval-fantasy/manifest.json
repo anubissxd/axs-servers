@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
-  "version": "1.3.2",
-  "generated": "2026-09-25 23:15:53",
+  "version": "1.3.3",
+  "generated": "2026-09-28 00:42:30",
   "source": "vds:/root/servers/medieval-fantasy",
   "remove": [
     "resourcepacks/BrewinAndChewin-Excalibur_Support_1.20.1_v1.1.zip",
@@ -920,6 +920,13 @@
       "sha256": "745e93950e39d377200e8799cc5339d4a1adfa634da7aa5ee212bad7adfbb966",
       "size": 4117,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/mods__iceandfirebettercombat.jar"
+    },
+    {
+      "path": "mods/enhancedai-3.3.7.5.jar",
+      "filename": "enhancedai-3.3.7.5.jar",
+      "sha256": "d0299bf27bdb5f4fa6af1e8fb33b21277f1ba5613a811dd96aecb9f03e941069",
+      "size": 1387972,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__enhancedai-3.3.7.5.jar"
     },
     {
       "path": "mods/arsenal-forge-1.5.0+1.20.1.jar",
@@ -3295,6 +3302,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/config__bielgg_spells-experience.properties"
     },
     {
+      "path": "config/questplaques-common.toml",
+      "filename": "questplaques-common.toml",
+      "sha256": "da7c7659e4c2953d3c9ba2eb12b7829fdb56f1fb6bdb10fe850926306b3c424a",
+      "size": 1245,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__questplaques-common.toml"
+    },
+    {
       "path": "config/skinrestorer/config.json",
       "filename": "config.json",
       "sha256": "f534c528527dec2b5d13f9817b97179ba4107bec810d2ed4c605876a37b8b79f",
@@ -4585,7 +4599,7 @@
     {
       "path": "config/iceandfire-common.toml",
       "filename": "iceandfire-common.toml",
-      "sha256": "084377f5a7cfbf86d39118eb94334da66a4de11fbd4f1e07e0b88e40bce54db3",
+      "sha256": "b5ae3383f5f42e13ac3b0795d78933831b4d4d0c2e5d56dffc5f087b79ab4948",
       "size": 15517,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__iceandfire-common.toml"
     },
@@ -5549,6 +5563,13 @@
       "sha256": "a19b7c81a150bd965b153ded9c45ee7649eaad9e10d0a5ec1d662e7b15ceadb2"
     },
     {
+      "path": "kubejs/server_scripts/anubis_hub_spawn.js",
+      "filename": "anubis_hub_spawn.js",
+      "sha256": "11caea12b583557af2fd7c600ea054485f8513172f2bbd0f62f9951ffe65b75f",
+      "size": 1033,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__anubis_hub_spawn.js"
+    },
+    {
       "path": "kubejs/server_scripts/chidori_proc.js",
       "filename": "chidori_proc.js",
       "sha256": "06593de31a9a38b54f171197a3cff7d755c0eaa0789206cc62b3f6cc4ffd778d",
@@ -5997,18 +6018,11 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/global_packs__required_data__anubis_fixes__data__knights_and_castles__worldgen__biome__twistedmeadows.json"
     },
     {
-      "path": "mods/enhancedai-3.3.7.5.jar",
-      "filename": "enhancedai-3.3.7.5.jar",
-      "sha256": "d0299bf27bdb5f4fa6af1e8fb33b21277f1ba5613a811dd96aecb9f03e941069",
-      "size": 1387972,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/mods__enhancedai-3.3.7.5.jar"
-    },
-    {
-      "path": "config/questplaques-common.toml",
-      "filename": "questplaques-common.toml",
-      "sha256": "da7c7659e4c2953d3c9ba2eb12b7829fdb56f1fb6bdb10fe850926306b3c424a",
-      "size": 1245,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/config__questplaques-common.toml"
+      "path": "kubejs/server_scripts/anubis_rank_stages.js",
+      "filename": "anubis_rank_stages.js",
+      "sha256": "f8de664907d99a82eeaf99e17f086791947f562a0aafc48ace430b9916e387ac",
+      "size": 3763,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__anubis_rank_stages.js"
     }
   ]
 }
