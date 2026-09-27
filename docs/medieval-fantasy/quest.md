@@ -124,6 +124,6 @@ Maceracı rütbesine ait, modları öğreten görevler. Görev listesinden alın
 | # | Görev | ID | Bağlı olduğu | Hedef | Ödül | Not |
 |---|---|---|---|---|---|---|
 | 0 | **Maceracı Rütbesi** (kapı) | `4D41434552414332` | — | Stage `rank_maceraci` | — | Miu'dan rütbe alınca kendiliğinden tamamlanır. Bölümdeki bütün görevler buna bağlanır. |
-| 1 | **Büyü Masası** | `4D41434552414334` | 0 | `irons_spellbooks:inscription_table` **craft et** (`only_from_crafting`) | — | Tekli. Iron's Spells'e giriş: büyü parşömenlerini büyü kitabına işlemek. `hide_until_deps_complete`. |
+| 1 | **Büyü Masası** | `4D41434552414334` | 0 | `irons_spellbooks:inscription_table` **craftla** (`only_from_crafting`) | 1 Can İksiri (Instant Health I, ödül ID `4D41434552414336`) | Tekli. Iron's Spells'e giriş: büyü parşömenlerini büyü kitabına işlemek. `hide_until_deps_complete`. |
 
-Sonraki boş ID önerisi: `4D41434552414336` ve sonrası (bölüm ID'si + artan son hane).
+Sonraki boş ID önerisi: `4D41434552414337` ve sonrası (bölüm ID'si + artan son hane).
