@@ -19,10 +19,10 @@ Sadece daha önce "Tamam." dememiş oyuncuya açılır (oyuncu etiketi: `miu_tan
 **D1:** "Merhaba *[oyuncu]*! Güzel bir maceraya atılmaya hazır mısın? Neyse niye soruyorum ki? Her türlü atılmak zorundasın. Emrediyorum! Miyav."
 → [Devam]
 
-**D2:** "Öncelikle sen Kutsanmış bir varlıksın. Benim tarafımdan olmasa da benim kadar kudretli birisi tarafından."
+**D2:** "Öncelikle sen Kutsanmış bir varlıksın ve benim tarafımdan olmasa da benim kadar kudretli birisi tarafından kutsandın. Her neyse."
 → [Devam]
 
-**D3:** "Her neyse. Artık ölümsüzsün. En azından yarı olacak şekilde. Öldüğünde burada tekrar diriliyorsun. Fakat her öldüğünde benliğinden bir parça yok olup gidiyor."
+**D3:** "Artık ölümsüzsün. En azından yarı-ölümsüzsün. Öldüğünde burada tekrar diriliyorsun. Fakat her öldüğünde benliğinden bir parça yok olup gidiyor. Dikkatli ol."
 - **[Tamam.]** → Oyuncu **Maceracı** ve **Kutsanmış** rütbelerini alır; bu konuşma bir daha açılmaz.
 - **[Niye?]** → Miu oyuncuya 10 hasar verir →
   **Niye:** "NE BİLEYİM BEN BE SALAK!?"
