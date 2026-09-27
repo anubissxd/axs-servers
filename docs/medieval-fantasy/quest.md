@@ -1,7 +1,9 @@
 # Medieval Fantasy — Görev Rehberi
 
 Bu dosya, Medieval Fantasy sunucusuna görev (quest) ekleyecek herkes ve onların Claude'u için yazıldı.
-Görev eklemeden önce baştan sona okuyun. Karakterler için [characters/](characters/), krallıklar için [kingdoms/](kingdoms/), hikâyeler için [stories/](stories/) klasörüne bakın.
+Görev eklemeden önce baştan sona okuyun.
+
+> **Claude için:** Yeni bir görev oluşturmadan önce **mevcut görevleri inceleyin**: bu dosyadaki [7. Görevler](#7-görevler) listesini ve VDS'teki `config/ftbquests/quests/chapters/*.snbt` dosyalarını okuyun. Yeni görevi onlara göre kurun: aynı bölüm yapısı, aynı kapı (stage) görevi, benzer dil ve açıklama tonu, çakışmayan görev ID'leri ve mantıklı konum (x/y). Aynı işi yapan bir görev zaten varsa yenisini eklemeyin, var olanı genişletin. Karakterler için [characters/](characters/), krallıklar için [kingdoms/](kingdoms/), hikâyeler için [stories/](stories/) klasörüne bakın.
 
 ---
 
@@ -96,7 +98,14 @@ Sohbette sadece en yüksek rütbe görünür. Sıralama: **Kutsanmış > Krallı
 - Krallık rütbesi için `krallik_katil @initiator <rank>` komutu vardır (oyuncu başka bir krallığa bağlıysa reddeder).
 - NPC'ler `korunan` etiketi taşır; mob temizleme komutlarında `tag=!korunan` kullanın.
 
-**Nerede durur?** Görev dosyaları VDS'te `config/ftbquests/quests/` altındadır. Görevler oyun içinde OP iken FTB Quests editörüyle düzenlenebilir. Görev dosyaları paketle oyunculara da gider; değişikliğin oyunculara ulaşması için paketin yayınlanması gerekir (proje sahibinin onayıyla).
+**Nerede durur?** Görev dosyaları VDS'te `config/ftbquests/quests/` altındadır: her bölüm `chapters/<ad>.snbt`. Görevler oyun içinde OP iken FTB Quests editörüyle de düzenlenebilir.
+
+**Dosyadan eklerken:**
+- Görev, task ve bölüm ID'leri 16 haneli hex'tir ve tüm dosyalarda benzersiz olmalıdır.
+- Dosyayı değiştirdikten sonra sunucu konsolunda `ftbquests reload` çalıştırın; logda "Loaded N chapters, M quests" satırını kontrol edin. Yeniden başlatma gerekmez.
+- Görev kitabı oyunculara **sunucudan** gönderilir: görev değişiklikleri için AnuDownloader paketini yayınlamaya gerek yoktur.
+- Craft etmeyi şart koşan eşya görevi: `type: "item"` + `only_from_crafting: true` (eşyayı başka yoldan elde etmek tamamlamaz).
+- Rütbesi olmayanlardan gizlemek için: görevi kapı görevine bağlayın (`dependencies`) ve `hide_until_deps_complete: true` verin.
 
 ---
 
@@ -104,4 +113,13 @@ Sohbette sadece en yüksek rütbe görünür. Sıralama: **Kutsanmış > Krallı
 
 Yeni görevler bu başlığın altına eklenir. Her görev için: adı, ait olduğu rütbe veya kişi, veren NPC (varsa), tekli mi zincir mi, hedefler ve ödüller.
 
-_Henüz görev yok._
+### Bölüm: Maceracı (`chapters/maceraci.snbt`, bölüm ID `4D41434552414331`)
+
+Maceracı rütbesine ait, modları öğreten görevler. Görev listesinden alınır (NPC gerekmez).
+
+| # | Görev | ID | Bağlı olduğu | Hedef | Ödül | Not |
+|---|---|---|---|---|---|---|
+| 0 | **Maceracı Rütbesi** (kapı) | `4D41434552414332` | — | Stage `rank_maceraci` | — | Miu'dan rütbe alınca kendiliğinden tamamlanır. Bölümdeki bütün görevler buna bağlanır. |
+| 1 | **Büyü Masası** | `4D41434552414334` | 0 | `irons_spellbooks:inscription_table` **craft et** (`only_from_crafting`) | — | Tekli. Iron's Spells'e giriş: büyü parşömenlerini büyü kitabına işlemek. `hide_until_deps_complete`. |
+
+Sonraki boş ID önerisi: `4D41434552414336` ve sonrası (bölüm ID'si + artan son hane).
