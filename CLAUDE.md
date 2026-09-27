@@ -1072,3 +1072,15 @@ Kurallar:
 - Kullanıcı mod önerisi istediğinde Claude sadece önerir; kullanıcı "kur/ekle" demeden kurmaz.
 - Öneriler toplu liste halinde verilir. Her öneri önceden kontrol edilir: Forge + 1.20.1 sürümü var mı, pakette zaten var mı (VDS'teki gerçek mod listesine bakılarak).
 - Forge'da olmayan mod önerilmez. Önerilip "kur/ekle" denmeyen modlar ve açıkça reddedilen modlar bir daha önerilmez.
+---
+
+# Medieval Fantasy: Dokümantasyon ve Görevler
+
+Medieval Fantasy'nin evreni, krallıkları, karakterleri (NPC'ler) ve görev kuralları `docs/medieval-fantasy/` altındadır:
+
+- `docs/medieval-fantasy/quest.md` — **görev eklemeden önce okunmalı**: evrenin yapısı, rütbe sistemi, görev kuralları, FTB Quests / Easy NPC teknik detayları
+- `docs/medieval-fantasy/kingdoms/` — krallıklar
+- `docs/medieval-fantasy/characters/` — NPC'ler (isim, konum, ilişkiler, diyaloglar)
+- `docs/medieval-fantasy/stories/` — hikâyeler
+
+Projede birden fazla kişi (ve onların Claude'u) görev ekler. Bir NPC'ye diyalog/görev eklendiğinde ilgili karakter dosyası da güncellenir.
