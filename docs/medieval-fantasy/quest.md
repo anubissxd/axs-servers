@@ -106,7 +106,8 @@ Sohbette sadece en yüksek rütbe görünür. Sıralama: **Kutsanmış > Krallı
 - Görev kitabı oyunculara **sunucudan** gönderilir: görev değişiklikleri için AnuDownloader paketini yayınlamaya gerek yoktur.
 - Craft etmeyi şart koşan eşya görevi: `type: "item"` + `only_from_crafting: true` (eşyayı başka yoldan elde etmek tamamlamaz).
 - Rütbesi olmayanlardan gizlemek için: görevi kapı görevine bağlayın (`dependencies`) ve `hide_until_deps_complete: true` verin.
-- **Görünüm kuralı:** Bütün görevler **circle** şeklinde ve **aynı boyutta**. Görevlere `shape` veya `size` yazmayın; varsayılan (`data.snbt` → `default_quest_shape: "circle"`) kullanılır. Her göreve konusuna uygun bir `icon` verin (kapı görevleri dahil; ör. Maceracı kapısı `minecraft:iron_sword`).
+- **Görünüm kuralı:** Bütün görevler **circle** şeklinde ve **aynı boyutta**. Görevlere `shape` veya `size` yazmayın; varsayılan (`data.snbt` → `default_quest_shape: "circle"`) kullanılır. Her göreve ve her task'a konusuna uygun bir `icon` verin (kapı görevleri ve Stage task'ları dahil; ör. Maceracı kapısı ve task'ı `minecraft:iron_sword`).
+- **Yazım kuralı:** Cümle olan her metin (task başlıkları, alt başlıklar, açıklamalar) **nokta ile biter** ve Türkçe yazım kurallarına uyar (ör. "-deki/-daki" bitişik: "bölgesindeki"). Görev ve bölüm **başlıkları** ("Maceracı Rütbesi", "Büyü Masası") noktasızdır. Spawn yerine oyuncuya "Başlangıç bölgesi" denir.
 
 ---
 
