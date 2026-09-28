@@ -108,6 +108,7 @@ Sohbette sadece en yüksek rütbe görünür. Sıralama: **Kutsanmış > Krallı
 - Rütbesi olmayanlardan gizlemek için: görevi kapı görevine bağlayın (`dependencies`) ve `hide_until_deps_complete: true` verin.
 - **Görünüm kuralı:** Bütün görevler **circle** şeklinde ve **aynı boyutta**. Görevlere `shape` veya `size` yazmayın; varsayılan (`data.snbt` → `default_quest_shape: "circle"`) kullanılır. Her göreve ve her task'a konusuna uygun bir `icon` verin (kapı görevleri ve Stage task'ları dahil; ör. Maceracı kapısı ve task'ı `minecraft:iron_sword`).
 - **Yazım kuralı:** Cümle olan her metin (task başlıkları, alt başlıklar, açıklamalar) **nokta ile biter** ve Türkçe yazım kurallarına uyar (ör. "-deki/-daki" bitişik: "bölgesindeki"). Görev ve bölüm **başlıkları** ("Maceracı Rütbesi", "Büyü Masası") noktasızdır. Spawn yerine oyuncuya "Başlangıç bölgesi" denir.
+- **Birden fazla yığılmayan eşya (iksir, alet, zırh) ödülü:** her biri için ayrı bir `item` ödülü ekleyin; tek ödüle `Count: 2b` yazmayın.
 - **Craft görevleri:** Task başlığı "<Eşya adı> craftla." biçimindedir (ör. "Inscription Table craftla."), "craft et" yazılmaz.
 - **Tarif anlatımı:** Maceracı görevleri oyuncunun hiçbir şey bilmediğini varsayar; tarifi adım adım betimleyin. Örnek: "Masanın tarifini öğrenmek için envanterini aç. Ekranın sağ tarafındaki eşya listesinin altında bir arama kutusu var; bu kutuya **Inscription Table** yaz. Listede beliren masa simgesinin üzerine gel ve **R** tuşuna bas. Açılan pencerede masayı hangi malzemelerle ve nasıl craftlayacağını göreceksin."
 - **Uzunluk kuralı:** Başlık, alt başlık (`subtitle`) ve task başlıkları **kısa** olur (ör. "Miu ile konuş."). Ayrıntı **açıklamaya** (`description`) yazılır: uzun, açıklayıcı ve güzel cümlelerle ne yapılacağı, nerede, neden ve tamamlanınca ne olacağı anlatılır (ör. "Başlangıç bölgesindeki Miu ile konuşarak Maceracı rütbesine sahip olman gerekir. Rütbeyi aldığın anda…").
@@ -125,6 +126,6 @@ Maceracı rütbesine ait, modları öğreten görevler. Görev listesinden alın
 | # | Görev | ID | Bağlı olduğu | Hedef | Ödül | Not |
 |---|---|---|---|---|---|---|
 | 0 | **Maceracı Rütbesi** (kapı) | `4D41434552414332` | — | Stage `rank_maceraci` | — | Miu'dan rütbe alınca kendiliğinden tamamlanır. Bölümdeki bütün görevler buna bağlanır. |
-| 1 | **Büyü Masası** | `4D41434552414334` | 0 | `irons_spellbooks:inscription_table` **craftla** (`only_from_crafting`) | 1 Can İksiri (Instant Health I, ödül ID `4D41434552414336`) | Tekli. Iron's Spells'e giriş: büyü parşömenlerini büyü kitabına işlemek. `hide_until_deps_complete`. |
+| 1 | **Büyü Masası** | `4D41434552414334` | 0 | `irons_spellbooks:inscription_table` **craftla** (`only_from_crafting`) | 2 Can İksiri (Instant Health I; iki ayrı ödül: `4D41434552414336`, `4D41434552414337`) | Tekli. Iron's Spells'e giriş: büyü parşömenlerini büyü kitabına işlemek. `hide_until_deps_complete`. |
 
-Sonraki boş ID önerisi: `4D41434552414337` ve sonrası (bölüm ID'si + artan son hane).
+Sonraki boş ID önerisi: `4D41434552414338` ve sonrası (bölüm ID'si + artan son hane).
