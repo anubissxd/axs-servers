@@ -178,11 +178,52 @@ Yerleşim: kapı (0, 0) → **Büyüler ve Rünler** (2, 0) → sağ-yukarı **I
 | 44 | **Ejderha Avcısı** | `…95` | 43 | `kill_if_dragon` | (-4, 0) | 3 tür, 5 evre, nerede yaşarlar, dövüş ipuçları, ölüden ganimet ve kan |
 | 45 | **Ejderha Yumurtası** | `…97` | 44 | `dragon_egg` | (-6, -1.5) | Ateş / buz / şimşek yumurtasını çatlatma |
 | 46 | **Ejderha Maması** | `…99` | 45 | `dragon_meal` | (-8, -1.5) | Besleme, Dragon Meal, sağ tıkla bilgi |
-| 47 | **Ejderha Asası** | `…9B` | 46 | `dragon_staff` | (-10, -1.5) | Oturt / dolaştır, binme (2. evreden sonra), uçuş, Flute, Horn |
+| 47 | **Ejderha Asası** | `…9B` | 46 | `dragon_staff` | (-10, -1.5) | Kafatası + çubuk; oturt / dolaştır / eşlik |
+| 47a | **Ejderhaya Binmek** | `…DF` | 47 | `checkmark` | (-12, -1.5) | 3. evreden itibaren eğil + sağ tık; zıplama, Dragon Down, Dragon Breath, Dragon Strike, kamera tuşu |
+| 47b | **Ejderha Flütü** | `…E1` | 47a | `dragon_flute` | (-14, -1.5) | 2 kemik + demir; uçan evcilleri indirir (Hippogryph, Amphithere de) |
+| 47c | **Ejderha Boynuzu** | `…E3` | 47b | `dragon_horn` | (-16, -1.5) | 4 kemik + çubuk; ejderhayı sakla / çağır |
+| 47d | **Ejderha Zırhı** | `…E5` | 47c | `dragonarmor` | (-18, -1.5) | Baş / boyun / gövde / kuyruk; bloklarla, en güçlüsü ejderha çeliği |
+| 47e | **Ejderha Üretmek** | `…E7` | 47d | `checkmark` | (-20, -1.5) | 4. evre, Lily Mixture, önce erkek sonra dişi, cinsiyet işaretleri |
 | 48 | **Ejderha Kemiği** | `…9D` | 44 | `dragonbone_tool` | (-6, 1.5) | Wither Bone, pul zırhı, kanla güçlendirilmiş kılıç |
 | 49 | **Ejderha Ocağı** | `…9F` | 48 | `dragon_forge_core` | (-8, 1.5) | Tuğla, çekirdek (kalp), yapı, ejderhayla çalıştırma |
 | 50 | **Ejderha Çeliği** | `…A1` | 49 | `dragonsteel` | (-10, 1.5) | Demir + kan → Dragonsteel, etkileri |
 
 - **Ice and Fire bilgileri** modun kendi Bestiary sayfalarından (`assets/iceandfire/lang/bestiary/en_us_0/*.txt`) ve tariflerinden doğrulandı.
 
-Sonraki boş ID önerisi: `4D414345524143A3` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
+**Alt-sol kol: İksirler** (kapıdan aşağı; ana sütun x = -1.5, yan görevler x = -3 / -4.5). Sunucuda `naturalRegeneration` **kapalı**: can yalnızca iksir, Altın Elma, büyü ve efektlerle dolar. Bu kol bunu öğütler.
+
+| Görev | ID | Bağlı | Hedef | Konum | Anlattığı |
+|---|---|---|---|---|---|
+| **Can Yenilenmez** | `…A3` | 0 | `checkmark` | (-1.5, 2) | Can kendiliğinden dolmaz; şifa kaynakları; yanında iksir taşı |
+| **Altın Elma** | `…BB` | Can Yenilenmez | `golden_apple` **craftla** | (-3, 2) | Yenilenme II + Emilim |
+| **Simya Standı** | `…A5` | Can Yenilenmez | `brewing_stand` **craftla** | (-1.5, 3.5) | Yakıt (1 Blaze Powder = 20), yuvalar, su şişesi. Ödül 2 Can İksiri (`…A7`) |
+| **Garip İksir** | `…A8` | Simya Standı | `potion` `awkward` | (-1.5, 5) | Nether Wart, ruh kumunda çoğaltma |
+| **Faydalı İksirler** | `…BD` | Garip İksir | `checkmark` | (-3, 5) | Malzeme → iksir listesi, Fermented Spider Eye ile tersine çevirme |
+| **Ateşe Dayanıklılık** | `…BF` | Faydalı İksirler | `potion` `fire_resistance` | (-4.5, 5) | Magma Cream, ateş ejderhası / Nether |
+| **Şifa İksiri** | `…AA` | Garip İksir | `potion` `strong_healing` | (-1.5, 6.5) | Parıldayan Karpuz, Glowstone, ölümsüzlere zarar |
+| **Zarar İksiri** | `…C1` | Şifa İksiri | `potion` `harming` | (-3, 6.5) | Fermented Spider Eye; ölümsüzleri iyileştirir |
+| **Yenilenme İksiri** | `…AC` | Şifa İksiri | `potion` `regeneration` | (-1.5, 8) | Ghast Tear, 45 sn |
+| **Uzun Süreli İksir** | `…C3` | Yenilenme İksiri | `potion` `long_regeneration` | (-1.5, 9.5) | Redstone; Glowstone ile birlikte olmaz |
+| **Fırlatılan İksir** | `…AE` | Uzun Süreli İksir | `splash_potion` (herhangi) | (-1.5, 11) | Gunpowder, dostları iyileştirme |
+| **Kalıcı İksir** | `…C5` | Fırlatılan İksir | `lingering_potion` (herhangi) | (-1.5, 12.5) | Dragon's Breath |
+
+İksir görevlerinde task: `item: {Count: 1b, id: "minecraft:potion", tag: {Potion: "minecraft:<tür>"}}` + `match_nbt` + `weak_nbt_match`. Ödül olarak verilen `healing` iksirleri görevi kendiliğinden tamamlamasın diye Şifa görevi `strong_healing` ister.
+
+**Apotheosis iksir tılsımı (Potion Charm):** Kara listesi boş; Yenilenme iksirinden kalıcı yenilenme tılsımı yapılabiliyor. Görevlerde öğretilmedi.
+
+**Alt-sağ kol: Sophisticated Backpacks + Storage** (kapıdan aşağı; ana sütun x = 1.5, çanta eklentileri x = 3):
+
+| Görev | ID | Bağlı | Hedef (**craftla**) | Konum |
+|---|---|---|---|---|
+| **Sırt Çantası** | `…B0` | 0 | `sophisticatedbackpacks:backpack` (ödül 2 Can İksiri `…B2`) | (1.5, 2) |
+| **Bakır Çanta** | `…B3` | Sırt Çantası | `copper_backpack` | (1.5, 3.5) |
+| **Çanta Eklentileri** | `…B5` | Bakır Çanta | `upgrade_base` | (1.5, 5) |
+| Toplama / Mıknatıs / Besleme / Simya / Doldurma / Yığın / Craft / Yok Edilemez | `…C7`–`…D5` (ikişer) | Çanta Eklentileri | `pickup_upgrade`, `magnet_upgrade`, `feeding_upgrade`, `alchemy_upgrade`, `refill_upgrade`, `stack_upgrade_tier_1`, `crafting_upgrade`, `everlasting_upgrade` | (3, 6.5 … 17) |
+| **Gelişmiş Sandık** | `…B7` | Çanta Eklentileri | `sophisticatedstorage:chest` | (1.5, 6.5) |
+| **Sandığı Yükselt** | `…D7` | Gelişmiş Sandık | `basic_to_iron_tier_upgrade` | (1.5, 8) |
+| **Sınırlı Varil** | `…D9` | Sandığı Yükselt | `limited_barrel_1` | (1.5, 9.5) |
+| **Koli Bandı** | `…DB` | Sınırlı Varil | `packing_tape` (`dropPacked = false`, yani bant gerekli) | (1.5, 11) |
+| **Depo Kontrolcüsü** | `…B9` | Koli Bandı | `controller` | (1.5, 12.5) |
+| **Depo Bağlantısı** | `…DD` | Depo Kontrolcüsü | `storage_link` (Storage Tool ile bağlama) | (1.5, 14) |
+
+Sonraki boş ID önerisi: `4D414345524143E9` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
