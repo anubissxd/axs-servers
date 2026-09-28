@@ -170,4 +170,19 @@ Yerleşim: kapı (0, 0) → **Büyüler ve Rünler** (2, 0) → sağ-yukarı **I
 
 - **Apotheosis rakamları** jar'daki `data/apotheosis/enchanting_stats/*.json`'dan doğrulandı: seviye = Eterna × 2; normal kitaplık en fazla 15 Eterna (30. seviye), Hellshelf / Seashelf en fazla 22.5 (45), Blazing / Glowing Hellshelf ve Crystalline / Heart-Forged Seashelf 30 (60), Deepshelf 35–37.5, Endshelf 45–50 (100).
 
-Sonraki boş ID önerisi: `4D41434552414393` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
+**Sol kol: Ice and Fire** (kapıdan sola; üst sıra ehlileştirme, alt sıra ocak ve çelik). Hepsi `advancement` task'ı (`iceandfire:iceandfire/<ad>`, `criterion: ""`), ödül yok.
+
+| # | Görev | ID | Bağlı olduğu | Advancement | Konum | Anlattığı |
+|---|---|---|---|---|---|---|
+| 43 | **Canavarlar Kitabı** | `…93` | 0 | `bestiary` | (-2, 0) | 3 Manuscript → Bestiary, Bestiary Lectern ile sayfa açma |
+| 44 | **Ejderha Avcısı** | `…95` | 43 | `kill_if_dragon` | (-4, 0) | 3 tür, 5 evre, nerede yaşarlar, dövüş ipuçları, ölüden ganimet ve kan |
+| 45 | **Ejderha Yumurtası** | `…97` | 44 | `dragon_egg` | (-6, -1.5) | Ateş / buz / şimşek yumurtasını çatlatma |
+| 46 | **Ejderha Maması** | `…99` | 45 | `dragon_meal` | (-8, -1.5) | Besleme, Dragon Meal, sağ tıkla bilgi |
+| 47 | **Ejderha Asası** | `…9B` | 46 | `dragon_staff` | (-10, -1.5) | Oturt / dolaştır, binme (2. evreden sonra), uçuş, Flute, Horn |
+| 48 | **Ejderha Kemiği** | `…9D` | 44 | `dragonbone_tool` | (-6, 1.5) | Wither Bone, pul zırhı, kanla güçlendirilmiş kılıç |
+| 49 | **Ejderha Ocağı** | `…9F` | 48 | `dragon_forge_core` | (-8, 1.5) | Tuğla, çekirdek (kalp), yapı, ejderhayla çalıştırma |
+| 50 | **Ejderha Çeliği** | `…A1` | 49 | `dragonsteel` | (-10, 1.5) | Demir + kan → Dragonsteel, etkileri |
+
+- **Ice and Fire bilgileri** modun kendi Bestiary sayfalarından (`assets/iceandfire/lang/bestiary/en_us_0/*.txt`) ve tariflerinden doğrulandı.
+
+Sonraki boş ID önerisi: `4D414345524143A3` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
