@@ -19,6 +19,7 @@ import sys, os, json, time, hashlib, shutil, socket, struct, subprocess, fcntl
 import datetime, argparse, urllib.request, urllib.error
 from concurrent.futures import ThreadPoolExecutor
 
+sys.dont_write_bytecode = True
 sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
 import havuz
 

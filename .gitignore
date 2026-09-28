@@ -52,3 +52,6 @@ servers/*/*.env
 
 # --- Java/build artefaktları ---
 *.class
+
+# --- Python ---
+__pycache__/
