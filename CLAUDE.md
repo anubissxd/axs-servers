@@ -1076,6 +1076,8 @@ Kurallar:
 
 # Medieval Fantasy: Dokümantasyon ve Görevler
 
+AnuDownloader'ın çalışma mantığı ve paket yayınlama adımları: `docs/anudownloader.md`.
+
 Medieval Fantasy'nin evreni, krallıkları, karakterleri (NPC'ler) ve görev kuralları `docs/medieval-fantasy/` altındadır:
 
 - `docs/medieval-fantasy/quest.md` — **görev eklemeden önce okunmalı**: evrenin yapısı, rütbe sistemi, görev kuralları, FTB Quests / Easy NPC teknik detayları
