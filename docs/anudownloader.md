@@ -2,7 +2,7 @@
 
 AnuDownloader, arkadaşların mod paketini kurup güncel tuttuğu Windows uygulamasıdır. Bu dosya, projede çalışan herkesin (ve Claude'unun) sistemi anlaması için yazıldı. Kaynak: `tools/anudownloader/`.
 
-> **Kural (istisnasız):** Paketin oyunculara giden halini değiştirmek (manifest üretmek, GitHub Release'e dosya yüklemek, `index.json`'u güncellemek) **yalnızca proje sahibi "AnuDownloader'a gönder / paketi yayınla" dediğinde** yapılır. Yarım veya test edilmemiş bir paket herkesin kurulumunu bozar.
+> **Kural (istisnasız):** Paketin oyunculara giden halini değiştirmek (manifest üretmek, GitHub Release'e dosya yüklemek, `index.json`'u güncellemek) **yalnızca Anubis veya swxff "Güncelle" dediğinde**, `guncelle` komutuyla yapılır (bkz. [guncelleme-akisi.md](guncelleme-akisi.md)). Yarım veya test edilmemiş bir paket herkesin kurulumunu bozar.
 
 ---
 
@@ -59,6 +59,10 @@ VDS klasörü (`/root/servers/medieval-fantasy`) → oyuncudaki klasör:
 
 ## 4. Yayınlama adımları
 
+**Normal yol: VDS'te `guncelle`.** Aşağıdaki adımların hepsini (manifest, yükleme, URL testi, yama notu, sürüm, commit, SHA sabitleme, purge, Discord) tek komut yapar. Anlatımı: [guncelleme-akisi.md](guncelleme-akisi.md). Kod: `tools/vds/guncelle.py`. Manifest üretimi `Build-Manifest-VDS.ps1` ile aynı mantıktadır (aynı klasör eşlemesi, aynı hariç tutulan dosyalar, aynı asset adı dönüşümü); birinde değişiklik yapılırsa öbürüne de yapılır.
+
+Aşağıdaki elle yöntem yalnızca `guncelle` çalışmazsa, Anubis'in Windows bilgisayarından yedek olarak kullanılır:
+
 1. **Manifest'i üret:**
    ```powershell
    cd tools/anudownloader
@@ -73,9 +77,10 @@ VDS klasörü (`/root/servers/medieval-fantasy`) → oyuncudaki klasör:
    `https://raw.githubusercontent.com/anubissxd/minecraft-servers/<40-hane-SHA>/distribution/<paket>/manifest.json`
    (Sabitlenmemiş `main` adresleri önbellekten eski içerik döndürebiliyor; SHA'lı adres her yayında değiştiği için bu sorun olmaz.)
 6. `index.json`'u commit + push et. (Eski uygulama sürümleri için jsDelivr purge da çağrılır.)
-7. **Discord duyurusu** yalnızca proje sahibi söylerse atılır:
+7. **Discord duyurusu:**
    `ssh root@31.58.91.7 python3 /root/scripts/notify_pack.py "<Paket Adı>" <sürüm> < distribution/<paket>/patchnotes.md`
-   Webhook adresi yalnızca VDS'teki script'te durur; repoya girmez.
+   Webhook adresi yalnızca VDS'teki script'te durur; repoya girmez. Ayrıntılar: [patchnotes.md](patchnotes.md).
+8. Havuzu elle arşivle: `/root/pending/medieval-fantasy.jsonl` içeriğini `/root/pending/archive/`'e taşı.
 
 **Yayın gerektirmeyenler:** FTB Quests görevleri (görev kitabı oyuncuya sunucudan gönderilir), sunucu-only ayarlar, dünyaya/NPC'lere yapılan değişiklikler.
 

@@ -979,23 +979,30 @@ Bütün geliştirmeler mümkün olduğunca bu yapıyı daha **güvenli, modüler
 
 ---
 
-# İzin Gerektiren İki İşlem (EN ÖNEMLİ KURAL)
+# Değişiklik Havuzu ve "Güncelle" (EN ÖNEMLİ KURAL)
 
-Bu iki işlem **yalnızca kullanıcı açıkça söylediğinde** yapılır. Kullanıcı "şu modu kur", "şunu araştır", "şu sorunu çöz" dediğinde bu **izin sayılmaz** — hazırlık yapılır, sonuç anlatılır, sonra beklenir.
+Medieval Fantasy'de iki kişi çalışır: **Anubis** (repo sahibi) ve **swxff** (GitHub `swaffX`), ve ikisinin Claude'u. Tam anlatım: `docs/guncelleme-akisi.md`. Önce `docs/README.md` okunur.
 
-## 1. Sunucuyu güncelleme/yeniden başlatma
+## 1. Her değişiklik havuza yazılır
 
-VDS'teki sunucuya mod ekleme/çıkarma, config değiştirme, `systemctl restart/stop` — hiçbiri kullanıcı **"sunucuyu güncelle"** (veya "başlat", "yeniden başlat") demeden yapılmaz.
+VDS'te bir şey değiştiren Claude, iş bitince hemen havuza oyuncuya gidecek bir cümle yazar:
 
-Kullanıcı sunucuda oynuyor olabilir ya da başkası bağlı olabilir; habersiz yeniden başlatma onları düşürür. Dosyaları hazırlayıp "şu değişiklikler hazır, sunucuyu güncelleyeyim mi?" diye sor.
+```bash
+ssh root@31.58.91.7 'havuz ekle <Anubis|swxff> <paket|sunucu> "<oyuncuya gidecek cümle>"'
+```
 
-## 2. AnuDownloader'daki mod paketini güncelleme
+Yama notu bu cümlelerden oluşur. Havuza yazılmayan değişiklik oyuncuya habersiz gider.
 
-Manifest üretmek, GitHub Release'e dosya yüklemek, `index.json`'u güncellemek — yani **paketin kullanıcılara giden halini değiştirmek** — kullanıcı **"AnuDownloader'a gönder"** (veya "paketi yayınla/güncelle") demeden yapılmaz.
+## 2. Yeniden başlatma + yayın + duyuru yalnızca "Güncelle" ile
 
-Arkadaşları o paketi indirip oynuyor; yarım kalmış veya test edilmemiş bir paket yayınlanırsa onların kurulumu bozulur.
+Sunucuyu yeniden başlatmak, AnuDownloader paketini yayınlamak ve Discord'a duyuru atmak **yalnızca Anubis veya swxff "Güncelle"** (veya "sunucuyu güncelle", "yayınla", "AnuDownloader'a gönder") dediğinde yapılır. "Şu modu kur", "şunu araştır", "şu sorunu çöz" **izin sayılmaz**: hazırlık yapılır, havuza yazılır, sonra beklenir.
 
-**Her iki kural için de istisna yok.** Emin değilsen sor.
+"Güncelle" denince üçü birden tek komutla yapılır:
+
+1. `ssh root@31.58.91.7 'guncelle --kim <kim> --kuru'` ile ne olacağına bak. Pakette havuzdaki bir kayıtla açıklanmayan değişen dosya varsa (başkasının unuttuğu kayıt, geçici test dosyası) dur ve kişiye söyle.
+2. Sorun yoksa `ssh root@31.58.91.7 'guncelle --kim <kim>'`. Bu komut yedek alır, sunucuyu yeniden başlatır ve açıldığını doğrular. Paket değiştiyse yayınlar ve Discord'a gönderir; değişmediyse sürüm artmaz, duyuru gitmez.
+
+Sunucuda oyuncu olabilir; habersiz yeniden başlatma onları düşürür. **Bu kuralın istisnası yok.** Emin değilsen sor.
 
 ---
 
@@ -1016,7 +1023,7 @@ Her paketin kendi `distribution/<paket>/patchnotes.md` dosyası vardır (örn. `
 - Bir pakette gerçek bir değişiklik yaptığımızda (mod paketten kaldırıldı/eklendi, mod sürümü güncellendi, bir config/ayar değiştirildi) **patchnotes.md'nin eski içeriğini tamamen sil, yeni içerikle değiştir** (üstüne ekleme yapma, sıfırdan yaz) ve `index.json`'daki o paketin `"version"` alanını artır.
 - Değişiklik yoksa (örn. sadece AnuDownloader'ın kendi kodunu güncelledik, pakete dokunmadık) **patchnotes.md'ye ve version'a dokunma.**
 
-Yama notu içeriğini kullanıcı kendisi yazıp verir — Claude format dayatmaz.
+Yama notunu artık `guncelle` havuzdaki kayıtlardan yazar; metni değişikliği yapan Claude havuza yazarken belirler. Anubis ileride yazım kuralları ekleyecek (`docs/patchnotes.md`). `manifest.json`, `patchnotes.md` ve `index.json` elle düzenlenmez.
 
 ## Derlemeden Önce Syntax Kontrolü ZORUNLU
 
@@ -1048,7 +1055,7 @@ https://raw.githubusercontent.com/anubissxd/minecraft-servers/<40-karakter-commi
 
 ## Paket İçeriği = VDS (tek kaynak)
 
-VDS hem sunucunun hem client paketinin **tek kaynağıdır**. Mod ekleme/güncelleme/kaldırma sadece VDS'te yapılır, paket `tools/anudownloader/Build-Manifest-VDS.ps1` ile oradan üretilir. Kullanıcının local Modrinth profiline (`%APPDATA%\ModrinthApp\profiles\...`) **dokunulmaz**: kullanıcı onu AnuDownloader'ı test etmek için kullanıyor, oraya elle dosya koymak testi bozar. Eski `Build-Manifest.ps1` (local profilden üretim) Medieval Fantasy için kullanılmaz.
+VDS hem sunucunun hem client paketinin **tek kaynağıdır**. Mod ekleme/güncelleme/kaldırma sadece VDS'te yapılır, paket oradan `guncelle` ile üretilir (`tools/vds/guncelle.py`); `tools/anudownloader/Build-Manifest-VDS.ps1` yalnızca yedek yöntemdir. Kullanıcının local Modrinth profiline (`%APPDATA%\ModrinthApp\profiles\...`) **dokunulmaz**: kullanıcı onu AnuDownloader'ı test etmek için kullanıyor, oraya elle dosya koymak testi bozar. Eski `Build-Manifest.ps1` (local profilden üretim) Medieval Fantasy için kullanılmaz.
 
 VDS'teki klasör → oyuncudaki klasör (`<sunucu>` = `/root/servers/medieval-fantasy`):
 
@@ -1076,7 +1083,14 @@ Kurallar:
 
 # Medieval Fantasy: Dokümantasyon ve Görevler
 
-AnuDownloader'ın çalışma mantığı ve paket yayınlama adımları: `docs/anudownloader.md`.
+**`docs/README.md` ilk okunacak dosyadır**: kim kimdir, hangi doküman ne anlatır, en önemli kurallar ve yarım kalan işler. Diğerleri:
+
+- `docs/guncelleme-akisi.md`: havuz ve "Güncelle"
+- `docs/vds.md`: VDS, servis, script'ler, cron, yedekler
+- `docs/patchnotes.md`: yama notları ve Discord duyurusu
+- `docs/anudownloader.md`: AnuDownloader'ın çalışma mantığı
+
+Bir sistemi değiştiren veya bir işi yarım bırakan, ilgili dokümanı aynı işte günceller (yarım işler `docs/README.md`'ye).
 
 Medieval Fantasy'nin evreni, krallıkları, karakterleri (NPC'ler) ve görev kuralları `docs/medieval-fantasy/` altındadır:
 
