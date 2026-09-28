@@ -298,8 +298,13 @@ def publish(pack_id, pack, files, old_by_path, remove_list, index, entries, vers
     }
     write_json(os.path.join(dist, "manifest.json"), manifest)
 
-    lines = [e["metin"] for e in entries] or ["Küçük düzeltmeler."]
+    lines = [e["metin"] for e in entries if e["tur"] != "uygulama"] or ["Küçük düzeltmeler."]
     notes = "# %s - %s\n\n" % (name, version) + "\n".join("- " + l for l in lines) + "\n"
+    # AnuDownloader'in yeni surumu ayni duyuruda, en altta kendi basligiyla verilir.
+    for e in entries:
+        if e["tur"] == "uygulama":
+            head, _, text = e["metin"].partition(":")
+            notes += "\n## %s\n\n- %s\n" % (head.strip(), text.strip() or head.strip())
     with open(os.path.join(dist, "patchnotes.md"), "w", encoding="utf8", newline="\n") as f:
         f.write(notes)
 

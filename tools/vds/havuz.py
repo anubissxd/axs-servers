@@ -2,7 +2,9 @@
 # Degisiklik havuzu: iki gelistiricinin (ve Claude'larinin) yaptigi degisiklikler
 # "guncelle" calisana kadar burada birikir. Ayrintilar: docs/guncelleme-akisi.md
 #
-#   havuz ekle <kim> <paket|sunucu> "<oyuncuya gidecek cumle>"
+#   havuz ekle <kim> <paket|sunucu|uygulama> "<oyuncuya gidecek cumle>"
+#   uygulama: AnuDownloader surumu. Metin "AnuDownloader X.Y.Z: aciklama" bicimindedir;
+#   yama notunun en altinda "## AnuDownloader X.Y.Z" basligi altinda cikar.
 #   havuz liste
 #   havuz sil <no>          (liste'deki numara)
 #
@@ -11,7 +13,7 @@
 import sys, os, json, datetime, fcntl
 
 POOL_DIR = "/root/pending"
-TURLER = ("paket", "sunucu")
+TURLER = ("paket", "sunucu", "uygulama")
 
 
 def pool_path(pack):
@@ -50,13 +52,13 @@ def main(argv):
         pack = argv[i + 1]
         del argv[i:i + 2]
     if not argv:
-        print("kullanim: havuz ekle <kim> <paket|sunucu> \"<metin>\" | havuz liste | havuz sil <no>")
+        print("kullanim: havuz ekle <kim> <paket|sunucu|uygulama> \"<metin>\" | havuz liste | havuz sil <no>")
         return 1
     cmd = argv[0]
 
     if cmd == "ekle":
         if len(argv) != 4 or argv[2] not in TURLER or not argv[3].strip():
-            print("kullanim: havuz ekle <kim> <paket|sunucu> \"<metin>\"")
+            print("kullanim: havuz ekle <kim> <paket|sunucu|uygulama> \"<metin>\"")
             return 1
         entry = {
             "zaman": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),

@@ -22,6 +22,7 @@ ssh root@31.58.91.7 'havuz ekle <kim> <paket|sunucu> "<oyuncuya gidecek cümle>"
 - `<paket|sunucu>`:
   - `paket`: oyuncunun dosyalarını da değiştiren şeyler (mod ekleme/kaldırma/güncelleme, `config/`, `kubejs/`, resourcepack...)
   - `sunucu`: sadece sunucuda kalan şeyler (sunucu-only mod, `world/serverconfig`, görevler, NPC'ler, dünya)
+  - `uygulama`: AnuDownloader'ın yeni bir sürümü yayınlandıysa. Metin `"AnuDownloader X.Y.Z: açıklama"` biçiminde yazılır. Yama notunun en altında `## AnuDownloader X.Y.Z` başlığıyla çıkar; paket ve uygulama tek duyuruda verilir.
 - Metin **yama notuna olduğu gibi girer**. Oyuncunun anlayacağı Türkçe, tek madde, noktalı cümle. Teknik dosya adı değil, oyuncunun göreceği etki yazılır. Kuralları: [patchnotes.md](patchnotes.md).
 
 Örnek:
