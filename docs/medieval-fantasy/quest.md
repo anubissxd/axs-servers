@@ -127,5 +127,6 @@ Maceracı rütbesine ait, modları öğreten görevler. Görev listesinden alın
 |---|---|---|---|---|---|---|
 | 0 | **Maceracı Rütbesi** (kapı) | `4D41434552414332` | — | Stage `rank_maceraci` | — | Miu'dan rütbe alınca kendiliğinden tamamlanır. Bölümdeki bütün görevler buna bağlanır. |
 | 1 | **Büyü Masası** | `4D41434552414334` | 0 | `irons_spellbooks:inscription_table` **craftla** (`only_from_crafting`) | 2 Can İksiri (Instant Health I; iki ayrı ödül: `4D41434552414336`, `4D41434552414337`) | Tekli. Iron's Spells'e giriş: büyü parşömenlerini büyü kitabına işlemek. `hide_until_deps_complete`. |
+| 2 | **Büyü Kitabı** | `4D41434552414338` | 1 | `irons_spellbooks:iron_spell_book` (Ironbound Tome) **craftla** (`only_from_crafting`) | 2 Can İksiri (`4D4143455241433A`, `4D4143455241433B`) | Zincir: Büyü Masası → Büyü Kitabı. İlk büyü kitabı, 6 büyü yuvası. `hide_until_deps_complete`. |
 
-Sonraki boş ID önerisi: `4D41434552414338` ve sonrası (bölüm ID'si + artan son hane).
+Sonraki boş ID önerisi: `4D4143455241433C` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
