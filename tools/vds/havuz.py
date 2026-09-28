@@ -59,7 +59,7 @@ def main(argv):
             print("kullanim: havuz ekle <kim> <paket|sunucu> \"<metin>\"")
             return 1
         entry = {
-            "zaman": datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
+            "zaman": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
             "kim": argv[1],
             "tur": argv[2],
             "metin": argv[3].strip(),
