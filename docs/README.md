@@ -42,8 +42,4 @@ Genel proje kuralları (sunucuların bağımsızlığı, mod ekleme/kaldırma, y
 
 Bir iş yarım kalırsa buraya yazılır, bitince silinir. Böylece öbür kişi (veya Claude'u) nerede kalındığını görür.
 
-- **Maceracı zinciri: okul parşömenleri** (`config/ftbquests/quests/chapters/maceraci.snbt`)
-  - Görevlerdeki parşömen NBT anahtarı yanlış (`ISB_Spells`), bu yüzden görevler hiç tamamlanamıyor ve ikonları düz parşömen görünüyor.
-  - Doğru anahtar `"irons_spellbooks:spell_container"`. Hem görev filtresinde hem ikonda düzeltilmeli; `quest.md`'deki not da yanlış.
-  - Eklenti okullarının hepsi (Cataclysm Spellbooks'un technomancy'si, Apprentice Codex'in eldritch'i, varsa diğerleri) araştırılıp her okula bir Common parşömen görevi eklenecek.
-  - Araştırma için yazılan geçici komut dosyası `/tmp/pa/zz_anubis_spell_dump.js`'e çekildi; sunucuda değil.
+- Şu an yok.
