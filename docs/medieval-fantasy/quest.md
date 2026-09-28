@@ -148,9 +148,9 @@ Yerleşim: kapı (0, 0) → **Büyüler ve Rünler** (2, 0) → sağ-yukarı **I
 | # | Görev | ID | Bağlı olduğu | Hedef | Ödül | Not |
 |---|---|---|---|---|---|---|
 | 22 | **Büyü Bağlama Masası** | `4D41434552414364` | 42 (Büyüler ve Rünler) | `spell_engine:spell_binding` **craftla** (`only_from_crafting`) | 2 Can İksiri (tek ödül, `…66`) | Konum (4, 3). |
-| 23 | **Sınıflar** | `4D41434552414367` | 22 | `checkmark` | — | Kitap yaratma (Book + 1 seviye), 8 sınıf kitabı, lapis ile büyü bağlama, kademe kuralı, Spell Book yuvası, tuşlar. |
+| 23 | **Sınıflar** | `4D41434552414367` | 22 | `checkmark` | — | 8 sınıf kitabı ve silahları (genel bakış). Konum (6, 3). |
 | 24 | **Rünler** | `4D41434552414369` | 22 | `runes:crafting_altar` **craftla** | — | Hangi sınıf hangi rünü harcar, sunak iki kat verir, Rune Pouch. |
-| 25–32 | **Sınıf yolları** (8 adet) | `…6B` – `…79` (task: +1) | 23 | `advancement` task: `rpg_series:spell_novice_<sınıf>` (kitaba ilk büyüyü bağlamak) | — | Arcane, Ateş, Buz (wizards), Paladin, Rahip (paladins), Okçu (archers), Haydut, Savaşçı (rogues). Açıklamada kitap, silahlar, bedel ve 6 büyü. 2 sütun × 4 satır (x 8 / 9.5, y 0.75…5.25). |
+| 25–32 | **Sınıf yolları** (8 adet) | `…6B` – `…79` (task: +1) | 23 | `advancement` task: `rpg_series:spell_novice_<sınıf>` (kitaba ilk büyüyü bağlamak) | — | Arcane, Ateş, Buz (wizards), Paladin, Rahip (paladins), Okçu (archers), Haydut, Savaşçı (rogues). Açıklamada kitap, silahlar, bedel ve 6 büyü. Her sınıf bir satır: yol (8, y) → İlk Büyü `spell_cast_<sınıf>_book` (9.5, y) → Usta `spell_master_<sınıf>` (11, y); y = 3 … 13.5. |
 
 - **RPG Series görev tespiti:** Spell Engine'in kendi advancement'ları (`rpg_series:*`) görev olarak kullanılabilir: `type: "advancement"`, `advancement: "rpg_series:..."`, `criterion: ""`. Masayı ziyaret: `rpg_series:classes`; kitap yaratma: `rpg_series:path_choose_<sınıf>`; ilk büyüyü bağlama: `spell_novice_<sınıf>`; kitabı doldurma: `spell_master_<sınıf>`; kitaptan büyü atma: `spell_cast_<sınıf>_book`.
 
@@ -195,7 +195,7 @@ Yerleşim: kapı (0, 0) → **Büyüler ve Rünler** (2, 0) → sağ-yukarı **I
 | Görev | ID | Bağlı | Hedef | Konum | Anlattığı |
 |---|---|---|---|---|---|
 | **Can Yenilenmez** | `…A3` | 0 | `checkmark` | (-1.5, 2) | Can kendiliğinden dolmaz; şifa kaynakları; yanında iksir taşı |
-| **Altın Elma** | `…BB` | Can Yenilenmez | `golden_apple` **craftla** | (-3, 2) | Yenilenme II + Emilim |
+| **Altın Elma** | `…BB` | Can Yenilenmez | `golden_apple` **craftla** | (-3, 3.5) | Yenilenme II + Emilim |
 | **Simya Standı** | `…A5` | Can Yenilenmez | `brewing_stand` **craftla** | (-1.5, 3.5) | Yakıt (1 Blaze Powder = 20), yuvalar, su şişesi. Ödül 2 Can İksiri (`…A7`) |
 | **Garip İksir** | `…A8` | Simya Standı | `potion` `awkward` | (-1.5, 5) | Nether Wart, ruh kumunda çoğaltma |
 | **Faydalı İksirler** | `…BD` | Garip İksir | `checkmark` | (-3, 5) | Malzeme → iksir listesi, Fermented Spider Eye ile tersine çevirme |
@@ -211,14 +211,14 @@ Yerleşim: kapı (0, 0) → **Büyüler ve Rünler** (2, 0) → sağ-yukarı **I
 
 **Apotheosis iksir tılsımı (Potion Charm):** Kara listesi boş; Yenilenme iksirinden kalıcı yenilenme tılsımı yapılabiliyor. Görevlerde öğretilmedi.
 
-**Alt-sağ kol: Sophisticated Backpacks + Storage** (kapıdan aşağı; ana sütun x = 1.5, çanta eklentileri x = 3):
+**Alt-sağ kol: Sophisticated Backpacks + Storage** (kapıdan aşağı; ana sütun x = 1.5, çanta eklentileri x = 0):
 
 | Görev | ID | Bağlı | Hedef (**craftla**) | Konum |
 |---|---|---|---|---|
 | **Sırt Çantası** | `…B0` | 0 | `sophisticatedbackpacks:backpack` (ödül 2 Can İksiri `…B2`) | (1.5, 2) |
 | **Bakır Çanta** | `…B3` | Sırt Çantası | `copper_backpack` | (1.5, 3.5) |
 | **Çanta Eklentileri** | `…B5` | Bakır Çanta | `upgrade_base` | (1.5, 5) |
-| Toplama / Mıknatıs / Besleme / Simya / Doldurma / Yığın / Craft / Yok Edilemez | `…C7`–`…D5` (ikişer) | Çanta Eklentileri | `pickup_upgrade`, `magnet_upgrade`, `feeding_upgrade`, `alchemy_upgrade`, `refill_upgrade`, `stack_upgrade_tier_1`, `crafting_upgrade`, `everlasting_upgrade` | (3, 6.5 … 17) |
+| Toplama / Mıknatıs / Besleme / Simya / Doldurma / Yığın / Craft / Yok Edilemez | `…C7`–`…D5` (ikişer) | Çanta Eklentileri | `pickup_upgrade`, `magnet_upgrade`, `feeding_upgrade`, `alchemy_upgrade`, `refill_upgrade`, `stack_upgrade_tier_1`, `crafting_upgrade`, `everlasting_upgrade` | (0, 6.5 … 17) |
 | **Gelişmiş Sandık** | `…B7` | Çanta Eklentileri | `sophisticatedstorage:chest` | (1.5, 6.5) |
 | **Sandığı Yükselt** | `…D7` | Gelişmiş Sandık | `basic_to_iron_tier_upgrade` | (1.5, 8) |
 | **Sınırlı Varil** | `…D9` | Sandığı Yükselt | `limited_barrel_1` | (1.5, 9.5) |
@@ -226,4 +226,30 @@ Yerleşim: kapı (0, 0) → **Büyüler ve Rünler** (2, 0) → sağ-yukarı **I
 | **Depo Kontrolcüsü** | `…B9` | Koli Bandı | `controller` | (1.5, 12.5) |
 | **Depo Bağlantısı** | `…DD` | Depo Kontrolcüsü | `storage_link` (Storage Tool ile bağlama) | (1.5, 14) |
 
-Sonraki boş ID önerisi: `4D414345524143E9` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
+**RPG kolu ayrıntısı** (Sınıflar'dan aşağı, x = 6): **Kitap Yaratmak** (6, 4.5) → **Büyü Bağlamak** (6, 6) → **Kitabı Takmak** (6, 7.5) → **Büyü Atmak** (6, 9) → **Büyü Gücü** (6, 10.5). Hepsi `checkmark`. Rünler (4, 4.5)'e taşındı. Spell Engine ayarları (`config/spell_engine/server.json5`): kitap yaratma 1 seviye, büyü atınca kitap 10 sn değiştirilemez, bekleme varken kitap çıkarılamaz, büyüler tokluk harcar.
+
+**Iron's büyü kitapları** (Ironbound Tome'dan yukarı, x = 6): **Altın** (6, -4.5) → **Elmas** (6, -6) → **Netherite** (6, -7.5) → **Efsanevi Kitaplar** (6, -9). Yanlarda **Uyanan Kitaplar** (Somake, 4.5, -4.5), **Eklenti Kitapları** (4.5, -6), **Okul Kitapları** (7.5, -6). Craft görevleri 2 Can İksiri verir. Rakamlar canlı sunucudan (`getMaxSpellSlots` + Curios özellikleri) okundu:
+
+| Kitap | Yuva | Özellik |
+|---|---|---|
+| Copper / Ironbound / Gold / Diamond / Netherite | 5 / 6 / 8 / 10 / 12 | Gold %15 hazırlama, +50 mana · Diamond +100 mana · Netherite +200 mana, %20 bekleme |
+| Blaze, Druidic, Villager, Evoker, Cursed Doll, Necronomicon | 10 | okul gücü %10, +200 mana |
+| Ice, Dragonskin, Legendary | 12 | Ice/Ender %10, +200 mana |
+| Somake I / II / III | 8 / 10 / 12 | okul gücü %5 / %15 / %25, +100 / 200 / 300 mana; okulun büyüleri atılarak uyanır |
+| Cataclysm (Ignis, Codex of Malice, Abyss, Desert), Volume of the Deep | 12 | %30 okul gücü, +300 mana (Deep: Eldritch %15, %20 bekleme) |
+| Disc Driver / Stockpiler's Dream | 15 | Technomancy %30 / 8000 mana ama mana dolmaz |
+| Unstable Spellbook | 8 | Unstable %25, +400 mana |
+
+**Sol-üst: Savaş** (x = -4.5'ten sola). Satır y = -3: **Dövüş Sanatı** (-4.5, -3; kapıya bağlı; Better Combat) → **Takla** (Combat Roll: 4 sn, en az 6 tokluk, havada / silah beklemesinde yok, yenilmezlik yok) → **Atılma** (Combat Dash: 3 hak, 4,5 sn) → **Silah Seviyesi** (Weapon Leveling: öldürme 1, vuruş %20 şansla 1 deneyim, en fazla 500, kırılmaz) → **Ölümün Bedeli** (Diminishing Health: ölümde %5; Altın Elma %5, uyku %5, 6 günde bir %5). Satır y = -4.5: **Yetenek Ağaçları** → **Sınıf Yetenekleri** (Class Skills, 13 puan) → **Silah Ustalığı** (Weapon Skills, 6 puan) → **Büyü Ağaçları** (Magic I → Primary School → Secondary School → Magic II) → **Maceracı Yetenekleri**. Ayrıca özel **Anubis** ağacı var (`global_packs/required_data/anubis_fixes`, 5 yetenek, kilitli başlar). Hepsi `checkmark`.
+
+**Sol-üst: Silah ve Zırh** (y = -6): **Silah Çeşitleri** (-4.5, -6) → **Zırh Çeşitleri** → **Kalkanlar** → **Uzak Menzil** → **Efsanevi Silahlar**. İki buluşma noktası (`dependency_requirement: "one_completed"`, iki yoldan biri yeter):
+- **Silahına Mücevher** (-3, -7.5): Silah Çeşitleri **veya** Apotheosis Mücevher Yuvası. Apotheosis bütün silah ve zırhlarda çalışır.
+- **Silah Yetenekleri** (4, 6, RPG kolunda): Büyü Bağlama Masası **veya** Silah Çeşitleri. RPG silah yetenekleri silah adına ve türüne göre bütün silahlara dağılır (`config/spell_engine/weapon_fallback.json`): kılıç → Swift Strikes, claymore → Flurry, büyük çekiç → Ground Slam, çift balta → Whirlwind, teber → Thrust, mızrak → Impale, orak → Swipe, hançer → Fan of Knives, gürz → Smash, balta → Cleave.
+
+**Sol-alt: Yemek ve Mevsimler** (Can Yenilenmez'e bağlı; Altın Elma (-3, 3.5)'e taşındı). Satır y = 3: **Açlık ve Can** (-6, 3) → **Bıçak** → **Kesme Tahtası** → **Pişirme Kabı** → **Şifalı Çorba** (beef_stew) → **Doyurucu Yemekler** → **Ziyafet** (-15, 3). Satır y = 4.5: **Zengin Toprak** (-6, 4.5), Pişirme Kabı'ndan **Tava** (-10.5), **Fıçı** (Brewin' and Chewin') → **Şarapçılık** (Vinery) → **Mutfak** (Bakery, Candlelight, Hearth and Harvest). Satır y = 6: **Mevsimler** (-6, 6) → **Takvim** → **Mevsim Sensörü**. Farmer's Delight ve diğerlerinde modun kendi advancement'ları kullanıldı.
+- **Comfort gerçekten iyileştirir:** Farmer's Delight'ın `ComfortEffect`'i gamerule'a bakmıyor; tokluk barı boşken canı dolduruyor. Can yenilenmesi kapalı olsa da çorbalar şifa kaynağı.
+- **Serene Seasons** (`config/sereneseasons`): alt mevsim 8 gün (mevsim 24, yıl 96 gün), sunucu boşken de ilerler, mevsim dışı ekin yavaş büyür (`out_of_season_crop_behavior = 0`), y 48 altı her mevsim verimli.
+
+**ID'ler:** Bölümün tek bayt son eki (`4D414345524143xx`) `…FF`'de doldu. Sonrası `4D414345524144xx` önekiyle devam eder; bu önek bölüm ID'si ile çakışmaz. Her ID tam **16 hex hane** olmalı; 17 haneli bir ID FTB Quests'i bozar.
+
+Sonraki boş ID önerisi: `4D41434552414464` ve sonrası.
