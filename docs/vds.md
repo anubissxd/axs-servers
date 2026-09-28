@@ -59,6 +59,8 @@ SSH'a satır içi yazılan Python/tırnaklı komutlar kolayca bozulur. Script'i 
 
 Rütbeler (`world/serverconfig/ftbranks/ranks.snbt`) konsolda `ftbranks reload` ile yenilenir.
 
+**Spawn güvenli bölgesi:** `kubejs/server_scripts/anubis_hub_safe.js`, spawn çevresinde canavar doğmasını engeller ve bölgeye yürüyerek giren canavarları 5 saniyede bir siler. Bölge: x -984.5, z -375.5, 96 blok yarıçap, sadece Overworld. Elle temizlemek için konsolda `anubis_hub_temizle` yazılır. Canavar kontrolü `getEntityType().getCategory()` ile yapılır; KubeJS'te `entity.type` metin döndürür, sınıfı vermez.
+
 ---
 
 ## Script'ler ve komutlar
