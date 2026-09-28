@@ -105,6 +105,8 @@ Sohbette sadece en yüksek rütbe görünür. Sıralama: **Kutsanmış > Krallı
 - Dosyayı değiştirdikten sonra sunucu konsolunda `ftbquests reload` çalıştırın; logda "Loaded N chapters, M quests" satırını kontrol edin. Yeniden başlatma gerekmez.
 - Görev kitabı oyunculara **sunucudan** gönderilir: görev değişiklikleri için AnuDownloader paketini yayınlamaya gerek yoktur.
 - Craft etmeyi şart koşan eşya görevi: `type: "item"` + `only_from_crafting: true` (eşyayı başka yoldan elde etmek tamamlamaz).
+- **Iron's Spells parşömeni görevi:** Bütün parşömenler aynı eşyadır (`irons_spellbooks:scroll`); büyü, eşyanın NBT'sinde durur. Task'a `item: {id: "irons_spellbooks:scroll", tag: {ISB_Spells: {data: [{id: "irons_spellbooks:<büyü>"}]}}}` ile `match_nbt: true` ve `weak_nbt_match: true` verin (zayıf eşleşme: sadece büyü kimliğine bakar, seviyeye bakmaz).
+- **`only_from_crafting` sadece normal craft masasında çalışır.** Scroll Forge, Alchemist Cauldron gibi özel makinelerin çıktılarında kullanmayın; o görevler eşyanın envanterde olmasıyla tamamlanır.
 - Rütbesi olmayanlardan gizlemek için: görevi kapı görevine bağlayın (`dependencies`) ve `hide_until_deps_complete: true` verin.
 - **Görünüm kuralı:** Bütün görevler **circle** şeklinde ve **aynı boyutta**. Görevlere `shape` veya `size` yazmayın; varsayılan (`data.snbt` → `default_quest_shape: "circle"`) kullanılır. Her göreve ve her task'a konusuna uygun bir `icon` verin (kapı görevleri ve Stage task'ları dahil; ör. Maceracı kapısı ve task'ı `minecraft:iron_sword`).
 - **Yazım kuralı:** Cümle olan her metin (task başlıkları, alt başlıklar, açıklamalar) **nokta ile biter** ve Türkçe yazım kurallarına uyar (ör. "-deki/-daki" bitişik: "bölgesindeki"). Görev ve bölüm **başlıkları** ("Maceracı Rütbesi", "Büyü Masası") noktasızdır. Spawn yerine oyuncuya "Başlangıç bölgesi" denir.
@@ -128,5 +130,9 @@ Maceracı rütbesine ait, modları öğreten görevler. Görev listesinden alın
 | 0 | **Maceracı Rütbesi** (kapı) | `4D41434552414332` | — | Stage `rank_maceraci` | — | Miu'dan rütbe alınca kendiliğinden tamamlanır. Bölümdeki bütün görevler buna bağlanır. |
 | 1 | **Büyü Masası** | `4D41434552414334` | 0 | `irons_spellbooks:inscription_table` **craftla** (`only_from_crafting`) | 2 Can İksiri (Instant Health I; iki ayrı ödül: `4D41434552414336`, `4D41434552414337`) | Tekli. Iron's Spells'e giriş: büyü parşömenlerini büyü kitabına işlemek. `hide_until_deps_complete`. |
 | 2 | **Büyü Kitabı** | `4D41434552414338` | 1 | `irons_spellbooks:iron_spell_book` (Ironbound Tome) **craftla** (`only_from_crafting`) | 2 Can İksiri (`4D4143455241433A`, `4D4143455241433B`) | Zincir: Büyü Masası → Büyü Kitabı. İlk büyü kitabı, 6 büyü yuvası. `hide_until_deps_complete`. |
+| 3 | **Parşömen Ocağı** | `4D4143455241433C` | 2 | `irons_spellbooks:scroll_forge` **craftla** (`only_from_crafting`) | 2 Can İksiri (`…3E`, `…3F`) | Zincir devamı. Buradan yol ikiye ayrılır. |
+| 4 | **Büyü Okulları** | `4D41434552414340` | 3 | `checkmark` (oyuncu okuyup işaretler) | — | Okullar ve odak eşyaları anlatılır. |
+| 5 | **Mürekkep** | `4D41434552414342` | 3 | `irons_spellbooks:common_ink` **edin** | — | Mürekkep nadirliği ve kazanda yükseltme anlatılır. Common Ink sandıklardan/ganimetten gelir. |
+| 6–13 | **Okul görevleri** (8 adet) | `…44` – `…52` (task: +1) | 4 **ve** 5 | Belirli büyünün **parşömenine** sahip ol | — | Ateş: Firebolt, Buz: Icicle, Şimşek: Electrocute, Kutsal: Healing Circle, Ender: Magic Missile, Kan: Ray of Siphoning, Evocation: Fang Strike, Doğa: Poison Arrow. Eldritch'te Common büyü yok. |
 
-Sonraki boş ID önerisi: `4D4143455241433C` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
+Sonraki boş ID önerisi: `4D41434552414354` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
