@@ -132,21 +132,25 @@ Maceracı rütbesine ait, modları öğreten görevler. Görev listesinden alın
 | # | Görev | ID | Bağlı olduğu | Hedef | Ödül | Not |
 |---|---|---|---|---|---|---|
 | 0 | **Maceracı Rütbesi** (kapı) | `4D41434552414332` | — | Stage `rank_maceraci` | — | Miu'dan rütbe alınca kendiliğinden tamamlanır. Bölümdeki bütün görevler buna bağlanır. |
-| 1 | **Büyü Masası** | `4D41434552414334` | 0 | `irons_spellbooks:inscription_table` **craftla** (`only_from_crafting`) | 2 Can İksiri (Instant Health I; tek ödül `Count: 2b`, `4D41434552414336`) | Tekli. Iron's Spells'e giriş: büyü parşömenlerini büyü kitabına işlemek. `hide_until_deps_complete`. |
+| 1 | **Büyü Masası** | `4D41434552414334` | 42 (Büyüler ve Rünler) | `irons_spellbooks:inscription_table` **craftla** (`only_from_crafting`) | 2 Can İksiri (Instant Health I; tek ödül `Count: 2b`, `4D41434552414336`) | Tekli. Iron's Spells'e giriş: büyü parşömenlerini büyü kitabına işlemek. `hide_until_deps_complete`. |
 | 2 | **Büyü Kitabı** | `4D41434552414338` | 1 | `irons_spellbooks:iron_spell_book` (Ironbound Tome) **craftla** (`only_from_crafting`) | 2 Can İksiri (tek ödül, `4D4143455241433A`) | Zincir: Büyü Masası → Büyü Kitabı. İlk büyü kitabı, 6 büyü yuvası. `hide_until_deps_complete`. |
 | 3 | **Parşömen Ocağı** | `4D4143455241433C` | 2 | `irons_spellbooks:scroll_forge` **craftla** (`only_from_crafting`) | 2 Can İksiri (tek ödül, `…3E`) | Zincir devamı. Buradan yol ikiye ayrılır. |
 | 4 | **Büyü Okulları** | `4D41434552414340` | 3 | `checkmark` (oyuncu okuyup işaretler) | — | Okullar ve odak eşyaları anlatılır. |
 | 5 | **Mürekkep** | `4D41434552414342` | 3 | `irons_spellbooks:common_ink` **edin** | — | Mürekkep nadirliği ve kazanda yükseltme anlatılır. Common Ink sandıklardan/ganimetten gelir. |
-| 6–21 | **Okul görevleri** (16 adet) | `…44` – `…62` (task: +1) | 4 **ve** 5 | Belirli büyünün **parşömenine** sahip ol | — | Ateş: Firebolt, Buz: Icicle, Şimşek: Electrocute, Kutsal: Healing Circle, Ender: Magic Missile, Kan: Ray of Siphoning, Evocation: Fang Strike, Doğa: Poison Arrow, Su (Aqua): Water Ball, Ses (Sound): Clef, Ruh (Spirit): Soul Burst, Simetri (Symmetry): Jade Bullet, Technomancy: Laserbolt — hepsi Common. Common büyüsü olmayanlar: Abyssal: Tidal Tear (Uncommon), Eldritch: Summon Sculk Centipede (Rare), Unstable: Glitch Projectiles (Rare). 2 sütun × 8 satır (x 10 ve 11.5, y -5.25…5.25, aralık 1.5). |
+| 6–21 | **Okul görevleri** (16 adet) | `…44` – `…62` (task: +1) | 4 **ve** 5 | Belirli büyünün **parşömenine** sahip ol | — | Ateş: Firebolt, Buz: Icicle, Şimşek: Electrocute, Kutsal: Healing Circle, Ender: Magic Missile, Kan: Ray of Siphoning, Evocation: Fang Strike, Doğa: Poison Arrow, Su (Aqua): Water Ball, Ses (Sound): Clef, Ruh (Spirit): Soul Burst, Simetri (Symmetry): Jade Bullet, Technomancy: Laserbolt — hepsi Common. Common büyüsü olmayanlar: Abyssal: Tidal Tear (Uncommon), Eldritch: Summon Sculk Centipede (Rare), Unstable: Glitch Projectiles (Rare). 2 sütun × 8 satır (x 12 ve 13.5, y -8.25…2.25, aralık 1.5). |
 
-Kapı görevinden iki kol çıkar: **sağ kol** Iron's Spells (yukarıdaki 1–21), **sol kol** RPG Series / Spell Engine (aşağıdaki 22–32).
+Yerleşim: kapı (0, 0) → **Büyüler ve Rünler** (2, 0) → sağ-yukarı **Iron's Spells** kolu (1–21, zincir y = -3; Okullar (10, -4.5), Mürekkep (10, -1.5)) ve sağ-aşağı **RPG Series** kolu (22–32, masa (4, 3)). Kapıdan yukarı **Apotheosis** kolu (33–41).
 
 | # | Görev | ID | Bağlı olduğu | Hedef | Ödül | Not |
 |---|---|---|---|---|---|---|
-| 22 | **Büyü Bağlama Masası** | `4D41434552414364` | 0 | `spell_engine:spell_binding` **craftla** (`only_from_crafting`) | 2 Can İksiri (tek ödül, `…66`) | Konum (-2, 0). |
+| 42 | **Büyüler ve Rünler** | `4D41434552414391` | 0 | `checkmark` (task `…92`) | — | İki büyü yolunu tanıtır: Iron's Spells (parşömen, kitap, okullar, mana, silah fark etmez) ve RPG Series (sınıf kitabı, sınıf silahı, rün). İkon `irons_spellbooks:arcane_essence`. |
+
+| # | Görev | ID | Bağlı olduğu | Hedef | Ödül | Not |
+|---|---|---|---|---|---|---|
+| 22 | **Büyü Bağlama Masası** | `4D41434552414364` | 42 (Büyüler ve Rünler) | `spell_engine:spell_binding` **craftla** (`only_from_crafting`) | 2 Can İksiri (tek ödül, `…66`) | Konum (4, 3). |
 | 23 | **Sınıflar** | `4D41434552414367` | 22 | `checkmark` | — | Kitap yaratma (Book + 1 seviye), 8 sınıf kitabı, lapis ile büyü bağlama, kademe kuralı, Spell Book yuvası, tuşlar. |
 | 24 | **Rünler** | `4D41434552414369` | 22 | `runes:crafting_altar` **craftla** | — | Hangi sınıf hangi rünü harcar, sunak iki kat verir, Rune Pouch. |
-| 25–32 | **Sınıf yolları** (8 adet) | `…6B` – `…79` (task: +1) | 23 | `advancement` task: `rpg_series:spell_novice_<sınıf>` (kitaba ilk büyüyü bağlamak) | — | Arcane, Ateş, Buz (wizards), Paladin, Rahip (paladins), Okçu (archers), Haydut, Savaşçı (rogues). Açıklamada kitap, silahlar, bedel ve 6 büyü. 2 sütun × 4 satır (x -6 / -7.5). |
+| 25–32 | **Sınıf yolları** (8 adet) | `…6B` – `…79` (task: +1) | 23 | `advancement` task: `rpg_series:spell_novice_<sınıf>` (kitaba ilk büyüyü bağlamak) | — | Arcane, Ateş, Buz (wizards), Paladin, Rahip (paladins), Okçu (archers), Haydut, Savaşçı (rogues). Açıklamada kitap, silahlar, bedel ve 6 büyü. 2 sütun × 4 satır (x 8 / 9.5, y 0.75…5.25). |
 
 - **RPG Series görev tespiti:** Spell Engine'in kendi advancement'ları (`rpg_series:*`) görev olarak kullanılabilir: `type: "advancement"`, `advancement: "rpg_series:..."`, `criterion: ""`. Masayı ziyaret: `rpg_series:classes`; kitap yaratma: `rpg_series:path_choose_<sınıf>`; ilk büyüyü bağlama: `spell_novice_<sınıf>`; kitabı doldurma: `spell_master_<sınıf>`; kitaptan büyü atma: `spell_cast_<sınıf>_book`.
 
@@ -166,4 +170,4 @@ Kapı görevinden iki kol çıkar: **sağ kol** Iron's Spells (yukarıdaki 1–2
 
 - **Apotheosis rakamları** jar'daki `data/apotheosis/enchanting_stats/*.json`'dan doğrulandı: seviye = Eterna × 2; normal kitaplık en fazla 15 Eterna (30. seviye), Hellshelf / Seashelf en fazla 22.5 (45), Blazing / Glowing Hellshelf ve Crystalline / Heart-Forged Seashelf 30 (60), Deepshelf 35–37.5, Endshelf 45–50 (100).
 
-Sonraki boş ID önerisi: `4D41434552414391` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
+Sonraki boş ID önerisi: `4D41434552414393` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
