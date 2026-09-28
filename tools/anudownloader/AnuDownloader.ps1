@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.16.12"
+$AppVersion = "2.16.13"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 # index.json sources, tried in order. The GitHub contents API is never cached
@@ -1134,6 +1134,10 @@ function Test-AnuSeedOnlyPath($manifestPath) {
         "config/apotheosis/adventure.cfg"
     )
     if ($alwaysSync -contains $p) { return $false }
+    # The quest book: on the server it is sent from the server, but single player
+    # reads the local copy, which is where quests are tested. It has to follow
+    # the server's quests or single player keeps showing an old quest book.
+    if ($p -like "config/ftbquests/quests/*") { return $false }
     return ($p -like "config/*" -or $p -like "mods/documentation/*" -or $p -like "mods/.connector/*")
 }
 
