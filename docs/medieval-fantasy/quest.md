@@ -143,11 +143,11 @@ Kapı görevinden iki kol çıkar: **sağ kol** Iron's Spells (yukarıdaki 1–2
 
 | # | Görev | ID | Bağlı olduğu | Hedef | Ödül | Not |
 |---|---|---|---|---|---|---|
-| 22 | **Büyü Bağlama Masası** | `4D41434552414364` | 0 | `spell_engine:spell_binding` **craftla** (`only_from_crafting`) | 2 Can İksiri (tek ödül, `Count: 2b`, `…66`) | Konum (-2, 0). |
+| 22 | **Büyü Bağlama Masası** | `4D41434552414364` | 0 | `spell_engine:spell_binding` **craftla** (`only_from_crafting`) | 2 Can İksiri (iki ayrı ödül: `…66`, `…7B`) | Konum (-2, 0). |
 | 23 | **Sınıflar** | `4D41434552414367` | 22 | `checkmark` | — | Kitap yaratma (Book + 1 seviye), 8 sınıf kitabı, lapis ile büyü bağlama, kademe kuralı, Spell Book yuvası, tuşlar. |
 | 24 | **Rünler** | `4D41434552414369` | 22 | `runes:crafting_altar` **craftla** | — | Hangi sınıf hangi rünü harcar, sunak iki kat verir, Rune Pouch. |
 | 25–32 | **Sınıf yolları** (8 adet) | `…6B` – `…79` (task: +1) | 23 | `advancement` task: `rpg_series:spell_novice_<sınıf>` (kitaba ilk büyüyü bağlamak) | — | Arcane, Ateş, Buz (wizards), Paladin, Rahip (paladins), Okçu (archers), Haydut, Savaşçı (rogues). Açıklamada kitap, silahlar, bedel ve 6 büyü. 2 sütun × 4 satır (x -6 / -7.5). |
 
 - **RPG Series görev tespiti:** Spell Engine'in kendi advancement'ları (`rpg_series:*`) görev olarak kullanılabilir: `type: "advancement"`, `advancement: "rpg_series:..."`, `criterion: ""`. Masayı ziyaret: `rpg_series:classes`; kitap yaratma: `rpg_series:path_choose_<sınıf>`; ilk büyüyü bağlama: `spell_novice_<sınıf>`; kitabı doldurma: `spell_master_<sınıf>`; kitaptan büyü atma: `spell_cast_<sınıf>_book`.
 
-Sonraki boş ID önerisi: `4D4143455241437B` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
+Sonraki boş ID önerisi: `4D4143455241437C` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
