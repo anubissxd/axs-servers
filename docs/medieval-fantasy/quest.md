@@ -150,4 +150,20 @@ Kapı görevinden iki kol çıkar: **sağ kol** Iron's Spells (yukarıdaki 1–2
 
 - **RPG Series görev tespiti:** Spell Engine'in kendi advancement'ları (`rpg_series:*`) görev olarak kullanılabilir: `type: "advancement"`, `advancement: "rpg_series:..."`, `criterion: ""`. Masayı ziyaret: `rpg_series:classes`; kitap yaratma: `rpg_series:path_choose_<sınıf>`; ilk büyüyü bağlama: `spell_novice_<sınıf>`; kitabı doldurma: `spell_master_<sınıf>`; kitaptan büyü atma: `spell_cast_<sınıf>_book`.
 
-Sonraki boş ID önerisi: `4D4143455241437C` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
+**Üst kol: Apotheosis** (kapıdan yukarı; sol sütun macera, sağ sütun efsun):
+
+| # | Görev | ID | Bağlı olduğu | Hedef | Ödül | Not |
+|---|---|---|---|---|---|---|
+| 33 | **Nadir Eşyalar** | `…7C` | 0 | advancement `apotheosis:affix/root` (affix'li eşya edin) | — | Nadirlik renkleri, eşyaların kaynağı, bosslar. (0, -2) |
+| 34 | **Mücevherler** | `…7E` | 33 | `apotheosis:affix/gem` | — | Mücevher nadirlikleri; örs düşürerek Gem Dust. (-1.5, -3.5) |
+| 35 | **Mücevher Yuvası** | `…80` | 34 | `apotheosis:affix/socket` | — | Smithing Table ile takma, Sigil of Socketing / Withdrawal. |
+| 36 | **Kurtarma Masası** | `…82` | 35 | `apotheosis:salvaging_table` **craftla** | 2 Can İksiri (`…84`) | Nadirlik malzemeleri. |
+| 37 | **Mücevher Kesme Masası** | `…85` | 36 | `apotheosis:gem_cutting_table` **craftla** | 2 Can İksiri (`…87`) | Mücevher yükseltme. |
+| 38 | **Yeniden Dövme Masası** | `…88` | 37 | `apotheosis:simple_reforging_table` **craftla** | 2 Can İksiri (`…8A`) | Reforging Table'a yükseltme. (-1.5, -9.5) |
+| 39 | **Efsunun Sırları** | `…8B` | 33 | `apotheosis:enchanting/30ench` | — | Eterna / Quanta / Arcana. (1.5, -3.5) |
+| 40 | **Hellshelf** | `…8D` | 39 | `apotheosis:enchanting/hellshelf` | — | Hellshelf, Seashelf. |
+| 41 | **Güçlü Efsun** | `…8F` | 40 | `apotheosis:enchanting/60ench` | — | Güçlendirilmiş raflar, Deepshelf / Endshelf. (1.5, -6.5) |
+
+- **Apotheosis rakamları** jar'daki `data/apotheosis/enchanting_stats/*.json`'dan doğrulandı: seviye = Eterna × 2; normal kitaplık en fazla 15 Eterna (30. seviye), Hellshelf / Seashelf en fazla 22.5 (45), Blazing / Glowing Hellshelf ve Crystalline / Heart-Forged Seashelf 30 (60), Deepshelf 35–37.5, Endshelf 45–50 (100).
+
+Sonraki boş ID önerisi: `4D41434552414391` ve sonrası (bölüm ID'si + artan son hex hane: …39, 3A, 3B, 3C…).
