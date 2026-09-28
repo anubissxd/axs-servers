@@ -47,4 +47,3 @@ Bir iş yarım kalırsa buraya yazılır, bitince silinir. Böylece öbür kişi
   - Doğru anahtar `"irons_spellbooks:spell_container"`. Hem görev filtresinde hem ikonda düzeltilmeli; `quest.md`'deki not da yanlış.
   - Eklenti okullarının hepsi (Cataclysm Spellbooks'un technomancy'si, Apprentice Codex'in eldritch'i, varsa diğerleri) araştırılıp her okula bir Common parşömen görevi eklenecek.
   - Araştırma için yazılan geçici komut dosyası `/tmp/pa/zz_anubis_spell_dump.js`'e çekildi; sunucuda değil.
-- **İksir yığını 16:** `kubejs/startup_scripts/anubis_potion_stack.js` hazır. Sonraki "Güncelle" ile hem sunucuya hem pakete girer.
