@@ -131,7 +131,7 @@ Maceracı rütbesine ait, modları öğreten görevler. Görev listesinden alın
 
 | # | Görev | ID | Bağlı olduğu | Hedef | Ödül | Not |
 |---|---|---|---|---|---|---|
-| 0 | **Maceracı Rütbesi** (kapı) | `4D41434552414332` | — | Stage `rank_maceraci` | — | Miu'dan rütbe alınca kendiliğinden tamamlanır. Bölümdeki bütün görevler buna bağlanır. |
+| 0 | **Maceracı Rütbesi** (kapı) | `4D41434552414332` | — | Stage `rank_maceraci` | **Başlangıç kiti:** Demir Kılıç, Demir Kazma, 4 Can İksiri, 16 Ekmek (`4D41434552414464`–`…67`) | Miu'dan rütbe alınca kendiliğinden tamamlanır. Bölümdeki bütün görevler buna bağlanır. |
 | 1 | **Büyü Masası** | `4D41434552414334` | 42 (Büyüler ve Rünler) | `irons_spellbooks:inscription_table` **craftla** (`only_from_crafting`) | 2 Can İksiri (Instant Health I; tek ödül `Count: 2b`, `4D41434552414336`) | Tekli. Iron's Spells'e giriş: büyü parşömenlerini büyü kitabına işlemek. `hide_until_deps_complete`. |
 | 2 | **Büyü Kitabı** | `4D41434552414338` | 1 | `irons_spellbooks:iron_spell_book` (Ironbound Tome) **craftla** (`only_from_crafting`) | 2 Can İksiri (tek ödül, `4D4143455241433A`) | Zincir: Büyü Masası → Büyü Kitabı. İlk büyü kitabı, 6 büyü yuvası. `hide_until_deps_complete`. |
 | 3 | **Parşömen Ocağı** | `4D4143455241433C` | 2 | `irons_spellbooks:scroll_forge` **craftla** (`only_from_crafting`) | 2 Can İksiri (tek ödül, `…3E`) | Zincir devamı. Buradan yol ikiye ayrılır. |
@@ -252,4 +252,4 @@ Yerleşim: kapı (0, 0) → **Büyüler ve Rünler** (2, 0) → sağ-yukarı **I
 
 **ID'ler:** Bölümün tek bayt son eki (`4D414345524143xx`) `…FF`'de doldu. Sonrası `4D414345524144xx` önekiyle devam eder; bu önek bölüm ID'si ile çakışmaz. Her ID tam **16 hex hane** olmalı; 17 haneli bir ID FTB Quests'i bozar.
 
-Sonraki boş ID önerisi: `4D41434552414464` ve sonrası.
+Sonraki boş ID önerisi: `4D41434552414468` ve sonrası.
