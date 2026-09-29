@@ -38,6 +38,7 @@ function hubButtons() {
     btn('Rapor veriyorum.', [tag('erwin_rep'), CLOSE]),
     btn('Seferim nasıl gidiyor?', [tag('erwin_info'), CLOSE]),
     btn('Birlik kaydım.', [tag('erwin_stat'), CLOSE]),
+    btn('Sefer defterim.', [tag('erwin_log'), CLOSE]),
     btn('Seferi bırakıyorum.', [tag('erwin_abort'), CLOSE]),
     btn('Tedarik.', ['{Type:"OPEN_TRADING_SCREEN",Id:' + TRADE_ID + '}']),
     btn('Ayrılıyorum.', [CLOSE])
