@@ -11,5 +11,6 @@
 | [Kral Kaelen](vlorya-krali.md) | Vlorya Kralı | İnsan | -662, 85, -253 | Vlorya |
 | [Kraliçe Elyndra](granfos-kralicesi.md) | Granfos Kraliçesi | İnsan | -826, 79, -485 | Granfos |
 | [Usta Büyücü](usta-buyucu.md) | — | İnsan | -789, 89, -330 | Granfos |
+| [Yoruichi](yoruichi.md) | — | Kedi | -673, -262 civarı (planlanan) | Vlorya (bağımsız) |
 
 Unvanlar oyunda ismin yanında gri-italik görünür (Easy NPC'de ayrı unvan satırı yok).
