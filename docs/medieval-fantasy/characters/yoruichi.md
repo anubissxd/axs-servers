@@ -95,7 +95,7 @@ Diyaloglar: `l3_teklif`, `l3_devam`, `l3_odul`, `l3_bitti`. Bağlamak için (L2'
 - **Oturduğu yer (ev):** -1032.518, 81.0, -338.304 (`YORUICHI_HOME`, `yoruichi_chase.js`). Oturma animasyonunda durur (poz arayüzden seçilecek, anahtar henüz bilinmiyor).
 - **İlk Shunpo (kaçış) noktası:** -1033.554, 72, -318.817 (`YORUICHI_FIRST_HOP`). Sonraki atlamalar bu yönde ileriye doğru otomatik üretilir (12–18 blok, zemin kontrolüyle). Kimse kovalamazsa 60 sn sonra eve döner.
 - Skin push edilmeden önce konumlar sabitlenecek; VDS'e "Güncelle" ile gidecek.
-- **Bakış yönü:** Yoruichi evinde **güneye (+Z)** bakar (`yaw 0`, `pitch 0`) ve **yaslanır** (Easy NPC `leaning` pozu). Eve dönerken bu yöne çevrilir ve tekrar yaslanır.
+- **Bakış yönü:** Yoruichi evinde **kuzeye (-Z)** bakar (`yaw 180`, `pitch 0`) ve **yaslanır** (Easy NPC `leaning` pozu). Eve dönerken bu yöne çevrilir ve tekrar yaslanır.
 - **Gölge Klon (L3):** İlk Shunpo noktasında (`-1033.554, 72, -318.817`) doğar; nokta yüklü değilse (yerel test) oyuncunun yakınına düşer.
 - **Geri sayım:** Yoruichi evde değilken 60 sn'lik eve dönüş süresi, 60 blok içindeki oyunculara action bar'da gösterilir ("Yoruichi eve dönüyor: N sn").
 
