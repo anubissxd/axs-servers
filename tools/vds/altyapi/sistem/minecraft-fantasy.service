@@ -1,0 +1,17 @@
+[Unit]
+StartLimitIntervalSec=600
+StartLimitBurst=5
+Description=Medieval Fantasy Minecraft Server
+After=network.target
+
+[Service]
+Type=forking
+WorkingDirectory=/root/servers/medieval-fantasy
+ExecStart=/usr/bin/screen -dmS fantasy /root/servers/medieval-fantasy/run.sh nogui
+ExecStop=/usr/bin/screen -S fantasy -X stuff 'stop\n'
+Restart=on-failure
+RestartSec=10
+User=root
+
+[Install]
+WantedBy=multi-user.target

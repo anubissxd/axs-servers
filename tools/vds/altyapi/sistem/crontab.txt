@@ -1,0 +1,3 @@
+* * * * * /usr/bin/python3 /root/scripts/update_players.py >> /root/scripts/update_players.log 2>&1
+0 4 * * * /root/scripts/backup_fantasy.sh >/dev/null 2>&1
+* * * * * /usr/bin/python3 /root/scripts/chunky_guard.py >/dev/null 2>&1

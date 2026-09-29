@@ -23,6 +23,8 @@ Bir sistemi değiştirdiğinde (yeni script, yeni kural, yeni klasör) ilgili do
 | [patchnotes.md](patchnotes.md) | Yama notları: nerede durur, nasıl yazılır, Discord duyurusu, gece kuralı |
 | [anudownloader.md](anudownloader.md) | AnuDownloader uygulaması, manifest, paket içeriği, uygulamanın kendisini güncelleme |
 | [assets.md](assets.md) | **Görseller:** büyü ikonları (`assets/spell-icons/`) ve NPC dokuları (`assets/npc-skins/`): kurallar, adlandırma, nasıl bağlanır |
+| [vds-tasima.md](vds-tasima.md) | **VDS taşıma / felaket kurtarma:** yedek nerede (GitHub release, şifreli), parola nerede, yeni VDS'te sırayla geri kurulum, yeni IP'de değişecekler |
+| [vds-tasima.md](vds-tasima.md) | **VDS taşıma / felaket kurtarma:** yedek nerede (GitHub release, şifreli), parola nerede, yeni VDS'te sırayla geri kurulum, yeni IP'de değişecekler |
 | [medieval-fantasy/quest.md](medieval-fantasy/quest.md) | Evren, rütbeler, FTB Quests / Easy NPC teknik detayları. **Görev eklemeden önce okunur.** |
 | [medieval-fantasy/test-erwin-hocalar.md](medieval-fantasy/test-erwin-hocalar.md) | Erwin ve Kakashi/Itachi için **gerçek oyun test listesi** (henüz oynanmadı) |
 | [medieval-fantasy/characters/](medieval-fantasy/characters/) | NPC'ler (isim, konum, UUID, diyalog) |
@@ -45,6 +47,7 @@ Genel proje kuralları (sunucuların bağımsızlığı, mod ekleme/kaldırma, y
 
 Bir iş yarım kalırsa buraya yazılır, bitince silinir. Böylece öbür kişi (veya Claude'u) nerede kalındığını görür.
 
+- **VDS taşıma (2026-09-30, ACİL):** Eski VDS (`31.58.91.7`) silinecek. Sunucu kapatıldı (2026-09-29 22:31 UTC), her şey şifreli olarak GitHub release `vds-yedek-2026-09-30`'a yedeklendi, kod ve ayarlar repoda `tools/vds/altyapi/`. **Yeni VDS gelene kadar bekle**, sonra [vds-tasima.md](vds-tasima.md) 2. bölümü izle. Parola Anubis'in bilgisayarında (`Desktop\Anubis\VDS-Yedek-Anahtar.txt`), repoda yok. Yeni IP'de değişecekler aynı dosyanın 3. bölümünde.
 - **Oyuncu sıfırlama (2026-09-28):** Anubissxd ve swxff karakterleri sıfırlandı (yedek: `/root/backups/medieval-fantasy/2026-09-28-before-player-reset`). Oyuncu dosyaları silindi, FTB Ranks rütbeleri kaldırıldı, swxff'in OP'si alındı. Görev ilerlemesi ve yetenek ağaçları sunucu belleğinde durduğu için `kubejs/server_scripts/anubis_player_reset.js` ikisinin **ilk girişinde** bunları komutla sıfırlar. İkisi de girip logda `ANUBIS_RESET tamamlandi` görüldükten sonra bu dosya silinir (sonraki "Güncelle"den önce).
 - **Erwin, Kakashi, Itachi (2026-09-29):** Erwin'in Keşif Birliği seferleri VDS'te canlı; Kakashi (Chidori) ve Itachi (Amaterasu, Tsukiyomi) sistemi hazır ama **NPC'ler henüz dünyada yok** (skin ve konum bekleniyor). Hiçbiri gerçek oyuncuyla test edilmedi: [test-erwin-hocalar.md](medieval-fantasy/test-erwin-hocalar.md). Erwin havuz kayıtları bir sonraki "Güncelle"de gider; hocalar NPC kurulunca havuza yazılır.
 - **Yoruichi / Shunpo (2026-09-29):** VDS'te canlı ve L1–L3 swxff tarafından denendi; ayrıntı [yoruichi.md](medieval-fantasy/characters/yoruichi.md). Açık kararlar (aynı dosyada "Açık konular"): kayıp parşömen yeniden alma, `rank_vloryan` şartı, PvP stun/hasar, FTB Quests keşif görevi. Yeni büyü ve ücret gibi oyuncuya dönük değişiklikler havuzda; bir sonraki "Güncelle"de yama notuna girer.

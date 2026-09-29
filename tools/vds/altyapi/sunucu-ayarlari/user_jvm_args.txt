@@ -1,0 +1,15 @@
+-Xms1G
+-Xmx7G
+-XX:+UseG1GC
+-XX:+ParallelRefProcEnabled
+-XX:MaxGCPauseMillis=200
+-XX:+UnlockExperimentalVMOptions
+-XX:+DisableExplicitGC
+-XX:G1NewSizePercent=30
+-XX:G1MaxNewSizePercent=40
+-XX:G1HeapRegionSize=8M
+-XX:G1ReservePercent=20
+-XX:G1PeriodicGCInterval=300000
+-XX:+UseStringDeduplication
+-Duser.language=en
+-Duser.country=US
