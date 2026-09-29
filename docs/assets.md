@@ -50,6 +50,7 @@ Easy NPC'lerin özel dokuları (ör. Miu ve Çamur'un gerçek kedilerine göre y
 |---|---|---|
 | `miu_v2.png` | Miu | Gerçek kedi Miu'ya göre |
 | `camur_v2.png` | Çamur | Gerçek kedi Çamur'a göre |
+| `yoruichi_v1.png` | Yoruichi | İnsan formu (Alex, ince kol); swxff ekledi |
 
 Yeni NPC dokuları (ör. Yoruichi) aynı klasöre eklenir.
 
@@ -65,7 +66,7 @@ SkinData{Type:"SECURE_REMOTE_URL", URL:"https://raw.githubusercontent.com/anubis
 
 ### Kurallar
 
-- **64×32 PNG** (klasik Minecraft doku düzeni). Kedi NPC'ler vanilla `tabby.png` düzenine göre çizilir.
+- **Boyut NPC türüne göre:** kedi NPC'ler **64×32** (vanilla `tabby.png` düzeni), insan NPC'ler **64×64** (klasik oyuncu skin düzeni; Alex için ince kol).
 - **Dosya adı: `<npc>_v<sürüm>.png`**, küçük harf, Türkçe karakter yok.
 - **Dokuyu değiştirirken yeni bir dosya adı kullanın** (`miu_v2.png` → `miu_v3.png`). Oyuncuların oyunu adresi önbelleğe alır; aynı adla değiştirilen doku onlarda güncellenmez. Eski sürüm dosyası silinebilir ama önce NPC'nin adresi yeniye çevrilmiş olmalıdır.
 - Dosya `main` dalına itilmeden NPC'ye bağlanmaz: adres çalışmıyorsa NPC dokusuz görünür.

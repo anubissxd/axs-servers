@@ -1,6 +1,6 @@
 # Yoruichi
 
-- **Tür:** İnsan (easy_npc:humanoid_slim, Alex/ince kol). Önceden kediydi. Skin: [yoruichi.png](../../../distribution/medieval-fantasy/npc-textures/yoruichi.png) (uzak URL, `SECURE_REMOTE_URL`, `main` dalındaki raw adresi; diğer NPC dokuları gibi). Oyuncuların görebilmesi için dosyanın GitHub'a push edilmiş olması gerekir.
+- **Tür:** İnsan (easy_npc:humanoid_slim, Alex/ince kol). Önceden kediydi. Skin: [yoruichi_v1.png](../../../assets/npc-skins/yoruichi_v1.png) (uzak URL, `SECURE_REMOTE_URL`, `main` dalındaki raw adresi; diğer NPC dokuları gibi). Oyuncuların görebilmesi için dosyanın GitHub'a push edilmiş olması gerekir.
 - **Konum (planlanan, VDS):** Vlorya Kalesi (-673, -262) civarı, kale dışında bir yerde. Kesin koordinat VDS'e yerleştirilirken terrain'e göre ayarlanır.
 - **Konum (local test):** Dünya spawn'ına yakın (112, 87, -96) — sadece diyalog/mekanik testi için, final değil.
 - **Krallık:** [Vlorya](../kingdoms/vlorya.md) — resmi üye değil, bağımsız, kalenin çevresinde dolaşan gizemli bir kedi.

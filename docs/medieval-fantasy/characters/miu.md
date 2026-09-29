@@ -5,7 +5,7 @@
 - **Krallık:** [Caddy](../kingdoms/caddy.md)
 - **Görevi:** Oyunculara Maceracı rank'ini verir (planlanan)
 - **Poz:** Oturuyor, hareketsiz
-- **Görünüş:** Özel doku [miu_v2.png](../../../distribution/medieval-fantasy/npc-textures/miu_v2.png), gerçek kedi Miu'ya göre
+- **Görünüş:** Özel doku [miu_v2.png](../../../assets/npc-skins/miu_v2.png), gerçek kedi Miu'ya göre
 - **İlişkiler:** Çamur'un arkadaşı
 
 ## Hikâye

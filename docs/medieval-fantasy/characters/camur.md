@@ -6,7 +6,7 @@
 - **Krallık:** [Caddy](../kingdoms/caddy.md) — kralı
 - **Görevi:** —
 - **Poz:** Oturuyor
-- **Görünüş:** Özel doku [camur_v2.png](../../../distribution/medieval-fantasy/npc-textures/camur_v2.png), gerçek kedi Çamur'a göre
+- **Görünüş:** Özel doku [camur_v2.png](../../../assets/npc-skins/camur_v2.png), gerçek kedi Çamur'a göre
 - **Sır:** Oyuncular onu "Kralın Kedisi" olarak bilir, ama Caddy Krallığı'nın kralı Çamur'un kendisidir.
 - **İlişkiler:** Çiftçi Tobias ve Şövalye Aldric onun adamları; Miu arkadaşı
 
