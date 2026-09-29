@@ -54,6 +54,9 @@ const NPCS = {
     ilk: 'Yaa... Bir de sen mi? Peki. Ben Kakashi. Gelmişsin madem, bir şey soracaksın herhalde. Kısa tut, sayfayı bitirmem lazım.',
     hubText: 'Tamam, dinliyorum. Chidori mi? Yıldırımı elde toplayıp tek vuruşta bırakmak... Kolay değil. Her seviye ayrı bir sınav ister ve sınavlar hızla ilgilidir. Erwin\'in rütbesi olmadan da bir şey öğretmem.',
     kabul: 'Sana bir şey soracaktım.',
+    kars: 'Yine sen. Sayfamı bozmadan önce söyle: ne var? Bir şey mi istiyorsun, yoksa sadece etrafta mı dolaşıyorsun?',
+    karsBtn: 'Bir şey öğrenmek istiyorum.',
+    karsGeri: 'Sadece geçiyordum.',
     buttons: () => [
       btn('Chidori öğrenmek istiyorum.', [tag('hoca_req_chidori'), CLOSE]),
       btn('Sınavı bildiriyorum.', [tag('hoca_rep_kakashi'), CLOSE]),
@@ -68,6 +71,9 @@ const NPCS = {
     ilk: 'Yo! Ben Gojo Satoru. Evet, o en güçlü olan. İmza yok, üzgünüm. Bir şey soracaksan sor ama hızlı; sonsuzlukla meşgulüm.',
     hubText: 'Mavi, Kırmızı, Mor... Sırayla, tabii. Önce ikisini öğrenirsin, üçüncüsü ikisinin birleşimi. Keşif Birliği\'nde yükselmeden kapıdan içeri bile almam, hehe.',
     kabul: 'Senden bir şey öğrenmek istiyorum.',
+    kars: 'Yo, yine sen! Bana hayran mısın yoksa gerçekten bir işin mi var? Şaka şaka. Ya da değil. Ne istiyorsun?',
+    karsBtn: 'Bir şey öğrenmek istiyorum.',
+    karsGeri: 'Sadece selam vermek istedim.',
     buttons: () => [
       btn('Mavi öğrenmek istiyorum.', [tag('hoca_req_ao'), CLOSE]),
       btn('Kırmızı öğrenmek istiyorum.', [tag('hoca_req_aka'), CLOSE]),
@@ -90,6 +96,9 @@ const NPCS = {
     ilk: 'Yaklaşmışsın. Adım Itachi. Buraya gelenlerin çoğu bir şey ister ve pişman olur. Sen ne için buradasın?',
     hubText: 'Bilgi arıyorsun. Amaterasu gözlerin gördüğünü yakan kara alevdir; Tsukiyomi ise zihni kıran yanılsama. İkisi de bedel ister. Amaterasu için Gece Avcısı, Tsukiyomi için Eşik Muhafızı olmalısın. Önce alev, sonra gölge.',
     kabul: 'Seninle konuşmak istiyorum.',
+    kars: '...Yine sen. Konuş. Ama uzun tutma.',
+    karsBtn: 'Öğrenmek istediğim şeyler var.',
+    karsGeri: 'Önemli değil.',
     diger: () => [
       btn('Eğitim durumum.', [tag('hoca_info'), CLOSE]),
       btn('Amaterasu parşömenimi kaybettim.', [tag('hoca_lost_amaterasu'), CLOSE]),
@@ -111,6 +120,7 @@ if (!N) { console.error('bilinmeyen npc: ' + npc); process.exit(1) }
 const dialogs = [
   dialog('hoca_ret', N.ret, [btn('Anlıyorum.', [CLOSE])], 'hoca_ret'),
   dialog('hoca_ilk', N.ilk, [btn(N.kabul, [tag('hoca_met_' + npc), open('hoca_hub')], 'hoca_kabul')], 'hoca_ilk'),
+  dialog('hoca_kars', N.kars, [btn(N.karsBtn, [open('hoca_hub')]), btn(N.karsGeri, [CLOSE])], 'hoca_kars'),
   dialog('hoca_hub', N.hubText, N.buttons(), 'hoca_hub')
 ]
 if (N.diger) dialogs.push(dialog('hoca_diger', 'Başka ne var?', N.diger(), 'hoca_diger'))
@@ -120,7 +130,7 @@ function route(dlg, cond) {
 const routes = [
   route('hoca_ret', 'tag=!rank_maceraci'),
   route('hoca_ilk', 'tag=rank_maceraci,tag=!hoca_met_' + npc),
-  route('hoca_hub', 'tag=rank_maceraci,tag=hoca_met_' + npc)
+  route('hoca_kars', 'tag=rank_maceraci,tag=hoca_met_' + npc)
 ]
 const skinUuid = uuidToInts(nameUuid(SKIN_URL))
 const nbt = '{UUID:' + uuidToInts(UUID) + ',CustomName:' + q('{"color":"' + N.color + '","text":"' + N.name + '"}') + ',Tags:["korunan","hoca_npc_' + npc + '"],' +
@@ -145,13 +155,20 @@ fs.mkdirSync(fnDir, { recursive: true })
 fs.writeFileSync(path.join(fnDir, npc + '_kur.mcfunction'), out.join(NL) + NL)
 // Mevcut NPC'nin yalnızca diyalog ve yönlendirmelerini yeniler (HOCA_UUID = NPC'nin gerçek uuid'si)
 const SEL = '@e[tag=hoca_npc_' + npc + ',limit=1]'
-const upd = [
-  '# ' + N.name + ' diyalog yenileme. Üretici: tools/yoruichi/gen_hocalar.js',
-  'forceload add ' + Math.floor(Number(X)) + ' ' + Math.floor(Number(Z)),
+// İki aşamalı: önce yığın yüklenir (forceload), 3 sn sonra yazılır. Aynı tikte yazmak yüklenmemiş yığında sessizce başarısız olur.
+const cxz = Math.floor(Number(X)) + ' ' + Math.floor(Number(Z))
+const upd1 = [
+  '# ' + N.name + ' diyalog yenileme, 1. aşama. Üretici: tools/yoruichi/gen_hocalar.js',
+  'forceload add ' + cxz,
+  'schedule function yoruichi:' + npc + '_diyalog2 60t replace'
+]
+const upd2 = [
+  '# ' + N.name + ' diyalog yenileme, 2. aşama.',
   'data modify entity ' + SEL + ' ActionData.ActionEventSet set value {ON_INTERACTION:[' + routes.join(',') + ']}',
   'data modify entity ' + SEL + ' DialogData set value {Type:"CUSTOM",DialogDataSet:[' + dialogs.join(',') + ']}',
-  'forceload remove ' + Math.floor(Number(X)) + ' ' + Math.floor(Number(Z)),
+  'forceload remove ' + cxz,
   'say ' + N.name + ' diyalogları yenilendi.'
 ]
-fs.writeFileSync(path.join(fnDir, npc + '_diyalog.mcfunction'), upd.join(NL) + NL)
+fs.writeFileSync(path.join(fnDir, npc + '_diyalog.mcfunction'), upd1.join(NL) + NL)
+fs.writeFileSync(path.join(fnDir, npc + '_diyalog2.mcfunction'), upd2.join(NL) + NL)
 console.log('ok', npc, 'uuid', UUID, 'skin', SKIN_URL)
