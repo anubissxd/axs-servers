@@ -5,7 +5,7 @@
 | [Miu](miu.md) | — | Kedi | -979, 68, -380 | Caddy |
 | [Çamur](camur.md) | Kralın Kedisi | Kedi | -1045, 71, -344 | Caddy (kralı) |
 | [Çiftçi Tobias](ciftci.md) | — | İnsan | -979, 68, -371 | Caddy |
-| [Şövalye Aldric](sovalye.md) | — | İnsan | -988, 68, -371 | Caddy |
+| [Erwin Smith](erwin-smith.md) | — | İnsan | -988, 68, -371 | Caddy |
 | [Kral Vargoth](drondra-krali.md) | Drondra Kralı | İnsan | -634, 76, -432 | Drondra |
 | [Kraliçe Morvena](drondra-kralicesi.md) | Drondra Kraliçesi | İnsan | -634, 76, -436 | Drondra |
 | [Kral Kaelen](vlorya-krali.md) | Vlorya Kralı | İnsan | -662, 85, -253 | Vlorya |

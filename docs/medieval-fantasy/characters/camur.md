@@ -8,7 +8,7 @@
 - **Poz:** Oturuyor
 - **Görünüş:** Özel doku [camur_v2.png](../../../assets/npc-skins/camur_v2.png), gerçek kedi Çamur'a göre
 - **Sır:** Oyuncular onu "Kralın Kedisi" olarak bilir, ama Caddy Krallığı'nın kralı Çamur'un kendisidir.
-- **İlişkiler:** Çiftçi Tobias ve Şövalye Aldric onun adamları; Miu arkadaşı
+- **İlişkiler:** Çiftçi Tobias ve Erwin Smith (eski adıyla Şövalye Aldric) onun adamları; Miu arkadaşı
 
 ## Skin / Texture
 

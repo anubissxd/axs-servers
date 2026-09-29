@@ -51,6 +51,7 @@ Easy NPC'lerin özel dokuları (ör. Miu ve Çamur'un gerçek kedilerine göre y
 | `miu_v2.png` | Miu | Gerçek kedi Miu'ya göre |
 | `camur_v2.png` | Çamur | Gerçek kedi Çamur'a göre |
 | `yoruichi_v1.png` | Yoruichi | İnsan formu (Alex, ince kol); swxff ekledi |
+| `erwin_v1.png` | Erwin Smith | İnsan (klasik kol), eski Şövalye Aldric'in yerine; swxff ekledi |
 
 Yeni NPC dokuları (ör. Yoruichi) aynı klasöre eklenir.
 
