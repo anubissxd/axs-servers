@@ -20,14 +20,14 @@
 
 | Yol | Sınav | Ücret |
 |---|---|---|
-| Amaterasu L1 Kara Alevin Doğuşu | 14 Nether askeri | 6 |
-| Amaterasu L2 Sönmeyen Ateş | 14 kale nöbetçisi (blaze, wither iskeleti, ghast) | 10 |
-| Amaterasu L3 Yakılan Ruhlar | 8 kadim varlık (mezarlık elit, yıkıntı bekçisi) | 16 |
-| Tsukiyomi L1 Sahte Gerçek (sahne) | 5 yanılsama: 1 gerçek (durağan), 4 sahte (sürekli yer değiştirir). Gerçeği öldür; sahteye vurursan körlük. 2 dk | 8 |
-| Tsukiyomi L2 Aynaların Ardı | 8 büyücü (Iron's kült, evoker, illusioner) | 14 |
-| Tsukiyomi L3 Sonsuz Gece | 1 gece hükümdarı (Cataclysm/BoMD/Mowzie/Iron's boss) | 22 |
+| Amaterasu L1 Kara Alevin Doğuşu | 14 Nether askeri | 7 |
+| Amaterasu L2 Sönmeyen Ateş | 14 kale nöbetçisi (blaze, wither iskeleti, ghast) | 12 |
+| Amaterasu L3 Yakılan Ruhlar | 8 kadim varlık (mezarlık elit, yıkıntı bekçisi) | 18 |
+| Tsukiyomi L1 Sahte Gerçek (sahne) | 5 yanılsama: 1 gerçek (durağan), 4 sahte (sürekli yer değiştirir). Gerçeği öldür; sahteye vurursan körlük. 2 dk | 9 |
+| Tsukiyomi L2 Aynaların Ardı | 8 büyücü (Iron's kült, evoker, illusioner) | 16 |
+| Tsukiyomi L3 Sonsuz Gece | 1 gece hükümdarı (Cataclysm/BoMD/Mowzie/Iron's boss) | 25 |
 
-Toplam: Amaterasu 32, Tsukiyomi 44 zümrüt bloğu.
+Toplam: Amaterasu 37, Tsukiyomi 50 zümrüt bloğu.
 
 **Sahneli sınav:** Tsukiyomi L1'de 5 "Yanılsama" doğar: biri gerçek (12 canlı, yerinden kıpırdamaz), dördü sahte (1 canlı, yarım saniyede bir biri yer değiştirir). Sahteyi vurunca oyuncuya 4 sn körlük + yavaşlık gelir ve 3 sn sonra yenisi doğar. Gerçek olan ölünce sınav geçilir. Süre dolarsa ya da başkası öldürürse hocadan ücretsiz yeniden başlatılır.
 

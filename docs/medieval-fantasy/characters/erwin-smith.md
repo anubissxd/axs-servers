@@ -22,19 +22,19 @@
 
 **Şart:** `rank_maceraci`. Rütbesizlere Erwin reddeder (`erwin_ret`).
 
-**Akış:** "Sefer istiyorum" → Erwin rütbeye uygun **3 sefer teklif eder** (sohbette tıklanır: [A] [B] [C]) → oyuncu seçer, hedefi öldürür (eylem çubuğunda sayaç) → "Rapor veriyorum" → ödül. Aynı anda tek sefer; sefer sonrası 2 dk, bırakınca 5 dk bekleme; günde en çok 6 sefer. Son 4 sefer teklifte tekrarlanmaz; teklifler 10 dk geçerli. Hedef sayısı her tekliflenişte aralıktan rastgele seçilir.
+**Akış:** "Sefer istiyorum" → Erwin rütbeye uygun **3 sefer teklif eder** (sohbette tıklanır: [A] [B] [C]) → oyuncu seçer, hedefi öldürür (eylem çubuğunda sayaç) → "Rapor veriyorum" → ödül. Aynı anda tek sefer; sefer sonrası 4 dk, bırakınca 5 dk bekleme; günde en çok 5 sefer. Son 4 sefer teklifte tekrarlanmaz; teklifler 10 dk geçerli. Hedef sayısı her tekliflenişte aralıktan rastgele seçilir.
 
-**Rütbeler (terfi):** Yeminsiz → Kül Bekçisi (3 Sis Devriyesi) → Kan Yeminli (4 Av) → Gece Avcısı (4 Karanlığa İniş) → Eşik Muhafızı (3 Kan Sözü). Rütbe `erwin_rank_1..4` etiketidir; Erwin'in ana diyaloğu rütbeye göre değişir.
+**Rütbeler (terfi):** Yeminsiz → Kül Bekçisi (4 Sis Devriyesi) → Kan Yeminli (5 Av) → Gece Avcısı (5 Karanlığa İniş) → Eşik Muhafızı (4 Kan Sözü). Rütbe `erwin_rank_1..4` etiketidir; Erwin'in ana diyaloğu rütbeye göre değişir.
 
 | Tür | Kim görür | Hedefler | Ödül (zümrüt bloğu) |
 |---|---|---|---|
 | I Sis Devriyesi | Yeminsiz, Kül Bekçisi | zombi, iskelet, örümcek, creeper, boğulmuş, slime (8-30 adet) | 1-2 |
-| II Av | Kül Bekçisi, Kan Yeminli | yağmacı, enderman, mezarlık, derin karanlık, kaos, cadı, Nether askeri, büyücü, düşmüş şövalye (4-16) | 1-3 |
-| III Karanlığa İniş | Kan Yeminli, Gece Avcısı | ravager, kale, mutant, kadim yaratıklar, orman ruhu, yıkıntı bekçisi (1-16) | 3-5 |
-| IV Kan Sözü | Gece Avcısı, Eşik Muhafızı | tek boss: Cataclysm, BoMD, Mowzie, Iron's, Souls | 6-10 |
-| V Kıyamet Seferi | Eşik Muhafızı | ejderha, Leviathan/Scylla, Wither, Warden, Ender Ejderhası | 12-18 |
+| II Av | Kül Bekçisi, Kan Yeminli | yağmacı, enderman, mezarlık, derin karanlık, kaos, cadı, Nether askeri, büyücü, düşmüş şövalye (4-16) | 1-2 |
+| III Karanlığa İniş | Kan Yeminli, Gece Avcısı | ravager, kale, mutant, kadim yaratıklar, orman ruhu, yıkıntı bekçisi (1-16) | 2-4 |
+| IV Kan Sözü | Gece Avcısı, Eşik Muhafızı | tek boss: Cataclysm, BoMD, Mowzie, Iron's, Souls | 5-8 |
+| V Kıyamet Seferi | Eşik Muhafızı | ejderha, Leviathan/Scylla, Wither, Warden, Ender Ejderhası | 10-14 |
 
-Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekkep; IV-V'te netherite/totem) eklenir; **%5 büyük zafer** blok ödülünü ikiye katlar. Ekonomi: Yoruichi'nin eğitimi toplam 19 blok; bir Tür I seferi ortalama 1,5 blok.
+Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekkep; IV-V'te netherite/totem) eklenir; **%3 büyük zafer** blok ödülünü ikiye katlar. Ekonomi: Yoruichi'nin eğitimi toplam 19 blok; bir Tür I seferi ortalama 1,5 blok.
 
 **Teknik:** mantık `kubejs/server_scripts/erwin_seferleri.js` (şablonlar, teklif, sayaç, ödül, terfi; durum oyuncunun `persistentData`'sında `erwin_*`). Diyalog düğmeleri `erwin_req/rep/info/stat/abort` etiketi verir, script alır. Diyalogları `tools/yoruichi/gen_erwin.js` üretir (datapack fonksiyonu `yoruichi:erwin_setup`, konsoldan çalıştırılır). Yönetici komutu: `/erwin_sifirla <oyuncu>` tüm ilerlemeyi sıfırlar. Hedef kimlikleri sunucu kayıt defterinden doğrulandı; yeni mod eklenirse şablonlara elle eklenir.
 
@@ -52,6 +52,8 @@ Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekk
 - **Sinema motoru (`kubejs/server_scripts/sinema_motoru.js`):** Erwin ve hocalar için ortak. Bir senaryo adımlardan oluşur (`{t: saniye, title/sound/say/note/cmd/fn}`); oyuncuda aynı anda tek senaryo oynar, yenisi sona eklenir. Sinema yalnızca bezemedir: ödül, sayaç ve durum senaryodan bağımsız hemen işlenir. Tek istisna sahne sınavlarının senaryo sonunda başlamasıdır.
 - **Veri yedeği (`oyuncu_yedek.js`):** Oyuncunun `erwin_*` ve `hoca_*` verisi her 10 saniyede ve ölmeden hemen önce dünya verisine kopyalanır; ölüm/girişte oyuncuda eksikse geri yazılır (yönetici sıfırlaması korunur). Java çağrıları `/yedek_test` ile sunucuda doğrulandı (BASARILI).
 - **Ödül dengesi:** Nadir/OP eşyalar (Nether yıldızı, netherite kalıbı, denizin kalbi) kaldırıldı; Tür V'te büyülü altın elma %20 (1 adet), netherite külçe %10, totem %8.
+
+**Denge (zorlaştırma turu):** Hedef sayıları ~%25 arttı, blok ödülleri düştü (I 1-2, II 1-2, III 2-4, IV 5-8, V 10-14), ganimet şansları ~%20 azaldı, büyük zafer %3, günde 5 sefer, bekleme 4 dk, terfi sayıları 4/5/5/4.
 
 **Not:** Ortak sefer denendi ve kaldırıldı (kişi başı verimi artırıyordu, gereksiz görüldü).
 

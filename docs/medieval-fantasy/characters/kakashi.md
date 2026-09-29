@@ -15,16 +15,16 @@
 
 ## Eğitim
 
-Ücret zümrüt bloğu (Yoruichi'de toplam 19, Chidori 4 seviye ve güçlü olduğu için toplam 40). Hız sınavlarında öldürmeler kayan bir zaman penceresi içinde sayılır (pencere dışına düşen öldürme sayılmaz).
+Ücret zümrüt bloğu (Yoruichi'de toplam 19, Chidori 4 seviye ve güçlü olduğu için toplam 46). Hız sınavlarında öldürmeler kayan bir zaman penceresi içinde sayılır (pencere dışına düşen öldürme sayılmaz).
 
 | Seviye | Sınav | Ücret | Rütbe |
 |---|---|---|---|
-| L1 Zil Sınavı (sahne) | "Gölge Kakashi" zil taşır; oyuncu 2 blok yakına gelince yüzeyde başka bir noktaya kaçar. 90 sn içinde ona vurup öldür | 4 | Kül Bekçisi |
-| L2 Şimşek Zinciri | 150 sn içinde 10 düşman (+enderman, yağmacı) | 8 | Kül Bekçisi |
-| L3 Bin Kuşun Sesi | 120 sn içinde 8 güçlü hedef (yağmacı, mezarlık, kaos, Nether askeri) | 12 | Kan Yeminli |
-| L4 Kırılmayan Yıldırım | 180 sn içinde 6 yıkıntı bekçisi / kadim yaratık | 16 | Gece Avcısı |
+| L1 Zil Sınavı (sahne) | "Gölge Kakashi" zil taşır; oyuncu 2 blok yakına gelince yüzeyde başka bir noktaya kaçar. 90 sn içinde ona vurup öldür | 5 | Kül Bekçisi |
+| L2 Şimşek Zinciri | 150 sn içinde 10 düşman (+enderman, yağmacı) | 9 | Kül Bekçisi |
+| L3 Bin Kuşun Sesi | 120 sn içinde 8 güçlü hedef (yağmacı, mezarlık, kaos, Nether askeri) | 14 | Kan Yeminli |
+| L4 Kırılmayan Yıldırım | 180 sn içinde 6 yıkıntı bekçisi / kadim yaratık | 18 | Gece Avcısı |
 
-Ödül: o seviyenin Chidori parşömeni. Ücret bir seviye için **bir kez** alınır (sınavı bırakıp tekrar denemek ücretsiz). Kayıp parşömen: en yüksek öğrenilen seviyenin ücretinin yarısı (ör. Chidori L4 için 8 blok); ucuz olsaydı parşömen arkadaşlara çoğaltılırdı.
+Ödül: o seviyenin Chidori parşömeni. Ücret bir seviye için **bir kez** alınır (sınavı bırakıp tekrar denemek ücretsiz). Kayıp parşömen: en yüksek öğrenilen seviyenin ücretinin yarısı (ör. Chidori L4 için 9 blok); ucuz olsaydı parşömen arkadaşlara çoğaltılırdı.
 
 **Sahneli sınav:** L1'de "Gölge Kakashi" (6 canlı, NoAI, parlayan zombi, elinde zil) doğar; oyuncu yaklaşınca kaçar. Başkası öldürürse ya da süre dolarsa sahne biter; hocaya tekrar "Chidori öğrenmek istiyorum" denince **ücretsiz** yeniden başlar. Sahne mobları `korunan` etiketlidir (hub güvenli bölgesi canavar doğmasını engelliyor, bu etiket muaf tutar).
 
