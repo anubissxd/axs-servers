@@ -1,7 +1,7 @@
 {
   "pack_name": "Medieval Fantasy",
-  "version": "1.3.6",
-  "generated": "2026-09-29 15:04:09",
+  "version": "1.3.7",
+  "generated": "2026-09-29 22:29:38",
   "source": "vds:/root/servers/medieval-fantasy",
   "remove": [
     "resourcepacks/BrewinAndChewin-Excalibur_Support_1.20.1_v1.1.zip",
@@ -5591,6 +5591,13 @@
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__chidori_proc.js"
     },
     {
+      "path": "kubejs/server_scripts/erwin_seferleri.js",
+      "filename": "erwin_seferleri.js",
+      "sha256": "77c1283adbbe60a638ca8f004498134d5838347f2aa889fcda8c59f5acbed15e",
+      "size": 62767,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__erwin_seferleri.js"
+    },
+    {
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__server_scripts__example.js",
       "size": 126,
       "path": "kubejs/server_scripts/example.js",
@@ -5605,11 +5612,46 @@
       "sha256": "cc57e2f8fbbca459ad49ee5fe8beb4016c4fa0ab7d013c1fe9560e8f647baf16"
     },
     {
+      "path": "kubejs/server_scripts/hocalar_egitim.js",
+      "filename": "hocalar_egitim.js",
+      "sha256": "d7e6a667300cb0e20d074d87a51ce28fcf64f22b423fa0a3c9273dfe4fc9c7f1",
+      "size": 43368,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__hocalar_egitim.js"
+    },
+    {
+      "path": "kubejs/server_scripts/kenpachi.js",
+      "filename": "kenpachi.js",
+      "sha256": "3c069a6de819b585f7bfc6b8743b7a096accc3977780dcba6fffe902c6a4f438",
+      "size": 3743,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__kenpachi.js"
+    },
+    {
+      "path": "kubejs/server_scripts/oyuncu_yedek.js",
+      "filename": "oyuncu_yedek.js",
+      "sha256": "0636aacc575b6a2f814e62b1e2f5d7ba8f0ff47ff2565f3564b12dc4943a515e",
+      "size": 3655,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__oyuncu_yedek.js"
+    },
+    {
       "path": "kubejs/server_scripts/rasengan_proc.js",
       "filename": "rasengan_proc.js",
       "sha256": "a61db5b10545e053b881de323ab5834fa56efc7549ce7fe20fda20ba2cb4ceed",
       "size": 9372,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__rasengan_proc.js"
+    },
+    {
+      "path": "kubejs/server_scripts/sinema_motoru.js",
+      "filename": "sinema_motoru.js",
+      "sha256": "84ad490592cfa5018e2a1a986e00c1e0ef0dbb1de41931228cbd7c9118446a9f",
+      "size": 8680,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__sinema_motoru.js"
+    },
+    {
+      "path": "kubejs/server_scripts/thorfinn_ticaret.js",
+      "filename": "thorfinn_ticaret.js",
+      "sha256": "ed592b23679ff21bfa9c7ed25eea9e28f31331096c3ccbd084829f3cde8af562",
+      "size": 22097,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__thorfinn_ticaret.js"
     },
     {
       "path": "kubejs/server_scripts/tsukiyomi_proc.js",
@@ -5621,30 +5663,37 @@
     {
       "path": "kubejs/server_scripts/yoruichi_chase.js",
       "filename": "yoruichi_chase.js",
-      "sha256": "ea433fa1ba1e41f01ca5f7e671711f363c473952c4d50f41ba74445c474b185b",
-      "size": 13933,
+      "sha256": "4b71215d5a81fc0bea1ed9d170d7b6a188e2212ef45f95916d71f9e1f0829be5",
+      "size": 24038,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__yoruichi_chase.js"
     },
     {
       "path": "kubejs/server_scripts/yoruichi_flashstep_fx.js",
       "filename": "yoruichi_flashstep_fx.js",
-      "sha256": "c0f6a037a16389efa8d1575eb429365ada441cfc0e426aeb27c23b6b09df3d74",
-      "size": 18562,
+      "sha256": "518ab455dc4f580add5a7d7931f0698cd312fd1eb9aeebe8f38787be15373d8f",
+      "size": 26998,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__yoruichi_flashstep_fx.js"
     },
     {
       "path": "kubejs/server_scripts/yoruichi_l2.js",
       "filename": "yoruichi_l2.js",
-      "sha256": "f5863156628958dcad93ca3075cc8961af162d8d4e0c5a9b46918ca4f86fb866",
-      "size": 2321,
+      "sha256": "03543ce556c25aeddb0e2046f78c017a078100cf28a208ddca6f523a6fcb4953",
+      "size": 3756,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__yoruichi_l2.js"
     },
     {
       "path": "kubejs/server_scripts/yoruichi_l3.js",
       "filename": "yoruichi_l3.js",
-      "sha256": "a1ec0df061216156e432e9968485b7a13884573eff0fbb28ed59f5e16ecf022e",
-      "size": 11555,
+      "sha256": "81eb544c92cd046ebf075cf56a011ed2bb3b71d6ed4558ee2a4be3763d281253",
+      "size": 14488,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__yoruichi_l3.js"
+    },
+    {
+      "path": "kubejs/server_scripts/yoruichi_pay.js",
+      "filename": "yoruichi_pay.js",
+      "sha256": "e4d6dbf5cf7eee41557002dee46a2698aac3e4713deb43b86fce8ab0b55b0b4a",
+      "size": 3416,
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack-overflow/kubejs__server_scripts__yoruichi_pay.js"
     },
     {
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/medieval-fantasy-pack/kubejs__client_scripts__spell_scrolls_jei.js",

@@ -1,5 +1,21 @@
-# Medieval Fantasy - 1.3.6
+# Medieval Fantasy - 1.3.7
 
-- Miu'dan Maceracı rütbesini alınca görev kitabındaki ilk görev artık kendiliğinden tamamlanıyor; başlangıç kiti alınabiliyor.
-- Shunpo büyüsü eklendi: Yoruichi'nin eğitimlerini tamamlayan Vlorya'lılar bakış yönünde ışınlanabiliyor ya da bir düşmanın arkasına geçip onu sersemletebiliyor (3 seviye).
-- Chidori, Rasengan, Tsukiyomi ve Amaterasu parşömenleri artık Scroll Forge'da yapılamıyor ve sandıklarda bulunmuyor.
+- Yoruichi artık evinde yaslanarak bekliyor ve kaçış görevi aynı anda tek oyuncuya açık; 60 saniye içinde yakalanmazsa eve dönüyor ve yeniden konuşmak gerekiyor.
+- Yoruichi kaçarken ve eve dönerken artık oyuncuların Shunpo'suyla aynı siyah hız çizgisi efektini kullanıyor.
+- Shunpo büyüsü bazen "yükleniyor"da takılıp kullanılamıyordu; düzeltildi.
+- Yoruichi kaçarken gittiği yeri gösteriyor: kısa süre parlıyor, varış noktasında gökyüzüne uzanan bir ışık sütunu çıkıyor ve yönü ekranda yazıyor.
+- Shunpo'nun hakları bittiğinde büyü simgesinde diğer büyülerdeki gibi bekleme göstergesi görünüyor.
+- Yoruichi'nin 5 düşman görevinde ilerleme (0/5, 1/5...) ekranda sürekli görünüyor ve işaretlenen düşman parlıyor.
+- Yoruichi'nin eğitimleri artık ücretli: 1. eğitim 3, 2. eğitim 6, 3. eğitim 10 zümrüt bloğu (her seviye için yalnızca ilk kabulde bir kez alınır).
+- Shunpo geliştirildi: kullanırken kısa süre hasar almıyorsun, kalkış noktasında kalan siluet yakındaki düşmanları 2 saniye kendine çekiyor ve bir düşmanın arkasına geçince 1,5 saniye içinde tekrar Shunpo atarsan hak harcamadan sıradaki düşmana atlıyorsun (en fazla 3 zincir).
+- Yoruichi'nin ilk eğitiminin bitiş sahnesi kısaldı ve sahne bitmeden ikinci eğitim teklifi açılmıyor; kovalama sırasında Yoruichi'ye tıklamak artık ilk konuşmayı baştan açmıyor.
+- Spawn'daki Şövalye Aldric'in yerine Erwin Smith geldi (aynı konum, yeni ad ve görünüm).
+- Erwin Smith seferlerinin rütbeleri dark fantasy temasına çevrildi: Yeminsiz, Kül Bekçisi, Kan Yeminli, Gece Avcısı, Eşik Muhafızı.
+- Erwin Smith seferlerine Kader Zinciri (3 bölümlük bağlı seferler), Kanlı Ay (lanetli teklif, ödül x2), Kan Bahsi (ödül x1.5, ölürsen iptal), Ölüm Emri (isimli elit hedef), unvanlar ve sefer defteri eklendi.
+- Erwin Smith seferleri sinematik oldu: sefer kabulünde tür başlığı ve sesleri, Ölüm Emri belirişi, zafer başlığı ve parçacıkları, terfide ve unvanda hikâyeli sahneler, üst seviye seferlerde uzaktan kalp atışı. Rütbe ve ilerleme verisi ölümde kaybolmayacak şekilde yedekleniyor.
+- Erwin Smith seferleri daha zorlu ve dengeli oldu: hedef sayıları arttı, ödüller azaldı, günde en fazla 5 sefer, seferler arası bekleme 4 dakika, terfi için daha fazla sefer gerekiyor.
+- Erwin Smith seferleri: Maceracı rütbesiyle rütbeye göre 3 sefer teklifi, öldürme görevleri ve Birlik rütbesi terfileri. Ödül çoğunlukla zümrüt, zümrüt bloğu nadir bir ekstra; şansa bağlı ganimet de düşer. Ölüm Emri ödülü ve hedefi dengelendi.
+- Birlik rütbeleri (Yeminsiz, Kül Bekçisi, Kan Yeminli, Gece Avcısı, Eşik Muhafızı) artık oyuncu adının yanında görünüyor ve Kutsanmışın üstünde sayılıyor. Yoruichi, Kakashi, Itachi ve Gojo bu rütbeyi şart koşuyor.
+- Çiftçi Tobias yerine Thorfinn geldi ve bütün ticaret onda: mallar Birlik rütbene göre açılıyor, bedel zümrüt (zümrüt bloğu yalnızca ders ücreti), stok az ve sana özel. Thorfinn hasat siparişleriyle mahsul ve yemek karşılığı küçük zümrüt veriyor.
+- Büyü hocaları Caddy çevresinde: Kakashi (Chidori), Itachi (Amaterasu, Tsukiyomi) ve Gojo (Mavi, Kırmızı, Mor). Her seviye için Birlik rütbesi, zümrüt bloğu ücreti ve bir sınav gerekiyor; parşömen sınavı geçince veriliyor.
+- Drondra Kralı Vargoth artık Kenpachi tarafından korunuyor; gücüyle hava atan, zayıfları küçümseyen bir koruyucu.
