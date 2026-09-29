@@ -81,3 +81,9 @@ SkinData{Type:"SECURE_REMOTE_URL", URL:"https://raw.githubusercontent.com/anubis
 | Yeni büyü ikonu | `assets/spell-icons/<büyü>.png` | VDS'te `kubejs/assets/kubejs/textures/gui/spell_icons/` içine aynı dosya; `havuz ekle ... paket` |
 | Yeni NPC dokusu | `assets/npc-skins/<npc>_v1.png`, `main`'e it | NPC'ye `SkinData` ile bağla; `docs/medieval-fantasy/characters/<npc>.md`'ye yaz |
 | Değişen doku | Yeni sürüm adı (`_v2` → `_v3`) | NPC adresini yeniye çevir |
+
+---
+
+## 4. Karakter dosyasında gösterim
+
+Özel dokusu olan her NPC için `docs/medieval-fantasy/characters/<npc>.md` dosyasında, özellik listesinin hemen altında bir **`## Skin / Texture`** bölümü olur: dokunun görseli (`<img ... width="256">`, küçük olduğu için büyütülmüş), dosya bağlantısı, boyutu ve oyunda nasıl bağlandığı. Yeni özel doku eklendiğinde bu bölüm de aynı işte eklenir. Örnek: [miu.md](medieval-fantasy/characters/miu.md).

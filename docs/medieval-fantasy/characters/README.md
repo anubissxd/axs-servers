@@ -14,3 +14,5 @@
 | [Yoruichi](yoruichi.md) | — | Kedi | -673, -262 civarı (planlanan) | Vlorya (bağımsız) |
 
 Unvanlar oyunda ismin yanında gri-italik görünür (Easy NPC'de ayrı unvan satırı yok).
+
+**Özel skin / doku:** Özel dokusu olan karakterin (şu an Miu, Çamur, Yoruichi) dosyasında görseliyle birlikte bir `## Skin / Texture` bölümü bulunur. Yeni özel doku eklenince bu bölüm de eklenir; dosya `assets/npc-skins/` altında durur ([kurallar](../../assets.md)).

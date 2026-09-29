@@ -7,6 +7,14 @@
 - **Görevi:** Şartı sağlayan oyunculara Shunpo (Flash Step) eğitimi verir.
 - **İlişkiler:** Kimseyle bağı açıklanmaz — gizemini korur.
 
+## Skin / Texture
+
+<img src="../../../assets/npc-skins/yoruichi_v1.png" alt="yoruichi_v1.png" width="256">
+
+- **Dosya:** [`assets/npc-skins/yoruichi_v1.png`](../../../assets/npc-skins/yoruichi_v1.png) (64×64, insan (Alex, ince kol))
+- **Oyunda:** `SkinData` `SECURE_REMOTE_URL` ile bu dosyanın GitHub ham adresine bağlı (`tools/yoruichi` araçları kurar); swxff ekledi.
+- Kurallar ve nasıl bağlanacağı: [assets.md](../../../docs/assets.md)
+
 ## Konsept
 
 Bleach'teki Yoruichi Shihouin'den ilham alınmıştır: gerçekte kim olduğunu saklayan, sıradan bir kara kedi kılığında dolaşan bir usta. Oyuncular onu **bulduklarında** (ekstra rütbe şartı yok — keşif tek şart) eğitim teklifini alabilir.

@@ -8,6 +8,14 @@
 - **Görünüş:** Özel doku [miu_v2.png](../../../assets/npc-skins/miu_v2.png), gerçek kedi Miu'ya göre
 - **İlişkiler:** Çamur'un arkadaşı
 
+## Skin / Texture
+
+<img src="../../../assets/npc-skins/miu_v2.png" alt="miu_v2.png" width="256">
+
+- **Dosya:** [`assets/npc-skins/miu_v2.png`](../../../assets/npc-skins/miu_v2.png) (64×32, kedi)
+- **Oyunda:** `SkinData` `SECURE_REMOTE_URL` ile bu dosyanın GitHub ham adresine bağlı; gerçek kedi Miu'ya göre çizildi.
+- Kurallar ve nasıl bağlanacağı: [assets.md](../../../docs/assets.md)
+
 ## Hikâye
 
 ## Diyaloglar
