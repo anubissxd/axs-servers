@@ -116,3 +116,14 @@ Diyaloglar: `l3_teklif`, `l3_devam`, `l3_odul`, `l3_bitti`. Bağlamak için (L2'
 - **Shunpo hak dolumu:** Süre artık gerçek zaman (`Date.now()`). Eskiden sunucu tick sayacı kullanılıyordu; `/kubejs reload` sayacı sıfırlayınca kayıtlı zaman sayaçtan büyük kalıyor ve hak uzun süre dolmuyordu ("yükleniyor"da kalma). Anahtar `flashstepChargesV4`.
 - **Iron's bekleme göstergesi:** Shunpo'nun kendi hak sistemi var (Iron's bekleme süresi 0). Hak **kalmayınca** bir sonraki hakkın dolmasına kalan süre Iron's `PlayerCooldowns`'a yazılır (`addCooldown("kubejs:flashstep", tick)` + `syncToPlayer`), böylece kitap/büyü çubuğu/büyü çarkındaki simgede diğer büyülerdeki gibi bekleme görünür. Hak varken bekleme yazılmaz (çok haklı seviyelerde ikinci atışı engellemesin).
 - **L2 ilerleme görünürlüğü:** İşaretlenen düşman 10 sn parlar ve oyuncuya "Gölge işaretlendi. Son vuruşu sen yap." yazılır. Her sayılan öldürmede sohbete ve action bar'a "Shunpo: n/5 düşman" yazılır. Görev aktifken (`yoruichi_l2` var, `yoruichi_l2_done` yok) ilerleme her 2 saniyede action bar'da "Shunpo: 0/5 düşman" olarak görünür. Sayılmayan isaretli ölümler `latest.log`'a nedeniyle (`yoruichi l2: ...`) yazılır.
+
+### Ücretler (zümrüt bloğu)
+Her eğitim ücretlidir; ücret **ilk kabulde bir kez** alınır (`yoruichi_paid_l<n>` etiketi): 60 sn sonra yeniden konuşma ya da Gölge Klon'u yeniden deneme ücret istemez.
+
+| Seviye | Ücret | Neden |
+|---|---|---|
+| L1 (kovalamaca, ilk Shunpo) | **3 zümrüt bloğu** | Kısa, risksiz giriş |
+| L2 (5 düşmanın arkasına geç ve öldür) | **6 zümrüt bloğu** | Uzun ve savaş gerektirir |
+| L3 (Gölge Klon mini boss) | **10 zümrüt bloğu** | En zoru, en güçlü seviye |
+
+Akış: diyalog düğmesi `yoruichi_pay_l<n>` etiketini verir ve kapanır; `kubejs/server_scripts/yoruichi_pay.js` envanterdeki zümrüt bloklarını sayar, yeterliyse keser ve görevi başlatır (`yoruichi_tanisti` / `yoruichi_l2` / `yoruichi_l3_start`), yetersizse "Yeterli zümrüt bloğun yok. N zümrüt bloğu getir (x/N)." der. Fiyatlar `YORUICHI_PRICES`'tadır; diyalog metinleri `tools/yoruichi/gen_*.js` ve canlı NPC'de (`tools/yoruichi/gen_prices.js` → `yoruichi:prices`) elle eşitlenir.

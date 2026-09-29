@@ -37,17 +37,17 @@ const dialogs = [
   dialog('D4', 'Yakaladin demek... Guzel. Simdi sana gercekten ogretebilirim.', [btn('Tamam.', [CLOSE])]),
   dialog('D1', 'Hmm... buralarda daha once gormedigim bir surat.', [btn('Konusan bir kedi mi?', [open('d2')], 'd1_devam')], 'default'),
   dialog('Kovulma', "Sen Vlorya'dan degilsin. Bu bilgiye layik degilsin. Defol.", [btn('(ayril)', [CLOSE])]),
-  dialog('D2Kizgin', 'Bunu hak ettin. Ama vurusa verdigin tepkiye baktim - hic fena degilmis. Simdi gercekten ogrenmek ister misin?', [
-    btn('Tamam, ogret.', [action('/tag @initiator add yoruichi_tanisti'), open('d3')], 'd2_kizgin_ogret')
+  dialog('D2Kizgin', 'Bunu hak ettin. Ama vurusa verdigin tepkiye baktim - hic fena degilmis. Simdi gercekten ogrenmek ister misin? Bedeli 3 zumrut blogu.', [
+    btn('Tamam, ogret.', [action('/tag @initiator add yoruichi_pay_l1'), CLOSE], 'd2_kizgin_ogret')
   ], 'd2_kizgin'),
-  dialog('D2', 'Cevik gorunuyorsun. Ama ceviklik sadece konusmakla olmaz - gostermek gerekir.', [
-    btn('Bana ogret.', [action('/tag @initiator add yoruichi_tanisti'), open('d3')], 'd2_ogret'),
+  dialog('D2', 'Cevik gorunuyorsun. Ama ceviklik sadece konusmakla olmaz - gostermek gerekir. Ogretmenin bedeli: 3 zumrut blogu.', [
+    btn('Bana ogret.', [action('/tag @initiator add yoruichi_pay_l1'), CLOSE], 'd2_ogret'),
     btn('Sadece bir kedisin.', [action('/damage @initiator 4 minecraft:mob_attack by ' + NEW), open('d2_kizgin')], 'd2_ret')
   ]),
   dialog('D3', 'Iyi. O zaman beni takip et - gorebilirsen.', [btn('Tamam.', [CLOSE])]),
   // --- L2 ---
-  dialog('l2_teklif', 'Tek adım attın, çocuk. Ama bir gölge tek adımla doğmaz. Beş düşman seç. Arkalarına geç, onlar seni fark etmeden bitir. Sonra bana dön.', [
-    btn('Hazırım.', [action('/tag @initiator add yoruichi_l2'), CLOSE]), btn('Sonra.', [CLOSE])
+  dialog('l2_teklif', 'Tek adım attın, çocuk. Ama bir gölge tek adımla doğmaz. Beş düşman seç. Arkalarına geç, onlar seni fark etmeden bitir. Sonra bana dön. Bedeli 6 zümrüt bloğu.', [
+    btn('Hazırım.', [action('/tag @initiator add yoruichi_pay_l2'), CLOSE]), btn('Sonra.', [CLOSE])
   ], 'l2_teklif'),
   dialog('l2_devam', 'Henüz bitmedi. Saymayı bilirsin: beş gölge. Arkalarına geç, sonu sen getir.', [btn('Tamam.', [CLOSE])], 'l2_devam'),
   dialog('l2_odul', 'Beş gölge, beş sessiz son. Fena değil... hiç fena değil. Al bunu. Adımların artık daha uzağa uzanacak.', [
@@ -55,8 +55,8 @@ const dialogs = [
   ], 'l2_odul'),
   dialog('l2_bitti', 'Ustalık bir gecede gelmez. Git, adımlarını sına. Hazır olduğunda ben buradayım.', [btn('Tamam.', [CLOSE])], 'l2_bitti'),
   // --- L3 ---
-  dialog('l3_teklif', 'İki adım attın. Üçüncüsü benim gölgem. O da benim gibi durmaz: görmediğin yerden vurmak zorundasın. Arkasına geç, sırtına vur. Önden vuracaksan hiç uğraşma.', [
-    btn('Gölgeyi çağır.', [action('/tag @initiator add yoruichi_l3_start'), CLOSE]), btn('Henüz değil.', [CLOSE])
+  dialog('l3_teklif', 'İki adım attın. Üçüncüsü benim gölgem. O da benim gibi durmaz: görmediğin yerden vurmak zorundasın. Arkasına geç, sırtına vur. Önden vuracaksan hiç uğraşma. Bedeli 10 zümrüt bloğu.', [
+    btn('Gölgeyi çağır.', [action('/tag @initiator add yoruichi_pay_l3'), CLOSE]), btn('Henüz değil.', [CLOSE])
   ], 'l3_teklif'),
   dialog('l3_devam', 'Gölgem seni bekliyor. Arkasına geç... ve görmeden vur.', [btn('Tamam.', [CLOSE])], 'l3_devam'),
   dialog('l3_odul', 'Gölgemi bitirdin... Demek Shunpo gerçekten senin oldu. Al bunu. Artık hiçbir gölge sana yetişemez.', [
