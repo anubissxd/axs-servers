@@ -80,7 +80,15 @@ const routes = [
   route('l3_bitti', 'tag=rank_vloryan,tag=yoruichi_l3_claimed')
 ]
 
-const skinUuid = uuidToInts(crypto.randomUUID())
+// Skin UUID'si (docs/assets.md): URL'nin Java UUID.nameUUIDFromBytes(UTF-8) sonucu; yanlissa NPC varsayilan dokuyla gorunur
+function nameUuid(str) {
+  const h = crypto.createHash('md5').update(Buffer.from(str, 'utf8')).digest()
+  h[6] = (h[6] & 0x0f) | 0x30
+  h[8] = (h[8] & 0x3f) | 0x80
+  const x = h.toString('hex')
+  return x.slice(0, 8) + '-' + x.slice(8, 12) + '-' + x.slice(12, 16) + '-' + x.slice(16, 20) + '-' + x.slice(20)
+}
+const skinUuid = uuidToInts(nameUuid(SKIN_URL))
 const nbt = '{UUID:' + uuidToInts(NEW) + ',CustomName:' + q('{"color":"#B983FF","text":"Yoruichi"}') + ',Tags:["korunan","yoruichi_npc"],' +
   'Invulnerable:1b,PersistenceRequired:1b,EasyNPCVersion:3,' +
   'EntityAttribute:{IsInvulnerable:1b,IsImmovable:1b,IsPushable:0b,PushEntities:0b,IsKnockbackResistant:1b,IsAttackableByPlayers:0b,IsAttackableByMonsters:0b,IsExplosionResistant:1b},' +
