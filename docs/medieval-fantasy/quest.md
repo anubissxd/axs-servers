@@ -82,13 +82,19 @@ Sohbette sadece en yüksek rütbe görünür. Sıralama: **Kutsanmış > Krallı
 
 ## 6. Teknik: görev nasıl bağlanır
 
-**Rütbe → görev bağlantısı.** Sunucudaki `kubejs/server_scripts/anubis_rank_stages.js` script'i her oyuncunun FTB Ranks rütbelerini birkaç saniyede bir `rank_<id>` adlı oyuncu etiketine çevirir. FTB Library bu etiketleri **stage** olarak okur. Bu yüzden FTB Quests'te bir görevi bir rütbeye bağlamak için:
+**Rütbe → görev bağlantısı.** Sunucudaki `kubejs/server_scripts/anubis_rank_stages.js` script'i her oyuncunun FTB Ranks rütbelerini birkaç saniyede bir `rank_<id>` adlı oyuncu etiketine çevirir.
 
-- Görevin (veya zincirin ilk görevinin) başına **Stage** tipinde bir task koyun, stage adı `rank_<id>` (ör. `rank_maceraci`).
-- Zincirin geri kalanı bu göreve bağımlı (dependency) olur.
-- Rütbesi olmayan oyuncu Stage task'ını tamamlayamaz, dolayısıyla zinciri açamaz.
+> **Dikkat: bu sunucuda Stage task'ı çalışmıyor.** FTB Quests "stage" görev türünü tanımıyor ve dosyayı yüklerken task'ı `type: "custom"` olarak kaydediyor. Custom task kendiliğinden tamamlanmaz. Bu yüzden 2026-09-29'a kadar Maceracı Rütbesi (kapı) görevi kimse için tamamlanmadı.
 
-**Kişiye özel görevler.** Oyuncuya `/tag <oyuncu> add gorev_<ad>` ile bir etiket verin (veya bir NPC düğmesi versin) ve görevin başına bu etiketle bir Stage task koyun. Etiket stage olarak okunur.
+Rütbeye bağlı bir görev şöyle kurulur:
+
+- Görevin (zincirin ilk görevinin) task'ı `custom` olarak kalır.
+- `anubis_rank_stages.js` içindeki `anubisCompleteGate` fonksiyonu, `rank_maceraci` etiketi olan oyuncu için görevi bir kez `ftbquests change_progress <oyuncu> complete <görev id>` ile tamamlar. Bunun yapıldığı, oyuncunun KubeJS persistentData'sındaki `anubis_gate_done` bayrağıyla işaretlenir.
+- Yeni bir rütbe kapısı eklenecekse bu fonksiyon o rütbe ve görev ID'si için genişletilir.
+- Zincirin geri kalanı bu göreve bağımlı (dependency) olur; rütbesi olmayan oyuncu zinciri açamaz.
+- Tek oyunculu dünyada rütbe sistemi yoktur; kapıyı geçmek için `/ftbquests change_progress @s complete 4D41434552414332`.
+
+**Kişiye özel görevler.** Aynı yöntem kullanılır: bir etiketi (`/tag <oyuncu> add gorev_<ad>`) script'te kontrol edip görevi komutla tamamlayın.
 
 **NPC'den görev vermek (Easy NPC).** NPC'lerin diyalog düğmelerine `COMMAND` eylemi eklenir. Bilinen tuzaklar:
 
