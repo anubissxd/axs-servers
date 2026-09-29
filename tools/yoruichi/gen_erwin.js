@@ -51,18 +51,24 @@ const ERWIN_SHOP = [
 ]
 function hubButtons() {
   return [
-    btn('Sefer istiyorum.', [tag('erwin_req'), CLOSE]),
-    btn('Rapor veriyorum.', [tag('erwin_rep'), CLOSE]),
-    btn('Seferim nasıl gidiyor?', [tag('erwin_info'), CLOSE]),
-    btn('Birlik kaydım.', [tag('erwin_stat'), CLOSE]),
-    btn('Sefer defterim.', [tag('erwin_log'), CLOSE]),
-    btn('Seferi bırakıyorum.', [tag('erwin_abort'), CLOSE]),
-    btn('Rütbe dükkânı.', [open('erwin_dukkan')]),
-    btn('Tedarik.', ['{Type:"OPEN_TRADING_SCREEN",Id:' + TRADE_ID + '}']),
+    btn('Sefer / rapor.', [tag('erwin_req'), CLOSE]),
+    btn('Diğer işler.', [open('erwin_diger')]),
     btn('Ayrılıyorum.', [CLOSE])
   ]
 }
+function digerButtons() {
+  return [
+    btn('Seferim nasıl gidiyor?', [tag('erwin_info'), CLOSE]),
+    btn('Birlik kaydım.', [tag('erwin_stat'), CLOSE]),
+    btn('Sefer defterim.', [tag('erwin_log'), CLOSE]),
+    btn('Rütbe dükkânı.', [open('erwin_dukkan')]),
+    btn('Tedarik.', ['{Type:"OPEN_TRADING_SCREEN",Id:' + TRADE_ID + '}']),
+    btn('Seferi bırakıyorum.', [tag('erwin_abort'), CLOSE]),
+    btn('Geri.', [CLOSE])
+  ]
+}
 const dialogs = [
+  dialog('erwin_diger', 'Başka bir işin mi var?', digerButtons(), 'erwin_diger'),
   dialog('erwin_ret', 'Keşif Birliği herkesi kabul etmez. Sınırdaki tehlike gerçek; kılıç tutmayı bilenler gelir. Önce Maceracı olarak adını duyur, sonra konuşuruz.', [btn('Anlıyorum.', [CLOSE])], 'erwin_ret'),
   dialog('erwin_ilk', 'Ben Erwin Smith, Keşif Birliği\'nin komutanıyım. Caddy\'nin sınırlarında, duvarların ötesinde gördüklerimizi kimseye anlatamazsın; ama onlarla savaşacak insanlara ihtiyacım var. Seferler bana yazılan raporlardan doğar: her sefer bir hedef, bir bedel ve bir ödül. Küçük başlarsın; iyi dönersen daha derine gönderirim. Ölümcül seferler ise yalnızca hayatta kalanlara açılır. Ne dersin?', [
     btn('Katılıyorum.', [tag('erwin_met'), open('erwin_hub_0')], 'erwin_kabul')
