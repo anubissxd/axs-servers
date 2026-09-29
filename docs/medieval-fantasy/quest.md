@@ -61,8 +61,9 @@ Bir oyuncu **yalnızca bir** krallığa bağlılık yemini edebilir. Karakterler
 | **Kutsanmış** (`kutsanmis`) | Miu ile ilk konuşmada | `rank_kutsanmis` |
 | **Maceracı** (`maceraci`) | Miu ile ilk konuşmada | `rank_maceraci` |
 | **Drondrian / Vloryan / Granfosian** | Seçilen krallığın kralından | `rank_drondrian` / `rank_vloryan` / `rank_granfosian` |
+| **Birlik rütbeleri:** Yeminsiz, Kül Bekçisi, Kan Yeminli, Gece Avcısı, Eşik Muhafızı | Erwin Smith: tanışınca Yeminsiz, sefer sayısıyla terfi | `rank_yeminsiz`, `rank_kul_bekcisi`, `rank_kan_yeminli`, `rank_gece_avcisi`, `rank_esik_muhafizi` |
 
-Sohbette sadece en yüksek rütbe görünür. Sıralama: **Kutsanmış > Krallık rütbeleri > Maceracı**.
+Sohbette sadece en yüksek rütbe görünür. Sıralama: **Birlik rütbeleri (Eşik Muhafızı en üstte) > Kutsanmış > Krallık rütbeleri > Maceracı**. Birlik rütbeleri FTB Ranks'te güç 70-74'tür; yalnızca oyuncunun geçerli Birlik rütbesi tutulur (terfide eskisi alınır, `erwin_seferleri.js` `erwinSyncFtbRank`). Yoruichi, Kakashi, Itachi, Gojo ve Thorfinn bu rütbeyi şart koşar (Erwin'deki sayaç değerine bakarlar; rank ile hep birlikte güncellenir).
 
 ---
 

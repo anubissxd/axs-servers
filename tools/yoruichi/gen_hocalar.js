@@ -62,12 +62,40 @@ const NPCS = {
       btn('Ayrılıyorum.', [CLOSE])
     ]
   },
+  gojo: {
+    name: 'Gojo', color: '#7FD1FF',
+    ret: 'Yo! Hmm... adın yok, rütben yok. Endişelenme, nazik biriyim. Ama önce Maceracı ol, sonra gel; en güçlünün vaktini boşa harcamak suç sayılır. Şaka şaka. Ya da değil.',
+    ilk: 'Yo! Ben Gojo Satoru. Evet, o en güçlü olan. İmza yok, üzgünüm. Bir şey soracaksan sor ama hızlı; sonsuzlukla meşgulüm.',
+    hubText: 'Mavi, Kırmızı, Mor... Sırayla, tabii. Önce ikisini öğrenirsin, üçüncüsü ikisinin birleşimi. Keşif Birliği\'nde yükselmeden kapıdan içeri bile almam, hehe.',
+    kabul: 'Senden bir şey öğrenmek istiyorum.',
+    buttons: () => [
+      btn('Mavi öğrenmek istiyorum.', [tag('hoca_req_ao'), CLOSE]),
+      btn('Kırmızı öğrenmek istiyorum.', [tag('hoca_req_aka'), CLOSE]),
+      btn('Mor öğrenmek istiyorum.', [tag('hoca_req_murasaki'), CLOSE]),
+      btn('Sınavı bildiriyorum.', [tag('hoca_rep_gojo'), CLOSE]),
+      btn('Diğer işler.', [open('hoca_diger')]),
+      btn('Ayrılıyorum.', [CLOSE])
+    ],
+    diger: () => [
+      btn('Eğitim durumum.', [tag('hoca_info'), CLOSE]),
+      btn('Mavi parşömenimi kaybettim.', [tag('hoca_lost_ao'), CLOSE]),
+      btn('Kırmızı parşömenimi kaybettim.', [tag('hoca_lost_aka'), CLOSE]),
+      btn('Mor parşömenimi kaybettim.', [tag('hoca_lost_murasaki'), CLOSE]),
+      btn('Geri.', [CLOSE])
+    ]
+  },
   itachi: {
     name: 'Itachi', color: '#7A1F2B',
     ret: 'Boşuna geldin. Bu bilgi herkese emanet edilmez. Git.',
     ilk: 'Yaklaşmışsın. Adım Itachi. Buraya gelenlerin çoğu bir şey ister ve pişman olur. Sen ne için buradasın?',
     hubText: 'Bilgi arıyorsun. Amaterasu gözlerin gördüğünü yakan kara alevdir; Tsukiyomi ise zihni kıran yanılsama. İkisi de bedel ister. Amaterasu için Gece Avcısı, Tsukiyomi için Eşik Muhafızı olmalısın. Önce alev, sonra gölge.',
     kabul: 'Seninle konuşmak istiyorum.',
+    diger: () => [
+      btn('Eğitim durumum.', [tag('hoca_info'), CLOSE]),
+      btn('Amaterasu parşömenimi kaybettim.', [tag('hoca_lost_amaterasu'), CLOSE]),
+      btn('Tsukiyomi parşömenimi kaybettim.', [tag('hoca_lost_tsukiyomi'), CLOSE]),
+      btn('Geri.', [CLOSE])
+    ],
     buttons: () => [
       btn('Amaterasu öğrenmek istiyorum.', [tag('hoca_req_amaterasu'), CLOSE]),
       btn('Tsukiyomi öğrenmek istiyorum.', [tag('hoca_req_tsukiyomi'), CLOSE]),
@@ -85,14 +113,7 @@ const dialogs = [
   dialog('hoca_ilk', N.ilk, [btn(N.kabul, [tag('hoca_met_' + npc), open('hoca_hub')], 'hoca_kabul')], 'hoca_ilk'),
   dialog('hoca_hub', N.hubText, N.buttons(), 'hoca_hub')
 ]
-if (npc === 'itachi') {
-  dialogs.push(dialog('hoca_diger', 'Başka ne var?', [
-    btn('Eğitim durumum.', [tag('hoca_info'), CLOSE]),
-    btn('Amaterasu parşömenimi kaybettim.', [tag('hoca_lost_amaterasu'), CLOSE]),
-    btn('Tsukiyomi parşömenimi kaybettim.', [tag('hoca_lost_tsukiyomi'), CLOSE]),
-    btn('Geri.', [CLOSE])
-  ], 'hoca_diger'))
-}
+if (N.diger) dialogs.push(dialog('hoca_diger', 'Başka ne var?', N.diger(), 'hoca_diger'))
 function route(dlg, cond) {
   return '{Type:"COMMAND",PermLevel:3,Cmd:' + q('/execute as @initiator if entity @s[' + cond + '] run easy_npc dialog open ' + UUID + ' @s ' + dlg) + '}'
 }
@@ -107,7 +128,7 @@ const nbt = '{UUID:' + uuidToInts(UUID) + ',CustomName:' + q('{"color":"' + N.co
   'EntityAttribute:{IsInvulnerable:1b,IsImmovable:1b,IsPushable:0b,PushEntities:0b,IsKnockbackResistant:1b,IsAttackableByPlayers:0b,IsAttackableByMonsters:0b,IsExplosionResistant:1b},' +
   'SkinData:{Type:"SECURE_REMOTE_URL",URL:' + q(SKIN_URL) + ',UUID:' + skinUuid + '},' +
   'ObjectiveData:{HasObjectives:1b,ObjectiveDataSet:[{Type:"LOOK_AT_PLAYER"},{Type:"LOOK_AT_MOB"},{Type:"LOOK_AT_RESET"}]},' +
-  'ActionData:{ActionEventSet:{ON_INTERACTION:[' + routes.join(',') + ']}},' +
+  'Owner:' + uuidToInts(owner) + ',ActionData:{ActionPermissionLevel:3,ActionEventSet:{ON_INTERACTION:[' + routes.join(',') + ']}},' +
   'DialogData:{Type:"CUSTOM",DialogDataSet:[' + dialogs.join(',') + ']}}'
 
 const out = [

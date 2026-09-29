@@ -67,3 +67,12 @@ Bu sistemler simülasyonla ve sunucu komutlarıyla sınandı ama **gerçek oyunc
 5. **Hasat siparişi:** "Hasat siparişi" ile sipariş al, malı topla, tekrar "Hasat siparişi" ile teslim et: zümrüt ve sahne (başlık) gelmeli. Sipariş sürerken yenisini vermemeli; günde 4, arada 3 dk sınır.
 6. **Toprak rütbesi:** `thor_total` 8'e ulaşınca "TOPRAK RÜTBESİ" sahnesi ve yemek siparişleri açılmalı ("Toprak kaydım").
 7. **Sıfırlama:** `/thorfinn_sifirla <oyuncu>` her şeyi temizlemeli.
+
+## H. Gojo, Kenpachi ve FTB rütbeleri
+
+1. **Rütbe başlığı:** `/erwin_rutbe <oyuncu> 3` sonrası sohbette ve oyuncu listesinde adın yanında **[Gece Avcısı]** görünmeli (Kutsanmış yerine). Rütbe artınca eski rank alınmalı (`/tag <oyuncu> list` içinde tek Birlik `rank_*` etiketi).
+2. **Gojo tanışma:** Rütbesizken küçümser, Maceracıyken tanışma diyaloğu ("Yo! Ben Gojo Satoru...") açılmalı; ilk menü büyülerle değil kısa bir tanışmayla başlamalı. Ana menü 6 düğme, üst üste binmemeli.
+3. **Mavi/Kırmızı:** `/erwin_rutbe <oyuncu> 3`; Mavi L1 için 6 blok; kill sınavı; rapor sonrası parşömende **Gravity Fissure** (Mavi), **Shockwave** (Kırmızı) yazmalı. L3 için rütbe 4 gerekir.
+4. **Mor:** Mavi ve Kırmızı üç seviye bitmeden reddedilmeli; sonra rütbe 4, L1 12 blok; parşömen **Eldritch Blast**.
+5. **Kayıp parşömen ve bağ:** "Diğer işler" altından; hediye "Sonsuzluğun Bandı" (bağ Usta Öğrenci olunca).
+6. **Kenpachi:** Üç düğme küçümsesin; "Seninle dövüşmek istiyorum" reiatsu sahnesini oynatmalı (ekran kararır, kalp atışı, kısa yavaşlama, hasar yok). Doku 64×64 olarak doğru görünmeli.

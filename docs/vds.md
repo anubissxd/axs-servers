@@ -109,6 +109,7 @@ Konsoldan ya da oyunda (op 2) çalışır. Sistem açıklamaları ilgili karakte
 | `/erwin_sifirla <oyuncu>` | Oyuncunun tüm Erwin ilerlemesini (rütbe, sefer, unvan, defter, dükkân stoğu, `erwin_met`) sıfırlar |
 | `/erwin_rutbe <oyuncu> <0-4>` | Test için Birlik rütbesini doğrudan ayarlar ve Thorfinn stoğunu yeniler |
 | `/thorfinn_sifirla <oyuncu>` | Thorfinn siparişini, toprak rütbesini, stoğunu ve `thor_met` etiketini sıfırlar |
+| `function yoruichi:gojo_kur`, `function yoruichi:kenpachi_kur` | Gojo ve Kenpachi'yi doğurur (`gen_hocalar.js gojo ...`, `gen_kenpachi.js`; ikisi de geçici `forceload` kullanır, Owner/izin seviyesi doğurma NBT'sindedir). `_diyalog` fonksiyonları yalnızca diyalogları yeniler |
 | `function yoruichi:thorfinn_diyalog` | Thorfinn NPC'sinin adını, dokusunu ve diyaloglarını yeniler (`tools/yoruichi/gen_thorfinn.js` üretir) |
 | `/hoca_sifirla <oyuncu>` | Oyuncunun Kakashi/Itachi ilerlemesini (seviyeler, ücret kayıtları, hediye bayrakları, aktif sınav) sıfırlar |
 | `/yedek_test` | Oyuncu verisi yedeğinin Java çağrılarını sahte bir bölmeyle sınar; "BASARILI" yazmalı |

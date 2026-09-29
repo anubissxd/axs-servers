@@ -13,3 +13,6 @@
 
 ## Diyaloglar
 
+
+
+**Koruyucusu:** [Kenpachi](kenpachi.md), kralın yanında durur ve kimseyi kolayca geçirmez.
