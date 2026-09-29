@@ -92,14 +92,19 @@ Diyaloglar: `l3_teklif`, `l3_devam`, `l3_odul`, `l3_bitti`. Bağlamak için (L2'
 **Büyü adı:** oyunda "Shunpo" (büyü kimliği hâlâ `kubejs:flashstep`, eski parşömenler çalışır). İkon: `shunpo_16x16.png`.
 
 ### Konum (VDS, Caddy bölgesi, Vlorya'ya bağlı tarafsız nokta)
-- **Oturduğu yer (ev):** -1031.573, 81.5, -337.264 (`YORUICHI_HOME`, `yoruichi_chase.js`). Oturma animasyonunda durur (poz arayüzden seçilecek, anahtar henüz bilinmiyor).
+- **Oturduğu yer (ev):** -1032.518, 81.0, -338.304 (`YORUICHI_HOME`, `yoruichi_chase.js`). Oturma animasyonunda durur (poz arayüzden seçilecek, anahtar henüz bilinmiyor).
 - **İlk Shunpo (kaçış) noktası:** -1033.554, 72, -318.817 (`YORUICHI_FIRST_HOP`). Sonraki atlamalar bu yönde ileriye doğru otomatik üretilir (12–18 blok, zemin kontrolüyle). Kimse kovalamazsa 60 sn sonra eve döner.
 - Skin push edilmeden önce konumlar sabitlenecek; VDS'e "Güncelle" ile gidecek.
-- **Bakış yönü:** Yoruichi evinde **güneye (+Z)** bakar (`yaw -1.4`, `pitch 0`). Eve dönerken bu yöne çevrilir.
+- **Bakış yönü:** Yoruichi evinde **kuzeye (-Z)** bakar (`yaw 180`, `pitch 0`) ve **yaslanır** (Easy NPC `leaning` pozu). Eve dönerken bu yöne çevrilir ve tekrar yaslanır.
 - **Gölge Klon (L3):** İlk Shunpo noktasında (`-1033.554, 72, -318.817`) doğar; nokta yüklü değilse (yerel test) oyuncunun yakınına düşer.
 - **Geri sayım:** Yoruichi evde değilken 60 sn'lik eve dönüş süresi, 60 blok içindeki oyunculara action bar'da gösterilir ("Yoruichi eve dönüyor: N sn").
 
 ### VDS kurulum durumu (2026-09-29)
 - **Yayında:** Paket 1.3.6 ("Güncelle", swxff) ile Shunpo büyüsü, kovalama/L2/L3 script'leri, lang, ses, ikon ve sonic_boom dokuları oyunculara gitti; sunucu yeniden başlatıldı (KubeJS: 15 sunucu script'i, 0 hata). Yedek: `/root/backups/medieval-fantasy/2026-09-29-before-shunpo-kubejs`.
-- **Yoruichi VDS'te kuruldu:** `world/datapacks/yoruichi/` (üretici: `tools/yoruichi/gen_vds.js`). Konum `-1031.573, 81.5, -337.264`, UUID `fff2c1ae-28c0-4f9c-858b-94f7cbc0ca8e`, sahip (Owner) swxff, skin `assets/npc-skins/yoruichi_v1.png` (skin UUID'si URL'den `nameUUIDFromBytes` ile üretilir). Konsoldan `function yoruichi:human` ve `function yoruichi:human_lock` çalıştırıldı. NPC'yi silip yeniden kurmak gerekirse aynı iki fonksiyon.
+- **Yoruichi VDS'te kuruldu:** `world/datapacks/yoruichi/` (üretici: `tools/yoruichi/gen_vds.js`). Konum `-1032.518, 81.0, -338.304`, UUID `fff2c1ae-28c0-4f9c-858b-94f7cbc0ca8e`, sahip (Owner) swxff, skin `assets/npc-skins/yoruichi_v1.png` (skin UUID'si URL'den `nameUUIDFromBytes` ile üretilir). Konsoldan `function yoruichi:human` ve `function yoruichi:human_lock` çalıştırıldı. NPC'yi silip yeniden kurmak gerekirse aynı iki fonksiyon.
 - **Bekleyen:** oturma pozu (arayüzden seçilip NBT anahtarı yedekten okunacak), Gölge Klon dövüşünün ve otomatik kaçış noktalarının VDS'te denenmesi.
+
+### Poz ve kovalama kuralları (2026-09-29)
+- **Poz:** Evde `easy_npc:pose/humanoid/leaning` (ModelData'ya `data modify` ile yazılır: `PoseName`, `Rotation` = derece → radyan `[x,y,z,0]`, `Position` = `[x,-y,z]`, `Pose:"DEFAULT"`). **İlk Shunpo atlamasında** ayakta poza (`standing`) geçer, kovalama boyunca ayakta kalır, eve dönünce yeniden yaslanır (`yoruichiSetPose`, `yoruichi_chase.js`).
+- **Tek kovalayan:** Kovalama ilk atlamayı tetikleyen oyuncuya kilitlenir (`global.yoruichiChaseOwner`). Başkaları yaklaşırsa action bar'da "Yoruichi şu an başka biriyle ilgileniyor." görür, kovalamaya müdahale edemez. Sahip oyundan çıkarsa ya da yakalanıp sahne biterse kilit açılır.
+- **60 sn kuralı:** Son atlamadan 60 sn sonra Yoruichi eve döner, kilit açılır ve kovalayan oyuncudan `yoruichi_tanisti` etiketi **silinir**; kovalama kendiliğinden yeniden başlamaz, oyuncu Yoruichi ile yeniden konuşmalıdır ("Sabrım tükendi. Hazır olduğunda yeniden konuş.").
