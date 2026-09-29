@@ -8,7 +8,7 @@ const crypto = require('crypto')
 const root = process.argv[2]
 const NEW = process.argv[3]
 const OLD = process.argv[4] || '5a1afe8a-cbf7-47a3-a751-39b4f228f3b6'
-const SKIN_URL = 'https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/npc-textures/yoruichi.png'
+const SKIN_URL = 'https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/assets/npc-skins/yoruichi_v1.png'
 const BS = String.fromCharCode(92)
 const NL = String.fromCharCode(10)
 
