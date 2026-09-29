@@ -16,7 +16,7 @@
 
 ## Eğitim
 
-Ücret zümrüt bloğu. Her seviye sırayla açılır; ücret seviye başına bir kez alınır. Kayıp parşömen: 2 zümrüt bloğu.
+Ücret zümrüt bloğu. Her seviye sırayla açılır; ücret seviye başına bir kez alınır. Kayıp parşömen: en yüksek öğrenilen seviyenin ücretinin yarısı.
 
 | Yol | Sınav | Ücret |
 |---|---|---|

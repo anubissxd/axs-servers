@@ -24,7 +24,7 @@
 | L3 Bin Kuşun Sesi | 120 sn içinde 8 güçlü hedef (yağmacı, mezarlık, kaos, Nether askeri) | 12 | Kan Yeminli |
 | L4 Kırılmayan Yıldırım | 180 sn içinde 6 yıkıntı bekçisi / kadim yaratık | 16 | Gece Avcısı |
 
-Ödül: o seviyenin Chidori parşömeni. Ücret bir seviye için **bir kez** alınır (sınavı bırakıp tekrar denemek ücretsiz). Kayıp parşömen: 2 zümrüt bloğu (en yüksek öğrenilen seviyede yeniden yazılır).
+Ödül: o seviyenin Chidori parşömeni. Ücret bir seviye için **bir kez** alınır (sınavı bırakıp tekrar denemek ücretsiz). Kayıp parşömen: en yüksek öğrenilen seviyenin ücretinin yarısı (ör. Chidori L4 için 8 blok); ucuz olsaydı parşömen arkadaşlara çoğaltılırdı.
 
 ## Teknik
 

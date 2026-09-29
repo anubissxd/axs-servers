@@ -22,17 +22,17 @@
 
 **Şart:** `rank_maceraci`. Rütbesizlere Erwin reddeder (`erwin_ret`).
 
-**Akış:** "Sefer istiyorum" → Erwin rütbeye uygun **3 sefer teklif eder** (sohbette tıklanır: [A] [B] [C]) → oyuncu seçer, hedefi öldürür (eylem çubuğunda sayaç) → "Rapor veriyorum" → ödül. Aynı anda tek sefer; sefer sonrası 2 dk, bırakınca 5 dk bekleme; günde en çok 10 sefer. Son 4 sefer teklifte tekrarlanmaz; teklifler 10 dk geçerli. Hedef sayısı her tekliflenişte aralıktan rastgele seçilir.
+**Akış:** "Sefer istiyorum" → Erwin rütbeye uygun **3 sefer teklif eder** (sohbette tıklanır: [A] [B] [C]) → oyuncu seçer, hedefi öldürür (eylem çubuğunda sayaç) → "Rapor veriyorum" → ödül. Aynı anda tek sefer; sefer sonrası 2 dk, bırakınca 5 dk bekleme; günde en çok 6 sefer. Son 4 sefer teklifte tekrarlanmaz; teklifler 10 dk geçerli. Hedef sayısı her tekliflenişte aralıktan rastgele seçilir.
 
 **Rütbeler (terfi):** Yeminsiz → Kül Bekçisi (3 Sis Devriyesi) → Kan Yeminli (4 Av) → Gece Avcısı (4 Karanlığa İniş) → Eşik Muhafızı (3 Kan Sözü). Rütbe `erwin_rank_1..4` etiketidir; Erwin'in ana diyaloğu rütbeye göre değişir.
 
 | Tür | Kim görür | Hedefler | Ödül (zümrüt bloğu) |
 |---|---|---|---|
 | I Sis Devriyesi | Yeminsiz, Kül Bekçisi | zombi, iskelet, örümcek, creeper, boğulmuş, slime (8-30 adet) | 1-2 |
-| II Av | Kül Bekçisi, Kan Yeminli | yağmacı, enderman, mezarlık, derin karanlık, kaos, cadı, Nether askeri, büyücü, düşmüş şövalye (4-16) | 2-4 |
-| III Karanlığa İniş | Kan Yeminli, Gece Avcısı | ravager, kale, mutant, kadim yaratıklar, orman ruhu, yıkıntı bekçisi (1-16) | 4-7 |
-| IV Kan Sözü | Gece Avcısı, Eşik Muhafızı | tek boss: Cataclysm, BoMD, Mowzie, Iron's, Souls | 8-14 |
-| V Kıyamet Seferi | Eşik Muhafızı | ejderha, Leviathan/Scylla, Wither, Warden, Ender Ejderhası | 16-24 |
+| II Av | Kül Bekçisi, Kan Yeminli | yağmacı, enderman, mezarlık, derin karanlık, kaos, cadı, Nether askeri, büyücü, düşmüş şövalye (4-16) | 1-3 |
+| III Karanlığa İniş | Kan Yeminli, Gece Avcısı | ravager, kale, mutant, kadim yaratıklar, orman ruhu, yıkıntı bekçisi (1-16) | 3-5 |
+| IV Kan Sözü | Gece Avcısı, Eşik Muhafızı | tek boss: Cataclysm, BoMD, Mowzie, Iron's, Souls | 6-10 |
+| V Kıyamet Seferi | Eşik Muhafızı | ejderha, Leviathan/Scylla, Wither, Warden, Ender Ejderhası | 12-18 |
 
 Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekkep; IV-V'te netherite/totem) eklenir; **%5 büyük zafer** blok ödülünü ikiye katlar. Ekonomi: Yoruichi'nin eğitimi toplam 19 blok; bir Tür I seferi ortalama 1,5 blok.
 
@@ -46,7 +46,7 @@ Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekk
 - **Ölüm Emri:** Tür I-III seferlerin %20'sinde son hedef öldüğünde isimli, parlayan bir elit doğar (Kanlı Orakçı vb.). Öldürmek ayrıca ödül verir; sefer tamamlanması için gerekli değildir.
 - **Unvanlar:** Kırk Gölge (40 sefer), Sonsuz Nöbetçi (100), Kan Sözü Ustası (5 Kan Sözü), Ejderha Katili (Kıyamet seferi), Kader Kırıcı (3 zincir), Ay Avcısı (5 Kanlı Ay), Ölüm Emri Avcısı (5), Kan Bahisçisi (5 bahis). "Birlik kaydım" gösterir.
 - **Sefer defteri:** Son 10 tamamlanan sefer (tarih, ad, blok); diyalogda "Sefer defterim".
-- **Ortak sefer:** Tür teklifindeki [👥] ile seçilir (zincir hariç). Yakındaki (48 blok) uygun Maceracılara [Katıl] daveti gider (2 dk). Biri katılınca ikisinin hedef sayısı x1,5 olur, öldürmeler ikisine de yazılır, ödül her birine %90 verilir; katılan olmazsa sefer tek başına normal sürer. Katılan oyuncunun rütbesi seferin türüne yetmeli, bekleme ve günlük sınırı olmamalı.
+- **Ortak sefer:** Tür teklifindeki [👥] ile seçilir (zincir hariç). Yakındaki (48 blok) uygun Maceracılara [Katıl] daveti gider (2 dk). Biri katılınca ikisinin hedef sayısı x1,5 olur, öldürmeler ikisine de yazılır, ödül her birine %75 verilir; katılan olmazsa sefer tek başına normal sürer. Katılan oyuncunun rütbesi seferin türüne yetmeli, bekleme ve günlük sınırı olmamalı.
 - **Büyü hocaları:** Rütbe terfisinde ilgili hoca ipucu verilir: [Kakashi](kakashi.md) (Chidori: Kül Bekçisi+), [Itachi](itachi.md) (Amaterasu: Gece Avcısı, Tsukiyomi: Eşik Muhafızı).
 - **Ödül dengesi:** Nadir/OP eşyalar (Nether yıldızı, netherite kalıbı, denizin kalbi) kaldırıldı; Tür V'te büyülü altın elma %20 (1 adet), netherite külçe %10, totem %8.
 
