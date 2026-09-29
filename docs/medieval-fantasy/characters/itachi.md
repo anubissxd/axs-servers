@@ -31,6 +31,8 @@ Toplam: Amaterasu 32, Tsukiyomi 44 zümrüt bloğu.
 
 **Sahneli sınav:** Tsukiyomi L1'de 5 "Yanılsama" doğar: biri gerçek (12 canlı, yerinden kıpırdamaz), dördü sahte (1 canlı, yarım saniyede bir biri yer değiştirir). Sahteyi vurunca oyuncuya 4 sn körlük + yavaşlık gelir ve 3 sn sonra yenisi doğar. Gerçek olan ölünce sınav geçilir. Süre dolarsa ya da başkası öldürürse hocadan ücretsiz yeniden başlatılır.
 
+**Sinema:** Her sınav açılışı temalıdır: Amaterasu'da kara alev sesi, ruh ateşi parçacıkları ve kararma; Tsukiyomi'de enderman bakışı sesi, portal parçacıkları ve uzun kararma. Seviye başlıkları ("KARA ALEVİN DOĞUŞU", "SÖNMEYEN ATEŞ", "YAKILAN RUHLAR", "SAHTE GERÇEK", "AYNALARIN ARDI", "SONSUZ GECE"), Itachi'nin anlatısı, sınav talimatı; rapor verince parşömen töreni ve son seviyede "USTALIK" sahnesi. Yarı yolda kısa bir söz. Sinema sürerken yeni istek bekletilir.
+
 **Hoca bağı:** Itachi'den öğrenilen toplam seviyeye göre Yabancı → Tanıdık (1+) → Öğrenci (3+) → Usta Öğrenci (6). Bağa uygun sözler ve kayıp parşömen indirimi (Öğrenci %25, Usta Öğrenci yarı yarıya).
 
 ## Teknik

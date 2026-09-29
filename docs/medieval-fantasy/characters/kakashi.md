@@ -28,6 +28,8 @@
 
 **Sahneli sınav:** L1'de "Gölge Kakashi" (6 canlı, NoAI, parlayan zombi, elinde zil) doğar; oyuncu yaklaşınca kaçar. Başkası öldürürse ya da süre dolarsa sahne biter; hocaya tekrar "Chidori öğrenmek istiyorum" denince **ücretsiz** yeniden başlar. Sahne mobları `korunan` etiketlidir (hub güvenli bölgesi canavar doğmasını engelliyor, bu etiket muaf tutar).
 
+**Sinema:** Her sınav bir açılış senaryosuyla başlar: şimşek sesi ve kıvılcım parçacıkları, seviye başlığı ("ZİL SINAVI", "ŞİMŞEK ZİNCİRİ", "BİN KUŞUN SESİ", "KIRILMAYAN YILDIRIM"), Kakashi'nin 2 satırlık anlatısı, sonra sınav talimatı ve (sahneli sınavda) sahnenin başlaması. Rapor verince parşömen töreni: büyü parçacıkları, seviye başlığı, övgü, kapanış sözü, bağ sözü; son seviyede "USTALIK" sahnesi. Kill sınavlarında yarı yolda hoca kısa bir söz söyler. Sinema sürerken yeni istek "Bir saniye. Dinle." ile bekletilir.
+
 **Hoca bağı:** Kakashi'den öğrenilen toplam seviyeye göre Yabancı → Tanıdık (1+) → Öğrenci (3+) → Usta Öğrenci (4). Sınav başlarken ve rapor alırken bağa uygun bir söz söyler. Kayıp parşömen ücreti Öğrenci'de %25, Usta Öğrenci'de yarı yarıya iner.
 
 ## Teknik
