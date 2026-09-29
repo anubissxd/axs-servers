@@ -1,5 +1,6 @@
 // Erwin Smith: sefer diyaloglari ve yonlendirmeleri (Easy NPC) icin datapack fonksiyonu uretir.
 // Mantik kubejs/server_scripts/erwin_seferleri.js icindedir; buradaki dugmeler yalnizca 'erwin_*' etiketi verir.
+// Easy NPC bir diyalogda en fazla 6 gorunur dugmeyi duzenleyebilir (fazlasi ust uste biner); yonetici dugmesi yalnizca <=5 dugmede eklenir.
 // Kullanim: node gen_erwin.js <datapack klasoru> <owner-uuid>   (sonra konsolda 'reload' ve 'function yoruichi:erwin_setup'; oyuncu cevrimdisi olabilir)
 const fs = require('fs')
 function uuidToInts(u) {
@@ -21,7 +22,7 @@ const adminBtn = '{Conditions:[{Type:"PLAYER_TAG",Name:"rank_admin"}],Name:"[Adm
 function btn(name, actions, label) { return '{Name:' + q(name) + (label ? ',Label:' + q(label) : '') + ',Actions:[' + actions.join(',') + ']}' }
 function dialog(name, text, buttons, label) {
   return '{Options:{AllowEscClose:0,ShowCloseButton:0,ButtonConditionMode:"HIDE"},Texts:[{Text:' + q(text) + '}],' +
-    (label ? 'Label:' + q(label) + ',' : '') + 'Buttons:[' + buttons.concat([adminBtn]).join(',') + '],Name:' + q(name) + '}'
+    (label ? 'Label:' + q(label) + ',' : '') + 'Buttons:[' + (buttons.length <= 5 ? buttons.concat([adminBtn]) : buttons).join(',') + '],Name:' + q(name) + '}'
 }
 const tag = t => action('/tag @initiator add ' + t)
 
@@ -52,6 +53,8 @@ const ERWIN_SHOP = [
 function hubButtons() {
   return [
     btn('Sefer / rapor.', [tag('erwin_req'), CLOSE]),
+    btn('Seferi bırakıyorum.', [tag('erwin_abort'), CLOSE]),
+    btn('Rütbe dükkânı.', [open('erwin_dukkan')]),
     btn('Diğer işler.', [open('erwin_diger')]),
     btn('Ayrılıyorum.', [CLOSE])
   ]
@@ -61,9 +64,7 @@ function digerButtons() {
     btn('Seferim nasıl gidiyor?', [tag('erwin_info'), CLOSE]),
     btn('Birlik kaydım.', [tag('erwin_stat'), CLOSE]),
     btn('Sefer defterim.', [tag('erwin_log'), CLOSE]),
-    btn('Rütbe dükkânı.', [open('erwin_dukkan')]),
     btn('Tedarik.', ['{Type:"OPEN_TRADING_SCREEN",Id:' + TRADE_ID + '}']),
-    btn('Seferi bırakıyorum.', [tag('erwin_abort'), CLOSE]),
     btn('Geri.', [CLOSE])
   ]
 }

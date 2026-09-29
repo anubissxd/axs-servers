@@ -1,5 +1,6 @@
 // Büyü hocası NPC'leri (Kakashi, Itachi) için datapack fonksiyonu üretir: NPC'yi verilen konuma doğurur, diyalogları ve
 // yönlendirmeleri kurar. Mantık kubejs/server_scripts/hocalar_egitim.js içindedir; buradaki düğmeler yalnızca 'hoca_*' etiketi verir.
+// Easy NPC bir diyalogda en fazla 6 görünür düğmeyi düzenleyebilir (fazlası üst üste biner); yönetici düğmesi yalnızca <=5 düğmede eklenir.
 // Kullanım:
 //   node gen_hocalar.js <kakashi|itachi> <datapack klasoru> <owner-uuid> <x> <y> <z> <yaw> [skin-dosyasi] [slim]
 //   sonra konsolda 'reload' ve 'function yoruichi:<npc>_kur' (skin-dosyasi varsayılan <npc>_v1.png)
@@ -42,7 +43,7 @@ const adminBtn = '{Conditions:[{Type:"PLAYER_TAG",Name:"rank_admin"}],Name:"[Adm
 function btn(name, actions, label) { return '{Name:' + q(name) + (label ? ',Label:' + q(label) : '') + ',Actions:[' + actions.join(',') + ']}' }
 function dialog(name, text, buttons, label) {
   return '{Options:{AllowEscClose:0,ShowCloseButton:0,ButtonConditionMode:"HIDE"},Texts:[{Text:' + q(text) + '}],' +
-    (label ? 'Label:' + q(label) + ',' : '') + 'Buttons:[' + buttons.concat([adminBtn]).join(',') + '],Name:' + q(name) + '}'
+    (label ? 'Label:' + q(label) + ',' : '') + 'Buttons:[' + (buttons.length <= 5 ? buttons.concat([adminBtn]) : buttons).join(',') + '],Name:' + q(name) + '}'
 }
 const tag = t => action('/tag @initiator add ' + t)
 
@@ -71,9 +72,7 @@ const NPCS = {
       btn('Amaterasu öğrenmek istiyorum.', [tag('hoca_req_amaterasu'), CLOSE]),
       btn('Tsukiyomi öğrenmek istiyorum.', [tag('hoca_req_tsukiyomi'), CLOSE]),
       btn('Sınavı bildiriyorum.', [tag('hoca_rep_itachi'), CLOSE]),
-      btn('Eğitim durumum.', [tag('hoca_info'), CLOSE]),
-      btn('Amaterasu parşömenimi kaybettim.', [tag('hoca_lost_amaterasu'), CLOSE]),
-      btn('Tsukiyomi parşömenimi kaybettim.', [tag('hoca_lost_tsukiyomi'), CLOSE]),
+      btn('Diğer işler.', [open('hoca_diger')]),
       btn('Ayrılıyorum.', [CLOSE])
     ]
   }
@@ -86,6 +85,14 @@ const dialogs = [
   dialog('hoca_ilk', N.ilk, [btn(N.kabul, [tag('hoca_met_' + npc), open('hoca_hub')], 'hoca_kabul')], 'hoca_ilk'),
   dialog('hoca_hub', N.hubText, N.buttons(), 'hoca_hub')
 ]
+if (npc === 'itachi') {
+  dialogs.push(dialog('hoca_diger', 'Başka ne var?', [
+    btn('Eğitim durumum.', [tag('hoca_info'), CLOSE]),
+    btn('Amaterasu parşömenimi kaybettim.', [tag('hoca_lost_amaterasu'), CLOSE]),
+    btn('Tsukiyomi parşömenimi kaybettim.', [tag('hoca_lost_tsukiyomi'), CLOSE]),
+    btn('Geri.', [CLOSE])
+  ], 'hoca_diger'))
+}
 function route(dlg, cond) {
   return '{Type:"COMMAND",PermLevel:3,Cmd:' + q('/execute as @initiator if entity @s[' + cond + '] run easy_npc dialog open ' + UUID + ' @s ' + dlg) + '}'
 }
