@@ -4,6 +4,7 @@
 
 - **Tür:** İnsan (easy_npc:humanoid, klasik kol)
 - **Konum:** -988.5, 68, -371.5 (spawn)
+- **Zırh:** Altın işlemeli (Sentry) demir şövalye zırhı takılı (`item replace entity`, düşme şansı 0). Diyalog düzeni: ana menüde en çok 5, alt menülerde en çok 5-6 düğme (Easy NPC bundan fazlasını üst üste çizer): Sefer / rapor, Seferi bırakıyorum, Rütbe dükkânı, Diğer işler (seferim nasıl gidiyor, birlik kaydım, defter, tedarik), Ayrılıyorum.
 - **Krallık:** [Caddy](../kingdoms/caddy.md) (tarafsız, hiçbir krallığa bağlı değil)
 - **Görevi:** Keşif Birliği komutanı. Maceracı rütbeli oyunculara tekrarlanmayan, kademeli zorlaşan **öldürme seferleri** verir (aşağıda). Aldric'ten kalan ticaret ("Tedarik" düğmesi) duruyor.
 - **Görünüş:** Attack on Titan'daki Erwin Smith (sarı saç, Survey Corps yeşil pelerini)
@@ -28,13 +29,13 @@
 
 | Tür | Kim görür | Hedefler | Ödül (zümrüt bloğu) |
 |---|---|---|---|
-| I Sis Devriyesi | Yeminsiz, Kül Bekçisi | zombi, iskelet, örümcek, creeper, boğulmuş, slime (8-30 adet) | 1-2 |
-| II Av | Kül Bekçisi, Kan Yeminli | yağmacı, enderman, mezarlık, derin karanlık, kaos, cadı, Nether askeri, büyücü, düşmüş şövalye (4-16) | 1-2 |
-| III Karanlığa İniş | Kan Yeminli, Gece Avcısı | ravager, kale, mutant, kadim yaratıklar, orman ruhu, yıkıntı bekçisi (1-16) | 2-4 |
-| IV Kan Sözü | Gece Avcısı, Eşik Muhafızı | tek boss: Cataclysm, BoMD, Mowzie, Iron's, Souls | 5-8 |
-| V Kıyamet Seferi | Eşik Muhafızı | ejderha, Leviathan/Scylla, Wither, Warden, Ender Ejderhası | 10-14 |
+| I Sis Devriyesi | Yeminsiz, Kül Bekçisi | zombi, iskelet, örümcek, creeper, boğulmuş, slime (8-30 adet) | 2-4 zümrüt (%4 ile 1 blok) |
+| II Av | Kül Bekçisi, Kan Yeminli | yağmacı, enderman, mezarlık, derin karanlık, kaos, cadı, Nether askeri, büyücü, düşmüş şövalye (4-16) | 3-6 zümrüt (%6 ile 1 blok) |
+| III Karanlığa İniş | Kan Yeminli, Gece Avcısı | ravager, kale, mutant, kadim yaratıklar, orman ruhu, yıkıntı bekçisi (1-16) | 6-10 zümrüt (%10 ile 1 blok) |
+| IV Kan Sözü | Gece Avcısı, Eşik Muhafızı | tek boss: Cataclysm, BoMD, Mowzie, Iron's, Souls | 12-20 zümrüt (%18 ile 1 blok) |
+| V Kıyamet Seferi | Eşik Muhafızı | ejderha, Leviathan/Scylla, Wither, Warden, Ender Ejderhası | 24-36 zümrüt (%30 ile 1-2 blok) |
 
-Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekkep; IV-V'te netherite/totem) eklenir; **%3 büyük zafer** blok ödülünü ikiye katlar. Ekonomi: Yoruichi'nin eğitimi toplam 19 blok; bir Tür I seferi ortalama 1,5 blok.
+Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekkep; IV-V'te netherite/totem) eklenir; **%3 büyük zafer** zümrüt ödülünü ikiye katlar. Zümrüt bloğu asıl ödeme aracıdır (dükkân, Yoruichi), bu yüzden ödül olarak nadir bir ekstradır. 9 zümrüt = 1 blok; Yoruichi'nin eğitimi 19 blok = 171 zümrüt, yani onlarca sefer ister. Ölüm Emri ödülü normal sefer ödülünün yarısıdır, hedefin canı ve zırhı artırılmıştır.
 
 **Teknik:** mantık `kubejs/server_scripts/erwin_seferleri.js` (şablonlar, teklif, sayaç, ödül, terfi; durum oyuncunun `persistentData`'sında `erwin_*`). Diyalog düğmeleri `erwin_req/rep/info/stat/abort` etiketi verir, script alır. Diyalogları `tools/yoruichi/gen_erwin.js` üretir (datapack fonksiyonu `yoruichi:erwin_setup`, konsoldan çalıştırılır). Yönetici komutu: `/erwin_sifirla <oyuncu>` tüm ilerlemeyi sıfırlar. Hedef kimlikleri sunucu kayıt defterinden doğrulandı; yeni mod eklenirse şablonlara elle eklenir.
 
@@ -53,6 +54,7 @@ Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekk
 - **Veri yedeği (`oyuncu_yedek.js`):** Oyuncunun `erwin_*` ve `hoca_*` verisi her 10 saniyede ve ölmeden hemen önce dünya verisine kopyalanır; ölüm/girişte oyuncuda eksikse geri yazılır (yönetici sıfırlaması korunur). Java çağrıları `/yedek_test` ile sunucuda doğrulandı (BASARILI).
 - **Ödül dengesi:** Nadir/OP eşyalar (Nether yıldızı, netherite kalıbı, denizin kalbi) kaldırıldı; Tür V'te büyülü altın elma %20 (1 adet), netherite külçe %10, totem %8.
 
+**Denge (ödül kısma turu):** Ödül artık bozuk zümrüttür, blok nadir ekstradır (oyuncu ilk seferde çok fazla aldığını bildirdi); ganimet şansları bir kez daha %25 kısıldı, Ölüm Emri ödülü yarıya indi.
 **Denge (zorlaştırma turu):** Hedef sayıları ~%25 arttı, blok ödülleri düştü (I 1-2, II 1-2, III 2-4, IV 5-8, V 10-14), ganimet şansları ~%20 azaldı, büyük zafer %3, günde 5 sefer, bekleme 4 dk, terfi sayıları 4/5/5/4.
 
 **Not:** Ortak sefer denendi ve kaldırıldı (kişi başı verimi artırıyordu, gereksiz görüldü).

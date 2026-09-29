@@ -1,11 +1,11 @@
 # Itachi (Amaterasu ve Tsukiyomi öğretmeni)
 
-*(Sistem hazır ve VDS'te; NPC henüz oyunda yok. Skin ve konum bekleniyor.)*
+*(Sistem ve NPC VDS'te kurulu; gerçek oyunda test edilmedi.)*
 
 - **Tür:** İnsan (easy_npc:humanoid; kol tipi skin'e göre)
 - **Öğrettiği büyüler:** Amaterasu (`kubejs:amaterasu`, 3 seviye), Tsukiyomi (`kubejs:tsukiyomi`, 3 seviye); bkz. `kubejs/startup_scripts/amaterasu_spell.js`, `tsukiyomi_spell.js`
 - **Krallık:** Tarafsız
-- **Konum:** *belirlenecek*
+- **Konum:** -805.5, 72, -475.5 (yön: güney; oyuncuya bakar)
 - **Skin dosyası:** `assets/npc-skins/itachi_v1.png` (bkz. [assets.md](../../assets.md))
 - **Neden Itachi (ikisi de):** Amaterasu ve Tsukiyomi onun imza teknikleridir. İki büyü tek NPC'de olur ama **iki ayrı eğitim yolu** vardır.
 

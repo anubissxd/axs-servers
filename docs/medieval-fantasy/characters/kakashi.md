@@ -1,11 +1,11 @@
 # Kakashi (Chidori öğretmeni)
 
-*(Sistem hazır ve VDS'te; NPC henüz oyunda yok. Skin ve konum bekleniyor.)*
+*(Sistem ve NPC VDS'te kurulu; gerçek oyunda test edilmedi.)*
 
 - **Tür:** İnsan (easy_npc:humanoid; kol tipi skin'e göre)
 - **Öğrettiği büyü:** Chidori (4 seviye, `kubejs:chidori`, bkz. `kubejs/startup_scripts/chidori_spell.js`)
 - **Krallık:** Tarafsız (Yoruichi gibi bir öğretmen; Vlorya'ya bağlı değil)
-- **Konum:** *belirlenecek*
+- **Konum:** -786.5, 72, -331.5 (yön: güney; oyuncuya bakar)
 - **Skin dosyası:** `assets/npc-skins/kakashi_v1.png` (bkz. [assets.md](../../assets.md))
 - **Neden Kakashi:** Chidori'yi yaratan ve öğreten kişidir; Yoruichi modeli (öğretmen NPC, öğrenci oyuncu).
 
