@@ -43,3 +43,4 @@ Genel proje kuralları (sunucuların bağımsızlığı, mod ekleme/kaldırma, y
 Bir iş yarım kalırsa buraya yazılır, bitince silinir. Böylece öbür kişi (veya Claude'u) nerede kalındığını görür.
 
 - **Oyuncu sıfırlama (2026-09-28):** Anubissxd ve swxff karakterleri sıfırlandı (yedek: `/root/backups/medieval-fantasy/2026-09-28-before-player-reset`). Oyuncu dosyaları silindi, FTB Ranks rütbeleri kaldırıldı, swxff'in OP'si alındı. Görev ilerlemesi ve yetenek ağaçları sunucu belleğinde durduğu için `kubejs/server_scripts/anubis_player_reset.js` ikisinin **ilk girişinde** bunları komutla sıfırlar. İkisi de girip logda `ANUBIS_RESET tamamlandi` görüldükten sonra bu dosya silinir (sonraki "Güncelle"den önce).
+- **Yoruichi / Shunpo (2026-09-29):** Dosyalar VDS'e kopyalandı ama sunucu yeniden başlatılmadı (startup script + paket yayını "Güncelle" ile). "Güncelle" sonrası Yoruichi'yi kurmak için [yoruichi.md](medieval-fantasy/characters/yoruichi.md) "VDS kurulum durumu"nu izle.

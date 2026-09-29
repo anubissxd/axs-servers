@@ -79,7 +79,7 @@ Diyaloglar: `l3_teklif`, `l3_devam`, `l3_odul`, `l3_bitti`. Bağlamak için (L2'
 `saves/<dünya>/datapacks/yoruichi_l2/` (üretici: oturum scratchpad'i, `gen_dp2.js`) tek seferlik `yoruichi:wire_l2` fonksiyonunu içerir. Yoruichi'nin yakınındayken: `/reload`, `/datapack enable "file/yoruichi_l2"`, `/function yoruichi:wire_l2`. Fonksiyon `l2_teklif`, `l2_devam`, `l2_odul`, `l2_bitti` diyaloglarını ekler ve `ON_INTERACTION` yönlendirmesini etiketlere (`yoruichi_l2`, `yoruichi_l2_done`, `yoruichi_l2_claimed`) göre yeniden yazar. NPC'ye `yoruichi_l2_wired` etiketi koyar, ikinci çalıştırmada yeniden bağlamaz. UUID (`5a1afe8a-...`) yalnızca local test NPC'sine aittir; VDS'te yeni UUID ile üretilmelidir. Yedek: `easy_npc/backup/`.
 
 ### Kediden insana dönüşüm (datapack)
-`saves/<dünya>/datapacks/yoruichi_l2/` içindeki `yoruichi:human` fonksiyonu eski kedi NPC'nin konumunda yeni bir `easy_npc:humanoid_slim` doğurur (tüm diyaloglar ve yönlendirmeler dahil, tag'ler: `korunan`, `yoruichi_npc`), kediyi siler. Yeni UUID: `fff2c1ae-28c0-4f9c-858b-94f7cbc0ca8e` (`yoruichi_chase.js` içindeki `YORUICHI_UUID_STR` ve `type=easy_npc:humanoid_slim` seçicileri buna göre güncellendi). Kullanım: Yoruichi'nin yakınında `/reload`, `/function yoruichi:human`. Üretici: oturum scratchpad'i, `gen_human.js`. VDS'e taşınırken aynı üretici yeni UUID'yle çalıştırılır.
+`saves/<dünya>/datapacks/yoruichi_l2/` içindeki `yoruichi:human` fonksiyonu eski kedi NPC'nin konumunda yeni bir `easy_npc:humanoid_slim` doğurur (tüm diyaloglar ve yönlendirmeler dahil, tag'ler: `korunan`, `yoruichi_npc`), kediyi siler. Yeni UUID: `fff2c1ae-28c0-4f9c-858b-94f7cbc0ca8e` (`yoruichi_chase.js` içindeki `YORUICHI_UUID_STR` ve `type=easy_npc:humanoid_slim` seçicileri buna göre güncellendi). Kullanım: Yoruichi'nin yakınında `/reload`, `/function yoruichi:human`. Üretici: `tools/yoruichi/gen_human.js`. VDS'e taşınırken aynı üretici yeni UUID'yle çalıştırılır.
 
 **Büyü adı:** oyunda "Shunpo" (büyü kimliği hâlâ `kubejs:flashstep`, eski parşömenler çalışır). İkon: `shunpo_16x16.png`.
 
@@ -90,3 +90,8 @@ Diyaloglar: `l3_teklif`, `l3_devam`, `l3_odul`, `l3_bitti`. Bağlamak için (L2'
 - **Bakış yönü:** Yoruichi evinde **güneye (+Z)** bakar (`yaw -1.4`, `pitch 0`). Eve dönerken bu yöne çevrilir.
 - **Gölge Klon (L3):** İlk Shunpo noktasında (`-1033.554, 72, -318.817`) doğar; nokta yüklü değilse (yerel test) oyuncunun yakınına düşer.
 - **Geri sayım:** Yoruichi evde değilken 60 sn'lik eve dönüş süresi, 60 blok içindeki oyunculara action bar'da gösterilir ("Yoruichi eve dönüyor: N sn").
+
+### VDS kurulum durumu (2026-09-29)
+- **Yapıldı (etkin değil):** Shunpo büyüsü, kovalama/L2/L3 script'leri, lang, ses, ikon, sonic_boom dokuları ve 4 eski büyüde Scroll Forge/loot kapatma `kubejs/` altına kopyalandı (yedek: `/root/backups/medieval-fantasy/2026-09-29-before-shunpo-kubejs`); havuza iki kayıt yazıldı. Sunucu yeniden başlatılmadı, paket yayınlanmadı.
+- **Datapack hazır, etkin değil:** `world/datapacks/yoruichi/` (üretici: `tools/yoruichi/gen_vds.js`, çıktı: `human`, `human_lock` fonksiyonları). "Güncelle"den sonra konsolda/oyunda: `/datapack enable "file/yoruichi"`, `/reload`, Anubis ya da swxff OP olarak `/function yoruichi:human` (NPC'yi ev noktasında doğurur, Owner'ı çalıştıran yapar), ardından `/function yoruichi:human_lock`. Sonra oturma pozu arayüzden seçilir.
+- Bekleyen: oturma pozu anahtarı, Gölge Klon dövüşünün ve otomatik kaçış noktalarının VDS'te denenmesi.
