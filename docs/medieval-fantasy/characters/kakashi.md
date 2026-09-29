@@ -30,7 +30,9 @@
 
 **Sinema:** Her sınav bir açılış senaryosuyla başlar: şimşek sesi ve kıvılcım parçacıkları, seviye başlığı ("ZİL SINAVI", "ŞİMŞEK ZİNCİRİ", "BİN KUŞUN SESİ", "KIRILMAYAN YILDIRIM"), Kakashi'nin 2 satırlık anlatısı, sonra sınav talimatı ve (sahneli sınavda) sahnenin başlaması. Rapor verince parşömen töreni: büyü parçacıkları, seviye başlığı, övgü, kapanış sözü, bağ sözü; son seviyede "USTALIK" sahnesi. Kill sınavlarında yarı yolda hoca kısa bir söz söyler. Sinema sürerken yeni istek "Bir saniye. Dinle." ile bekletilir.
 
-**Hoca bağı:** Kakashi'den öğrenilen toplam seviyeye göre Yabancı → Tanıdık (1+) → Öğrenci (3+) → Usta Öğrenci (4). Sınav başlarken ve rapor alırken bağa uygun bir söz söyler. Kayıp parşömen ücreti Öğrenci'de %25, Usta Öğrenci'de yarı yarıya iner.
+**Yıldırım fırtınası (Chidori L4):** Sınav açılışında uzaktan üç şimşek çakar (elektrik kıvılcımı sütunu ve gök gürültüsü), sınav sürerken 8 saniyede bir rastgele yönde sahte şimşek düşer; kapanışta yeniden. Tamamen kozmetik: gerçek yıldırım yok, hasar veya ateş riski yok.
+
+**Hoca bağı:** Kakashi'den öğrenilen toplam seviyeye göre Yabancı → Tanıdık (1+) → Öğrenci (3+) → Usta Öğrenci (4). Sınav başlarken ve rapor alırken bağa uygun bir söz söyler. Usta Öğrenci olununca Kakashi bir kez kozmetik hediye verir: "Kopya Bandanası" (koyu mavi deri miğfer, kırılmaz). Kayıp parşömen ücreti Öğrenci'de %25, Usta Öğrenci'de yarı yarıya iner.
 
 ## Teknik
 

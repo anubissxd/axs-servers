@@ -33,7 +33,9 @@ Toplam: Amaterasu 32, Tsukiyomi 44 zümrüt bloğu.
 
 **Sinema:** Her sınav açılışı temalıdır: Amaterasu'da kara alev sesi, ruh ateşi parçacıkları ve kararma; Tsukiyomi'de enderman bakışı sesi, portal parçacıkları ve uzun kararma. Seviye başlıkları ("KARA ALEVİN DOĞUŞU", "SÖNMEYEN ATEŞ", "YAKILAN RUHLAR", "SAHTE GERÇEK", "AYNALARIN ARDI", "SONSUZ GECE"), Itachi'nin anlatısı, sınav talimatı; rapor verince parşömen töreni ve son seviyede "USTALIK" sahnesi. Yarı yolda kısa bir söz. Sinema sürerken yeni istek bekletilir.
 
-**Hoca bağı:** Itachi'den öğrenilen toplam seviyeye göre Yabancı → Tanıdık (1+) → Öğrenci (3+) → Usta Öğrenci (6). Bağa uygun sözler ve kayıp parşömen indirimi (Öğrenci %25, Usta Öğrenci yarı yarıya).
+**Karga sahneleri:** Itachi'nin her sınav açılışında oyuncunun etrafında 5 "Karga" (yarasa) belirir, kanat sesi ve duman parçacıklarıyla 8 saniye sonra silinir; ustalık kapanışında da tekrar oynar.
+
+**Hoca bağı:** Itachi'den öğrenilen toplam seviyeye göre Yabancı → Tanıdık (1+) → Öğrenci (3+) → Usta Öğrenci (6). Bağa uygun sözler ve kayıp parşömen indirimi; Usta Öğrenci olununca (Amaterasu ve Tsukiyomi tamam) Itachi bir kez kozmetik hediye verir: "Gece Pelerini" (koyu deri göğüslük, kırılmaz). İndirim (Öğrenci %25, Usta Öğrenci yarı yarıya).
 
 ## Teknik
 
