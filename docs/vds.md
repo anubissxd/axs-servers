@@ -100,6 +100,21 @@ ssh -t root@31.58.91.7 gh auth login
 
 ---
 
+## Oyun içi yönetici komutları (KubeJS)
+
+Konsoldan ya da oyunda (op 2) çalışır. Sistem açıklamaları ilgili karakter dokümanlarında.
+
+| Komut | Ne yapar |
+|---|---|
+| `/erwin_sifirla <oyuncu>` | Oyuncunun tüm Erwin ilerlemesini (rütbe, sefer, unvan, defter, dükkân stoğu, `erwin_met`) sıfırlar |
+| `/hoca_sifirla <oyuncu>` | Oyuncunun Kakashi/Itachi ilerlemesini (seviyeler, ücret kayıtları, hediye bayrakları, aktif sınav) sıfırlar |
+| `/yedek_test` | Oyuncu verisi yedeğinin Java çağrılarını sahte bir bölmeyle sınar; "BASARILI" yazmalı |
+| `/anubis_hub_temizle` | Hub çevresindeki yüklü canavarları siler |
+| `function yoruichi:erwin_setup` | Erwin'in diyalog ve yönlendirmelerini kurar/yeniler (konsol; `tools/yoruichi/gen_erwin.js` üretir) |
+| `function yoruichi:kakashi_kur`, `function yoruichi:itachi_kur` | NPC'yi doğurur (önce `tools/yoruichi/gen_hocalar.js` ile üretilip datapack'e konur) |
+
+Temizlik: takılı sahne varlıkları `/kill @e[tag=hoca_scene]`, karga sürüsü `/kill @e[tag=hoca_karga]`. Sınama listesi: [medieval-fantasy/test-erwin-hocalar.md](medieval-fantasy/test-erwin-hocalar.md).
+
 ## Yedekler
 
 Hepsi `/root/backups/medieval-fantasy/` altındadır.
