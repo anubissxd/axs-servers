@@ -21,6 +21,8 @@ Yerel profil: `%APPDATA%\.minecraft\versions\Medieval Fantasy\` (yeni VDS'te `/r
 
 Üretim (repodaki [tools/yoruichi/gen_hocalar.js](../tools/yoruichi/gen_hocalar.js)): `HOCA_UUID=<npc-uuid> node gen_hocalar.js <kakashi|itachi|gojo> <datapack> <owner-uuid> <x> <y> <z> 0`. NPC uuid'leri: Kakashi `6de0f631-c97e-44de-a0ea-d1778f073f74`, Itachi `6ea2c950-4873-485e-afb6-6b74c244f238`, Gojo `6bbe609e-4759-4904-9795-3e7974da69f8`. Koordinatlar: Kakashi -786.5 72 -331.5, Itachi -805.5 72 -475.5, Gojo -820 69 -473.
 
+**Gojo şimdilik pasif:** Blue/Red/Purple öğretimi kapalı (Gojo savar); `hocalar_egitim.js` içinde `HOCA_DEVRE_DISI` ve `gen_hocalar.js` içinde Gojo `pasif: true`. Yeni VDS'te `gojo_diyalog` fonksiyonu **savan** diyaloglarla yazılmalı; açmak için [gojo.md](medieval-fantasy/characters/gojo.md) başındaki notu izle.
+
 ## 2. Yeni VDS'te sırayla
 
 1. **Önce genel geri kurulum** ([vds-tasima.md](vds-tasima.md)): sunucu klasörü, mod jar'ları, config, kubejs (1.3.7 hâli).

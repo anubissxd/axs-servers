@@ -1,5 +1,7 @@
 # Gojo
 
+> **Şimdilik devre dışı (2026-09-30):** Blue, Red ve Purple öğretimi kapatıldı; Gojo başından savar ve büyü vermez. Kod ve veriler yerinde: `hocalar_egitim.js` içindeki `HOCA_DEVRE_DISI` girdilerini silip `tools/yoruichi/gen_hocalar.js` içinde Gojo'nun `pasif: true` satırını kaldırınca ve `gojo_diyalog` fonksiyonunu yeniden çalıştırınca tekrar açılır. Büyülerin kendisi (startup script) kayıtlı kalır.
+
 *(Sistem kurulu; büyüler kendi adlarıyla kayıtlı ve oyunun yeniden başlatılmasını ister. Gerçek oyunda test edilmedi.)*
 
 - **Tür:** İnsan (easy_npc:humanoid, klasik kol). UUID `6bbe609e-4759-4904-9795-3e7974da69f8`, etiketleri `korunan`, `hoca_npc_gojo`.

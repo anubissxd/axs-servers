@@ -75,6 +75,8 @@ const NPCS = {
     name: 'Gojo', color: '#7FD1FF',
     ret: 'Yo! Hmm... adın yok, rütben yok. Endişelenme, nazik biriyim. Ama önce Maceracı ol, sonra gel; en güçlünün vaktini boşa harcamak suç sayılır. Şaka şaka. Ya da değil.',
     ilk: 'Yo! Ben Gojo Satoru. Evet, o en güçlü olan. İmza yok, üzgünüm. Bir şey soracaksan sor ama hızlı; sonsuzlukla meşgulüm.',
+    pasif: true, // şimdilik büyü öğretmiyor: hub yalnızca savar (etkinleştirmek için bu satırı ve hocalar_egitim.js HOCA_DEVRE_DISI'yı kaldır)
+    pasifHub: 'Şimdi mi? Hayır. Ben de meşgulüm, sen de hazır değilsin. Mavi, Kırmızı, Mor... hepsi sırası gelince. Şimdi git, sonra gel. Hehe.',
     hubText: 'Mavi, Kırmızı, Mor... Sırayla, tabii. Önce ikisini öğrenirsin, üçüncüsü ikisinin birleşimi. Keşif Birliği\'nde yükselmeden kapıdan içeri bile almam, hehe.',
     kabul: 'Senden bir şey öğrenmek istiyorum.',
     kars: [
@@ -138,10 +140,10 @@ if (!N) { console.error('bilinmeyen npc: ' + npc); process.exit(1) }
 const dialogs = [
   dialog('hoca_ret', N.ret, [btn('Anlıyorum.', [CLOSE])], 'hoca_ret'),
   dialog('hoca_ilk', N.ilk, [btn(N.kabul, [tag('hoca_met_' + npc), open('hoca_hub')], 'hoca_kabul')], 'hoca_ilk'),
-  dialog('hoca_hub', N.hubText, N.buttons(), 'hoca_hub')
+  dialog('hoca_hub', N.pasif ? N.pasifHub : N.hubText, N.pasif ? [btn('Peki, gidiyorum.', [CLOSE])] : N.buttons(), 'hoca_hub')
 ]
 N.kars.forEach((t, i) => dialogs.push(dialog('hoca_kars_' + (i + 1), t, [btn(N.karsBtn, [open('hoca_hub')]), btn(N.karsGeri, [CLOSE])], 'hoca_kars_' + (i + 1))))
-if (N.diger) dialogs.push(dialog('hoca_diger', 'Başka ne var?', N.diger(), 'hoca_diger'))
+if (N.diger && !N.pasif) dialogs.push(dialog('hoca_diger', 'Başka ne var?', N.diger(), 'hoca_diger'))
 function route(dlg, cond) {
   return '{Type:"COMMAND",PermLevel:3,Cmd:' + q('/execute as @initiator if entity @s[' + cond + '] run easy_npc dialog open ' + UUID + ' @s ' + dlg) + '}'
 }
