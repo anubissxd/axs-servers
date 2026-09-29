@@ -14,6 +14,7 @@ Eski VDS (`31.58.91.7`) **30 Eylül 2026'da silindi/silinecek**. Bu doküman: he
 | Gerçek script'ler (webhook'lu), `/root/pending`, `/root/dev` (mdk, kaynaklar), `/root/mod-bekleyen`, `/root/staging`, `authorized_keys` | GitHub release `vds-yedek-2026-09-30` → `extras.tar.zst.enc.*` | **Evet** |
 | **Tüm sunucu klasörü** (`/root/servers/medieval-fantasy`: dünya, oyuncu verileri, mod jar'ları, config, kubejs, NPC'ler, ops/whitelist, `server-only-mods.txt`) | Aynı release → `server-medieval-fantasy.tar.zst.enc.00/.01/.02` | **Evet** |
 | Eski dünya (`2026-09-25-old-world-final`) | Aynı release → `old-world-final.tar.zst.enc.*` | **Evet** |
+| **Delta:** ilk yedekten sonra değişenler (Watut + CoroUtil jar'ları, yeni config'ler, havuz kaydı, dünyadan 79 dosya) | Aynı release → `delta-watut.tar.zst.enc.00` | **Evet** |
 | Oyuncu paketi (mod/config dosyaları) | GitHub release `medieval-fantasy-pack-overflow` + `distribution/medieval-fantasy/manifest.json` | Hayır (zaten herkese açık) |
 | AnuDownloader kurulum dosyası | GitHub release `anudownloader` | Hayır |
 
@@ -56,7 +57,7 @@ apt update && apt install -y openjdk-17-jdk-headless openjdk-21-jdk-headless scr
 ```bash
 mkdir -p /root/yedek-in && cd /root/yedek-in
 gh release download vds-yedek-2026-09-30 -R anubissxd/minecraft-servers
-sha256sum -c server-medieval-fantasy.sha256 extras.sha256
+for s in extras server-medieval-fantasy delta-watut old-world-final; do sha256sum -c $s.sha256; done
 # parolayı /root/.yedek-anahtar dosyasına koy (Anubis'in bilgisayarındaki VDS-Yedek-Anahtar.txt içeriği), chmod 600
 
 cat extras.tar.zst.enc.* | openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -pass file:/root/.yedek-anahtar | zstd -dc | tar -C / -xf -
@@ -65,6 +66,12 @@ cat server-medieval-fantasy.tar.zst.enc.* | openssl enc -d -aes-256-cbc -pbkdf2 
 ```
 
 Dosyalar aynı yola (`/root/servers/medieval-fantasy`, `/root/scripts`, `/root/pending`, `/root/dev`...) açılır. Eski dünya gerekirse `old-world-final.tar.zst.enc.*` aynı şekilde `/`'e açılır (`/root/backups/medieval-fantasy/2026-09-25-old-world-final`).
+
+**Son adım: delta'yı üstüne aç** (ilk yedekten sonra eklenen What Are They Up To + CoroUtil ve yeni config'ler):
+
+```bash
+cat delta-watut.tar.zst.enc.* | openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -pass file:/root/.yedek-anahtar | zstd -dc | tar -C / -xf -
+```
 
 ### 2.3 Servis, cron, script'ler
 
@@ -122,5 +129,5 @@ Domain kullanılmıyor; ileride bir alan adı alınırsa IP değişimi bu tabloy
 
 - Sunucu `online-mode=false` (TLauncher paketi), `white-list=true`. Ayarlar: [`tools/vds/altyapi/sunucu-ayarlari/server.properties`](../tools/vds/altyapi/sunucu-ayarlari/server.properties).
 - Yedek alındığında sunucu **kapalıydı** (sunucu: 2026-09-29 22:31 UTC, `save-all flush` sonrası `systemctl stop`). Dünya o andaki halinde. Sonraki her değişiklik yedekte yoktur.
-- Sunucu, yedeğin ardından bir kez **What Are They Up To (Watut) + CoroUtil** testi için açıldıysa bu, dünyada ihmal edilebilir fark yaratır. Ayrıntı: `docs/README.md` "Yarım kalan işler".
+- Yedekten sonra sunucu bir kez **What Are They Up To (Watut) + CoroUtil** testi için açılıp kapatıldı (2026-09-29 23:20-23:24 UTC): Forge yükledi, hata yok, `Done`. Bu iki mod `mods/`te ve **havuzda** (`havuz liste`), henüz paket olarak yayınlanmadı: yeni VDS ayağa kalkınca "Güncelle" ile pakete ve oyunculara gider. Fark delta arşivinde.
 - Yedekleri yükleyen script: eski VDS'te `/root/yedek_yukle.sh` (`extras` arşivinde). Aynı mantık tekrar gerekirse: `tar | zstd -T4 -3 | openssl enc ... | split -b 1900M`, sonra `gh release upload`.
