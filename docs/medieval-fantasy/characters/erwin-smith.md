@@ -24,15 +24,15 @@
 
 **Akış:** "Sefer istiyorum" → Erwin rütbeye uygun **3 sefer teklif eder** (sohbette tıklanır: [A] [B] [C]) → oyuncu seçer, hedefi öldürür (eylem çubuğunda sayaç) → "Rapor veriyorum" → ödül. Aynı anda tek sefer; sefer sonrası 2 dk, bırakınca 5 dk bekleme; günde en çok 10 sefer. Son 4 sefer teklifte tekrarlanmaz; teklifler 10 dk geçerli. Hedef sayısı her tekliflenişte aralıktan rastgele seçilir.
 
-**Rütbeler (terfi):** Acemi → Er (3 Devriye) → Onbaşı (4 Sefer) → Çavuş (4 Derin Sefer) → Birlik Kaptanı (3 Ölümcül Sefer). Rütbe `erwin_rank_1..4` etiketidir; Erwin'in ana diyaloğu rütbeye göre değişir.
+**Rütbeler (terfi):** Yeminsiz → Kül Bekçisi (3 Sis Devriyesi) → Kan Yeminli (4 Av) → Gece Avcısı (4 Karanlığa İniş) → Eşik Muhafızı (3 Kan Sözü). Rütbe `erwin_rank_1..4` etiketidir; Erwin'in ana diyaloğu rütbeye göre değişir.
 
 | Tür | Kim görür | Hedefler | Ödül (zümrüt bloğu) |
 |---|---|---|---|
-| I Devriye | Acemi, Er | zombi, iskelet, örümcek, creeper, boğulmuş, slime (8-30 adet) | 1-2 |
-| II Sefer | Er, Onbaşı | yağmacı, enderman, mezarlık, derin karanlık, kaos, cadı, Nether askeri, büyücü, düşmüş şövalye (4-16) | 2-4 |
-| III Derin Sefer | Onbaşı, Çavuş | ravager, kale, mutant, kadim yaratıklar, orman ruhu, yıkıntı bekçisi (1-16) | 4-7 |
-| IV Ölümcül | Çavuş, Kaptan | tek boss: Cataclysm, BoMD, Mowzie, Iron's, Souls | 8-14 |
-| V Efsane | Kaptan | ejderha, Leviathan/Scylla, Wither, Warden, Ender Ejderhası | 16-24 |
+| I Sis Devriyesi | Yeminsiz, Kül Bekçisi | zombi, iskelet, örümcek, creeper, boğulmuş, slime (8-30 adet) | 1-2 |
+| II Av | Kül Bekçisi, Kan Yeminli | yağmacı, enderman, mezarlık, derin karanlık, kaos, cadı, Nether askeri, büyücü, düşmüş şövalye (4-16) | 2-4 |
+| III Karanlığa İniş | Kan Yeminli, Gece Avcısı | ravager, kale, mutant, kadim yaratıklar, orman ruhu, yıkıntı bekçisi (1-16) | 4-7 |
+| IV Kan Sözü | Gece Avcısı, Eşik Muhafızı | tek boss: Cataclysm, BoMD, Mowzie, Iron's, Souls | 8-14 |
+| V Kıyamet Seferi | Eşik Muhafızı | ejderha, Leviathan/Scylla, Wither, Warden, Ender Ejderhası | 16-24 |
 
 Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekkep; IV-V'te netherite/totem) eklenir; **%5 büyük zafer** blok ödülünü ikiye katlar. Ekonomi: Yoruichi'nin eğitimi toplam 19 blok; bir Tür I seferi ortalama 1,5 blok.
 

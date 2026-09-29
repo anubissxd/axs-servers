@@ -26,11 +26,11 @@ function dialog(name, text, buttons, label) {
 const tag = t => action('/tag @initiator add ' + t)
 
 const HUB_TEXT = [
-  'Acemi. Adını duydum ama henüz kanıtın yok. Devriyelerle başla; sınır seni tanısın.',
-  'Er. Artık gerçek seferlere çıkabilirsin. Hangi tehlikenin peşine düşeceksin?',
-  'Onbaşı. Derin seferler seni bekliyor. Dikkatli seç, dikkatli git.',
-  'Çavuş. Ölümcül seferler için adın anılıyor. Hazırsan konuşalım.',
-  'Kaptan. Efsane seferler yalnızca senin gibi birine emanet edilir. Söyle, ne yapıyoruz?'
+  'Yeminsiz. Adını duydum ama henüz kimse senin için yemin etmedi. Sisin içinde küçük işlerle başla; karanlık seni tanısın.',
+  'Kül Bekçisi. Küllerin ötesine geçebilirsin artık. Hangi avın peşine düşeceksin?',
+  'Kan Yeminli. Karanlığın derinleri seni bekliyor. Dikkatli seç, dikkatli in.',
+  'Gece Avcısı. Kan sözleri için adın fısıldanıyor. Hazırsan konuşalım.',
+  'Eşik Muhafızı. Kıyamet seferleri yalnızca senin gibi birine emanet edilir. Söyle, hangi kapıyı kapatıyoruz?'
 ]
 function hubButtons() {
   return [
