@@ -20,7 +20,7 @@ Bizim yazdığımız Iron's Spells büyülerinin envanter/büyü çubuğu ikonla
 | `chidori.png` | Chidori | `kubejs/startup_scripts/chidori_spell.js` |
 | `rasengan.png` | Rasengan | `kubejs/startup_scripts/rasengan_spell.js` |
 | `tsukiyomi.png` | Tsukiyomi | `kubejs/startup_scripts/tsukiyomi_spell.js` |
-| `shunpo.png` | Shunpo | Henüz büyüsü yok; büyü eklenince aynı adla bağlanır |
+| `flashstep.png` | Shunpo (oyunda görünen ad) | `kubejs/startup_scripts/flashstep_spell.js`. Büyünün sistem adı `flashstep`, adı Shunpo; dosya sistem adıyla adlandırılır. Büyü kodunu swxff push edecek |
 
 **Bunlar aktif olarak kullanılıyor.** Iron's Spells bir büyünün ikonunu büyünün adından bulur: `kubejs:<büyü>` büyüsünün ikonu `textures/gui/spell_icons/<büyü>.png` dosyasıdır. Bu yüzden **dosya adı büyünün KubeJS adıyla birebir aynı olmalıdır**.
 
@@ -35,7 +35,7 @@ Oyundaki (VDS) yeri:
 ### Kurallar
 
 - **16×16 PNG**, şeffaf arka plan, Minecraft stiline uygun.
-- **Dosya adı = büyü adı**, küçük harf, Türkçe karakter ve boşluk yok (`shunpo.png`, `shunpo_16x16_minecraft.png` değil). Boyut ya da "minecraft" gibi son ek eklenmez.
+- **Dosya adı = büyü adı**, küçük harf, Türkçe karakter ve boşluk yok (`flashstep.png`, `flashstep_16x16_minecraft.png` değil; oyunda görünen ad Shunpo olsa bile dosya adı sistem adı `flashstep` olur). Boyut ya da "minecraft" gibi son ek eklenmez.
 - Yeni ikon önce `assets/spell-icons/`'a eklenir, sonra aynı dosya VDS'teki yola konur (aynı içerik, aynı ad).
 - İkonu değiştirirken iki yerde de değiştirin ve commit mesajında hangi büyünün ikonu olduğunu yazın.
 - Masaüstündeki "Icons" klasörü kaynak değildir; kaynak bu klasördür.
