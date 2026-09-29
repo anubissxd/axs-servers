@@ -49,3 +49,6 @@ Toplam: Amaterasu 37, Tsukiyomi 50 zümrüt bloğu.
 - **Rütbesiz (`hoca_ret`):** "Boşuna geldin. Bu bilgi herkese emanet edilmez. Önce Maceracı olarak adını duyur."
 - **İlk konuşma (`hoca_ilk`):** kendini tanıtır, iki büyüyü ve rütbe şartlarını anlatır.
 - **Ana diyalog (`hoca_hub`):** Amaterasu / Tsukiyomi öğrenmek istiyorum, sınavı bildiriyorum, eğitim durumum, iki parşömen için "kaybettim", ayrıl.
+
+
+**Karşılama:** Tanıştıktan sonra her gelişte hoca isteksiz bir karşılama repliğiyle başlar (5 farklı replik, `hoca_kars_1..5`); büyü menüsü ancak "öğrenmek istiyorum" denince açılır. Hangi replik açılacağı oyuncudaki `hoca_kn_<hoca>_<n>` etiketiyle belirlenir ve her konuşmadan sonra bir öncekinden farklı yeni biri seçilir (`hocalar_egitim.js` `hocaRerollGreeting`, etkileşimde `hoca_reroll_<hoca>` etiketi).

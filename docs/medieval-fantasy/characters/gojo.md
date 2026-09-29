@@ -49,7 +49,9 @@ Kayıp parşömen ücreti, bağ ve hediye diğer hocalarla aynıdır (`hocaLostF
 
 ## Diyalog ve etiketler
 
-Ana menü 6 düğme (Easy NPC'nin sınırı): Mavi, Kırmızı, Mor, Sınavı bildiriyorum, Diğer işler, Ayrılıyorum. "Diğer işler": Eğitim durumum, Mavi/Kırmızı/Mor parşömenimi kaybettim, Geri. Etiketler: `hoca_req_ao|aka|murasaki`, `hoca_rep_gojo`, `hoca_info`, `hoca_lost_ao|aka|murasaki`. Yönlendirme: Maceracı değilse `hoca_ret`, tanışmadıysa `hoca_ilk`, sonra `hoca_hub`.
+Ana menü 6 düğme (Easy NPC'nin sınırı): Mavi, Kırmızı, Mor, Sınavı bildiriyorum, Diğer işler, Ayrılıyorum. "Diğer işler": Eğitim durumum, Mavi/Kırmızı/Mor parşömenimi kaybettim, Geri. Etiketler: `hoca_req_ao|aka|murasaki`, `hoca_rep_gojo`, `hoca_info`, `hoca_lost_ao|aka|murasaki`. Yönlendirme: Maceracı değilse `hoca_ret`, tanışmadıysa `hoca_ilk`, sonra rastgele karşılama (`hoca_kars_n`), oradan `hoca_hub`.
+
+**Karşılama:** Tanıştıktan sonra her gelişte hoca isteksiz bir karşılama repliğiyle başlar (5 farklı replik, `hoca_kars_1..5`); büyü menüsü ancak "öğrenmek istiyorum" denince açılır. Hangi replik açılacağı oyuncudaki `hoca_kn_<hoca>_<n>` etiketiyle belirlenir ve her konuşmadan sonra bir öncekinden farklı yeni biri seçilir (`hocalar_egitim.js` `hocaRerollGreeting`, etkileşimde `hoca_reroll_<hoca>` etiketi).
 
 ## Teknik
 

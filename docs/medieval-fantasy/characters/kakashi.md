@@ -46,3 +46,6 @@
 - **Rütbesiz (`hoca_ret`):** "Yaa... Adını duymadım. Yolda kayboldum da, geç kaldım. Önce Maceracı olarak tanınmalısın; sonra konuşuruz."
 - **İlk konuşma (`hoca_ilk`):** kendini tanıtır (Kopya Ninja), Chidori'yi anlatır, Keşif Birliği şartını söyler.
 - **Ana diyalog (`hoca_hub`):** Chidori öğrenmek istiyorum / Sınavı bildiriyorum / Eğitim durumum / Parşömenimi kaybettim / Ayrılıyorum. Sınav, bildirim ve ödül konuşmaları chat mesajı olarak script'te.
+
+
+**Karşılama:** Tanıştıktan sonra her gelişte hoca isteksiz bir karşılama repliğiyle başlar (5 farklı replik, `hoca_kars_1..5`); büyü menüsü ancak "öğrenmek istiyorum" denince açılır. Hangi replik açılacağı oyuncudaki `hoca_kn_<hoca>_<n>` etiketiyle belirlenir ve her konuşmadan sonra bir öncekinden farklı yeni biri seçilir (`hocalar_egitim.js` `hocaRerollGreeting`, etkileşimde `hoca_reroll_<hoca>` etiketi).
