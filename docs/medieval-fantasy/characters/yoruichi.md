@@ -22,7 +22,8 @@ Bleach'teki Yoruichi Shihouin'den ilham alınmıştır: kim olduğunu saklayan, 
 ## Eğitim şartları
 
 1. **Rütbe:** Oyuncunun `rank_vloryan` rütbesi olmalı (FTB Ranks rank'i `vloryan`, `anubis_rank_stages.js` bunu etikete çevirir). Değilse "Sen Vlorya'dan değilsin, defol" diyaloğu açılır. Elle `tag` koymak işe yaramaz, script rütbeye göre etiketi geri siler. Rütbe `krallik_katil <oyuncu> vloryan` ile verilir.
-2. **Sıra:** L1 → L2 → L3. L2 teklifi L1 bittikten (`yoruichi_caught`), L3 teklifi L2 parşömeni alındıktan (`yoruichi_l2_claimed`) sonra açılır.
+2. **Keşif Birliği rütbesi (Erwin'e bağ):** Her eğitim için Erwin Smith'in Birlik rütbesi de aranır: L1 **Kül Bekçisi**, L2 **Kan Yeminli**, L3 **Gece Avcısı**. Yeterli değilse Yoruichi ücret almadan "Henüz erken" der (`yoruichi_pay.js`, `YORUICHI_MIN_RANK`). Ücreti daha önce ödenmiş seviye (`yoruichi_paid_l<n>`) geri çevrilmez. Erwin terfi sahnesinde Vlorya'lılara Yoruichi'nin hangi eğitiminin açıldığını da söyler.
+3. **Sıra:** L1 → L2 → L3. L2 teklifi L1 bittikten (`yoruichi_caught`), L3 teklifi L2 parşömeni alındıktan (`yoruichi_l2_claimed`) sonra açılır.
 3. **Ücret:** Her seviyede zümrüt bloğu (aşağıdaki tablo). Ücret her seviye için **yalnızca ilk kabulde bir kez** alınır (`yoruichi_paid_l<n>`), 60 sn sonra yeniden konuşma ya da Gölge Klon'u yeniden deneme ücret istemez.
 
 | Seviye | Ücret | Görev |

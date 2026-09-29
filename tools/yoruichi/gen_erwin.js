@@ -11,7 +11,6 @@ function uuidToInts(u) {
 }
 const path = require('path')
 const ERWIN = '504788d8-3dc0-407e-aebf-ca04dc17cfcb'
-const TRADE_ID = '[I;1305766263,957300831,-2141226545,-598731039]' // Aldric'ten kalan mevcut ticaret kaydi
 const BS = String.fromCharCode(92)
 const NL = String.fromCharCode(10)
 function q(s) { return '"' + s.split(BS).join(BS + BS).split('"').join(BS + '"') + '"' }
@@ -33,28 +32,12 @@ const HUB_TEXT = [
   'Gece Avcısı. Kan sözleri için adın fısıldanıyor. Hazırsan konuşalım.',
   'Eşik Muhafızı. Kıyamet seferleri yalnızca senin gibi birine emanet edilir. Söyle, hangi kapıyı kapatıyoruz?'
 ]
-// Rütbe dükkânı: kubejs/server_scripts/erwin_seferleri.js içindeki ERWIN_SHOP ile AYNI olmalı (etiket: erwin_buy_<key>)
-const SHOP_RANKS = ['', 'Kül Bekçisi', 'Kan Yeminli', 'Gece Avcısı', 'Eşik Muhafızı']
-const ERWIN_SHOP = [
-  { key: 'havuc', rank: 1, label: 'Altın havuç x16', price: 1 },
-  { key: 'ok', rank: 1, label: 'Ok x64', price: 1 },
-  { key: 'et', rank: 1, label: 'Pişmiş et x32', price: 1 },
-  { key: 'tsisesi', rank: 1, label: 'Tecrübe şişesi x8', price: 2 },
-  { key: 'altinelma', rank: 2, label: 'Altın elma x2', price: 3 },
-  { key: 'inci', rank: 2, label: 'Ender incisi x4', price: 3 },
-  { key: 'tsisesi2', rank: 2, label: 'Tecrübe şişesi x24', price: 5 },
-  { key: 'elmas', rank: 3, label: 'Elmas x4', price: 5 },
-  { key: 'pargasi', rank: 3, label: 'Netherite parçası x1', price: 6 },
-  { key: 'totem', rank: 3, label: 'Ölümsüzlük totemi', price: 14 },
-  { key: 'tsisesi3', rank: 4, label: 'Tecrübe şişesi x64', price: 9 },
-  { key: 'pargasi2', rank: 4, label: 'Netherite parçası x2', price: 10 },
-  { key: 'buyulu', rank: 4, label: 'Büyülü altın elma', price: 16 }
-]
+// Rütbe dükkânı Easy NPC ticaret ekranıyla açılır (erwin_seferleri.js: erwinShopOpen); buradaki düğme yalnızca etiket verir.
 function hubButtons() {
   return [
     btn('Sefer / rapor.', [tag('erwin_req'), CLOSE]),
     btn('Seferi bırakıyorum.', [tag('erwin_abort'), CLOSE]),
-    btn('Rütbe dükkânı.', [open('erwin_dukkan')]),
+    btn('Rütbe dükkânı.', [tag('erwin_dukkan'), CLOSE]),
     btn('Diğer işler.', [open('erwin_diger')]),
     btn('Ayrılıyorum.', [CLOSE])
   ]
@@ -64,7 +47,7 @@ function digerButtons() {
     btn('Seferim nasıl gidiyor?', [tag('erwin_info'), CLOSE]),
     btn('Birlik kaydım.', [tag('erwin_stat'), CLOSE]),
     btn('Sefer defterim.', [tag('erwin_log'), CLOSE]),
-    btn('Tedarik.', ['{Type:"OPEN_TRADING_SCREEN",Id:' + TRADE_ID + '}']),
+    btn('Ambar stoğum.', [tag('erwin_stok'), CLOSE]),
     btn('Geri.', [CLOSE])
   ]
 }
@@ -75,10 +58,6 @@ const dialogs = [
     btn('Katılıyorum.', [tag('erwin_met'), open('erwin_hub_0')], 'erwin_kabul')
   ], 'erwin_ilk')
 ]
-dialogs.push(dialog('erwin_dukkan', 'Birliğin ambarından yalnızca rütbesi yeten alır. Yükseldikçe daha iyisini açarım. Ödeme zümrüt bloğuyla. Stok sana özel ve belirli aralıklarla yenilenir.', [1, 2, 3, 4].map(rk => btn(SHOP_RANKS[rk] + ' malları', [open('erwin_dukkan_' + rk)])).concat([btn('Stok durumu.', [tag('erwin_stok'), CLOSE]), btn('Geri.', [CLOSE])]), 'erwin_dukkan'))
-for (let rk = 1; rk <= 4; rk++) {
-  dialogs.push(dialog('erwin_dukkan_' + rk, SHOP_RANKS[rk] + ' rütbesi ve üstü için:', ERWIN_SHOP.filter(x => x.rank === rk).map(x => btn(x.label + ' (' + x.price + ' blok)', [tag('erwin_buy_' + x.key), CLOSE])).concat([btn('Geri.', [open('erwin_dukkan')])]), 'erwin_dukkan_' + rk))
-}
 for (let r = 0; r < 5; r++) dialogs.push(dialog('erwin_hub_' + r, HUB_TEXT[r], hubButtons(), 'erwin_hub_' + r))
 
 function route(dlg, cond) {

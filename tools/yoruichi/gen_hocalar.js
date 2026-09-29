@@ -20,7 +20,7 @@ const SLIM = skinFile === 'slim' || slimArg === 'slim'
 const SKIN = skinFile && skinFile !== 'slim' ? skinFile : npc + '_v1.png'
 const SKIN_URL = 'https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/assets/npc-skins/' + SKIN
 const TYPE = SLIM ? 'easy_npc:humanoid_slim' : 'easy_npc:humanoid'
-const UUID = crypto.randomUUID()
+const UUID = process.env.HOCA_UUID || crypto.randomUUID() // mevcut NPC'nin diyaloglarını yenilemek için HOCA_UUID verilir
 
 function uuidToInts(u) {
   const h = u.replace(/-/g, '')
@@ -50,10 +50,10 @@ const tag = t => action('/tag @initiator add ' + t)
 const NPCS = {
   kakashi: {
     name: 'Kakashi', color: '#9AA0A6',
-    ret: 'Yaa... Adını duymadım. Yolda kayboldum da, geç kaldım. Önce Maceracı olarak tanınmalısın; sonra konuşuruz.',
-    ilk: 'Ben Kakashi. Kopya Ninja derler; çünkü gördüğümü öğrenirim. Chidori\'yi yıllarca çalıştım: yıldırımı elde toplayıp tek vuruşta bırakmak. Çok hızlı, çok tehlikeli. Öğretebilirim, ama önce Keşif Birliği\'nde adını duyur: Erwin\'in seferlerini tamamla. Sonra her seviye için bir sınav ve bir bedel var. Anlaştık mı?',
-    hubText: 'Chidori\'yi öğrenmek istiyorsan hazır olmalısın. Her seviye ayrı bir sınav ister, ve sınavlar hızla ilgilidir.',
-    kabul: 'Anlaştık.',
+    ret: 'Hm? Kim bu... Bak, kitabımın en güzel yerindeyim. Adı sanı belli olmayan biriyle vakit harcamam. Git başımdan. Bir gün Maceracı olursan, belki.',
+    ilk: 'Yaa... Bir de sen mi? Peki. Ben Kakashi. Gelmişsin madem, bir şey soracaksın herhalde. Kısa tut, sayfayı bitirmem lazım.',
+    hubText: 'Tamam, dinliyorum. Chidori mi? Yıldırımı elde toplayıp tek vuruşta bırakmak... Kolay değil. Her seviye ayrı bir sınav ister ve sınavlar hızla ilgilidir. Erwin\'in rütbesi olmadan da bir şey öğretmem.',
+    kabul: 'Sana bir şey soracaktım.',
     buttons: () => [
       btn('Chidori öğrenmek istiyorum.', [tag('hoca_req_chidori'), CLOSE]),
       btn('Sınavı bildiriyorum.', [tag('hoca_rep_kakashi'), CLOSE]),
@@ -64,10 +64,10 @@ const NPCS = {
   },
   itachi: {
     name: 'Itachi', color: '#7A1F2B',
-    ret: 'Boşuna geldin. Bu bilgi herkese emanet edilmez. Önce Maceracı olarak adını duyur.',
-    ilk: 'Ben Itachi. Amaterasu, gözlerin gördüğünü yakan kara alevdir; Tsukiyomi ise zihni kıran yanılsama. İkisi de güç ister ve ikisi de bedel. Keşif Birliği\'nde yeterince yükselmeden yanıma gelme: Amaterasu için Gece Avcısı, Tsukiyomi için Eşik Muhafızı olmalısın. Önce alev, sonra gölge. Hazır mısın?',
-    hubText: 'Amaterasu ile başlarsın. Tsukiyomi\'yi ancak alevi tamamen öğrendikten sonra gösteririm.',
-    kabul: 'Hazırım.',
+    ret: 'Boşuna geldin. Bu bilgi herkese emanet edilmez. Git.',
+    ilk: 'Yaklaşmışsın. Adım Itachi. Buraya gelenlerin çoğu bir şey ister ve pişman olur. Sen ne için buradasın?',
+    hubText: 'Bilgi arıyorsun. Amaterasu gözlerin gördüğünü yakan kara alevdir; Tsukiyomi ise zihni kıran yanılsama. İkisi de bedel ister. Amaterasu için Gece Avcısı, Tsukiyomi için Eşik Muhafızı olmalısın. Önce alev, sonra gölge.',
+    kabul: 'Seninle konuşmak istiyorum.',
     buttons: () => [
       btn('Amaterasu öğrenmek istiyorum.', [tag('hoca_req_amaterasu'), CLOSE]),
       btn('Tsukiyomi öğrenmek istiyorum.', [tag('hoca_req_tsukiyomi'), CLOSE]),
@@ -112,12 +112,25 @@ const nbt = '{UUID:' + uuidToInts(UUID) + ',CustomName:' + q('{"color":"' + N.co
 
 const out = [
   '# ' + N.name + ' NPC kurulumu. Üretici: tools/yoruichi/gen_hocalar.js',
+  'forceload add ' + Math.floor(Number(X)) + ' ' + Math.floor(Number(Z)),
   'execute in minecraft:overworld run summon ' + TYPE + ' ' + X + ' ' + Y + ' ' + Z + ' ' + nbt,
   'data modify entity ' + UUID + ' Owner set value ' + uuidToInts(owner),
   'data modify entity ' + UUID + ' ActionData.ActionPermissionLevel set value 3',
+  'forceload remove ' + Math.floor(Number(X)) + ' ' + Math.floor(Number(Z)),
   'say ' + N.name + ' kuruldu.'
 ]
 const fnDir = path.join(root, 'data', 'yoruichi', 'functions')
 fs.mkdirSync(fnDir, { recursive: true })
 fs.writeFileSync(path.join(fnDir, npc + '_kur.mcfunction'), out.join(NL) + NL)
+// Mevcut NPC'nin yalnızca diyalog ve yönlendirmelerini yeniler (HOCA_UUID = NPC'nin gerçek uuid'si)
+const SEL = '@e[tag=hoca_npc_' + npc + ',limit=1]'
+const upd = [
+  '# ' + N.name + ' diyalog yenileme. Üretici: tools/yoruichi/gen_hocalar.js',
+  'forceload add ' + Math.floor(Number(X)) + ' ' + Math.floor(Number(Z)),
+  'data modify entity ' + SEL + ' ActionData.ActionEventSet set value {ON_INTERACTION:[' + routes.join(',') + ']}',
+  'data modify entity ' + SEL + ' DialogData set value {Type:"CUSTOM",DialogDataSet:[' + dialogs.join(',') + ']}',
+  'forceload remove ' + Math.floor(Number(X)) + ' ' + Math.floor(Number(Z)),
+  'say ' + N.name + ' diyalogları yenilendi.'
+]
+fs.writeFileSync(path.join(fnDir, npc + '_diyalog.mcfunction'), upd.join(NL) + NL)
 console.log('ok', npc, 'uuid', UUID, 'skin', SKIN_URL)

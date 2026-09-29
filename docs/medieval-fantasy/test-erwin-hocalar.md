@@ -21,7 +21,7 @@ Bu sistemler simülasyonla ve sunucu komutlarıyla sınandı ama **gerçek oyunc
 4. **Ölüm Emri:** Sefer bitince isimli parlayan yaratık doğuyor mu (başlık ve çan)? Öldürünce ekstra ödül.
 5. **Unvanlar ve defter:** "Birlik kaydım" ve "Sefer defterim" doğru bilgiyi yazıyor mu?
 6. **Terfi:** Gerekli sefer sayısına ulaşınca terfi sahnesi (başlık, 3-4 satır Erwin) ve hoca ipucu.
-7. **Rütbe dükkânı:** Rütbeye göre malları al; rütbe düşükse reddedilir mi, stok azalır mı, "Stok durumu" doğru mu, süre dolunca yenileniyor mu?
+7. **Rütbe dükkânı (ticaret ekranı):** `/erwin_rutbe <oyuncu> 1` ile rütbeyi ayarla. "Rütbe dükkânı" ticaret ekranını açmalı; rütbenin mallarını göstermeli. Bir mal al: ekran kapanınca "Ambar stoğum" stoğun bir azaldığını göstermeli, ekranı yeniden açınca aynı mal daha az (veya kapalı) olmalı. Rütbeyi 3 yapıp daha fazla mal açıldığını kontrol et. Süre dolunca yenileniyor mu? İki oyuncu aynı anda açarsa ikincisi "meşgul" almalı.
 
 ## C. Ölümde veri
 1. Bir sefer al, sayacı ilerlet. `/kill` ile öl, yeniden doğ.
