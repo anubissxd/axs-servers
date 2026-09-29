@@ -43,16 +43,26 @@ function dialog(name, text, buttons, label) {
 }
 const tag = t => action('/tag @initiator add ' + t)
 
+// Karşılama sürümleri (sürüm 1 orijinal). Hangisi açılacağı oyuncudaki dv_thor_<n> etiketine bağlıdır (npc_cesitlilik.js).
+const HUB_VARIANTS = [
+  'Toprak yalan söylemez; emeğin karşılığını verir. Mallarım rütbesi olana açık, bedeli zümrütle ödersin. Ya da bana bir iş yaparsın: ambarımın açığı var.',
+  'Yine geldin. Bu topraklarda hiçbir şey bedavaya çıkmaz. Ne lazım?',
+  'Bir zamanlar kılıçla kazanırdım. Şimdi tırmıkla. İkisi de sabır ister. Söyle.',
+  'Ambarın kapısı açık, ama cebin dolu olmalı. Ne için buradasın?'
+]
+const hubButtons = () => [
+  btn('Ticaret.', [tag('thor_shop'), CLOSE]),
+  btn('Hasat siparişi.', [tag('thor_ord'), CLOSE]),
+  btn('Gece nöbeti.', [tag('thor_nobet'), CLOSE]),
+  btn('Birlik ikmali.', [tag('thor_ikmal'), CLOSE]),
+  btn('Diğer işler.', [open('thor_diger')]),
+  btn('Ayrılıyorum.', [CLOSE])
+]
 const dialogs = [
   dialog('thor_ilk', 'Yolcu. Adım Thorfinn. Bir zamanlar kılıç taşırdım; şimdi toprak sürüyorum. Caddy\'de ne alınıp ne satılacaksa benden geçer. Ama baştan söyleyeyim: burada hiçbir şey ucuz değil. Toprak da öyle, emek de. Kolay kazanılan şey kolay harcanır. Ne istiyorsun?', [
     btn('Seninle ticaret konuşmak istiyorum.', [tag('thor_met'), open('thor_hub')], 'thor_kabul')
   ], 'thor_ilk'),
-  dialog('thor_hub', 'Toprak yalan söylemez; emeğin karşılığını verir. Mallarım rütbesi olana açık, bedeli zümrütle ödersin. Ya da bana bir iş yaparsın: ambarımın açığı var.', [
-    btn('Ticaret.', [tag('thor_shop'), CLOSE]),
-    btn('Hasat siparişi.', [tag('thor_ord'), CLOSE]),
-    btn('Diğer işler.', [open('thor_diger')]),
-    btn('Ayrılıyorum.', [CLOSE])
-  ], 'thor_hub'),
+  ...HUB_VARIANTS.map((txt, k) => { const nm = k === 0 ? 'thor_hub' : 'thor_hub_' + (k + 1); return dialog(nm, txt, hubButtons(), nm) }),
   dialog('thor_diger', 'Başka bir şey mi?', [
     btn('Siparişim nasıl?', [tag('thor_info'), CLOSE]),
     btn('Siparişi bırakıyorum.', [tag('thor_abort'), CLOSE]),
@@ -66,14 +76,15 @@ function route(dlg, cond) {
 }
 const routes = [
   route('thor_ilk', 'tag=!thor_met'),
-  route('thor_hub', 'tag=thor_met')
+  ...HUB_VARIANTS.map((txt, k) => route(k === 0 ? 'thor_hub' : 'thor_hub_' + (k + 1), 'tag=thor_met,tag=dv_thor_' + (k + 1))),
+  route('thor_hub', 'tag=thor_met' + HUB_VARIANTS.map((x, i) => ',tag=!dv_thor_' + (i + 1)).join('')),
+  action('/execute as @initiator if entity @s[tag=thor_met] run tag @s add dv_reroll_thor')
 ]
 const SEL = NPC_UUID
 const cx = Math.floor(X)
 const cz = Math.floor(Z)
 const out = [
   '# Thorfinn (eski Çiftçi Tobias) yenileme. Üretici: tools/yoruichi/gen_thorfinn.js',
-  'forceload add ' + cx + ' ' + cz,
   'data modify entity ' + SEL + ' CustomName set value ' + q('{"color":"#C8A165","text":"Thorfinn"}'),
   'data modify entity ' + SEL + ' SkinData set value {Type:"SECURE_REMOTE_URL",URL:' + q(SKIN_URL) + ',UUID:' + uuidToInts(nameUuid(SKIN_URL)) + '}',
   'tag ' + SEL + ' add thorfinn_npc',
@@ -86,5 +97,7 @@ const out = [
 ]
 const fnDir = path.join(root, 'data', 'yoruichi', 'functions')
 fs.mkdirSync(fnDir, { recursive: true })
-fs.writeFileSync(path.join(fnDir, 'thorfinn_diyalog.mcfunction'), out.join(NL) + NL)
+// İki aşamalı: önce yığın yüklenir (forceload), 3 sn sonra yazılır (yüklenmemiş yığında data modify sessizce başarısız olur)
+fs.writeFileSync(path.join(fnDir, 'thorfinn_diyalog.mcfunction'), ['forceload add ' + cx + ' ' + cz, 'schedule function yoruichi:thorfinn_diyalog2 60t replace'].join(NL) + NL)
+fs.writeFileSync(path.join(fnDir, 'thorfinn_diyalog2.mcfunction'), out.join(NL) + NL)
 console.log('ok thorfinn')

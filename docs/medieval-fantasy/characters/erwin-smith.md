@@ -29,11 +29,11 @@
 
 | Tür | Kim görür | Hedefler | Ödül (zümrüt bloğu) |
 |---|---|---|---|
-| I Sis Devriyesi | Yeminsiz, Kül Bekçisi | zombi, iskelet, örümcek, creeper, boğulmuş, slime (8-30 adet) | 2-4 zümrüt (%4 ile 1 blok) |
-| II Av | Kül Bekçisi, Kan Yeminli | yağmacı, enderman, mezarlık, derin karanlık, kaos, cadı, Nether askeri, büyücü, düşmüş şövalye (4-16) | 3-6 zümrüt (%6 ile 1 blok) |
-| III Karanlığa İniş | Kan Yeminli, Gece Avcısı | ravager, kale, mutant, kadim yaratıklar, orman ruhu, yıkıntı bekçisi (1-16) | 6-10 zümrüt (%10 ile 1 blok) |
-| IV Kan Sözü | Gece Avcısı, Eşik Muhafızı | tek boss: Cataclysm, BoMD, Mowzie, Iron's, Souls | 12-20 zümrüt (%18 ile 1 blok) |
-| V Kıyamet Seferi | Eşik Muhafızı | ejderha, Leviathan/Scylla, Wither, Warden, Ender Ejderhası | 24-36 zümrüt (%30 ile 1-2 blok) |
+| I Sis Devriyesi | Yeminsiz, Kül Bekçisi | zombi, iskelet, örümcek, creeper, boğulmuş, slime (8-30 adet) | 1-3 zümrüt (%3 ile 1 blok) |
+| II Av | Kül Bekçisi, Kan Yeminli | yağmacı, enderman, mezarlık, derin karanlık, kaos, cadı, Nether askeri, büyücü, düşmüş şövalye (4-16) | 2-4 zümrüt (%4,5 ile 1 blok) |
+| III Karanlığa İniş | Kan Yeminli, Gece Avcısı | ravager, kale, mutant, kadim yaratıklar, orman ruhu, yıkıntı bekçisi (1-16) | 4-7 zümrüt (%7,5 ile 1 blok) |
+| IV Kan Sözü | Gece Avcısı, Eşik Muhafızı | tek boss: Cataclysm, BoMD, Mowzie, Iron's, Souls | 9-14 zümrüt (%14 ile 1 blok) |
+| V Kıyamet Seferi | Eşik Muhafızı | ejderha, Leviathan/Scylla, Wither, Warden, Ender Ejderhası | 18-26 zümrüt (%22 ile 1-2 blok) |
 
 Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekkep; IV-V'te netherite/totem) eklenir; **%3 büyük zafer** zümrüt ödülünü ikiye katlar. Zümrüt bloğu asıl ödeme aracıdır (dükkân, Yoruichi), bu yüzden ödül olarak nadir bir ekstradır. 9 zümrüt = 1 blok; Yoruichi'nin eğitimi 19 blok = 171 zümrüt, yani onlarca sefer ister. Ölüm Emri ödülü normal sefer ödülünün yarısıdır, hedefin canı ve zırhı artırılmıştır.
 
@@ -55,6 +55,7 @@ Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekk
 - **Veri yedeği (`oyuncu_yedek.js`):** Oyuncunun `erwin_*` ve `hoca_*` verisi her 10 saniyede ve ölmeden hemen önce dünya verisine kopyalanır; ölüm/girişte oyuncuda eksikse geri yazılır (yönetici sıfırlaması korunur). Java çağrıları `/yedek_test` ile sunucuda doğrulandı (BASARILI).
 - **Ödül dengesi:** Nadir/OP eşyalar (Nether yıldızı, netherite kalıbı, denizin kalbi) kaldırıldı; Tür V'te büyülü altın elma %20 (1 adet), netherite külçe %10, totem %8.
 
+**Denge (ikinci ödül kısma turu):** Zümrüt ödülleri ~%25 düşürüldü (Tür I 1-3, II 2-4, III 4-7, IV 9-14, V 18-26), blok şansları da düştü, ganimet şansları bir kez daha kısıldı (%60 ölçek).
 **Denge (ödül kısma turu):** Ödül artık bozuk zümrüttür, blok nadir ekstradır (oyuncu ilk seferde çok fazla aldığını bildirdi); ganimet şansları bir kez daha %25 kısıldı, Ölüm Emri ödülü yarıya indi.
 **Denge (zorlaştırma turu):** Hedef sayıları ~%25 arttı, blok ödülleri düştü (I 1-2, II 1-2, III 2-4, IV 5-8, V 10-14), ganimet şansları ~%20 azaldı, büyük zafer %3, günde 5 sefer, bekleme 4 dk, terfi sayıları 4/5/5/4.
 

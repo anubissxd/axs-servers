@@ -46,15 +46,28 @@ function dialog(name, text, buttons, label) {
 }
 const tag = t => action('/tag @initiator add ' + t)
 
-const dialogs = [
-  dialog('kenpachi_hub', 'Hm. Bir sinek daha. Kralın kapısına kadar gelmişsin... yürüyüşün bile zayıf. Ne var, çabuk söyle. Sıkılırsam kılıcımı çekerim, ve o zaman konuşacak kimse kalmaz.', [
-    btn('Kralla görüşmek istiyorum.', [tag('kenpachi_kral'), CLOSE]),
-    btn('Kimsin sen?', [tag('kenpachi_kim'), CLOSE]),
-    btn('Seninle dövüşmek istiyorum.', [tag('kenpachi_dovus'), CLOSE]),
-    btn('Ayrılıyorum.', [CLOSE])
-  ], 'kenpachi_hub')
+// Karşılama sürümleri (sürüm 1 orijinal). Hangisi açılacağı oyuncudaki dv_kenpachi_<n> etiketine bağlıdır (npc_cesitlilik.js).
+const HUB_VARIANTS = [
+  'Hm. Bir sinek daha. Kralın kapısına kadar gelmişsin... yürüyüşün bile zayıf. Ne var, çabuk söyle. Sıkılırsam kılıcımı çekerim, ve o zaman konuşacak kimse kalmaz.',
+  'Hah! Yine mi? Kılıcımı çekmeden seni ezmek istemiyorum. Sıkıcı olurdu.',
+  'Ne bakıyorsun? Kralın kapısındayım, sen bir sinek gibi vızıldıyorsun. Söyle.',
+  'Uğraşmak istemiyorum. Ya bir şey söyle ya da defol.'
 ]
-const routes = ['{Type:"COMMAND",PermLevel:3,Cmd:' + q('/execute as @initiator run easy_npc dialog open ' + UUID + ' @s kenpachi_hub') + '}']
+const hubButtons = () => [
+  btn('Kralla görüşmek istiyorum.', [tag('kenpachi_kral'), CLOSE]),
+  btn('Kimsin sen?', [tag('kenpachi_kim'), CLOSE]),
+  btn('Seninle dövüşmek istiyorum.', [tag('kenpachi_dovus'), CLOSE]),
+  btn('Ayrılıyorum.', [CLOSE])
+]
+const dialogs = [
+  ...HUB_VARIANTS.map((txt, i) => { const nm = i === 0 ? 'kenpachi_hub' : 'kenpachi_hub_' + (i + 1); return dialog(nm, txt, hubButtons(), nm) })
+]
+const open = n => '{Type:"COMMAND",PermLevel:3,Cmd:' + q('/execute as @initiator if entity @s[' + n.cond + '] run easy_npc dialog open ' + UUID + ' @s ' + n.dlg) + '}'
+const routes = [
+  ...HUB_VARIANTS.map((txt, i) => open({ dlg: i === 0 ? 'kenpachi_hub' : 'kenpachi_hub_' + (i + 1), cond: 'tag=dv_kenpachi_' + (i + 1) })),
+  open({ dlg: 'kenpachi_hub', cond: HUB_VARIANTS.map((x, i) => 'tag=!dv_kenpachi_' + (i + 1)).join(',') }),
+  action('/tag @initiator add dv_reroll_kenpachi')
+]
 const skinUuid = uuidToInts(nameUuid(SKIN_URL))
 const NAME = q('{"color":"#B22222","text":"Kenpachi"}')
 const cx = Math.floor(Number(X))
@@ -77,9 +90,9 @@ const out = [
   'forceload remove ' + cx + ' ' + cz,
   'say Kenpachi kuruldu.'
 ]
-const upd = [
-  '# Kenpachi diyalog yenileme. Üretici: tools/yoruichi/gen_kenpachi.js',
-  'forceload add ' + cx + ' ' + cz,
+const upd1 = ['# Kenpachi diyalog yenileme, 1. aşama.', 'forceload add ' + cx + ' ' + cz, 'schedule function yoruichi:kenpachi_diyalog2 60t replace']
+const upd2 = [
+  '# Kenpachi diyalog yenileme, 2. aşama.',
   'data modify entity ' + UUID + ' ActionData.ActionEventSet set value {ON_INTERACTION:[' + routes.join(',') + ']}',
   'data modify entity ' + UUID + ' DialogData set value {Type:"CUSTOM",DialogDataSet:[' + dialogs.join(',') + ']}',
   'forceload remove ' + cx + ' ' + cz,
@@ -88,5 +101,6 @@ const upd = [
 const fnDir = path.join(root, 'data', 'yoruichi', 'functions')
 fs.mkdirSync(fnDir, { recursive: true })
 fs.writeFileSync(path.join(fnDir, 'kenpachi_kur.mcfunction'), out.join(NL) + NL)
-fs.writeFileSync(path.join(fnDir, 'kenpachi_diyalog.mcfunction'), upd.join(NL) + NL)
+fs.writeFileSync(path.join(fnDir, 'kenpachi_diyalog.mcfunction'), upd1.join(NL) + NL)
+fs.writeFileSync(path.join(fnDir, 'kenpachi_diyalog2.mcfunction'), upd2.join(NL) + NL)
 console.log('ok kenpachi uuid', UUID)

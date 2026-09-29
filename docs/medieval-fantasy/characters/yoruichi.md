@@ -126,3 +126,6 @@ Oyuncunun Yoruichi durumunu sıfırlamak için şu etiketler silinir (`tag <oyun
 - **PvP:** Hedefin arkasına geçince oyuncuya da stun/hasar uygulanıyor; sınırlanıp sınırlanmayacağı belirlenmedi.
 - **Görev kitabı:** FTB Quests'te Yoruichi görevi/keşif ipucu yok.
 - Poz, yön ve dövüş dengesi (can, hasar, ücretler) oynanarak ayarlanacak.
+
+
+**Diyalog çeşitliliği:** Tekrar eden durumlarda (kovalama beklerken, L2/L3 devam, L3 bitti, Vlorya'lı olmayanlara) her konuşmada aynı cümle çıkmasın diye 3 farklı sürüm vardır (`dv_yoruichi_<n>` etiketi, `npc_cesitlilik.js`). Ek diyaloglar `tools/yoruichi/gen_yoruichi_cesit.js` ile üretilip oyunda `function yoruichi:yoruichi_cesit` ile yazılır (var olan diyalogları oyun içinde kopyalayarak; yönlendirmeler sürüm etiketine göre dallanır). Asıl tanışma ve teklif diyaloglarına dokunulmaz.

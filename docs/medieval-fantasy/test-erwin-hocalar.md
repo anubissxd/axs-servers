@@ -76,3 +76,13 @@ Bu sistemler simülasyonla ve sunucu komutlarıyla sınandı ama **gerçek oyunc
 4. **Mor:** Mavi ve Kırmızı üç seviye bitmeden reddedilmeli; sonra rütbe 4, L1 12 blok; parşömen **Purple**.
 5. **Kayıp parşömen ve bağ:** "Diğer işler" altından; hediye "Sonsuzluğun Bandı" (bağ Usta Öğrenci olunca).
 6. **Kenpachi:** Üç düğme küçümsesin; "Seninle dövüşmek istiyorum" reiatsu sahnesini oynatmalı (ekran kararır, kalp atışı, kısa yavaşlama, hasar yok). Doku 64×64 olarak doğru görünmeli.
+
+## I. Yeni: Thorfinn'in geri kalanı, Kenpachi kapışması, çeşitli diyaloglar
+
+1. **Diyalog çeşitliliği:** Erwin, Thorfinn, Kenpachi ve Yoruichi ile art arda 5-6 kez konuş (her seferinde menüyü kapat). Karşılama her seferinde farklı olmalı (bir öncekiyle aynısı çıkmamalı). Hocalar da aynı.
+2. **Hayvancılık ve mevsim:** `/erwin_rutbe` gerekmeden Thorfinn'den sipariş al; yumurta/tüy/süt/bal peteği gibi hayvan ürünleri çıkabilmeli. Serene Seasons açıkken bazı siparişlerin sonunda "(Kış siparişi)" gibi mevsim notu görünmeli.
+3. **Gece nöbeti:** Gündüz "Gece nöbeti" reddedilmeli. `/time set night` sonra kabul: 12+ zombi/iskelet/örümcek/creeper öldür (action bar sayaç). Bitince Thorfinn'e dön, zümrüt ve başlık gelmeli. Şafak sökünce (`/time set day`, 3 dk sonra) nöbet düşmeli.
+4. **Birlik ikmali:** Erwin rütben 2 altıyken reddetmeli; `/erwin_rutbe <oyuncu> 2` ile ikmal siparişi al, malı getir, ödemeyi gör, aynı gün ikinciyi reddetmeli.
+5. **Thorfinn hikâyesi:** `thor_total` 1, 8, 16... değerlerine ulaşınca başlık ve iki replik gelmeli ("İLK HASAT", "YARA"...).
+6. **Kenpachi kapışması:** Rütben 2 altındayken "Seninle dövüşmek istiyorum" reiatsu sahnesi ve uyarı vermeli. `/erwin_rutbe <oyuncu> 3` sonra kapışma başlamalı: sahne, savaşçı Kenpachi doğar (orijinali kaybolur), sana yürür ve vurur (7 hasar, 1,5 sn). Canı yarıya inince "GERÇEK GÜÇ" sahnesi, daha sert vurur. Kazanırsan Nozarashi kılıcı gelmeli ve orijinal Kenpachi yerine dönmeli. Ölürsen/kaçarsan savaşçı silinmeli ve orijinal geri gelmeli. `/kenpachi_sifirla` ile yeniden dene.
+   - **Bilmediklerimiz:** Savaşçı Easy NPC'nin tp ile yürümesi ve `damage` ile vurması gerçek oyunda denenmedi; savaşçı doğmuyorsa/hareket etmiyorsa `logs/latest.log`'a bak ("kenpachi kapisma hata").

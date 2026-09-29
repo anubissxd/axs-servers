@@ -23,6 +23,21 @@ Yerel profil: `%APPDATA%\.minecraft\versions\Medieval Fantasy\` (yeni VDS'te `/r
 
 **Gojo şimdilik pasif:** Blue/Red/Purple öğretimi kapalı (Gojo savar); `hocalar_egitim.js` içinde `HOCA_DEVRE_DISI` ve `gen_hocalar.js` içinde Gojo `pasif: true`. Yeni VDS'te `gojo_diyalog` fonksiyonu **savan** diyaloglarla yazılmalı; açmak için [gojo.md](medieval-fantasy/characters/gojo.md) başındaki notu izle.
 
+### Sonradan eklenenler (2026-09-30, aynı gün)
+
+| Dosya | Ne |
+|---|---|
+| `server_scripts/npc_cesitlilik.js` | **yeni**: NPC diyalog sürümü etiket döndürme (Erwin, Thorfinn, Kenpachi, Yoruichi) |
+| `server_scripts/kenpachi.js` | değişti: kapışma sistemi, `/kenpachi_sifirla` |
+| `server_scripts/thorfinn_ticaret.js` | değişti: hayvancılık, mevsim, gece nöbeti, Birlik ikmali, hikâye, ödül azaltma |
+| `server_scripts/erwin_seferleri.js` | değişti: ödül azaltma (2. tur) |
+| `server_scripts/sinema_motoru.js` | değişti: `kenpachiFightBegin` izinli fn |
+| datapack fonksiyonları | `erwin_setup(2)`, `thorfinn_diyalog(2)`, `kenpachi_diyalog(2)`, `yoruichi_cesit(2)`, `tum_diyaloglar_yenile` |
+
+Yeni VDS'te diyalogları tek seferde yazmak için: `reload`, sonra `function yoruichi:tum_diyaloglar_yenile` (Erwin, Thorfinn, Kenpachi, Yoruichi ve üç hocayı sırayla günceller; 3-4 sn bekle). Yoruichi'nin çeşitlilik fonksiyonu `gen_yoruichi_cesit.js` ile **orijinal** Yoruichi verisinden (`tools/nbt_tool.js dump`) üretilir; kalıcı olarak oyunda çalıştırılır.
+
+**Havuza eklenecek oyuncu cümleleri:** Erwin seferlerinin zümrüt ödülleri biraz düştü; NPC'ler artık her konuşmada farklı karşılama repliği söylüyor; Thorfinn'e gece nöbeti, Birlik ikmali, hayvancılık ve mevsim siparişleri ile hikâye bölümleri geldi; Kenpachi'ye meydan okuyup kapışabilirsin (Gece Avcısı ve üstü), yenersen Nozarashi kılıcını verir.
+
 ## 2. Yeni VDS'te sırayla
 
 1. **Önce genel geri kurulum** ([vds-tasima.md](vds-tasima.md)): sunucu klasörü, mod jar'ları, config, kubejs (1.3.7 hâli).
