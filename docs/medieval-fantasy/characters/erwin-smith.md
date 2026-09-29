@@ -40,7 +40,7 @@ Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekk
 
 **Ek sistemler:**
 
-- **Kader Zinciri:** %30 ihtimalle 3. teklif, 3 bölümlük bağlı bir zincir olur (Mezarlığın Uyanışı, Kızıl Yağmacılar: Kül Bekçisi+; Derinin Çağrısı: Kan Yeminli+; Alevlerin Bedeli: Gece Avcısı+; Kadim Uyanış: Eşik Muhafızı). Bölüm bitince sonraki bölüm hemen başlar; son bölümde ödül iki kez atılır. Tamamlanan zincir tekrar teklif edilmez; sefer bırakılırsa zincir baştan teklif edilebilir.
+- **Kader Zinciri:** %30 ihtimalle 3. teklif, 3 bölümlük bağlı bir zincir olur (Mezarlığın Uyanışı, Kızıl Yağmacılar: Kül Bekçisi+; Derinin Çağrısı: Gece Avcısı+; Alevlerin Bedeli: Gece Avcısı+; Kadim Uyanış: Eşik Muhafızı). Bölüm bitince sonraki bölüm hemen başlar; son bölümde ödül iki kez atılır. Tamamlanan zincir tekrar teklif edilmez; sefer bırakılırsa zincir baştan teklif edilebilir.
 - **Kanlı Ay:** Tür I-III tekliflerinin %20'si lanetli olur: hedef sayısı x1,5, blok ödülü x2.
 - **Kan Bahsi:** Tekliflerdeki [☠] ile seçilir: blok ödülü x1,5, ama ölürsen sefer (zincirse tamamı) iptal olur.
 - **Ölüm Emri:** Tür I-III seferlerin %20'sinde son hedef öldüğünde isimli, parlayan bir elit doğar (Kanlı Orakçı vb.). Öldürmek ayrıca ödül verir; sefer tamamlanması için gerekli değildir.
