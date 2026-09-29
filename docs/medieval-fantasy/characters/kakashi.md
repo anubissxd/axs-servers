@@ -19,12 +19,16 @@
 
 | Seviye | Sınav | Ücret | Rütbe |
 |---|---|---|---|
-| L1 Yıldırımın İlk Adımı | 180 sn içinde 8 düşman (zombi, iskelet, örümcek, creeper) | 4 | Kül Bekçisi |
+| L1 Zil Sınavı (sahne) | "Gölge Kakashi" zil taşır; oyuncu 2 blok yakına gelince yüzeyde başka bir noktaya kaçar. 90 sn içinde ona vurup öldür | 4 | Kül Bekçisi |
 | L2 Şimşek Zinciri | 150 sn içinde 10 düşman (+enderman, yağmacı) | 8 | Kül Bekçisi |
 | L3 Bin Kuşun Sesi | 120 sn içinde 8 güçlü hedef (yağmacı, mezarlık, kaos, Nether askeri) | 12 | Kan Yeminli |
 | L4 Kırılmayan Yıldırım | 180 sn içinde 6 yıkıntı bekçisi / kadim yaratık | 16 | Gece Avcısı |
 
 Ödül: o seviyenin Chidori parşömeni. Ücret bir seviye için **bir kez** alınır (sınavı bırakıp tekrar denemek ücretsiz). Kayıp parşömen: en yüksek öğrenilen seviyenin ücretinin yarısı (ör. Chidori L4 için 8 blok); ucuz olsaydı parşömen arkadaşlara çoğaltılırdı.
+
+**Sahneli sınav:** L1'de "Gölge Kakashi" (6 canlı, NoAI, parlayan zombi, elinde zil) doğar; oyuncu yaklaşınca kaçar. Başkası öldürürse ya da süre dolarsa sahne biter; hocaya tekrar "Chidori öğrenmek istiyorum" denince **ücretsiz** yeniden başlar. Sahne mobları `korunan` etiketlidir (hub güvenli bölgesi canavar doğmasını engelliyor, bu etiket muaf tutar).
+
+**Hoca bağı:** Kakashi'den öğrenilen toplam seviyeye göre Yabancı → Tanıdık (1+) → Öğrenci (3+) → Usta Öğrenci (4). Sınav başlarken ve rapor alırken bağa uygun bir söz söyler. Kayıp parşömen ücreti Öğrenci'de %25, Usta Öğrenci'de yarı yarıya iner.
 
 ## Teknik
 
