@@ -1,0 +1,26 @@
+plugins {
+    id 'eclipse'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+version = '1.0.0'
+group = 'anubis.bust'
+base { archivesName = 'anubis-bust' }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.20'
+}
+
+tasks.named('jar', Jar) {
+    manifest {
+        attributes([
+            'Implementation-Version': project.version
+        ])
+    }
+}

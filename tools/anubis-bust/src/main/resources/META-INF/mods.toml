@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="anubis_bust"
+version="1.0.0"
+displayName="Anubis Bust"
+description="Adds a 3D bust (volume) to chosen Easy NPC humanoids, picked by skin name in bust.json."
+authors="Anubis"
+[[dependencies.anubis_bust]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="CLIENT"
+[[dependencies.anubis_bust]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="CLIENT"

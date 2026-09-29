@@ -1,0 +1,18 @@
+{
+  "npcs": [
+    {
+      "match": "yoruichi",
+      "width": 1.0,
+      "height": 1.0,
+      "depth": 1.0,
+      "spread": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "tilt": 8.0,
+      "overlay": true,
+      "physics": true,
+      "physicsAmount": 1.0,
+      "hideWithChestplate": true
+    }
+  ]
+}
