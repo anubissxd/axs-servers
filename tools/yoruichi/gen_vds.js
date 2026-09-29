@@ -101,7 +101,7 @@ const fnDir = path.join(root, 'data', 'yoruichi', 'functions')
 fs.mkdirSync(fnDir, { recursive: true })
 const run = [
   '# Yoruichi: kedi -> insan (humanoid_slim). Uretici: gen_human.js',
-  'summon easy_npc:humanoid_slim -1032.518 81.0 -338.304 ' + nbt.replace('{UUID:', '{Rotation:[180.0f,0.0f],UUID:'),
+  'summon easy_npc:humanoid_slim -1032.518 81.0 -338.304 ' + nbt.replace('{UUID:', '{Rotation:[0.0f,0.0f],UUID:'),
   // VDS: sahip = swxff (offline UUID, ops.json); konsoldan calistirilinca @s olmadigi icin sabit UUID
   'data modify entity ' + NEW + ' Owner set value ' + uuidToInts('f0993f6d-14c8-31ac-87bd-e19999446b86'),
   'data modify entity ' + NEW + ' ActionData.ActionPermissionLevel set value 3',
