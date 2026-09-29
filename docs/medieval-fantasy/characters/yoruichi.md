@@ -97,7 +97,7 @@ Diyaloglar: `l3_teklif`, `l3_devam`, `l3_odul`, `l3_bitti`. Bağlamak için (L2'
 - Skin push edilmeden önce konumlar sabitlenecek; VDS'e "Güncelle" ile gidecek.
 - **Bakış yönü:** Yoruichi evinde **kuzeye (-Z)** bakar (`yaw 180`, `pitch 0`) ve **rest pozunda durur** (Easy NPC `rest` pozu). Eve dönerken bu yöne çevrilir ve tekrar yaslanır.
 - **Gölge Klon (L3):** İlk Shunpo noktasında (`-1033.554, 72, -318.817`) doğar; nokta yüklü değilse (yerel test) oyuncunun yakınına düşer.
-- **Geri sayım:** Yoruichi evde değilken 60 sn'lik eve dönüş süresi, 60 blok içindeki oyunculara action bar'da gösterilir ("Yoruichi eve dönüyor: N sn").
+- **Geri sayım:** Yoruichi evde değilken 60 sn'lik eve dönüş süresi yalnızca **kovalayan oyuncuya** action bar'da gösterilir ("Yoruichi eve dönüyor: N sn").
 
 ### VDS kurulum durumu (2026-09-29)
 - **Yayında:** Paket 1.3.6 ("Güncelle", swxff) ile Shunpo büyüsü, kovalama/L2/L3 script'leri, lang, ses, ikon ve sonic_boom dokuları oyunculara gitti; sunucu yeniden başlatıldı (KubeJS: 15 sunucu script'i, 0 hata). Yedek: `/root/backups/medieval-fantasy/2026-09-29-before-shunpo-kubejs`.
