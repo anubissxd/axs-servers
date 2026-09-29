@@ -45,6 +45,7 @@ const dialogs = [
     btn('Sadece bir kedisin.', [action('/damage @initiator 4 minecraft:mob_attack by ' + NEW), open('d2_kizgin')], 'd2_ret')
   ]),
   dialog('D3', 'Iyi. O zaman beni takip et - gorebilirsen.', [btn('Tamam.', [CLOSE])]),
+  dialog('chase_bekle', 'Beni yakalayabilirsen konuşuruz.', [btn('Tamam.', [CLOSE])], 'chase_bekle'),
   // --- L2 ---
   dialog('l2_teklif', 'Tek adım attın, çocuk. Ama bir gölge tek adımla doğmaz. Beş düşman seç. Arkalarına geç, onlar seni fark etmeden bitir. Sonra bana dön. Bedeli 6 zümrüt bloğu.', [
     btn('Hazırım.', [action('/tag @initiator add yoruichi_pay_l2'), CLOSE]), btn('Sonra.', [CLOSE])
@@ -70,7 +71,8 @@ function route(dlg, cond) {
 }
 const routes = [
   '{Type:"COMMAND",PermLevel:3,Cmd:' + q('/execute as @initiator unless entity @s[tag=rank_vloryan] run easy_npc dialog open ' + NEW + ' @s kovulma') + '}',
-  route('default', 'tag=rank_vloryan,tag=!yoruichi_caught'),
+  route('default', 'tag=rank_vloryan,tag=!yoruichi_caught,tag=!yoruichi_scene,tag=!yoruichi_tanisti'),
+  route('chase_bekle', 'tag=rank_vloryan,tag=yoruichi_tanisti,tag=!yoruichi_caught,tag=!yoruichi_scene'),
   route('l2_teklif', 'tag=rank_vloryan,tag=yoruichi_caught,tag=!yoruichi_l2,tag=!yoruichi_l2_done,tag=!yoruichi_l2_claimed'),
   route('l2_devam', 'tag=rank_vloryan,tag=yoruichi_l2,tag=!yoruichi_l2_done'),
   route('l2_odul', 'tag=rank_vloryan,tag=yoruichi_l2_done,tag=!yoruichi_l2_claimed'),
