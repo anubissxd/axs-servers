@@ -1089,6 +1089,7 @@ Kurallar:
 - `docs/vds.md`: VDS, servis, script'ler, cron, yedekler
 - `docs/patchnotes.md`: yama notları ve Discord duyurusu
 - `docs/anudownloader.md`: AnuDownloader'ın çalışma mantığı
+- `docs/assets.md`: görsel kuralları. Büyü ikonları `assets/spell-icons/<büyü>.png` (dosya adı = büyünün sistem adı, 16×16), özel NPC dokuları `assets/npc-skins/<npc>_v<n>.png`. Her görsel bu iki klasörde durur; başka yere konmaz. NPC dokusunu değiştirirken yeni sürüm adı kullan (önbellek).
 
 Bir sistemi değiştiren veya bir işi yarım bırakan, ilgili dokümanı aynı işte günceller (yarım işler `docs/README.md`'ye).
 

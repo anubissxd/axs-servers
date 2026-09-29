@@ -21,6 +21,7 @@ Bir sistemi değiştirdiğinde (yeni script, yeni kural, yeni klasör) ilgili do
 | [guncelleme-akisi.md](guncelleme-akisi.md) | **Değişiklik havuzu ve "Güncelle" komutu** — iki kişinin değişikliklerinin tek seferde sunucuya + AnuDownloader'a + Discord'a gitmesi |
 | [patchnotes.md](patchnotes.md) | Yama notları: nerede durur, nasıl yazılır, Discord duyurusu, gece kuralı |
 | [anudownloader.md](anudownloader.md) | AnuDownloader uygulaması, manifest, paket içeriği, uygulamanın kendisini güncelleme |
+| [assets.md](assets.md) | **Görseller:** büyü ikonları (`assets/spell-icons/`) ve NPC dokuları (`assets/npc-skins/`): kurallar, adlandırma, nasıl bağlanır |
 | [medieval-fantasy/quest.md](medieval-fantasy/quest.md) | Evren, rütbeler, FTB Quests / Easy NPC teknik detayları. **Görev eklemeden önce okunur.** |
 | [medieval-fantasy/characters/](medieval-fantasy/characters/) | NPC'ler (isim, konum, UUID, diyalog) |
 | [medieval-fantasy/kingdoms/](medieval-fantasy/kingdoms/) | Krallıklar |
