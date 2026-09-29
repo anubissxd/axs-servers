@@ -72,7 +72,7 @@ Bu sistemler simülasyonla ve sunucu komutlarıyla sınandı ama **gerçek oyunc
 
 1. **Rütbe başlığı:** `/erwin_rutbe <oyuncu> 3` sonrası sohbette ve oyuncu listesinde adın yanında **[Gece Avcısı]** görünmeli (Kutsanmış yerine). Rütbe artınca eski rank alınmalı (`/tag <oyuncu> list` içinde tek Birlik `rank_*` etiketi).
 2. **Gojo tanışma:** Rütbesizken küçümser, Maceracıyken tanışma diyaloğu ("Yo! Ben Gojo Satoru...") açılmalı; ilk menü büyülerle değil kısa bir tanışmayla başlamalı. Ana menü 6 düğme, üst üste binmemeli.
-3. **Mavi/Kırmızı:** `/erwin_rutbe <oyuncu> 3`; Mavi L1 için 6 blok; kill sınavı; rapor sonrası parşömende **Gravity Fissure** (Mavi), **Shockwave** (Kırmızı) yazmalı. L3 için rütbe 4 gerekir.
-4. **Mor:** Mavi ve Kırmızı üç seviye bitmeden reddedilmeli; sonra rütbe 4, L1 12 blok; parşömen **Eldritch Blast**.
+3. **Mavi/Kırmızı:** `/erwin_rutbe <oyuncu> 3`; Mavi L1 için 6 blok; kill sınavı; rapor sonrası parşömende **Blue** (Mavi) ve **Red** (Kırmızı) yazmalı; büyü kitabında/parşömen aramada "Blue", "Red", "Purple" ile bulunmalı (oyunu yeniden başlattıktan sonra). L3 için rütbe 4 gerekir.
+4. **Mor:** Mavi ve Kırmızı üç seviye bitmeden reddedilmeli; sonra rütbe 4, L1 12 blok; parşömen **Purple**.
 5. **Kayıp parşömen ve bağ:** "Diğer işler" altından; hediye "Sonsuzluğun Bandı" (bağ Usta Öğrenci olunca).
 6. **Kenpachi:** Üç düğme küçümsesin; "Seninle dövüşmek istiyorum" reiatsu sahnesini oynatmalı (ekran kararır, kalp atışı, kısa yavaşlama, hasar yok). Doku 64×64 olarak doğru görünmeli.

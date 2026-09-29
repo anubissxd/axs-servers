@@ -21,6 +21,7 @@ Bizim yazdığımız Iron's Spells büyülerinin envanter/büyü çubuğu ikonla
 | `rasengan.png` | Rasengan | `kubejs/startup_scripts/rasengan_spell.js` |
 | `tsukiyomi.png` | Tsukiyomi | `kubejs/startup_scripts/tsukiyomi_spell.js` |
 | `flashstep.png` | Shunpo (oyunda görünen ad) | `kubejs/startup_scripts/flashstep_spell.js`. Büyünün sistem adı `flashstep`, adı Shunpo; dosya sistem adıyla adlandırılır. Büyü kodunu swxff push edecek |
+| `gojo_blue.png`, `gojo_red.png`, `gojo_purple.png` | Blue, Red, Purple (Gojo'nun büyüleri) | `kubejs/startup_scripts/gojo_spells.js` |
 
 **Bunlar aktif olarak kullanılıyor.** Iron's Spells bir büyünün ikonunu büyünün adından bulur: `kubejs:<büyü>` büyüsünün ikonu `textures/gui/spell_icons/<büyü>.png` dosyasıdır. Bu yüzden **dosya adı büyünün KubeJS adıyla birebir aynı olmalıdır**.
 

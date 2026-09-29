@@ -1,6 +1,6 @@
 # Gojo
 
-*(Sistem VDS'te kurulu; büyüler modlardan hazır, gerçek oyunda test edilmedi.)*
+*(Sistem kurulu; büyüler kendi adlarıyla kayıtlı ve oyunun yeniden başlatılmasını ister. Gerçek oyunda test edilmedi.)*
 
 - **Tür:** İnsan (easy_npc:humanoid, klasik kol). UUID `6bbe609e-4759-4904-9795-3e7974da69f8`, etiketleri `korunan`, `hoca_npc_gojo`.
 - **Konum:** -819.5, 69, -472.5 (istenen -820, 69, -473; NPC blok ortasına oturdu)
@@ -15,17 +15,19 @@
 - **Dosya:** [`assets/npc-skins/gojo_v1.png`](../../../assets/npc-skins/gojo_v1.png) (64×64, insan, klasik kol); swxff ekledi.
 - **Oyunda:** `SkinData` `SECURE_REMOTE_URL` ile bu dosyanın GitHub ham adresine bağlı. Kurallar: [assets.md](../../assets.md).
 
-## Büyüler (modlardan hazır, yeniden başlatma gerekmez)
+## Büyüler (kendi adlarıyla: Blue, Red, Purple)
 
-Bu üç büyü sunucudaki modlarda zaten kayıtlı olduğu için hemen çalışır. Oyunda parşömen üzerinde **mod adıyla** görünür (Gojo bunu söyler). Kendi adıyla ayrı bir büyü istenirse ileride KubeJS büyüsü yazılabilir (yeniden başlatma ve istemci güncellemesi gerektirir).
+Oyunda **İngilizce adlarıyla** görünür ve aranır: **Blue**, **Red**, **Purple** (dil dosyası `kubejs/assets/kubejs/lang/`, `spell.kubejs.gojo_*`). Her biri kendi kayıtlı Iron's Spells büyüsüdür (`kubejs:gojo_blue`, `kubejs:gojo_red`, `kubejs:gojo_purple`, startup script `gojo_spells.js`; **oyunun yeniden başlatılması gerekir**). Etkilerini Iron's Spells'in mevcut büyülerinden ödünç alırlar (onCast içinde onların kendi onCast'ını çağırırlar), üstüne kendi parçacık efekti ve kendi mana/bekleme/nadirlik değerleri gelir. Ödünç alınan büyülerin kendisine dokunulmaz.
 
-| Büyü | Anime | Oyunda kullanılan | Neden |
-|---|---|---|---|
-| **Mavi** (Ao) | Çekim | Iron's Spells **Gravity Fissure** (ender, epic): ileri giden küçük kara delik, yakındakileri çeker | Çekim/toplama hissi |
-| **Kırmızı** (Aka) | İtme | Iron's Spells **Shockwave**: elektrikli patlama, çevresindekileri savurur | Patlayıcı itme |
-| **Mor** (Murasaki) | Mavi + Kırmızı birleşimi | Iron's Spells **Eldritch Blast** (efsanevi, mor eldritch ışını) | Mor renk ve yıkım ışını; Chidori dengesinde de referans alınan büyü |
+| Büyü | Anime | Etkisi (ödünç alınan) | Mana (L1/L2/L3) | Bekleme | Yazım |
+|---|---|---|---|---|---|
+| **Blue** (Mavi) | Çekim | Gravity Fissure: ileri giden küçük kara delik, yakındakileri çeker | 45 / 55 / 65 | 20 sn | uzun (1,5 sn) |
+| **Red** (Kırmızı) | İtme | Shockwave: elektrikli patlama dalgası, çevresindekileri savurur | 40 / 50 / 60 | 15 sn | uzun (1 sn) |
+| **Purple** (Mor) | Mavi + Kırmızı birleşimi | Eldritch Blast: mor yıkım ışını | 100 / 130 / 160 | 60 sn | anlık |
 
-Elenen adaylar: Cataclysm Gravitational Pull (Mavi'ye yakın ama yalnızca kendine çeker), bielgg Red Buster (balta gerektirir), bielgg Neutron Lance / Worldbreaker / Absolute End (en yüksek can hasarı verir, aşırı güçlü).
+İkonlar: [`assets/spell-icons/gojo_blue.png`, `gojo_red.png`, `gojo_purple.png`](../../../assets/spell-icons/) (16×16, oyunda `kubejs/assets/kubejs/textures/gui/spell_icons/`). İlk sürüm basit parlayan küredir; istenirse değiştirilir.
+
+Elenen ödünç adayları: Cataclysm Gravitational Pull, bielgg Red Buster / Neutron Lance / Worldbreaker / Absolute End (balta gerektiriyor ya da en yüksek can hasarı veriyor, aşırı güçlü).
 
 ## Eğitim şartları
 
