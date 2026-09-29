@@ -107,7 +107,9 @@ Konsoldan ya da oyunda (op 2) çalışır. Sistem açıklamaları ilgili karakte
 | Komut | Ne yapar |
 |---|---|
 | `/erwin_sifirla <oyuncu>` | Oyuncunun tüm Erwin ilerlemesini (rütbe, sefer, unvan, defter, dükkân stoğu, `erwin_met`) sıfırlar |
-| `/erwin_rutbe <oyuncu> <0-4>` | Test için Birlik rütbesini doğrudan ayarlar ve kişisel dükkân stoğunu yeniler |
+| `/erwin_rutbe <oyuncu> <0-4>` | Test için Birlik rütbesini doğrudan ayarlar ve Thorfinn stoğunu yeniler |
+| `/thorfinn_sifirla <oyuncu>` | Thorfinn siparişini, toprak rütbesini, stoğunu ve `thor_met` etiketini sıfırlar |
+| `function yoruichi:thorfinn_diyalog` | Thorfinn NPC'sinin adını, dokusunu ve diyaloglarını yeniler (`tools/yoruichi/gen_thorfinn.js` üretir) |
 | `/hoca_sifirla <oyuncu>` | Oyuncunun Kakashi/Itachi ilerlemesini (seviyeler, ücret kayıtları, hediye bayrakları, aktif sınav) sıfırlar |
 | `/yedek_test` | Oyuncu verisi yedeğinin Java çağrılarını sahte bir bölmeyle sınar; "BASARILI" yazmalı |
 | `/anubis_hub_temizle` | Hub çevresindeki yüklü canavarları siler |

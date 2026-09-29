@@ -9,5 +9,5 @@
 ## Yönetim
 
 - **Kral:** [Çamur](../characters/camur.md). Oyuncular onu "Kralın Kedisi" olarak bilir; ama kralın ta kendisi Çamur'dur.
-- [Çiftçi Tobias](../characters/ciftci.md) ve [Erwin Smith](../characters/erwin-smith.md) (eski adıyla Şövalye Aldric): doğrudan Çamur'un adamları.
+- [Thorfinn](../characters/thorfinn.md) (eski Çiftçi Tobias) ve [Erwin Smith](../characters/erwin-smith.md) (eski adıyla Şövalye Aldric): doğrudan Çamur'un adamları.
 - [Miu](../characters/miu.md): Çamur'un arkadaşı.

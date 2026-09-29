@@ -21,7 +21,8 @@ Bu sistemler simülasyonla ve sunucu komutlarıyla sınandı ama **gerçek oyunc
 4. **Ölüm Emri:** Sefer bitince isimli parlayan yaratık doğuyor mu (başlık ve çan)? Öldürünce ekstra ödül.
 5. **Unvanlar ve defter:** "Birlik kaydım" ve "Sefer defterim" doğru bilgiyi yazıyor mu?
 6. **Terfi:** Gerekli sefer sayısına ulaşınca terfi sahnesi (başlık, 3-4 satır Erwin) ve hoca ipucu.
-7. **Rütbe dükkânı (ticaret ekranı):** `/erwin_rutbe <oyuncu> 1` ile rütbeyi ayarla. "Rütbe dükkânı" ticaret ekranını açmalı; rütbenin mallarını göstermeli. Bir mal al: ekran kapanınca "Ambar stoğum" stoğun bir azaldığını göstermeli, ekranı yeniden açınca aynı mal daha az (veya kapalı) olmalı. Rütbeyi 3 yapıp daha fazla mal açıldığını kontrol et. Süre dolunca yenileniyor mu? İki oyuncu aynı anda açarsa ikincisi "meşgul" almalı.
+7. **Ambar (Thorfinn):** Erwin'de "Ambar nerede?" Thorfinn'e yönlendirmeli. Asıl test aşağıdaki Thorfinn bölümünde.
+7b. **Eski not (artık Thorfinn):** `/erwin_rutbe <oyuncu> 1` ile rütbeyi ayarla. Thorfinn'de "Ticaret" ticaret ekranını açmalı; rütbenin mallarını göstermeli. Bir mal al: ekran kapanınca "Ambar stoğum" stoğun bir azaldığını göstermeli, ekranı yeniden açınca aynı mal daha az (veya kapalı) olmalı. Rütbeyi 3 yapıp daha fazla mal açıldığını kontrol et. Süre dolunca yenileniyor mu? İki oyuncu aynı anda açarsa ikincisi "meşgul" almalı.
 
 ## C. Ölümde veri
 1. Bir sefer al, sayacı ilerlet. `/kill` ile öl, yeniden doğ.
@@ -55,3 +56,14 @@ Bu sistemler simülasyonla ve sunucu komutlarıyla sınandı ama **gerçek oyunc
 | Tarih | Bölüm | Sonuç | Not |
 |---|---|---|---|
 | | | | |
+
+
+## G. Thorfinn (ticaret)
+
+1. **Tanışma:** Thorfinn'e tıkla. İlk seferde tanışma diyaloğu, sonra ana menü (4 düğme) açılmalı; düğmeler üst üste binmemeli.
+2. **Ticaret:** `/erwin_rutbe <oyuncu> 1`. "Ticaret" ticaret ekranını açmalı, 4 mal göstermeli, bedel **zümrüt** olmalı (blok değil). Rütbesizken ("erwin_rutbe 0") reddedilmeli.
+3. **Stok:** Bir mal al. Ekranı kapat, "Diğer işler → Stok durumu" stoğun azaldığını göstermeli; ekranı yeniden açınca aynı mal kapalı/daha az olmalı. Başka bir oyuncuda stok ayrı olmalı.
+4. **Yüksek fiyat:** Rütbeyi 3 yap. Totem (128 zümrüt) iki yuvalı görünmeli; yeterli zümrütle alınabilmeli.
+5. **Hasat siparişi:** "Hasat siparişi" ile sipariş al, malı topla, tekrar "Hasat siparişi" ile teslim et: zümrüt ve sahne (başlık) gelmeli. Sipariş sürerken yenisini vermemeli; günde 4, arada 3 dk sınır.
+6. **Toprak rütbesi:** `thor_total` 8'e ulaşınca "TOPRAK RÜTBESİ" sahnesi ve yemek siparişleri açılmalı ("Toprak kaydım").
+7. **Sıfırlama:** `/thorfinn_sifirla <oyuncu>` her şeyi temizlemeli.

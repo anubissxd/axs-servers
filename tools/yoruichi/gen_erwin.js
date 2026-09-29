@@ -32,12 +32,12 @@ const HUB_TEXT = [
   'Gece Avcısı. Kan sözleri için adın fısıldanıyor. Hazırsan konuşalım.',
   'Eşik Muhafızı. Kıyamet seferleri yalnızca senin gibi birine emanet edilir. Söyle, hangi kapıyı kapatıyoruz?'
 ]
-// Rütbe dükkânı Easy NPC ticaret ekranıyla açılır (erwin_seferleri.js: erwinShopOpen); buradaki düğme yalnızca etiket verir.
+// Rütbe dükkânı Thorfinn'e taşındı (thorfinn_ticaret.js); Erwin'deki düğme yalnızca yönlendirir.
 function hubButtons() {
   return [
     btn('Sefer / rapor.', [tag('erwin_req'), CLOSE]),
     btn('Seferi bırakıyorum.', [tag('erwin_abort'), CLOSE]),
-    btn('Rütbe dükkânı.', [tag('erwin_dukkan'), CLOSE]),
+    btn('Ambar nerede?', [tag('erwin_ambar'), CLOSE]),
     btn('Diğer işler.', [open('erwin_diger')]),
     btn('Ayrılıyorum.', [CLOSE])
   ]
@@ -47,7 +47,6 @@ function digerButtons() {
     btn('Seferim nasıl gidiyor?', [tag('erwin_info'), CLOSE]),
     btn('Birlik kaydım.', [tag('erwin_stat'), CLOSE]),
     btn('Sefer defterim.', [tag('erwin_log'), CLOSE]),
-    btn('Ambar stoğum.', [tag('erwin_stok'), CLOSE]),
     btn('Geri.', [CLOSE])
   ]
 }
