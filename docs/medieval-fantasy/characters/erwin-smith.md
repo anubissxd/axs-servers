@@ -46,7 +46,7 @@ Her ödüle şansa bağlı ekstra ganimet (altın elma, elmas, tecrübe, mürekk
 - **Ölüm Emri:** Tür I-III seferlerin %20'sinde son hedef öldüğünde isimli, parlayan bir elit doğar (Kanlı Orakçı vb.). Öldürmek ayrıca ödül verir; sefer tamamlanması için gerekli değildir.
 - **Unvanlar:** Kırk Gölge (40 sefer), Sonsuz Nöbetçi (100), Kan Sözü Ustası (5 Kan Sözü), Ejderha Katili (Kıyamet seferi), Kader Kırıcı (3 zincir), Ay Avcısı (5 Kanlı Ay), Ölüm Emri Avcısı (5), Kan Bahisçisi (5 bahis). "Birlik kaydım" gösterir.
 - **Sefer defteri:** Son 10 tamamlanan sefer (tarih, ad, blok); diyalogda "Sefer defterim".
-- **Nadir ödüller:** Tür IV-V ödüllerine netherite yükseltme kalıbı, denizin kalbi, Nether yıldızı eklendi.
+- **Ödül dengesi:** Nadir/OP eşyalar (Nether yıldızı, netherite kalıbı, denizin kalbi) kaldırıldı; Tür V'te büyülü altın elma %20 (1 adet), netherite külçe %10, totem %8.
 
 **Test:** oyuncu/sunucu taklit eden simülasyonla uçtan uca (teklif, sayaç, rapor, bahis, zincir, unvan, defter, Ölüm Emri, 2500 teklif örnekleme) sınandı; Ölüm Emri summon komutu sunucuda çalıştırılarak doğrulandı. Oyuncuyla gerçek tıklama akışı hâlâ denenmedi.
 
