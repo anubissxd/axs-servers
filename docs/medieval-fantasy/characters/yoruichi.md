@@ -1,138 +1,127 @@
 # Yoruichi
 
-- **Tür:** İnsan (easy_npc:humanoid_slim, Alex/ince kol). Önceden kediydi. Skin: [yoruichi_v1.png](../../../assets/npc-skins/yoruichi_v1.png) (uzak URL, `SECURE_REMOTE_URL`, `main` dalındaki raw adresi; diğer NPC dokuları gibi). Oyuncuların görebilmesi için dosyanın GitHub'a push edilmiş olması gerekir.
-- **Konum (planlanan, VDS):** Vlorya Kalesi (-673, -262) civarı, kale dışında bir yerde. Kesin koordinat VDS'e yerleştirilirken terrain'e göre ayarlanır.
-- **Konum (local test):** Dünya spawn'ına yakın (112, 87, -96) — sadece diyalog/mekanik testi için, final değil.
-- **Krallık:** [Vlorya](../kingdoms/vlorya.md) — resmi üye değil, bağımsız, kalenin çevresinde dolaşan gizemli bir kedi.
-- **Görevi:** Şartı sağlayan oyunculara Shunpo (Flash Step) eğitimi verir.
-- **İlişkiler:** Kimseyle bağı açıklanmaz — gizemini korur.
+- **Tür:** İnsan (`easy_npc:humanoid_slim`, Alex/ince kol). Önceden kara kediydi (eski kedi NPC kaldırıldı).
+- **UUID:** `fff2c1ae-28c0-4f9c-858b-94f7cbc0ca8e` (`yoruichi_chase.js` içindeki `YORUICHI_UUID_STR`). Etiketleri: `korunan`, `yoruichi_npc`.
+- **Konum (VDS):** Caddy bölgesinde, `-1032.518, 81.0, -338.304` (`YORUICHI_HOME`). Evinde **rest** pozunda durur.
+- **Krallık:** Konumu Caddy bölgesinde ama **Vlorya'ya bağlıdır**: yalnızca Vlorya'lılar (`rank_vloryan`) ondan öğrenebilir. Caddy krallığına bağlı değildir.
+- **Görevi:** Vlorya'lı oyunculara **Shunpo** (Bleach'teki hızlı adım; oyunda Iron's Spells büyüsü, sistem adı `kubejs:flashstep`) öğretir. Üç eğitim vardır (L1, L2, L3), her biri **zümrüt bloğu** ister.
+- **Karşılığı:** Shunpo, Iron's Spells büyüsü olarak bakış yönünde ışınlanır, hedefin arkasına geçer; ayrıntı aşağıda.
+- **İlişkiler:** Kimseyle bağı açıklanmaz, gizemini korur.
 
 ## Skin / Texture
 
 <img src="../../../assets/npc-skins/yoruichi_v1.png" alt="yoruichi_v1.png" width="256">
 
-- **Dosya:** [`assets/npc-skins/yoruichi_v1.png`](../../../assets/npc-skins/yoruichi_v1.png) (64×64, insan (Alex, ince kol))
-- **Oyunda:** `SkinData` `SECURE_REMOTE_URL` ile bu dosyanın GitHub ham adresine bağlı (`tools/yoruichi` araçları kurar); swxff ekledi.
-- Kurallar ve nasıl bağlanacağı: [assets.md](../../../docs/assets.md)
+- **Dosya:** [`assets/npc-skins/yoruichi_v1.png`](../../../assets/npc-skins/yoruichi_v1.png) (64×64, insan, Alex ince kol); swxff ekledi.
+- **Oyunda:** `SkinData` `SECURE_REMOTE_URL` ile bu dosyanın GitHub ham adresine bağlı. Skin UUID'si adresin `UUID.nameUUIDFromBytes` sonucudur. Kurallar: [assets.md](../../../docs/assets.md).
 
 ## Konsept
 
-Bleach'teki Yoruichi Shihouin'den ilham alınmıştır: gerçekte kim olduğunu saklayan, sıradan bir kara kedi kılığında dolaşan bir usta. Oyuncular onu **bulduklarında** (ekstra rütbe şartı yok — keşif tek şart) eğitim teklifini alabilir.
+Bleach'teki Yoruichi Shihouin'den ilham alınmıştır: kim olduğunu saklayan, çevik ve alaycı bir usta. Oyunculara doğrudan öğretmez; önce kendisini yakalatır, sonra ücret ister ve sınavlar verir.
 
-## Eğitim şartı
+## Eğitim şartları
 
-Yalnızca onu bulmuş olmak yeterli. Rütbe veya krallık bağı gerekmez.
+1. **Rütbe:** Oyuncunun `rank_vloryan` rütbesi olmalı (FTB Ranks rank'i `vloryan`, `anubis_rank_stages.js` bunu etikete çevirir). Değilse "Sen Vlorya'dan değilsin, defol" diyaloğu açılır. Elle `tag` koymak işe yaramaz, script rütbeye göre etiketi geri siler. Rütbe `krallik_katil <oyuncu> vloryan` ile verilir.
+2. **Sıra:** L1 → L2 → L3. L2 teklifi L1 bittikten (`yoruichi_caught`), L3 teklifi L2 parşömeni alındıktan (`yoruichi_l2_claimed`) sonra açılır.
+3. **Ücret:** Her seviyede zümrüt bloğu (aşağıdaki tablo). Ücret her seviye için **yalnızca ilk kabulde bir kez** alınır (`yoruichi_paid_l<n>`), 60 sn sonra yeniden konuşma ya da Gölge Klon'u yeniden deneme ücret istemez.
 
-## Diyalog akışı (taslak — test aşamasında)
-
-**D1:** "Hmm... buralarda daha önce görmediğim bir surat."
-→ [Konuşan bir kedi mi?]
-
-**D2:** "Çevik görünüyorsun. Ama çeviklik sadece konuşmakla olmaz - göstermek gerekir."
-- **[Bana öğret.]** → Oyuncu `yoruichi_tanisti` etiketini alır, eğitim aşamasına geçer.
-- **[Sadece bir kedisin.]** → Diyalog kapanır, tekrar konuşulabilir (etiket verilmez).
-
-**D3 (eğitim kabul edilince):** "İyi. O zaman beni takip et - görebilirsen."
-
-## Uygulanan mekanikler (yalnızca local singleplayer testinde, VDS'e gönderilmedi)
-
-Kaynak: `%APPDATA%\.minecraft\versions\Medieval Fantasy\kubejs\server_scripts\`
-
-- `yoruichi_chase.js`: `yoruichi_tanisti` etiketli oyuncu 5 blok yaklaşınca Yoruichi sabit waypoint'lerden birine ışınlanır (POOF/CLOUD + `kubejs:flashstep` sesi + action bar'da laf atma). 6 kaçıştan sonra oyuncu `yoruichi_caught` alır; 30 sn hareketsizlikte sayaç sıfırlanır.
-- Öğrenme sahnesi (`yoruichi_chase.js` sonu): yakalanınca ~15 sn sürer. "Yakaladın." başlığı, Yoruichi'nin hız konuşması (chat), biriken şimşek kıvılcımları, gök gürültüsü ve altın "SHUNPO / Flash Step öğrenildi" başlığı, 8 sn Hız III, sonra Yoruichi flash step ile kaybolur. Sadece komut kullanır, oyuncunun konumuna dokunmaz.
-- **Flash Step artık bir Iron's Spells büyüsü** (`startup_scripts/flashstep_spell.js`, okul Ender, nadir, 3 seviye). Mantık `server_scripts/yoruichi_flashstep_fx.js` içindeki `global.flashstepCast`'te. Bakış yönünde en fazla 10 blok ışınlanır; engel (duvar, tavan, zemin) varsa onun hemen önünde durur. 10 blok içinde doğrudan bakılan bir canlı varsa (`korunan` etiketli NPC'ler hariç) onun ARKASINA geçer ve ona döner. 3 seviye: L1 7 blok/1 hak/3 sn/20 mana, L2 12 blok/2 hak/2 sn/25 mana, L3 15 blok/3 hak/1,5 sn/30 mana; Scroll Forge'da craftlanamaz ve loot olarak bulunamaz (`canBeCraftedBy` false, `setAllowLooting` false); açıklamalar İngilizce, Iron's formatında (`FLASHSTEP_RANGES/CHARGES/RECHARGES`). Yoruichi L1 parşömeni verir; L2 ve L3 Yoruichi görev zinciriyle verilecek (görevler henüz tasarlanmadı). `combat_dash`'e dokunmaz. Yoruichi sahnesinin sonunda oyuncuya parşömen verilir. Hedefin arkasına geçince hedefe 2 sn sersemleme (Yavaşlık 7 + zıplayamama) ve kısa vuruş (4 hasar, `FLASHSTEP_HIT_DAMAGE`) uygulanır. Görsel: kalkışta siyah siluet (artçı görüntü), varışta iç ve dış siyah yer halkası, siyah hız çizgileri. `/tp` komutu Grand Teleport animasyonunu tetiklediği için hedefe dönme `p.connection.teleport` ile yapılır. Startup script olduğu için değişiklik oyunu baştan açmayı gerektirir. Eskiden `combat_dash` cooldown düşüşüne bindirilen sürüm kaldırıldı (kayma iptal edilemiyordu).
-- Görsel: `kubejs/assets/minecraft/textures/particle/sonic_boom_0..15.png` yatay hız çizgisi dokusuyla değiştirildi (16 kare, açık + koyu mor çizgiler, hızla solar). Flash Step bu partikülü kaybolma noktasında, yol boyunca (1,5 blokta bir), varışta ve oyuncunun kendi gözünün önünde spawn eder. Ek olarak ters yöne akan `end_rod` çizgileri, `electric_spark` ve zemin bloğunun toz parçacıkları (`block` particle) vardır. Yan etki: Warden'ın ses dalgası da artık bu dokuyla görünür (Warden çok nadir).
-- Ses: `kubejs/assets/kubejs/sounds/flashstep.ogg` + `sounds.json`.
-
-VDS'e taşırken: `YORUICHI_UUID_STR` ve `YORUICHI_WAYPOINTS` Vlorya'daki yeni NPC'ye göre güncellenmeli; diyalog ve `ON_INTERACTION` NPC entity'sindedir, dosya değildir.
-
-## Planlanan eğitim akışı (henüz uygulanmadı)
-
-1. **Beni yakala:** Kısa bir takip rotası, Yoruichi kaçar, oyuncu izler. Ders: hız önemli.
-2. **Deneme:** Oyuncuya geçici hız/zıplama efekti verilip kısa bir parkur/zaman denemesi yaptırılır.
-3. **Açılış:** Yoruichi gerçek yeteneği verir (Shunpo — anlık kısa mesafe teleport + after-image efekti, Rasengan/Chidori gibi Iron's Spells custom spell olarak kurulacak).
-
-Bu üç aşama henüz teknik olarak kurulmadı; şu an sadece D1-D3 tanışma diyaloğu test ediliyor.
-
-## Notlar
-
-- Görsel: Easy NPC'nin native `minecraft:black` kedi varyantı kullanılıyor, özel doku (skin) yok — Miu'nun aksine.
-- Teknik detaylar (NBT alanları, komutlar) için [quest.md](../quest.md)'deki Easy NPC bölümüne bakılabilir.
-
-## Flash Step seviyeleri ve görev zinciri (taslak, NPC'ye henüz bağlanmadı)
-
-Kod: `kubejs/server_scripts/yoruichi_l2.js` (sayaç), `yoruichi_flashstep_fx.js` (işaretleme). Tüm etiketler ve komutlar NPC diyalog düğmelerinden verilir (NPC'nin `ActionPermissionLevel` değeri 3 olmalı, `@initiator` konuşan oyuncudur, bkz. [quest.md](../quest.md)).
-
-### L1 (mevcut)
-İlk konuşma, kovalamaca, "Shunpo" sahnesi. Sonunda L1 parşömeni verilir. Etiketler: `yoruichi_tanisti` → `yoruichi_caught`.
-
-### L2 — "Beş Gölge"
-**Kural:** Flash Step ile bir düşmanın arkasına geçilince düşman işaretlenir (2 dakika). İşaretli düşmanın **son vuruşunu** oyuncu yaparsa sayılır. Süre sınırı yoktur (can ve silah gücü fark etmesin). 5 düşmandan sonra oyuncu `yoruichi_l2_done` alır. Sayaç oyuncunun `persistentData.flashstep_kills` alanındadır.
-
-**Diyalog akışı (taslak):**
-
-- **D-L2-1** (`yoruichi_caught` var, `yoruichi_l2` yok): "Tek adım atmayı öğrendin. Bir gölge tek adımla doğmaz, çocuk. Beş düşman seç. Arkalarına geç. Onlar seni fark etmeden bitir. Sonra bana dön."
-  - **[Hazırım.]** → `tag @initiator add yoruichi_l2` — "Güzel. Gözlerin açık olsun."
-  - **[Sonra.]** → "Acele etme. Ben buralardan gitmem."
-- **D-L2-2** (`yoruichi_l2` var, `yoruichi_l2_done` yok): "Henüz bitmedi. Saymayı bilirsin: beş gölge. Arkalarına geç, sen bitir."
-- **D-L2-3** (`yoruichi_l2_done` var): "Beş gölge, beş sessiz son. Fena değil... hiç fena değil. Al bunu. Adımların artık daha uzağa uzanacak."
-  - **[Teşekkürler.]** → `give @initiator irons_spellbooks:scroll{"irons_spellbooks:spell_container":{data:[{id:"kubejs:flashstep",index:0,level:2,locked:1b}],maxSpells:1,mustEquip:0b,spellWheel:0b}} 1` ve `tag @initiator add yoruichi_l2_claimed`.
-
-### L3 — "Gölge Klon" (mini boss)
-Kod: `kubejs/server_scripts/yoruichi_l3.js`. Diyalogtan `yoruichi_l3_start` etiketi verilir; oyuncunun yakınında bir **Gölge Klon** doğar (vindicator, siyah deri zırh, demir kılıç, 150 can, geri itilmez, ganimet yok; tag'leri `yoruichi_shadow` ve `ysh_<oyuncu uuid>`). Kurallar: gölgeye **yalnızca sahibi ve yalnızca arkasından** hasar verilebilir (saldırganın gölgeye göre yönü, gölgenin baktığı yönün arkasında olmalı; aksi halde vuruş iptal edilir ve action bar'da uyarı çıkar). Gölge her 3–5 sn'de oyuncunun 4–7 blok çevresinde rastgele bir yere ışınlanır. 3 dakikada yenilemezse, oyuncu ölürse ya da çıkarsa gölge kaybolur ve `yoruichi_l3` etiketi silinir (ceza yok, tekrar denenir). Öldürülünce oyuncu `yoruichi_l3_done` alır; Yoruichi ile konuşunca L3 parşömeni verilir (`yoruichi_l3_claimed`).
-
-Diyaloglar: `l3_teklif`, `l3_devam`, `l3_odul`, `l3_bitti`. Bağlamak için (L2'den sonra): `/function yoruichi:wire_l3`.
-
-### L2 diyaloglarını NPC'ye bağlamak (datapack)
-`saves/<dünya>/datapacks/yoruichi_l2/` (üretici: oturum scratchpad'i, `gen_dp2.js`) tek seferlik `yoruichi:wire_l2` fonksiyonunu içerir. Yoruichi'nin yakınındayken: `/reload`, `/datapack enable "file/yoruichi_l2"`, `/function yoruichi:wire_l2`. Fonksiyon `l2_teklif`, `l2_devam`, `l2_odul`, `l2_bitti` diyaloglarını ekler ve `ON_INTERACTION` yönlendirmesini etiketlere (`yoruichi_l2`, `yoruichi_l2_done`, `yoruichi_l2_claimed`) göre yeniden yazar. NPC'ye `yoruichi_l2_wired` etiketi koyar, ikinci çalıştırmada yeniden bağlamaz. UUID (`5a1afe8a-...`) yalnızca local test NPC'sine aittir; VDS'te yeni UUID ile üretilmelidir. Yedek: `easy_npc/backup/`.
-
-### Kediden insana dönüşüm (datapack)
-`saves/<dünya>/datapacks/yoruichi_l2/` içindeki `yoruichi:human` fonksiyonu eski kedi NPC'nin konumunda yeni bir `easy_npc:humanoid_slim` doğurur (tüm diyaloglar ve yönlendirmeler dahil, tag'ler: `korunan`, `yoruichi_npc`), kediyi siler. Yeni UUID: `fff2c1ae-28c0-4f9c-858b-94f7cbc0ca8e` (`yoruichi_chase.js` içindeki `YORUICHI_UUID_STR` ve `type=easy_npc:humanoid_slim` seçicileri buna göre güncellendi). Kullanım: Yoruichi'nin yakınında `/reload`, `/function yoruichi:human`. Üretici: `tools/yoruichi/gen_human.js`. VDS'e taşınırken aynı üretici yeni UUID'yle çalıştırılır.
-
-**Büyü adı:** oyunda "Shunpo" (büyü kimliği hâlâ `kubejs:flashstep`, eski parşömenler çalışır). İkon: `shunpo_16x16.png`.
-
-### Konum (VDS, Caddy bölgesi, Vlorya'ya bağlı tarafsız nokta)
-- **Oturduğu yer (ev):** -1032.518, 81.0, -338.304 (`YORUICHI_HOME`, `yoruichi_chase.js`). Oturma animasyonunda durur (poz arayüzden seçilecek, anahtar henüz bilinmiyor).
-- **İlk Shunpo (kaçış) noktası:** -1033.554, 72, -318.817 (`YORUICHI_FIRST_HOP`). Sonraki atlamalar bu yönde ileriye doğru otomatik üretilir (12–18 blok, zemin kontrolüyle). Kimse kovalamazsa 60 sn sonra eve döner.
-- Skin push edilmeden önce konumlar sabitlenecek; VDS'e "Güncelle" ile gidecek.
-- **Bakış yönü:** Yoruichi evinde **kuzeye (-Z)** bakar (`yaw 180`, `pitch 0`) ve **rest pozunda durur** (Easy NPC `rest` pozu). Eve dönerken bu yöne çevrilir ve tekrar yaslanır.
-- **Gölge Klon (L3):** İlk Shunpo noktasında (`-1033.554, 72, -318.817`) doğar; nokta yüklü değilse (yerel test) oyuncunun yakınına düşer.
-- **Geri sayım:** Yoruichi evde değilken 60 sn'lik eve dönüş süresi yalnızca **kovalayan oyuncuya** action bar'da gösterilir ("Yoruichi eve dönüyor: N sn").
-
-### VDS kurulum durumu (2026-09-29)
-- **Yayında:** Paket 1.3.6 ("Güncelle", swxff) ile Shunpo büyüsü, kovalama/L2/L3 script'leri, lang, ses, ikon ve sonic_boom dokuları oyunculara gitti; sunucu yeniden başlatıldı (KubeJS: 15 sunucu script'i, 0 hata). Yedek: `/root/backups/medieval-fantasy/2026-09-29-before-shunpo-kubejs`.
-- **Yoruichi VDS'te kuruldu:** `world/datapacks/yoruichi/` (üretici: `tools/yoruichi/gen_vds.js`). Konum `-1032.518, 81.0, -338.304`, UUID `fff2c1ae-28c0-4f9c-858b-94f7cbc0ca8e`, sahip (Owner) swxff, skin `assets/npc-skins/yoruichi_v1.png` (skin UUID'si URL'den `nameUUIDFromBytes` ile üretilir). Konsoldan `function yoruichi:human` ve `function yoruichi:human_lock` çalıştırıldı. NPC'yi silip yeniden kurmak gerekirse aynı iki fonksiyon.
-- **Bekleyen:** oturma pozu (arayüzden seçilip NBT anahtarı yedekten okunacak), Gölge Klon dövüşünün ve otomatik kaçış noktalarının VDS'te denenmesi.
-
-### Poz ve kovalama kuralları (2026-09-29)
-- **Poz:** Evde `easy_npc:pose/humanoid/rest` (ModelData'ya `data modify` ile yazılır: `PoseName`, `Rotation` = derece → radyan `[x,y,z,0]`, `Position` = `[x,-y,z]`, `Pose:"DEFAULT"`). **İlk Shunpo atlamasında** ayakta poza (`standing`) geçer, kovalama boyunca ayakta kalır, eve dönünce yeniden yaslanır (`yoruichiSetPose`, `yoruichi_chase.js`).
-- **Tek kovalayan:** Kovalama ilk atlamayı tetikleyen oyuncuya kilitlenir (`global.yoruichiChaseOwner`). Başkaları yaklaşırsa action bar'da "Yoruichi şu an başka biriyle ilgileniyor." görür, kovalamaya müdahale edemez. Sahip oyundan çıkarsa ya da yakalanıp sahne biterse kilit açılır.
-- **60 sn kuralı:** Son atlamadan 60 sn sonra Yoruichi eve döner, kilit açılır ve kovalayan oyuncudan `yoruichi_tanisti` etiketi **silinir**; kovalama kendiliğinden yeniden başlamaz, oyuncu Yoruichi ile yeniden konuşmalıdır ("Sabrım tükendi. Hazır olduğunda yeniden konuş.").
-- **Yön korunur:** İlk Shunpo atlamasında NPC evdeyse o anki yönü (`yaw`, `pitch`) kaydedilir (`global.yoruichiHomeYawV2/PitchV2`); eve dönünce bu yön geri verilir. Arayüzden ya da komutla ayarlanan yön böylece bozulmaz. Kayıt yoksa (sunucu yeniden başladıysa) `YORUICHI_HOME.yaw` kullanılır.
-- **Yoruichi'nin Shunpo VFX'i:** Kaçış atlamaları ve eve dönüş, oyuncunun Shunpo'suyla aynı efekti kullanır (`yoruichiShunpoFx`: siyah hız çizgileri, artçı siluet, siyah toz, yer halkaları). `fs*` yardımcıları `yoruichi_flashstep_fx.js`'tedir.
-- **Model yönü ve poz (önemli):** Easy NPC arayüzündeki **Rotation** düğmesi NPC'nin *model* yönünü `ModelData.Root.Rotation` alanına yazar (varlığın `Rotation` yaw'ından ayrı). Poz değiştirilirken (`yoruichiSetPose`) `ModelData` **tamamen değiştirilmez**, yalnızca `Pose`, `PoseName`, `Rotation`, `Position` yazılır; `Root` korunur. (Eskiden tamamı `set value` ile yazılıyor, `Root` sıfırlanıyor ve elle ayarlanan yön bozuluyordu.)
-- **Atlama sonrası bakış:** Kaçış `tp`'sine `~ 0` eklendi (yaw aynı, pitch 0); "oyuncuya bak" hedefi yüzünden NPC yukarı/aşağı bakar halde kalmaz.
-- **Varış ipucu (`YORUICHI_HINT`):** Her atlamadan sonra Yoruichi 4 sn parlar (`glowing`), varış noktasında 4 sn gökyüzüne uzanan siyah/beyaz parçacık sütunu çıkar, oyuncunun action bar'ında yön ve mesafe yazar ("Yoruichi güney yönünde, 18 blok uzakta, aşağıda."). `false` yapılırsa kapanır.
-- **Shunpo hak dolumu:** Süre artık gerçek zaman (`Date.now()`). Eskiden sunucu tick sayacı kullanılıyordu; `/kubejs reload` sayacı sıfırlayınca kayıtlı zaman sayaçtan büyük kalıyor ve hak uzun süre dolmuyordu ("yükleniyor"da kalma). Anahtar `flashstepChargesV4`.
-- **Iron's bekleme göstergesi:** Shunpo'nun kendi hak sistemi var (Iron's bekleme süresi 0). Hak **kalmayınca** bir sonraki hakkın dolmasına kalan süre Iron's `PlayerCooldowns`'a yazılır (`addCooldown("kubejs:flashstep", tick)` + `syncToPlayer`), böylece kitap/büyü çubuğu/büyü çarkındaki simgede diğer büyülerdeki gibi bekleme görünür. Hak varken bekleme yazılmaz (çok haklı seviyelerde ikinci atışı engellemesin).
-- **L2 ilerleme görünürlüğü:** İşaretlenen düşman 10 sn parlar ve oyuncuya "Gölge işaretlendi. Son vuruşu sen yap." yazılır. Her sayılan öldürmede sohbete ve action bar'a "Shunpo: n/5 düşman" yazılır. Görev aktifken (`yoruichi_l2` var, `yoruichi_l2_done` yok) ilerleme her 2 saniyede action bar'da "Shunpo: 0/5 düşman" olarak görünür. Sayılmayan isaretli ölümler `latest.log`'a nedeniyle (`yoruichi l2: ...`) yazılır.
-
-### Ücretler (zümrüt bloğu)
-Her eğitim ücretlidir; ücret **ilk kabulde bir kez** alınır (`yoruichi_paid_l<n>` etiketi): 60 sn sonra yeniden konuşma ya da Gölge Klon'u yeniden deneme ücret istemez.
-
-| Seviye | Ücret | Neden |
+| Seviye | Ücret | Görev |
 |---|---|---|
-| L1 (kovalamaca, ilk Shunpo) | **3 zümrüt bloğu** | Kısa, risksiz giriş |
-| L2 (5 düşmanın arkasına geç ve öldür) | **6 zümrüt bloğu** | Uzun ve savaş gerektirir |
-| L3 (Gölge Klon mini boss) | **10 zümrüt bloğu** | En zoru, en güçlü seviye |
+| L1 | **3 zümrüt bloğu** | Kovalamaca, ilk Shunpo |
+| L2 | **6 zümrüt bloğu** | 5 düşmanın arkasına geçip öldür |
+| L3 | **10 zümrüt bloğu** | Gölge Klon mini boss |
 
-Akış: diyalog düğmesi `yoruichi_pay_l<n>` etiketini verir ve kapanır; `kubejs/server_scripts/yoruichi_pay.js` envanterdeki zümrüt bloklarını sayar, yeterliyse keser ve görevi başlatır (`yoruichi_tanisti` / `yoruichi_l2` / `yoruichi_l3_start`), yetersizse "Yeterli zümrüt bloğun yok. N zümrüt bloğu getir (x/N)." der. Fiyatlar `YORUICHI_PRICES`'tadır; diyalog metinleri `tools/yoruichi/gen_*.js` ve canlı NPC'de (`tools/yoruichi/gen_prices.js` → `yoruichi:prices`) elle eşitlenir.
-- **Gölge Klon uzaklaşma ve ölüm (2026-09-29):** Oyuncu gölgeden **10 bloktan** fazla uzaklaşırsa gölge hemen oyuncunun **arkasına** (bakış yönünün tersi, 2,5–4 blok, zemin kontrollü) Shunpo atar (en az 2 sn arayla; `YL3_CHASE_DIST`). Bu, 3–5 sn'lik rastgele yakın ışınlanmaya ek olarak çalışır. Oyuncu sınav sırasında **ölürse** sınav biter, gölge silinir, `yoruichi_l3` etiketi kalkar ve "Gölgem seni yendi. Hazır olduğunda yeniden çağır." (gölge öldürdüyse) ya da "Sınav bitti. Hazır olduğunda yeniden gel." yazılır. Ücret (`yoruichi_paid_l3`) yeniden istenmez; yeni gölge 150 canla doğar.
+Akış: diyalog düğmesi `yoruichi_pay_l<n>` etiketini verir ve kapanır; `kubejs/server_scripts/yoruichi_pay.js` envanterdeki zümrüt bloklarını sayar, yeterliyse keser ve görevi başlatır (`yoruichi_tanisti` / `yoruichi_l2` / `yoruichi_l3_start`), yetersizse "Yeterli zümrüt bloğun yok. N zümrüt bloğu getir (x/N)." der. Fiyatlar `YORUICHI_PRICES`'tadır; diyalog metinlerindeki fiyatlar `tools/yoruichi/gen_*.js` ve canlı NPC'de (`gen_prices.js` → `yoruichi:prices`) elle eşitlenir.
 
-### Shunpo geliştirmeleri (2026-09-29)
-`yoruichi_flashstep_fx.js`. Sabitler dosyanın başında (`FLASHSTEP_*`).
-- **Kısa dokunulmazlık:** Shunpo sırasında `FLASHSTEP_IFRAME_TICKS` (8 tick, ~0,4 sn) boyunca Direnç V (%100 hasar azaltma).
-- **Yanıltıcı siluet (decoy):** Kalkış noktasındaki siyah siluet 2 sn görünür kalır; `FLASHSTEP_DECOY_RADIUS` (16) içinde oyuncuyu hedef alan `Mob`'lar 2 sn boyunca hedeflerini bırakıp silüete koşar (5 tickte bir yenilenir). `yoruichi_shadow` ve `korunan` etiketli varlıklar etkilenmez (Gölge Klon adil kalsın).
-- **Zincir vuruş:** Bir düşmanın arkasına geçince `FLASHSTEP_CHAIN_WINDOW_MS` (1,5 sn) içinde yeniden Shunpo **hak harcamaz** (mana yine harcanır). Oyuncu bir düşmana bakmıyorsa menzil içindeki **en yakın düşmana** (görüş hattı temiz, önceki hedef hariç) otomatik gider; her zincir vuruşunda stun ve hasar uygulanır. Ust uste en fazla `FLASHSTEP_CHAIN_MAX` (3). Iron's bekleme göstergesi zincir penceresi bitince yazılır (yoksa zinciri engellerdi).
-- **Uygulanmadı (bilerek):** Shunko (yıldırım zırhı buff'ı). Dengeyi bozar diye ertelendi.
-- **L1 sonu (2026-09-29):** Sahne ~14,5 sn'den ~9 sn'ye kısaltıldı (Shunpo parşömeni 7,5. sn'de, Yoruichi 9,25. sn'de eve döner). `yoruichi_caught` artık yakalanınca değil **sahne bitince** verilir; sahne sürerken oyuncuda `yoruichi_scene` etiketi vardır ve hiçbir diyalog açılmaz (L2 teklifi sahne bitmeden açılamaz). Oyuncu sahne sırasında çıkarsa sahne kaydı ve `yoruichi_scene` silinir, kovalamayı bastan oynar (parşömen verilmemişti). Kovalama sürerken (`yoruichi_tanisti` var, `yoruichi_caught` yok) Yoruichi'ye tıklamak "Beni yakalayabilirsen konuşuruz." diyaloğunu açar (`chase_bekle`); ilk konuşma (`default`) yalnızca hiç kabul etmemiş oyuncuya açılır. Canlı NPC'de rotalar `tools/yoruichi/gen_routes2.js` (`yoruichi:routes2`) ile güncellendi.
+## Diyalog ve etiket akışı
+
+Yönlendirme NPC'nin `ON_INTERACTION` komutlarındadır (`easy_npc dialog open ...`), oyuncunun etiketlerine göre:
+
+| Oyuncu durumu | Açılan diyalog |
+|---|---|
+| Vlorya'lı değil | `kovulma` ("Sen Vlorya'dan değilsin...") |
+| Hiç kabul etmemiş (`yoruichi_tanisti` yok) | `default` → `d2` → "Bana öğret." (ücret L1) |
+| Kovalıyor (`yoruichi_tanisti` var, `yoruichi_caught` yok) | `chase_bekle` ("Beni yakalayabilirsen konuşuruz.") |
+| Yakalama sahnesi sürüyor (`yoruichi_scene`) | Hiçbir diyalog açılmaz |
+| `yoruichi_caught`, L2 başlamamış | `l2_teklif` ("Hazırım.", ücret L2) |
+| `yoruichi_l2`, bitmemiş | `l2_devam` |
+| `yoruichi_l2_done` | `l2_odul` (L2 parşömeni, `yoruichi_l2_claimed`) |
+| `yoruichi_l2_claimed`, L3 başlamamış | `l3_teklif` ("Gölgeyi çağır.", ücret L3) |
+| `yoruichi_l3` (sınav sürüyor) | `l3_devam` |
+| `yoruichi_l3_done` | `l3_odul` (L3 parşömeni, `yoruichi_l3_claimed`) |
+| `yoruichi_l3_claimed` | `l3_bitti` |
+
+İlk konuşma metinleri (D1–D4, D2Kizgin, Kovulma) ASCII yazılmıştır; L2/L3 diyalogları Türkçe karakterlidir.
+
+## L1: kovalamaca ve Shunpo sahnesi
+
+Kod: `kubejs/server_scripts/yoruichi_chase.js`.
+
+- Oyuncu "Bana öğret." deyip ücreti ödeyince `yoruichi_tanisti` alır. Yoruichi'ye **5 blok** yaklaşınca Yoruichi ışınlanır (Shunpo). **6. yaklaşımda** yakalanmış sayılır.
+- **İlk atlama** `YORUICHI_FIRST_HOP` = `-1033.554, 72, -318.817` noktasınadır. Sonraki atlamalar bu yönde (ev → ilk nokta) ileriye doğru **otomatik** üretilir (12–18 blok, zemin/yaprak/su/lav kontrolüyle, uygun yer bulunmazsa açıyı değiştirerek 14 deneme).
+- **Tek kovalayan:** Kovalama ilk atlamayı tetikleyen oyuncuya kilitlenir. Başkaları yaklaşırsa "Yoruichi şu an başka biriyle ilgileniyor." görür ve müdahale edemez. Sahip yakalanınca, oyundan çıkınca ya da süre dolunca kilit açılır.
+- **60 sn kuralı:** Son atlamadan 60 sn sonra Yoruichi eve döner, kilit açılır ve kovalayandan `yoruichi_tanisti` **silinir**; kovalama kendiliğinden başlamaz, oyuncunun yeniden konuşması gerekir ("Sabrım tükendi. Hazır olduğunda yeniden konuş."). Kalan süre **yalnızca kovalayan oyuncunun** action bar'ında görünür ("Yoruichi eve dönüyor: N sn").
+- **Varış ipucu (`YORUICHI_HINT`):** Her atlamadan sonra Yoruichi 4 sn parlar, varış noktasında 4 sn gökyüzüne uzanan siyah/beyaz parçacık sütunu çıkar ve action bar'da yön ve mesafe yazar. Kapatmak için `false`.
+- **Yoruichi'nin Shunpo VFX'i:** Oyuncununkiyle aynı efekt (`yoruichiShunpoFx`).
+- **Sahne (yakalanınca, ~9 sn):** "Yakaladın." başlığı ve Yoruichi'nin hız konuşması, biriken şimşek kıvılcımları, "SHUNPO" başlığı ile L1 parşömeni (7,5. sn), Yoruichi flash step ile kaybolup eve döner (9,25. sn). `yoruichi_caught` **sahne bitince** verilir; sahne sürerken `yoruichi_scene` etiketi vardır ve hiçbir diyalog açılmaz. Oyuncu sahne sırasında çıkarsa sahne kaydı silinir, kovalama baştan yapılır.
+- **Poz ve yön:** Evde `easy_npc:pose/humanoid/rest`, ilk Shunpo'da ayakta (`standing`), eve dönünce yeniden `rest`. Poz değişirken `ModelData.Root` (arayüzdeki *Rotation* düğmesinin yazdığı model yönü) **korunur**: yalnızca `Pose`, `PoseName`, `Rotation`, `Position` yazılır. Varlığın yönü (`yaw`, `pitch`) ilk atlamada kaydedilir ve eve dönünce geri verilir; kayıt yoksa `YORUICHI_HOME.yaw` (180, kuzey) kullanılır.
+- Atlama `tp`'sine `~ 0` eklenir: yaw aynı, pitch 0 ("oyuncuya bak" yüzünden yukarı bakar kalmasın).
+
+## L2: "Beş Gölge"
+
+Kod: `kubejs/server_scripts/yoruichi_l2.js`.
+
+- Oyuncu ücreti ödeyip "Hazırım." deyince `yoruichi_l2` alır ve sayaç (`persistentData.flashstep_kills`) **sıfırlanır**.
+- Shunpo ile bir düşmanın arkasına geçilince düşman **işaretlenir** (10 sn parlar; "Gölge işaretlendi. Son vuruşu sen yap."). İşaretli düşmanın **son vuruşunu** oyuncu yaparsa sayılır (işaret 2 dakika geçerli, can/silah gücü farketmesin diye süre sınırı yoktur).
+- İlerleme görev aktifken her 2 sn action bar'da "Shunpo: 0/5 düşman" olarak görünür; her sayılan öldürmede sohbete de yazılır. Sayılmayan işaretli ölümler `latest.log`'a nedeniyle (`yoruichi l2: ...`) yazılır.
+- 5/5 olunca `yoruichi_l2_done` verilir, Yoruichi'ye dönülür, L2 parşömeni alınır.
+
+## L3: "Gölge Klon" (mini boss)
+
+Kod: `kubejs/server_scripts/yoruichi_l3.js`.
+
+- "Gölgeyi çağır." ile (ücret L3) `yoruichi_l3_start` verilir; **ilk Shunpo noktasında** (`-1033.554, 72, -318.817`, zemin varsa; yoksa oyuncunun yakınında) bir **Gölge Klon** doğar: vindicator, siyah deri zırh, demir kılıç, 150 can, geri itilmez, ganimet yok. Etiketleri: `yoruichi_shadow`, `korunan` (spawn güvenli bölgesinde silinmesin), `ysh_<oyuncu uuid>` (sahibi).
+- **Yalnızca sahibi ve yalnızca arkasından** hasar verebilir; önden ya da yandan vuruş iptal edilir ("Gölgeni görmeden vuramıyorsun. Arkasına geç.").
+- Gölge her 3–5 sn'de oyuncunun 4–7 blok çevresine ışınlanır. Oyuncu **10 bloktan** fazla uzaklaşırsa hemen oyuncunun **arkasına** Shunpo atar (`YL3_CHASE_DIST`, en az 2 sn arayla).
+- **Bitiş:** Öldürülünce `yoruichi_l3_done`; Yoruichi'ye dönülür, L3 parşömeni alınır. 3 dakikada yenilmezse, oyuncu uzaklaşıp 160 blokten fazla açılırsa ya da çıkarsa gölge kaybolur (ücret tekrar istenmez). Oyuncu **ölürse** sınav biter, gölge silinir ve "Gölgem seni yendi. Hazır olduğunda yeniden çağır." (başka sebeple ölürse "Sınav bitti...") yazılır.
+
+## Shunpo büyüsü
+
+Kod: `startup_scripts/flashstep_spell.js` (kayıt), `server_scripts/yoruichi_flashstep_fx.js` (mantık, `global.flashstepCast`). Oyundaki adı **Shunpo**, iç kimliği `kubejs:flashstep` (eski parşömenler çalışır). İkon: `assets/spell-icons/flashstep.png` (16×16). Startup script olduğu için değişiklik oyunu baştan açmayı gerektirir.
+
+| Seviye | Menzil | Hak | Hak dolumu | Mana |
+|---|---|---|---|---|
+| L1 | 7 blok | 1 | 3 sn | 20 |
+| L2 | 12 blok | 2 | 2 sn | 25 |
+| L3 | 15 blok | 3 | 1,5 sn | 30 |
+
+- **Scroll Forge'da craftlanamaz ve sandıklarda çıkmaz** (`canBeCraftedBy` false, `setAllowLooting` false). Parşömen yalnızca Yoruichi'den alınır. Chidori, Rasengan, Tsukiyomi ve Amaterasu için de aynı kısıtlama geçerli. Açıklamalar İngilizce, Iron's formatında.
+- **Nasıl atılır:** Bakış yönünde menzile kadar ışınlanır, engel (duvar, tavan, zemin) varsa hemen önünde durur; aşağı bakış yatay ağırlıklı tutulur. 10 blok (seviye menzili) içinde doğrudan bakılan bir canlı varsa onun **arkasına** geçer ve ona döner (`korunan` NPC'ler hariç, `yoruichi_shadow` hedeflenebilir). `/tp` **kullanılmaz** (Grand Teleport sinematiği tetiklenir); dönme `p.connection.teleport` ile yapılır.
+- **Hedefin arkasına geçince:** 2 sn stun (Yavaşlık 7 + zıplayamama), 4 hasar (`FLASHSTEP_HIT_DAMAGE`), hedef 10 sn parlar (L2 işareti). Oyuncuya da uygulanır; PvP için karar bekliyor.
+- **Zincir vuruş:** Arkasına geçince `FLASHSTEP_CHAIN_WINDOW_MS` (1,5 sn) içinde yeniden Shunpo **hak harcamaz** (mana yine harcanır); bakılan hedef yoksa menzildeki **en yakın düşmana** otomatik gider (görüş hattı temiz, önceki hedef hariç). Üst üste en fazla 3.
+- **Kısa dokunulmazlık:** Shunpo sırasında 8 tick (~0,4 sn) Direnç V (%100 hasar azaltma).
+- **Yanıltıcı siluet (decoy):** Kalkış noktasındaki siluet 2 sn kalır; 16 blok içinde oyuncuyu hedef alan mob'lar 2 sn boyunca hedeflerini bırakıp silüete koşar. `yoruichi_shadow` ve `korunan` etkilenmez.
+- **Hak sistemi:** Süre **gerçek zaman** (`Date.now()`), reload'dan etkilenmez (eskiden tick sayacı reload'da sıfırlanıp hakları kilitliyordu). Anahtar `flashstepChargesV4`. Hak yoksa büyü hiç başlamaz (`checkPreCastConditions`), mana harcanmaz ve mesaj çıkmaz.
+- **Iron's bekleme göstergesi:** Hak **kalmayınca** bir sonraki hakkın dolmasına kalan süre Iron's `PlayerCooldowns`'a yazılır (`addCooldown` + `syncToPlayer`), kitap/büyü çubuğu/çarkındaki simgede bekleme görünür. Hak varken yazılmaz; zincir penceresi açıkken pencere bitince yazılır.
+- **Efektler:** Kalkışta ve varışta siyah hız çizgileri (`sonic_boom_0..15.png`, vanilla partikülün dokusu değiştirildi; Warden'ın ses dalgası da böyle görünür), artçı siyah siluet, siyah toz (`dust`), yol boyunca çizgi izi, iki yer halkası. Sesler `kubejs/assets/kubejs/sounds/flashstep.ogg`.
+- **Uygulanmadı (bilerek):** Shunko (yıldırım zırhı buff'ı), dengeyi bozar diye ertelendi.
+
+## Kurulum ve işletme (VDS)
+
+- **Durum (2026-09-29):** Paket 1.3.6 ile ilk sürüm yayınlandı; sonraki değişiklikler VDS'te canlı, `kubejs/server_scripts/` altına kopyalanıp `reload` ile yüklendi (havuza yama notları yazıldı, bir sonraki "Güncelle"de oyunculara gider). Yedek: `/root/backups/medieval-fantasy/2026-09-29-before-shunpo-kubejs`.
+- **NPC kurulumu:** `world/datapacks/yoruichi/` (üretici: `tools/yoruichi/gen_vds.js`). `human` NPC'yi ev noktasında doğurur (sahip swxff), `human_lock` hasar almaz/itilmez yapar, `prices` ücret diyaloglarını uygular, `routes2` sahne/kovalama sırasındaki diyalog kilidini uygular. Bunlar `data modify entity` ile canlı NPC verisini değiştirir.
+- **NPC'yi sıfırdan kurmak:** Konsolda `function yoruichi:human`, sonra `function yoruichi:human_lock`. Owner'ı OP'nin UUID'si yapar; Easy NPC komutları NPC sahibinin yetkisiyle çalıştırır (yoksa diyalog açılmaz, `quest.md`).
+- **Model yönü ve poz:** Yönü Easy NPC arayüzünden (`/easy_npc_config_ui configure <uuid>` → *Rotation*) ayarla; poz kodla değiştirilirken korunur.
+- **Yerel test:** Yerel dünyada VDS koordinatları yok; kovalama mevcut konumdan çalışır, ev/eve dönüş çalışmaz, Gölge Klon oyuncunun yakınında doğar.
+
+### Test için sıfırlama
+
+Oyuncunun Yoruichi durumunu sıfırlamak için şu etiketler silinir (`tag <oyuncu> remove ...`): `yoruichi_tanisti`, `yoruichi_caught`, `yoruichi_scene`, `yoruichi_l2`, `yoruichi_l2_done`, `yoruichi_l2_claimed`, `yoruichi_l3`, `yoruichi_l3_start`, `yoruichi_l3_done`, `yoruichi_l3_claimed`, `yoruichi_pay_l1/2/3`, `yoruichi_paid_l1/2/3`. Sayaç L2 kabulünde zaten sıfırlanır. Zümrüt bloğu için `give <oyuncu> minecraft:emerald_block 20`.
+
+## Açık konular
+
+- **Kayıp parşömen:** Yoruichi parşömeni yalnızca bir kez verir; kaybolursa yeniden alma yolu yok (yeniden satın alma önerildi).
+- **Rütbe şartı:** `rank_vloryan` şartı kodda ve diyalogda var; bilerek mi, karar bekliyor.
+- **PvP:** Hedefin arkasına geçince oyuncuya da stun/hasar uygulanıyor; sınırlanıp sınırlanmayacağı belirlenmedi.
+- **Görev kitabı:** FTB Quests'te Yoruichi görevi/keşif ipucu yok.
+- Poz, yön ve dövüş dengesi (can, hasar, ücretler) oynanarak ayarlanacak.
