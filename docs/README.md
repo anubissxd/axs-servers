@@ -20,6 +20,7 @@ Bir sistemi değiştirdiğinde (yeni script, yeni kural, yeni klasör) ilgili do
 | [vds.md](vds.md) | VDS: sunucu, servis, klasörler, script'ler, cron, yedekler, konsola komut gönderme |
 | [guncelleme-akisi.md](guncelleme-akisi.md) | **Değişiklik havuzu ve "Güncelle" komutu** — iki kişinin değişikliklerinin tek seferde sunucuya + AnuDownloader'a + Discord'a gitmesi |
 | [lokal-dunya.md](lokal-dunya.md) | **VDS dünyasını tek oyunculu modda çalışmak**: yedeği indirme, oyuncu verisini aktarma, VDS'e geri taşıma |
+| [vds-aktarma-notlari.md](vds-aktarma-notlari.md) | **Singleplayer'da geliştirilenlerin yeni VDS'e aktarma listesi**: değişen dosyalar, sıra, havuz cümleleri |
 | [patchnotes.md](patchnotes.md) | Yama notları: nerede durur, nasıl yazılır, Discord duyurusu, gece kuralı |
 | [anudownloader.md](anudownloader.md) | AnuDownloader uygulaması, manifest, paket içeriği, uygulamanın kendisini güncelleme |
 | [assets.md](assets.md) | **Görseller:** büyü ikonları (`assets/spell-icons/`) ve NPC dokuları (`assets/npc-skins/`): kurallar, adlandırma, nasıl bağlanır |
