@@ -67,4 +67,4 @@ Her ödüle şansa bağlı ekstra ganimet (elmas, tecrübe, mürekkep; IV-V'te n
 
 ## Diyaloglar
 
-Ana diyaloglar (`erwin_ret`, `erwin_ilk`, `erwin_hub_0..4`) `gen_erwin.js` içindedir; teklif/ödül/terfi konuşmaları script'te (Erwin'in sohbet mesajları).
+Ana diyaloglar (`erwin_ret`, `erwin_ilk`, `erwin_hub_0..4`) `gen_erwin.js` içindedir; teklif/ödül/terfi konuşmaları script'te (Erwin'in sohbet mesajları). **Cevaplar (2026-10-01, pilot):** Erwin'in kısa cevapları (bekleme, red, rapor, kabul vb.) sohbet yerine `erwin_yanit` diyaloğunda açılır: script `erwinSay` ile diyaloğun metnini yazar, `easy_npc dialog open` ile oyuncuya açar; yazılamazsa sohbete düşer. Tıklanabilir teklif listesi ([A] [B] [C]) sohbette kalır. Bu diyalog `gen_erwin.js` ile üretilir, bu yüzden `function yoruichi:erwin_setup` bir kez çalıştırılmalıdır. Gerçek oyunda denenmedi.

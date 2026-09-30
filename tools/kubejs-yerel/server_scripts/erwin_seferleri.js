@@ -272,7 +272,7 @@ function erwinJsonEsc(s) {
 }
 
 // Erwin konuşuyor: "Erwin Smith: ..." (yeşil ad, italik metin). **kalın** işaretlerini kalın yapar.
-function erwinSay(server, name, text) {
+function erwinSayChat(server, name, text) {
   var parts = String(text).split('**')
   var comps = ['{"text":"Erwin Smith","color":"dark_green","bold":true}', '{"text":": ","color":"gray","bold":false}']
   for (var i = 0; i < parts.length; i++) {
@@ -280,6 +280,40 @@ function erwinSay(server, name, text) {
     comps.push('{"text":"' + erwinJsonEsc(parts[i]) + '","color":"white","italic":true' + ',"bold":false' + '}')
   }
   server.runCommandSilent('tellraw ' + name + ' [' + comps.join(',') + ']')
+}
+
+// Erwin'in cevapları sohbet yerine diyalog penceresinde açılır: 'erwin_yanit' diyaloğunun metni yazılır, sonra oyuncuya açılır (easy_npc dialog open).
+// Aynı tikte birden çok söz gelirse birleşir. Diyalog yazılamazsa (NPC yüklü değil, diyalog kurulmamış) sohbete düşer.
+// Sohbette kalması gerekenler (tıklanabilir teklif listesi) erwinSayChat kullanır.
+const ERWIN_NPC_UUID = '504788d8-3dc0-407e-aebf-ca04dc17cfcb'
+var erwinPending = {}
+
+function erwinSnbtEsc(s) {
+  return String(s).split('\\').join('\\\\').split('"').join('\\"')
+}
+
+function erwinSay(server, name, text) {
+  var first = !erwinPending[name]
+  if (first) erwinPending[name] = []
+  erwinPending[name].push(String(text).split('**').join(''))
+  if (first) server.scheduleInTicks(2, () => erwinFlushSay(server, name))
+}
+
+function erwinFlushSay(server, name) {
+  var list = erwinPending[name]
+  delete erwinPending[name]
+  if (!list) return
+  var ok = 0
+  try {
+    ok = server.runCommandSilent('data modify entity ' + ERWIN_NPC_UUID + ' DialogData.DialogDataSet[{Name:"erwin_yanit"}].Texts[0].Text set value "' + erwinSnbtEsc(list.join(' ')) + '"')
+  } catch (e) {
+    ok = 0
+  }
+  if (ok > 0) {
+    server.runCommandSilent('easy_npc dialog open ' + ERWIN_NPC_UUID + ' ' + name + ' erwin_yanit')
+  } else {
+    list.forEach(t => erwinSayChat(server, name, t))
+  }
 }
 
 function erwinNote(server, name, text, color) {
@@ -470,7 +504,7 @@ function erwinOffer(server, p, name) {
     erwinSay(server, name, 'Şu an sana verecek uygun bir seferim yok. Biraz sonra tekrar gel.')
     return
   }
-  erwinSay(server, name, erwinPickOne(ERWIN_OFFER_HEAD))
+  erwinSayChat(server, name, erwinPickOne(ERWIN_OFFER_HEAD))
   for (var i = 0; i < offers.length; i++) erwinOfferLine(server, name, i, offers[i])
   erwinNote(server, name, 'Seçmek için [A] [B] [C]\'ye tıkla. [☠] = Kan Bahsi (ödül x1.5, ölürsen iptal). Teklifler 10 dakika geçerli.', 'white')
   pd.putString('erwin_o_1', offers[0] || '')
@@ -674,7 +708,7 @@ function erwinInfo(server, p, name) {
     }
     if (Number(pd.getInt('erwin_named_open')) === 1) erwinNote(server, name, 'Ölüm Emri hedefi yakınlarda: ismini taşıyan parlayan yaratığı bul.', 'dark_red')
   } else if (erwinOffersActive(p)) {
-    erwinSay(server, name, 'Tekliflerin hâlâ geçerli. Sohbetteki listeden birini seç ya da yeni sefer iste.')
+    erwinSayChat(server, name, 'Tekliflerin hâlâ geçerli. Sohbetteki listeden birini seç ya da yeni sefer iste.')
   } else {
     erwinSay(server, name, 'Şu an bir seferin yok. Sefer istemek için bana söyle.')
   }

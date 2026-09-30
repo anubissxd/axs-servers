@@ -96,3 +96,13 @@ Bu sistemler simülasyonla ve sunucu komutlarıyla sınandı ama **gerçek oyunc
 5. **Perde IV (ihanet):** `/aizen_evre 4`. Sessizlik, Erwin ve Kenpachi'nin sözü, cam kırılması, "AIZEN — Gözlük düştü", "Bu yara hiç yoktu", en çok yardım eden oyuncunun adı, ≥6 inceleme yapmışsan "Kırık Gözlük". Poz dikleşmeli, doku aizen_v2 olmalı, ~33 sn sonra evre 5.
 6. **Perde V (boss):** `/erwin_rutbe <oyuncu> 4`, "Seninle savaşacağım". Sahne sonra savaşçı doğar (orijinal kaybolur). Yakın vuruş (8), Kido (6, 5-14 blok), Shunpo (12 bloktan uzakta), can %66 altı Kyōka Suigetsu (körlük, mide bulantısı, 3 sahte Aizen; sahteye vurunca ceza), can %33 altı Kurohitsugi (2 sn içinde uzaklaş, yoksa 14 hasar). Kazanınca duyuru ve Kyōka Suigetsu parşömeni (büyü kayıtlıysa; oyunu yeniden başlattıktan sonra).
 7. **Sıfırlama:** `/aizen_sifirla <oyuncu>`, `/aizen_evre 1` (doku aizen_v1, poz ayakta).
+
+## K. Erwin cevapları diyalog penceresinde (pilot, 2026-10-01)
+
+Kurulum: oyunda `/reload`, sonra Erwin'in yakınında `function yoruichi:erwin_setup` (3-4 sn bekle). Sonra:
+1. "Seferi bırakıyorum" (sefer yokken) → "Bırakacak bir seferin yok." sohbette değil, **diyalog penceresinde**, "Tamam." düğmesiyle açılmalı.
+2. Bekleme süresindeyken sefer iste → "Biraz dinlen..." diyalogda.
+3. Sefer kabul edince başlık, özet ve kabul sözü **tek diyalogda birleşmiş** olmalı.
+4. Teklif listesi ([A] [B] [C]) hâlâ sohbette olmalı.
+5. Diyalog açılmıyor ya da boşsa `logs/latest.log`'a bak; metin sohbete düşüyorsa NPC yüklü değil ya da `erwin_setup` çalıştırılmamış demektir.
+6. İki oyuncu aynı anda konuşunca metinler karışmamalı.

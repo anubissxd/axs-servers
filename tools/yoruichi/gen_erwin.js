@@ -85,7 +85,9 @@ function digerButtons() {
 }
 const dialogs = [
   dialog('erwin_diger', 'Başka bir işin mi var?', digerButtons(), 'erwin_diger'),
-  dialog('erwin_ret', 'Keşif Birliği herkesi kabul etmez. Sınırdaki tehlike gerçek; kılıç tutmayı bilenler gelir. Önce Maceracı olarak adını duyur, sonra konuşuruz.', [btn('Anlıyorum.', [CLOSE])], 'erwin_ret'),
+  // Script (erwin_seferleri.js erwinSay) bu diyaloğun metnini her cevapta yazıp oyuncuya açar; buradaki metin yalnızca yer tutucudur.
+  dialog('erwin_yanit', '...', [btn('Tamam.', [CLOSE])], 'erwin_yanit'),
+  dialog('erwin_ret','Keşif Birliği herkesi kabul etmez. Sınırdaki tehlike gerçek; kılıç tutmayı bilenler gelir. Önce Maceracı olarak adını duyur, sonra konuşuruz.', [btn('Anlıyorum.', [CLOSE])], 'erwin_ret'),
   dialog('erwin_ilk', 'Ben Erwin Smith, Keşif Birliği\'nin komutanıyım. Caddy\'nin sınırlarında, duvarların ötesinde gördüklerimizi kimseye anlatamazsın; ama onlarla savaşacak insanlara ihtiyacım var. Seferler bana yazılan raporlardan doğar: her sefer bir hedef, bir bedel ve bir ödül. Küçük başlarsın; iyi dönersen daha derine gönderirim. Ölümcül seferler ise yalnızca hayatta kalanlara açılır. Ne dersin?', [
     btn('Katılıyorum.', [tag('erwin_met'), open('erwin_hub_0')], 'erwin_kabul')
   ], 'erwin_ilk')
