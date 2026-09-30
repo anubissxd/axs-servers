@@ -40,7 +40,7 @@ Yeni VDS'te diyalogları tek seferde yazmak için: `reload`, sonra `function yor
 
 | Dosya | Ne |
 |---|---|
-| `server_scripts/aizen.js` | **yeni**: evreler, yardım/araştırma, ihanet olayı, boss kapışması, komutlar |
+| `server_scripts/aizen.js` | **yeni**: 5 perdelik hikâye (misafir, şüphe, yaralı, ihanet, kötü), otomatik ilerleme (oynanmış süre), Shunpo ile gezinme, yardım/inceleme, boss kapışması, komutlar |
 | `startup_scripts/aizen_spell.js` | **yeni**: Kyōka Suigetsu büyüsü (oyun/sunucu yeniden başlatma) |
 | `assets/kubejs/lang/*.json`, `textures/gui/spell_icons/kyoka_suigetsu.png` | büyü adı ve ikonu |
 | `server_scripts/npc_cesitlilik.js`, `sinema_motoru.js` | `aizen` çeşitliliği, `aizenFightBegin` izinli fn |
@@ -78,3 +78,5 @@ Yeni VDS'te havuz boşsa `havuz ekle swxff paket "..."` ile şunları yaz (yama 
 - `data modify entity` ile NPC verisi yazmak **yüklenmemiş yığında sessizce başarısız olur** (Owner/izin seviyesi kaybolur). Hoca fonksiyonları iki aşamalıdır (önce `forceload`, 3 sn sonra yazma). Yeni NPC'ler için üreticiler Owner ve izin seviyesini doğurma NBT'sine koyuyor.
 - FTB Ranks tek oyunculuda yoktur; Birlik rütbeleri (Yeminsiz ... Eşik Muhafızı) `world/serverconfig/ftbranks/ranks.snbt` içinde tanımlı (güç 70-74). Yeni VDS'te bu dosyanın yedekteki hâlinde bulunduğunu doğrula; yoksa [medieval-fantasy/characters/erwin-smith.md](medieval-fantasy/characters/erwin-smith.md) içindeki FTB Ranks bölümündeki tanımdan yeniden yaz ve `ftbranks reload` çalıştır.
 - Startup script değişikliği için sunucu **ve oyuncular** oyunu tamamen yeniden başlatmalı; paket güncellenmeden oyuncular Blue/Red/Purple'ı görmez.
+
+**Aizen'in hikâyesi (5 perde):** Oynanmış 23 saat sonra ihanet kendiliğinden oynar (10 saat misafir, 8 saat şüphe, 5 saat yaralı). Yaralı evrede NPC pozu `yoruichiPoseSnbt` (yoruichi_chase.js) ile yaslanma pozuna alınır; bu yüzden yoruichi_chase.js yüklü olmalı. Havuza ek cümle: "Aizen'in bir sırrı var; ona yardım edip etmeyeceğine dikkat et."

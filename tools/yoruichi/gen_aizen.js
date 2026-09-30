@@ -41,7 +41,7 @@ function dialog(name, text, buttons, label) {
 }
 const tag = t => action('/tag @initiator add ' + t)
 
-// Evre 1: yardımsever âlim. Evre 2: aynı ama ince bir tuhaflık. Evre 3: olay sürerken. Evre 4: gerçek yüzü.
+// Evre 1: yardımsever âlim. Evre 2: aynı ama ince bir tuhaflık. Evre 3: yaralı (yardım bekliyor). Evre 4: ihanet sahnesi sürerken. Evre 5: gerçek yüzü.
 const S1 = [
   'Hoş geldin, yolcu. Ben Aizen; burada bilgiyle uğraşıyorum. Kimse bir şeyi tek başına çözmek zorunda değil. Bir şey mi arıyorsun?',
   'Yine görüşüyoruz. Bu topraklarda insanlar birbirine yardım ettiğinde daha uzağa gidiyor. Sana nasıl yardımcı olabilirim?',
@@ -52,8 +52,13 @@ const S2 = [
   'Erwin\'in rütbeleri, hocaların sınavları... Hepsi ne kadar düzenli, fark ettin mi? Düzenin bir yazarı olmalı. Bunu hiç düşündün mü?',
   'Güvenebileceğim birine ihtiyacım var. Ama önce güveni ölçmek gerekir. Ne dersin?'
 ]
-const S3 = 'Şu an değil. Bir şeyler oluyor. Git... ya da kal ve izle. Seçim senin.'
-const S4 = [
+const S3 = [
+  'Ah... sen misin. Kıpırdayamıyorum. Biri... bana saldırdı. Yardımına ihtiyacım var, yolcu.',
+  'Nefes almak zor. Çayı bile demleyemiyorum. Bir şeyler yiyebilirsem... belki toparlanırım.',
+  'Kimin yaptığını hatırlamıyorum... Yalnızca bir gölge. Bana yardım edenleri unutmayacağım.'
+]
+const S4 = 'Şu an değil. Bir şeyler oluyor. Git... ya da kal ve izle. Seçim senin.'
+const S5 = [
   'Sonunda gerçekten bakıyorsun. Güzel. Her şey hep gözünün önündeydi ve sen yine de bana çay ikram ettirdin. Eğlenceliydi.',
   'Bana kızgın mısın? Yanlış anlama, sana yalan söylemedim. Yalnızca söylemediklerimi söylemedim.',
   'Düzen bir yalandır ve o yalanı yazan el benimdi. Şimdi ne yapacaksın?'
@@ -66,8 +71,14 @@ const b1 = () => [
   btn('Ayrılıyorum.', [CLOSE])
 ]
 const b2 = () => b1().slice(0, 4).concat([btn('Bir şey fark ettim...', [tag('aizen_supheli'), CLOSE]), btn('Ayrılıyorum.', [CLOSE])])
-const b3 = () => [btn('Peki.', [CLOSE])]
-const b4 = () => [
+const b3 = () => [
+  btn('Yiyecek getireyim.', [tag('aizen_getir'), CLOSE]),
+  btn('Yaralarına bakıyorum.', [tag('aizen_incele'), CLOSE]),
+  btn('Kim yaptı?', [tag('aizen_kim'), CLOSE]),
+  btn('Ayrılıyorum.', [CLOSE])
+]
+const b4 = () => [btn('Peki.', [CLOSE])]
+const b5 = () => [
   btn('Seninle savaşacağım.', [tag('aizen_dovus'), CLOSE]),
   btn('Neden yaptın?', [tag('aizen_neden'), CLOSE]),
   btn('Gerçekte kimsin?', [tag('aizen_kim'), CLOSE]),
@@ -78,21 +89,22 @@ const dialogs = []
 const names = (p, i) => (i === 0 ? p : p + '_' + (i + 1))
 S1.forEach((t, i) => dialogs.push(dialog(names('aizen_s1', i), t, b1(), names('aizen_s1', i))))
 S2.forEach((t, i) => dialogs.push(dialog(names('aizen_s2', i), t, b2(), names('aizen_s2', i))))
-dialogs.push(dialog('aizen_s3', S3, b3(), 'aizen_s3'))
-S4.forEach((t, i) => dialogs.push(dialog(names('aizen_s4', i), t, b4(), names('aizen_s4', i))))
+S3.forEach((t, i) => dialogs.push(dialog(names('aizen_s3', i), t, b3(), names('aizen_s3', i))))
+dialogs.push(dialog('aizen_s4', S4, b4(), 'aizen_s4'))
+S5.forEach((t, i) => dialogs.push(dialog(names('aizen_s5', i), t, b5(), names('aizen_s5', i))))
 
 function route(dlg, cond) {
   return '{Type:"COMMAND",PermLevel:3,Cmd:' + q('/execute as @initiator if entity @s[' + cond + '] run easy_npc dialog open ' + UUID + ' @s ' + dlg) + '}'
 }
 const V = 3
 const routes = []
-;[['aizen_s1', 'aizen_st_1', S1], ['aizen_s2', 'aizen_st_2', S2], ['aizen_s4', 'aizen_st_4', S4]].forEach(([prefix, st, arr]) => {
+;[['aizen_s1', 'aizen_st_1', S1], ['aizen_s2', 'aizen_st_2', S2], ['aizen_s3', 'aizen_st_3', S3], ['aizen_s5', 'aizen_st_5', S5]].forEach(([prefix, st, arr]) => {
   arr.forEach((t, i) => routes.push(route(names(prefix, i), 'tag=' + st + ',tag=dv_aizen_' + (i + 1))))
   routes.push(route(prefix, 'tag=' + st + arr.map((t, i) => ',tag=!dv_aizen_' + (i + 1)).join('')))
 })
-routes.push(route('aizen_s3', 'tag=aizen_st_3'))
+routes.push(route('aizen_s4', 'tag=aizen_st_4'))
 // evre etiketi henüz yoksa (yeni girmiş oyuncu) evre 1 gösterilir
-routes.push(route('aizen_s1', 'tag=!aizen_st_1,tag=!aizen_st_2,tag=!aizen_st_3,tag=!aizen_st_4'))
+routes.push(route('aizen_s1', 'tag=!aizen_st_1,tag=!aizen_st_2,tag=!aizen_st_3,tag=!aizen_st_4,tag=!aizen_st_5'))
 routes.push(action('/tag @initiator add dv_reroll_aizen'))
 
 const skinUuid = uuidToInts(nameUuid(SKIN_URL))
