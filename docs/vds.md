@@ -6,7 +6,7 @@ Medieval Fantasy sunucusu, oyuncu paketinin kaynağı ve bütün otomasyon tek b
 - **Sistem:** Ubuntu 24.04, ~10 GB RAM, 99 GB disk
 - **Oyuncuların bağlandığı adres:** `31.58.91.7:25567`
 
-Anahtarlar `/root/.ssh/authorized_keys`'te durur (bkz. [README.md](README.md) "Kim kimdir"). Yeni biri eklenirken dosyanın yedeği alınır ve yalnızca `.pub` anahtar eklenir.
+Anahtarlar `/root/.ssh/authorized_keys`'te durur. Yeni biri eklenirken dosyanın yedeği alınır ve yalnızca `.pub` anahtar eklenir.
 
 ---
 

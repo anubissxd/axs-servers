@@ -4,15 +4,6 @@ Bu klasör projede çalışan **herkesin** (Anubis, swxff ve ikisinin Claude'u) 
 
 Bir sistemi değiştirdiğinde (yeni script, yeni kural, yeni klasör) ilgili doküman **aynı işte** güncellenir. Doküman kod kadar önemlidir.
 
-## Kim kimdir
-
-| Kişi | GitHub | Minecraft | VDS SSH anahtarı | Rol |
-|---|---|---|---|---|
-| Anubis | `anubissxd` (repo sahibi) | `Anubissxd` | `vds-raven` | Proje sahibi, OP |
-| swxff | `swaffX` (write yetkili) | `swxff` | `swxff medieval-fantasy-vds` | Geliştirici, OP 4 |
-
-İkisi de VDS'e `root` olarak **anahtarla** bağlanır. Şifre hiçbir zaman otomatik kullanılmaz; yeni kişi için `.pub` anahtarı istenir, özel anahtar (private key) asla paylaşılmaz.
-
 ## Hangi dosya ne anlatır
 
 | Dosya | Konu |
