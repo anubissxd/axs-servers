@@ -372,6 +372,11 @@ function yoruichiSay(server, name, text) {
   server.runCommandSilent('tellraw ' + name + ' [{"text":"Yoruichi","color":"light_purple","bold":true},{"text":": ' + text + '","color":"white","italic":true,"bold":false}]')
 }
 
+// Yoruichi'nin konuşma diyaloğuna verdiği cevaplar diyalog penceresinde açılır (npc_dialog.js); sahne ve kovalama repliği sohbette kalır.
+function yoruichiSayDlg(server, name, text) {
+  npcDlgSay(server, YORUICHI_UUID_STR, 'yoruichi_yanit', name, text, false, t => yoruichiSay(server, name, t))
+}
+
 function yoruichiTitle(server, name, title, subtitle, color) {
   server.runCommandSilent('title ' + name + ' times 10 50 20')
   server.runCommandSilent('title ' + name + ' subtitle {"text":"' + subtitle + '","color":"light_purple"}')

@@ -14,6 +14,7 @@ Bir sistemi değiştirdiğinde (yeni script, yeni kural, yeni klasör) ilgili do
 | [vds-aktarma-notlari.md](vds-aktarma-notlari.md) | **Singleplayer'da geliştirilenlerin yeni VDS'e aktarma listesi**: değişen dosyalar, sıra, havuz cümleleri |
 | [patchnotes.md](patchnotes.md) | Yama notları: nerede durur, nasıl yazılır, Discord duyurusu, gece kuralı |
 | [anudownloader.md](anudownloader.md) | AnuDownloader uygulaması, manifest, paket içeriği, uygulamanın kendisini güncelleme |
+| [npc-diyalog.md](npc-diyalog.md) | **NPC cevapları diyalog penceresinde**: nasıl çalışır, hangi NPC neyi diyalogda verir, bilinen tuzaklar |
 | [assets.md](assets.md) | **Görseller:** büyü ikonları (`assets/spell-icons/`) ve NPC dokuları (`assets/npc-skins/`): kurallar, adlandırma, nasıl bağlanır |
 | [vds-tasima.md](vds-tasima.md) | **VDS taşıma / felaket kurtarma:** yedek nerede (GitHub release, şifreli), parola nerede, yeni VDS'te sırayla geri kurulum, yeni IP'de değişecekler |
 | [medieval-fantasy/quest.md](medieval-fantasy/quest.md) | Evren, rütbeler, FTB Quests / Easy NPC teknik detayları. **Görev eklemeden önce okunur.** |

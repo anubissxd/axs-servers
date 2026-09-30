@@ -170,6 +170,38 @@ function hocaHas(p, tag) {
 
 function hocaEsc(s) { return String(s).split('\\').join('\\\\').split('"').join('\\"') }
 
+// Hocaların cevapları sohbet yerine diyalog penceresinde açılır (npc_dialog.js); yazılamazsa sohbete düşer. Sahne/sınav olayları sohbette kalır.
+const HOCA_UUIDS = { Kakashi: '6de0f631-c97e-44de-a0ea-d1778f073f74', Itachi: '6ea2c950-4873-485e-afb6-6b74c244f238', Gojo: '6bbe609e-4759-4904-9795-3e7974da69f8' }
+
+function hocaNpcOf(key) {
+  var k = String(key).toLowerCase()
+  return k === 'itachi' ? 'Itachi' : (k === 'gojo' ? 'Gojo' : 'Kakashi')
+}
+
+function hocaSayDlg(server, name, npc, text) {
+  npcDlgSay(server, HOCA_UUIDS[npc], String(npc).toLowerCase() + '_yanit', name, text, false, t => hocaSay(server, name, npc, t))
+}
+
+function hocaLineDlg(server, name, npc, text, color) {
+  npcDlgSay(server, HOCA_UUIDS[npc], String(npc).toLowerCase() + '_yanit', name, text, true, t => hocaNote(server, name, t, color))
+}
+
+// Oyuncuya en yakın hoca (hangi hocayla konuştuğu bilinmeyen bilgi ekranları için)
+function hocaNearestNpc(server, name) {
+  var best = 'Kakashi', bd = 1e18
+  try {
+    var pl = server.getPlayer(name)
+    Object.keys(HOCA_UUIDS).forEach(n => {
+      var e = pl.level.getEntity(Java.loadClass('java.util.UUID').fromString(HOCA_UUIDS[n]))
+      if (!e) return
+      var dx = e.x - pl.x, dy = e.y - pl.y, dz = e.z - pl.z
+      var d = dx * dx + dy * dy + dz * dz
+      if (d < bd) { bd = d; best = n }
+    })
+  } catch (e) {}
+  return best
+}
+
 function hocaSay(server, name, npc, text) {
   var parts = String(text).split('**')
   var comps = ['{"text":"' + npc + '","color":"' + HOCA_COLOR[npc] + '","bold":true}', '{"text":": ","color":"gray","bold":false}']
@@ -278,11 +310,11 @@ function hocaRequest(server, p, name, key) {
   var npc = spell.npc
   if (HOCA_DEVRE_DISI[key]) {
     var sv = HOCA_SAVMA[npc]
-    hocaSay(server, name, npc, sv[Math.floor(Math.random() * sv.length)])
+    hocaSayDlg(server, name, npc, sv[Math.floor(Math.random() * sv.length)])
     return
   }
   if (!hocaHas(p, 'rank_maceraci')) {
-    hocaSay(server, name, npc, 'Adını duymadım. Önce Maceracı olarak tanınmalısın.')
+    hocaSayDlg(server, name, npc, 'Adını duymadım. Önce Maceracı olarak tanınmalısın.')
     return
   }
   if (cineBusy(name)) {
@@ -295,32 +327,32 @@ function hocaRequest(server, p, name, key) {
       cinePlay(server, name, [{ t: 0, title: ['YENİDEN', HOCA_SPELLS[key].name, 'gray'] }, { t: 1, say: [npc, 'Bir daha deneyelim. Bu kez ücret yok.'] }, { t: 2.5, fn: 'hocaSceneStart', args: [key] }])
       return
     }
-    hocaSay(server, name, npc, 'Zaten bir sınavın var: ' + hocaQuestText(p) + '. Önce onu bitir.')
+    hocaSayDlg(server, name, npc, 'Zaten bir sınavın var: ' + hocaQuestText(p) + '. Önce onu bitir.')
     return
   }
   var lvl = hocaLvl(p, key)
   if (lvl >= spell.max) {
-    hocaSay(server, name, npc, spell.name + '\'de öğretebileceğim bir şey kalmadı. Kaybettiysen parşömenini yenileyebilirim.')
+    hocaSayDlg(server, name, npc, spell.name + '\'de öğretebileceğim bir şey kalmadı. Kaybettiysen parşömenini yenileyebilirim.')
     return
   }
   var next = lvl + 1
   var reqs = spell.requires === '' ? [] : String(spell.requires).split(',')
   for (var ri = 0; ri < reqs.length; ri++) {
     if (hocaLvl(p, reqs[ri]) < HOCA_SPELLS[reqs[ri]].max) {
-      hocaSay(server, name, npc, HOCA_SPELLS[reqs[ri]].name + ' seviyesini tamamen öğrenmeden buna geçemezsin. Önce onu bitir.')
+      hocaSayDlg(server, name, npc, HOCA_SPELLS[reqs[ri]].name + ' seviyesini tamamen öğrenmeden buna geçemezsin. Önce onu bitir.')
       return
     }
   }
   var need = spell.minRank[next - 1]
   if (hocaErwinRank(p) < need) {
-    hocaSay(server, name, npc, 'Henüz hazır değilsin. Keşif Birliği\'nde **' + ERWIN_RANK_NAMES[need] + '** olmalısın. Erwin\'in seferlerini tamamla, sonra gel.')
+    hocaSayDlg(server, name, npc, 'Henüz hazır değilsin. Keşif Birliği\'nde **' + ERWIN_RANK_NAMES[need] + '** olmalısın. Erwin\'in seferlerini tamamla, sonra gel.')
     return
   }
   var fee = spell.fees[next - 1]
   if (Number(pd.getInt('hoca_paid_' + key)) < next) {
     var have = hocaEmeraldBlocks(server, p, name)
     if (isNaN(have) || have < fee) {
-      hocaSay(server, name, npc, 'Bu eğitim bir bedel ister: ' + fee + ' zümrüt bloğu (' + (isNaN(have) ? 0 : have) + '/' + fee + ').')
+      hocaSayDlg(server, name, npc, 'Bu eğitim bir bedel ister: ' + fee + ' zümrüt bloğu (' + (isNaN(have) ? 0 : have) + '/' + fee + ').')
       return
     }
     server.runCommandSilent('clear ' + name + ' minecraft:emerald_block ' + fee)
@@ -339,18 +371,18 @@ function hocaReport(server, p, name, npcKey) {
   var pd = p.persistentData
   var key = hocaActive(p)
   if (key === '') {
-    hocaNote(server, name, 'Aktif bir büyü sınavın yok. Hocandan yeni bir sınav iste.', 'gray')
+    hocaLineDlg(server, name, hocaNpcOf(npcKey), 'Aktif bir büyü sınavın yok. Hocandan yeni bir sınav iste.', 'gray')
     return
   }
   var spell = HOCA_SPELLS[key]
   if (spell.npc.toLowerCase() !== npcKey) {
-    hocaNote(server, name, 'Aktif sınavını ' + spell.npc + ' verdi; ona rapor ver.', 'gray')
+    hocaLineDlg(server, name, hocaNpcOf(npcKey), 'Aktif sınavını ' + spell.npc + ' verdi; ona rapor ver.', 'gray')
     return
   }
   var lvl = Number(pd.getInt('hoca_act_lvl'))
   var q = spell.quests[lvl - 1]
   if (hocaHave(pd, q) < q.need) {
-    hocaSay(server, name, spell.npc, 'Henüz bitmedi: ' + hocaQuestText(p) + '.' + (q.win > 0 ? ' Süre dolduysa baştan denemen gerekir.' : ''))
+    hocaSayDlg(server, name, spell.npc, 'Henüz bitmedi: ' + hocaQuestText(p) + '.' + (q.win > 0 ? ' Süre dolduysa baştan denemen gerekir.' : ''))
     return
   }
   server.runCommandSilent('give ' + name + ' ' + hocaScroll(spell, lvl) + ' 1')
@@ -364,7 +396,7 @@ function hocaReport(server, p, name, npcKey) {
 
 function hocaInfo(server, p, name) {
   var pd = p.persistentData
-  hocaNote(server, name, '— Büyü Eğitimi —', 'dark_purple')
+  hocaLineDlg(server, name, hocaNearestNpc(server, name), '— Büyü Eğitimi —', 'dark_purple')
   HOCA_KEYS.forEach(k => {
     var s = HOCA_SPELLS[k]
     var l = hocaLvl(p, k)
@@ -373,33 +405,33 @@ function hocaInfo(server, p, name) {
       var need = s.minRank[l]
       line += hocaErwinRank(p) >= need ? '  — sonraki: ' + s.fees[l] + ' zümrüt bloğu' : '  — gerekli rütbe: ' + ERWIN_RANK_NAMES[need]
     }
-    hocaNote(server, name, line, l >= s.max ? 'gold' : 'gray')
+    hocaLineDlg(server, name, hocaNearestNpc(server, name), line, l >= s.max ? 'gold' : 'gray')
   })
-  hocaNote(server, name, 'Bağ: Kakashi ' + HOCA_BOND_NAMES[hocaBond(p, 'Kakashi')] + ' · Itachi ' + HOCA_BOND_NAMES[hocaBond(p, 'Itachi')] + ' · Gojo ' + HOCA_BOND_NAMES[hocaBond(p, 'Gojo')], 'dark_purple')
-  if (hocaActive(p) !== '') hocaNote(server, name, 'Aktif sınav: ' + hocaQuestText(p), 'yellow')
+  hocaLineDlg(server, name, hocaNearestNpc(server, name), 'Bağ: Kakashi ' + HOCA_BOND_NAMES[hocaBond(p, 'Kakashi')] + ' · Itachi ' + HOCA_BOND_NAMES[hocaBond(p, 'Itachi')] + ' · Gojo ' + HOCA_BOND_NAMES[hocaBond(p, 'Gojo')], 'dark_purple')
+  if (hocaActive(p) !== '') hocaLineDlg(server, name, hocaNearestNpc(server, name), 'Aktif sınav: ' + hocaQuestText(p), 'yellow')
 }
 
 function hocaLost(server, p, name, key) {
   var spell = HOCA_SPELLS[key]
   if (HOCA_DEVRE_DISI[key]) {
     var sv = HOCA_SAVMA[spell.npc]
-    hocaSay(server, name, spell.npc, sv[Math.floor(Math.random() * sv.length)])
+    hocaSayDlg(server, name, spell.npc, sv[Math.floor(Math.random() * sv.length)])
     return
   }
   var lvl = hocaLvl(p, key)
   if (lvl < 1) {
-    hocaSay(server, name, spell.npc, 'Sana henüz bir şey öğretmedim, kaybedecek bir parşömenin yok.')
+    hocaSayDlg(server, name, spell.npc, 'Sana henüz bir şey öğretmedim, kaybedecek bir parşömenin yok.')
     return
   }
   var fee = hocaLostFee(spell, lvl, hocaBond(p, spell.npc))
   var have = hocaEmeraldBlocks(server, p, name)
   if (isNaN(have) || have < fee) {
-    hocaSay(server, name, spell.npc, 'Parşömeni yeniden yazmak ' + fee + ' zümrüt bloğu ister (' + (isNaN(have) ? 0 : have) + '/' + fee + ').')
+    hocaSayDlg(server, name, spell.npc, 'Parşömeni yeniden yazmak ' + fee + ' zümrüt bloğu ister (' + (isNaN(have) ? 0 : have) + '/' + fee + ').')
     return
   }
   server.runCommandSilent('clear ' + name + ' minecraft:emerald_block ' + fee)
   server.runCommandSilent('give ' + name + ' ' + hocaScroll(spell, lvl) + ' 1')
-  hocaSay(server, name, spell.npc, 'Bir daha kaybetme. Bu, seviye ' + lvl + ' parşömeni.')
+  hocaSayDlg(server, name, spell.npc, 'Bir daha kaybetme. Bu, seviye ' + lvl + ' parşömeni.')
 }
 
 

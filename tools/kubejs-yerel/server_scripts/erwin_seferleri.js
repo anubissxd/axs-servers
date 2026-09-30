@@ -315,21 +315,12 @@ function erwinDlgOpen(server, name, dlg) {
 }
 
 function erwinSay(server, name, text) {
-  var first = !erwinPending[name]
-  if (first) erwinPending[name] = []
-  erwinPending[name].push(String(text).split('**').join(''))
-  if (first) server.scheduleInTicks(1, () => erwinFlushSay(server, name))
+  npcDlgSay(server, ERWIN_NPC_UUID, 'erwin_yanit', name, text, false, t => erwinSayChat(server, name, t))
 }
 
-function erwinFlushSay(server, name) {
-  var list = erwinPending[name]
-  delete erwinPending[name]
-  if (!list) return
-  if (erwinDlgSet(server, 'erwin_yanit', 'Texts[0].Text', list.join(' '))) {
-    erwinDlgOpen(server, name, 'erwin_yanit')
-  } else {
-    list.forEach(t => erwinSayChat(server, name, t))
-  }
+// Liste/kayıt gösterimi: her çağrı yeni satır (erwinNote ile aynı imza; renk diyalogda kullanılmaz).
+function erwinSayLine(server, name, text, color) {
+  npcDlgSay(server, ERWIN_NPC_UUID, 'erwin_yanit', name, text, true, t => erwinNote(server, name, t, color))
 }
 
 function erwinNote(server, name, text, color) {
@@ -749,17 +740,18 @@ function erwinReport(server, p, name) {
 function erwinInfo(server, p, name) {
   if (erwinContractActive(p)) {
     var pd = p.persistentData
-    erwinNote(server, name, 'Sefer: ' + erwinContractText(p), 'yellow')
-    erwinNote(server, name, ERWIN_TIER_NAMES[Number(pd.getInt('erwin_c_tier'))] + ' ' + erwinStars(Number(pd.getInt('erwin_c_tier'))), 'red')
-    if (Number(pd.getInt('erwin_c_bet')) === 1) erwinNote(server, name, '☠ Kan Bahsi aktif: ölürsen sefer iptal olur.', 'dark_red')
-    if (Number(pd.getInt('erwin_c_cursed')) === 1) erwinNote(server, name, '☾ Kanlı Ay: ödül iki katı.', 'dark_purple')
+    erwinSayLine(server, name, 'Sefer: ' + erwinContractText(p), 'yellow')
+    erwinSayLine(server, name, ERWIN_TIER_NAMES[Number(pd.getInt('erwin_c_tier'))] + ' ' + erwinStars(Number(pd.getInt('erwin_c_tier'))), 'red')
+    if (Number(pd.getInt('erwin_c_bet')) === 1) erwinSayLine(server, name, '☠ Kan Bahsi aktif: ölürsen sefer iptal olur.', 'dark_red')
+    if (Number(pd.getInt('erwin_c_cursed')) === 1) erwinSayLine(server, name, '☾ Kanlı Ay: ödül iki katı.', 'dark_purple')
     if (String(pd.getString('erwin_c_chain')) !== '') {
       var ch = ERWIN_CHAIN_BY_ID[String(pd.getString('erwin_c_chain'))]
-      if (ch) erwinNote(server, name, '⛓ Kader Zinciri: bölüm ' + (Number(pd.getInt('erwin_c_step')) + 1) + '/' + ch.steps.length, 'light_purple')
+      if (ch) erwinSayLine(server, name, '⛓ Kader Zinciri: bölüm ' + (Number(pd.getInt('erwin_c_step')) + 1) + '/' + ch.steps.length, 'light_purple')
     }
-    if (Number(pd.getInt('erwin_named_open')) === 1) erwinNote(server, name, 'Ölüm Emri hedefi yakınlarda: ismini taşıyan parlayan yaratığı bul.', 'dark_red')
+    if (Number(pd.getInt('erwin_named_open')) === 1) erwinSayLine(server, name, 'Ölüm Emri hedefi yakınlarda: ismini taşıyan parlayan yaratığı bul.', 'dark_red')
   } else if (erwinOffersActive(p)) {
-    erwinSayChat(server, name, 'Tekliflerin hâlâ geçerli. Sohbetteki listeden birini seç ya da yeni sefer iste.')
+    var liveOffers = [String(p.persistentData.getString('erwin_o_1')), String(p.persistentData.getString('erwin_o_2')), String(p.persistentData.getString('erwin_o_3'))].filter(x => x !== '')
+    if (!erwinOfferDialog(server, name, liveOffers)) erwinSay(server, name, 'Tekliflerin hâlâ geçerli. "Sefer / rapor" ile listeyi yeniden açabilirsin.')
   } else {
     erwinSay(server, name, 'Şu an bir seferin yok. Sefer istemek için bana söyle.')
   }
@@ -768,22 +760,22 @@ function erwinInfo(server, p, name) {
 function erwinStat(server, p, name) {
   var pd = p.persistentData
   var r = erwinRank(p)
-  erwinNote(server, name, '— Keşif Birliği Kaydı —', 'dark_green')
-  erwinNote(server, name, 'Rütben: ' + ERWIN_RANK_NAMES[r], 'gold')
-  erwinNote(server, name, 'Toplam sefer: ' + Number(pd.getInt('erwin_total')) + '  (bugün: ' + erwinDoneToday(p) + '/' + ERWIN_DAILY_LIMIT + ')', 'white')
-  erwinNote(server, name, 'Sis Devriyesi ' + Number(pd.getInt('erwin_done_1')) + ' · Av ' + Number(pd.getInt('erwin_done_2')) + ' · İniş ' + Number(pd.getInt('erwin_done_3')) + ' · Kan Sözü ' + Number(pd.getInt('erwin_done_4')) + ' · Kıyamet ' + Number(pd.getInt('erwin_done_5')), 'gray')
-  erwinNote(server, name, 'Zincir ' + Number(pd.getInt('erwin_chains_done')) + '/' + ERWIN_CHAINS.length + ' · Kanlı Ay ' + Number(pd.getInt('erwin_cursed_done')) + ' · Ölüm Emri ' + Number(pd.getInt('erwin_named_kills')) + ' · Kazanılan bahis ' + Number(pd.getInt('erwin_bets_won')), 'gray')
+  erwinSayLine(server, name, '— Keşif Birliği Kaydı —', 'dark_green')
+  erwinSayLine(server, name, 'Rütben: ' + ERWIN_RANK_NAMES[r], 'gold')
+  erwinSayLine(server, name, 'Toplam sefer: ' + Number(pd.getInt('erwin_total')) + '  (bugün: ' + erwinDoneToday(p) + '/' + ERWIN_DAILY_LIMIT + ')', 'white')
+  erwinSayLine(server, name, 'Sis Devriyesi ' + Number(pd.getInt('erwin_done_1')) + ' · Av ' + Number(pd.getInt('erwin_done_2')) + ' · İniş ' + Number(pd.getInt('erwin_done_3')) + ' · Kan Sözü ' + Number(pd.getInt('erwin_done_4')) + ' · Kıyamet ' + Number(pd.getInt('erwin_done_5')), 'gray')
+  erwinSayLine(server, name, 'Zincir ' + Number(pd.getInt('erwin_chains_done')) + '/' + ERWIN_CHAINS.length + ' · Kanlı Ay ' + Number(pd.getInt('erwin_cursed_done')) + ' · Ölüm Emri ' + Number(pd.getInt('erwin_named_kills')) + ' · Kazanılan bahis ' + Number(pd.getInt('erwin_bets_won')), 'gray')
   if (r < 4) {
     var need = ERWIN_PROMO_COUNT[r]
     var have = Number(pd.getInt('erwin_done_' + ERWIN_PROMO_TIER[r]))
-    erwinNote(server, name, 'Sonraki terfi (' + ERWIN_RANK_NAMES[r + 1] + '): ' + ERWIN_TIER_NAMES[ERWIN_PROMO_TIER[r]] + ' türünden ' + Math.min(have, need) + '/' + need, 'yellow')
+    erwinSayLine(server, name, 'Sonraki terfi (' + ERWIN_RANK_NAMES[r + 1] + '): ' + ERWIN_TIER_NAMES[ERWIN_PROMO_TIER[r]] + ' türünden ' + Math.min(have, need) + '/' + need, 'yellow')
   } else {
-    erwinNote(server, name, 'En yüksek rütbedesin. Kıyamet seferleri seni bekliyor.', 'yellow')
+    erwinSayLine(server, name, 'En yüksek rütbedesin. Kıyamet seferleri seni bekliyor.', 'yellow')
   }
   var owned = erwinOwnedTitles(pd)
   var names = []
   ERWIN_TITLES.forEach(t => { if (owned.indexOf(t[0]) >= 0) names.push(t[1]) })
-  erwinNote(server, name, 'Unvanlar: ' + (names.length > 0 ? names.join(', ') : 'henüz yok'), 'dark_purple')
+  erwinSayLine(server, name, 'Unvanlar: ' + (names.length > 0 ? names.join(', ') : 'henüz yok'), 'dark_purple')
 }
 
 function erwinLog(server, p, name) {
@@ -792,10 +784,10 @@ function erwinLog(server, p, name) {
     erwinSay(server, name, 'Defterimde henüz senin adına bir kayıt yok.')
     return
   }
-  erwinNote(server, name, '— Sefer Defteri (son ' + list.length + ') —', 'dark_green')
+  erwinSayLine(server, name, '— Sefer Defteri (son ' + list.length + ') —', 'dark_green')
   for (var i = list.length - 1; i >= 0; i--) {
     var f = list[i].split('|')
-    erwinNote(server, name, f[0] + '  ' + f[1] + '  (+' + f[2] + ' zümrüt)', 'gray')
+    erwinSayLine(server, name, f[0] + '  ' + f[1] + '  (+' + f[2] + ' zümrüt)', 'gray')
   }
 }
 

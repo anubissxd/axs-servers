@@ -29,8 +29,18 @@ const THOR_SHOP = [
 
 function thorJsonEsc(s) { return String(s).split('\\').join('\\\\').split('"').join('\\"') }
 
-function thorSay(server, name, text) {
+function thorSayChat(server, name, text) {
   server.runCommandSilent('tellraw ' + name + ' [{"text":"Thorfinn","color":"gold","bold":true},{"text":": ' + thorJsonEsc(text) + '","color":"white","italic":true,"bold":false}]')
+}
+
+// Thorfinn'in cevapları sohbet yerine diyalog penceresinde açılır (npc_dialog.js); yazılamazsa sohbete düşer.
+function thorSay(server, name, text) {
+  npcDlgSay(server, THOR_UUID, 'thorfinn_yanit', name, text, false, t => thorSayChat(server, name, t))
+}
+
+// Liste/bilgi satırı: her çağrı yeni satır (thorNote ile aynı imza).
+function thorSayLine(server, name, text, color) {
+  npcDlgSay(server, THOR_UUID, 'thorfinn_yanit', name, text, true, t => thorNote(server, name, t, color))
 }
 
 function thorNote(server, name, text, color) {
@@ -66,13 +76,13 @@ function thorShopResetStock(p) {
 }
 
 function thorStockInfo(server, p, name) {
-  thorNote(server, name, '— Thorfinn\'in ambarı (sana özel stok) —', 'gold')
+  thorSayLine(server, name, '— Thorfinn\'in ambarı (sana özel stok) —', 'gold')
   var r = erwinRank(p)
   THOR_SHOP.forEach(it => {
     var left = thorStockLeft(p, it)
     var mins = Math.max(0, Math.ceil((Number(p.persistentData.getLong('thor_shop_t_' + it.key)) - Date.now()) / 60000))
     var lock = it.rank > r ? ' [' + ERWIN_RANK_NAMES[it.rank] + ']' : ''
-    thorNote(server, name, it.n + ' ' + thorItemName(it.id) + ' — ' + it.price + ' zümrüt — stok ' + left + '/' + it.stock + ' (yenilenme ' + thorFmtMins(mins) + ')' + lock, left > 0 ? (it.rank > r ? 'dark_gray' : 'gray') : 'red')
+    thorSayLine(server, name, it.n + ' ' + thorItemName(it.id) + ' — ' + it.price + ' zümrüt — stok ' + left + '/' + it.stock + ' (yenilenme ' + thorFmtMins(mins) + ')' + lock, left > 0 ? (it.rank > r ? 'dark_gray' : 'gray') : 'red')
   })
 }
 
@@ -128,7 +138,7 @@ function thorShopOpen(server, p, name) {
   thorShopSync(server, false)
   var sh = global.thorShop
   if (sh && sh.user && String(sh.user) !== name) {
-    thorNote(server, name, 'Thorfinn şu an başka biriyle pazarlık ediyor. Biraz bekle.', 'gray')
+    thorSayLine(server, name, 'Thorfinn şu an başka biriyle pazarlık ediyor. Biraz bekle.', 'gray')
     return
   }
   var npc = thorShopNpc(server)
@@ -342,7 +352,7 @@ var season = thorSeason(server)
   pd.putString('thor_recent', recent.join(','))
   var seasonNote = o.season ? ' (' + THOR_SEASON_NAMES[o.season] + ' siparişi)' : ''
   thorSay(server, name, 'Bu sefer ' + n + ' ' + o.label + seasonNote + ' lazım. Ambar boş kalmasın. Getirdiğinde ' + em + ' zümrüt öderim; fazlasını isteme.')
-  thorNote(server, name, 'Sipariş: ' + n + ' ' + o.label + ' → ' + em + ' zümrüt. Hazır olunca Thorfinn\'e tekrar tıkla.', 'gold')
+  thorSayLine(server, name, 'Sipariş: ' + n + ' ' + o.label + ' → ' + em + ' zümrüt. Hazır olunca Thorfinn\'e tekrar tıkla.', 'gold')
 }
 
 // Thorfinn'in hikâyesi: her eşikte bir bölüm anlatır (sinema motoruyla). Teslim/nöbet/ikmal her biri sayaca bir ekler.
@@ -402,7 +412,7 @@ function thorOrderDeliver(server, p, name) {
   pd.putString('thor_o_key', '')
   var after = thorLandRank(p)
   thorSay(server, name, 'İyi mal. Toprağa saygı gösteren biri olduğun belli.')
-  thorNote(server, name, 'Ödemen: ' + em + ' zümrüt' + (extras.length > 0 ? ', ' + extras.join(', ') : '') + '.', 'green')
+  thorSayLine(server, name, 'Ödemen: ' + em + ' zümrüt' + (extras.length > 0 ? ', ' + extras.join(', ') : '') + '.', 'green')
   var steps = [{ t: 0, sound: ['minecraft:block.composter.ready', 1, 1] }, { t: 0.2, title: ['SİPARİŞ TAMAM', '+' + em + ' zümrüt', 'gold'] }]
   if (after > before) {
     steps.push({ t: 3, title: ['TOPRAK RÜTBESİ', THOR_LAND_RANKS[after].name, 'green'] })
@@ -414,15 +424,15 @@ function thorOrderDeliver(server, p, name) {
 }
 
 function thorOrderInfo(server, p, name) {
-  if (thorNobetActive(p)) thorNote(server, name, 'Gece nöbeti: ' + Number(p.persistentData.getInt('thor_n_have')) + '/' + Number(p.persistentData.getInt('thor_n_need')) + ' yaratık', 'dark_green')
-  if (String(p.persistentData.getString('thor_i_key')) !== '') thorNote(server, name, 'Birlik ikmali: ' + Number(p.persistentData.getInt('thor_i_n')) + ' ' + String(p.persistentData.getString('thor_i_label')), 'gold')
+  if (thorNobetActive(p)) thorSayLine(server, name, 'Gece nöbeti: ' + Number(p.persistentData.getInt('thor_n_have')) + '/' + Number(p.persistentData.getInt('thor_n_need')) + ' yaratık', 'dark_green')
+  if (String(p.persistentData.getString('thor_i_key')) !== '') thorSayLine(server, name, 'Birlik ikmali: ' + Number(p.persistentData.getInt('thor_i_n')) + ' ' + String(p.persistentData.getString('thor_i_label')), 'gold')
   if (!thorOrderActive(p)) {
     thorSay(server, name, 'Şu an sana verdiğim bir sipariş yok.')
     return
   }
   var have = 0
   try { have = Number(p.inventory.count(String(p.persistentData.getString('thor_o_id')))) } catch (e) { have = 0 }
-  thorNote(server, name, 'Sipariş: ' + thorOrderText(p) + ' — elinde ' + (isNaN(have) ? 0 : have) + ' — ödül ' + Number(p.persistentData.getInt('thor_o_em')) + ' zümrüt', 'gold')
+  thorSayLine(server, name, 'Sipariş: ' + thorOrderText(p) + ' — elinde ' + (isNaN(have) ? 0 : have) + ' — ödül ' + Number(p.persistentData.getInt('thor_o_em')) + ' zümrüt', 'gold')
 }
 
 function thorOrderAbort(server, p, name) {
@@ -485,7 +495,7 @@ function thorNobetRequest(server, p, name) {
   pd.putInt('thor_n_need', need2)
   pd.putLong('thor_n_start', Date.now())
   thorSay(server, name, 'Karanlık tarlamı yiyor. Gece boyunca ' + need2 + ' yaratığı geri püskürt; zombi, iskelet, örümcek, creeper. Şafak sökmeden ve yorulmadan.')
-  thorNote(server, name, 'Nöbet: ' + need2 + ' gece yaratığı öldür. Bitince Thorfinn\'e dön.', 'gold')
+  thorSayLine(server, name, 'Nöbet: ' + need2 + ' gece yaratığı öldür. Bitince Thorfinn\'e dön.', 'gold')
   cinePlay(server, name, [{ t: 0, sound: ['minecraft:entity.wolf.howl', 0.7, 0.8] }, { t: 0.3, title: ['GECE NÖBETİ', 'Tarlayı koru', 'dark_green'] }])
 }
 
@@ -498,7 +508,7 @@ function thorNobetReward(server, p, name) {
   pd.putLong('thor_n_next', Date.now() + THOR_NOBET_COOLDOWN_MS)
   pd.putInt('thor_total', Number(pd.getInt('thor_total')) + 1)
   thorSay(server, name, 'Tarla sağ. Sabaha kadar nöbet tuttun; bu sana yakışır.')
-  thorNote(server, name, 'Ödemen: ' + em + ' zümrüt.', 'green')
+  thorSayLine(server, name, 'Ödemen: ' + em + ' zümrüt.', 'green')
   cinePlay(server, name, [{ t: 0, sound: ['minecraft:block.composter.ready', 1, 1] }, { t: 0.2, title: ['NÖBET BİTTİ', '+' + em + ' zümrüt', 'gold'] }])
   thorStoryCheck(server, p, name)
 }
@@ -571,7 +581,7 @@ function thorIkmalRequest(server, p, name) {
       pd.putInt('thor_total', Number(pd.getInt('thor_total')) + 1)
       pd.putInt('thor_i_day', Math.floor(Date.now() / 86400000))
       thorSay(server, name, 'Birlik bu akşam tok yatacak. Erwin\'e selamımı söyle.')
-      thorNote(server, name, 'Ödemen: ' + em + ' zümrüt.', 'green')
+      thorSayLine(server, name, 'Ödemen: ' + em + ' zümrüt.', 'green')
       cinePlay(server, name, [{ t: 0, sound: ['minecraft:entity.villager.celebrate', 1, 1] }, { t: 0.2, title: ['İKMAL TAMAM', '+' + em + ' zümrüt', 'gold'] }])
       thorStoryCheck(server, p, name)
       return
@@ -594,15 +604,15 @@ function thorIkmalRequest(server, p, name) {
   pd.putInt('thor_i_n', n2)
   pd.putInt('thor_i_em', em2)
   thorSay(server, name, 'Keşif Birliği sefere çıkıyor. ' + n2 + ' ' + o.label + ' istiyorlar. Erwin iyi öder; ben adil öderim: ' + em2 + ' zümrüt.')
-  thorNote(server, name, 'İkmal: ' + n2 + ' ' + o.label + ' → ' + em2 + ' zümrüt (günde bir). Hazır olunca Thorfinn\'e tekrar tıkla ("Birlik ikmali").', 'gold')
+  thorSayLine(server, name, 'İkmal: ' + n2 + ' ' + o.label + ' → ' + em2 + ' zümrüt (günde bir). Hazır olunca Thorfinn\'e tekrar tıkla ("Birlik ikmali").', 'gold')
 }
 
 function thorStat(server, p, name) {
   var lr = thorLandRank(p)
   var pd = p.persistentData
   var nxt = lr + 1 < THOR_LAND_RANKS.length ? ' — sonraki rütbe için ' + (THOR_LAND_RANKS[lr + 1].from - Number(pd.getInt('thor_total'))) + ' teslim' : ' — en yüksek rütbe'
-  thorNote(server, name, 'Toprak rütben: ' + THOR_LAND_RANKS[lr].name + ' · teslim edilen sipariş ' + Number(pd.getInt('thor_total')) + nxt, 'gold')
-  thorNote(server, name, 'Bugün ' + thorDoneToday(p) + '/' + THOR_DAILY_ORDERS + ' sipariş. Birlik rütben: ' + ERWIN_RANK_NAMES[erwinRank(p)] + '.', 'gray')
+  thorSayLine(server, name, 'Toprak rütben: ' + THOR_LAND_RANKS[lr].name + ' · teslim edilen sipariş ' + Number(pd.getInt('thor_total')) + nxt, 'gold')
+  thorSayLine(server, name, 'Bugün ' + thorDoneToday(p) + '/' + THOR_DAILY_ORDERS + ' sipariş. Birlik rütben: ' + ERWIN_RANK_NAMES[erwinRank(p)] + '.', 'gray')
 }
 
 // ------------------------------------------------------------------ Etiket işleme

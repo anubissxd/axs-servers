@@ -74,12 +74,12 @@ function kenpachiChallenge(server, p, name) {
   var pd = p.persistentData
   var rank = Number(pd.getInt('erwin_rank')) || 0
   if (global.kenpachiFight) {
-    kenpachiSay(server, name, 'Şu an başka biriyle uğraşıyorum. Sıranı bekle, sinek.')
+    kenpachiSayDlg(server, name, 'Şu an başka biriyle uğraşıyorum. Sıranı bekle, sinek.')
     return
   }
   var left = Number(pd.getLong('kenpachi_next')) - Date.now()
   if (left > 0) {
-    kenpachiSay(server, name, 'Daha yeni ezildin. Biraz dinlen; ' + Math.ceil(left / 60000) + ' dakika sonra gel.')
+    kenpachiSayDlg(server, name, 'Daha yeni ezildin. Biraz dinlen; ' + Math.ceil(left / 60000) + ' dakika sonra gel.')
     return
   }
   if (!kenpachiHasTag(p, 'rank_maceraci') || rank < KENPACHI_FIGHT_RANK) {
@@ -247,6 +247,12 @@ function kenpachiPick(arr) { return arr[Math.floor(Math.random() * arr.length)] 
 
 function kenpachiEsc(s) { return String(s).split('\\').join('\\\\').split('"').join('\\"') }
 
+// Kenpachi'nin konuşma diyaloğuna verdiği cevaplar diyalog penceresinde açılır (npc_dialog.js); kapışma ve sahne repliği sohbette kalır.
+const KENPACHI_NPC_UUID = '078b6d17-96a0-49f6-b6c8-c88c78c6c45a'
+function kenpachiSayDlg(server, name, text) {
+  npcDlgSay(server, KENPACHI_NPC_UUID, 'kenpachi_yanit', name, text, false, t => kenpachiSay(server, name, t))
+}
+
 function kenpachiSay(server, name, text) {
   server.runCommandSilent('tellraw ' + name + ' [{"text":"Kenpachi","color":"dark_red","bold":true},{"text":": ","color":"gray","bold":false},{"text":"' + kenpachiEsc(text) + '","color":"white","italic":true,"bold":false}]')
 }
@@ -288,8 +294,8 @@ ServerEvents.tick(event => {
         p.getTags().forEach(t => { if (String(t) === tg) has = true })
         if (!has) continue
         server.runCommandSilent('tag ' + name + ' remove ' + tg)
-        if (tg === 'kenpachi_kral') kenpachiSay(server, name, kenpachiPick(KENPACHI_KRAL))
-        else if (tg === 'kenpachi_kim') kenpachiSay(server, name, kenpachiPick(KENPACHI_KIM))
+        if (tg === 'kenpachi_kral') kenpachiSayDlg(server, name, kenpachiPick(KENPACHI_KRAL))
+        else if (tg === 'kenpachi_kim') kenpachiSayDlg(server, name, kenpachiPick(KENPACHI_KIM))
         else if (tg === 'kenpachi_dovus') kenpachiChallenge(server, p, name)
       }
     } catch (e) {

@@ -28,6 +28,7 @@ Yerel profil: `%APPDATA%\.minecraft\versions\Medieval Fantasy\` (yeni VDS'te `/r
 | Dosya | Ne |
 |---|---|
 | `server_scripts/npc_cesitlilik.js` | **yeni**: NPC diyalog sürümü etiket döndürme (Erwin, Thorfinn, Kenpachi, Yoruichi) |
+| `server_scripts/npc_dialog.js` | **yeni** (2026-10-01): NPC cevapları diyalog penceresinde ([npc-diyalog.md](npc-diyalog.md)); erwin_seferleri, thorfinn_ticaret, hocalar_egitim, kenpachi, aizen, yoruichi_pay, yoruichi_chase de değişti. Erwin için `gen_erwin.js` yeni diyaloglar ekler: `function yoruichi:erwin_setup` |
 | `server_scripts/kenpachi.js` | değişti: kapışma sistemi, `/kenpachi_sifirla` |
 | `server_scripts/thorfinn_ticaret.js` | değişti: hayvancılık, mevsim, gece nöbeti, Birlik ikmali, hikâye, ödül azaltma |
 | `server_scripts/erwin_seferleri.js` | değişti: ödül azaltma (2. tur) |

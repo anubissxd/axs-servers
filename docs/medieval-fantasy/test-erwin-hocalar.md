@@ -106,3 +106,13 @@ Kurulum: oyunda `/reload`, sonra Erwin'in yakınında `function yoruichi:erwin_s
 4. Teklifler diyalogda açılmalı (üç seçenek, "Kan Bahsi ile seç" ve "Şimdilik kalsın" düğmeleri); seçince sefer başlamalı. Kan Bahsi alt penceresinde "Geri" çalışmalı. Sohbete düşüyorsa `logs/kubejs/server.log` içinde "erwin diyalog yazilamadi" satırına bak.
 5. Diyalog açılmıyor ya da boşsa `logs/latest.log`'a bak; metin sohbete düşüyorsa NPC yüklü değil ya da `erwin_setup` çalıştırılmamış demektir.
 6. İki oyuncu aynı anda konuşunca metinler karışmamalı.
+
+## L. Tüm NPC'lerin cevapları diyalogda (2026-10-01)
+
+Kurulum gerekmez (cevap diyaloğu kendiliğinden eklenir); oyunda `/reload` yeterli. Her NPC'de aşağıdaki cevapların **pencerede** açıldığını, sohbete düşmediğini kontrol et. Sohbete düşüyorsa `logs/kubejs/server.log`'ta "npc diyalog yazilamadi" satırına bak.
+1. **Erwin "Diğer işler":** Seferim nasıl gidiyor, Birlik kaydım, Sefer defterim (satır satır liste). Teklif açıkken "Seferim nasıl gidiyor" teklif penceresini yeniden açmalı.
+2. **Thorfinn:** stok durumu, sipariş isteme/teslim/bırakma, "sipariş durumu", gece nöbeti reddi, ikmal, toprak rütbesi.
+3. **Kakashi/Itachi/Gojo:** rütbe reddi, bedel uyarısı, rapor ("henüz bitmedi"), parşömen yenileme, büyü eğitimi bilgisi (en yakın hoca penceresinde).
+4. **Kenpachi:** meydan okuma reddi (rütbe/bekleme), "kral" ve "kim" cevapları. Kapışma içi replikler sohbette kalmalı.
+5. **Aizen** (NPC kurulduktan sonra): bilgi, çay, araştırma, yiyecek getirme, inceleme, "kim yaptı", meydan okuma reddi. Shunpo ile gelip konuşması ve kapışma replikleri sohbette kalmalı.
+6. **Yoruichi:** rütbe yetersizken ve zümrüt bloğu yetmezken cevapları pencerede; ücret/kabul sözü ve sahne sohbette.

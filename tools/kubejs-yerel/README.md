@@ -11,6 +11,7 @@ Yeni VDS gelince bu dosyalar `/root/servers/medieval-fantasy/kubejs/` altına ay
 | `server_scripts/thorfinn_ticaret.js` | Thorfinn ticaret, nöbet, ikmal, hikâye |
 | `server_scripts/erwin_seferleri.js` | Erwin seferleri (ödül azaltma) |
 | `server_scripts/hocalar_egitim.js`, `startup_scripts/gojo_spells.js` | Kakashi/Itachi/Gojo hocaları, Blue/Red/Purple |
+| `server_scripts/npc_dialog.js` | Ortak NPC diyalog yardımcıları (cevaplar diyalog penceresinde, [docs/npc-diyalog.md](../../docs/npc-diyalog.md)) |
 | `server_scripts/npc_cesitlilik.js` | NPC karşılama repliği çeşitliliği |
 | `server_scripts/sinema_motoru.js`, `yoruichi_chase.js` | Ortak altyapı (Shunpo, poz, sahneler) |
 | `assets-lang/en_us.json`, `tr_tr.json` | Büyü adları ve açıklamaları (**dosyanın tamamı**, VDS'tekiyle birleştirmeden ezme; önce fark al) |

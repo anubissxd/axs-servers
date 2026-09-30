@@ -95,6 +95,25 @@ function aizenNote(server, name, text, color) {
   server.runCommandSilent('tellraw ' + name + ' {"text":"' + aizenEsc(text) + '","color":"' + (color || 'gray') + '"}')
 }
 
+// Aizen'in konuşma diyaloğuna verdiği cevaplar diyalog penceresinde açılır (npc_dialog.js); kapışma ve gezinme repliği sohbette kalır.
+// NPC, 'aizen_npc' etiketiyle bulunur (UUID sabit değil).
+function aizenDlgUuid(server) {
+  var e = aizenNpcPos(server)
+  return e ? String(e.uuid) : ''
+}
+
+function aizenSayDlg(server, name, text) {
+  var u = aizenDlgUuid(server)
+  if (u === '') { aizenSay(server, name, text); return }
+  npcDlgSay(server, u, 'aizen_yanit', name, text, false, t => aizenSay(server, name, t))
+}
+
+function aizenLineDlg(server, name, text, color) {
+  var u = aizenDlgUuid(server)
+  if (u === '') { aizenNote(server, name, text, color); return }
+  npcDlgSay(server, u, 'aizen_yanit', name, text, true, t => aizenNote(server, name, t, color))
+}
+
 // ------------------------------------------------------------------ Evre etiketleri ve gecikmeli komutlar
 function aizenSyncTags(server, p, name) {
   var st = aizenStage(server)
@@ -283,21 +302,21 @@ function aizenInfo(server, p, name) {
   var rank = Number(erwinRank(p))
   var text = AIZEN_TIPS[Math.min(4, rank)]
   if (aizenStage(server) === 2) text += aizenPick(AIZEN_TIP_ODD)
-  aizenSay(server, name, text)
+  aizenSayDlg(server, name, text)
 }
 
 function aizenHelp(server, p, name) {
   var pd = p.persistentData
   var left = Number(pd.getLong('aizen_help_next')) - Date.now()
   if (left > 0) {
-    aizenSay(server, name, 'Bugünkü çayın hazır olması için ' + Math.ceil(left / 60000) + ' dakika daha bekle. Fazlası zarar verir.')
+    aizenSayDlg(server, name, 'Bugünkü çayın hazır olması için ' + Math.ceil(left / 60000) + ' dakika daha bekle. Fazlası zarar verir.')
     return
   }
   server.runCommandSilent('effect give ' + name + ' minecraft:regeneration 30 1 true')
   server.runCommandSilent('effect give ' + name + ' minecraft:saturation 5 0 true')
   pd.putLong('aizen_help_next', Date.now() + 6 * 3600000)
-  aizenSay(server, name, aizenStage(server) === 2 ? 'İç. Çay yalnızca bedeni iyileştirir; zihni değil. O konuda sana güveniyorum.' : 'İç, sana iyi gelecek. Zor günlerde bir fincan çay çok şey değiştirir.')
-  aizenNote(server, name, 'Aizen\'in çayı: 30 sn yenilenme ve doygunluk.', 'gold')
+  aizenSayDlg(server, name, aizenStage(server) === 2 ? 'İç. Çay yalnızca bedeni iyileştirir; zihni değil. O konuda sana güveniyorum.' : 'İç, sana iyi gelecek. Zor günlerde bir fincan çay çok şey değiştirir.')
+  aizenLineDlg(server, name, 'Aizen\'in çayı: 30 sn yenilenme ve doygunluk.', 'gold')
 }
 
 const AIZEN_TASKS = [
@@ -329,18 +348,18 @@ function aizenResearch(server, p, name) {
     var have = Number(pd.getInt('aizen_r_have'))
     var need = Number(pd.getInt('aizen_r_need'))
     if (have >= need) { aizenResearchReward(server, p, name); return }
-    aizenSay(server, name, 'Gözlemin sürüyor: ' + have + '/' + need + ' ' + String(pd.getString('aizen_r_label')) + '. Bitirince bana dön.')
+    aizenSayDlg(server, name, 'Gözlemin sürüyor: ' + have + '/' + need + ' ' + String(pd.getString('aizen_r_label')) + '. Bitirince bana dön.')
     return
   }
   var day = Math.floor(Date.now() / 86400000)
   if (Number(pd.getInt('aizen_r_day')) !== day) { pd.putInt('aizen_r_day', day); pd.putInt('aizen_r_day_count', 0) }
   if (Number(pd.getInt('aizen_r_day_count')) >= 5) {
-    aizenSay(server, name, 'Bugünlük yeter. Fazla gözlem, gözlemcinin de zihnini yorar.')
+    aizenSayDlg(server, name, 'Bugünlük yeter. Fazla gözlem, gözlemcinin de zihnini yorar.')
     return
   }
   var left = Number(pd.getLong('aizen_r_next')) - Date.now()
   if (left > 0) {
-    aizenSay(server, name, 'Acele etme. ' + Math.ceil(left / 60000) + ' dakika sonra yeni bir gözlem hazır olur.')
+    aizenSayDlg(server, name, 'Acele etme. ' + Math.ceil(left / 60000) + ' dakika sonra yeni bir gözlem hazır olur.')
     return
   }
   var t = aizenPick(AIZEN_TASKS)
@@ -349,8 +368,8 @@ function aizenResearch(server, p, name) {
   pd.putString('aizen_r_label', t.label)
   pd.putInt('aizen_r_need', n)
   pd.putInt('aizen_r_have', 0)
-  aizenSay(server, name, 'Bir gözlem: ' + n + ' ' + t.label + ' karşılaş ve alt et. Sayıları not edeceğim. Bitince gel.')
-  aizenNote(server, name, 'Araştırma: ' + n + ' ' + t.label + '. Bitince Aizen\'e dön.', 'gold')
+  aizenSayDlg(server, name, 'Bir gözlem: ' + n + ' ' + t.label + ' karşılaş ve alt et. Sayıları not edeceğim. Bitince gel.')
+  aizenLineDlg(server, name, 'Araştırma: ' + n + ' ' + t.label + '. Bitince Aizen\'e dön.', 'gold')
 }
 
 function aizenResearchReward(server, p, name) {
@@ -362,9 +381,9 @@ function aizenResearchReward(server, p, name) {
   pd.putInt('aizen_r_total', total)
   pd.putInt('aizen_r_day_count', Number(pd.getInt('aizen_r_day_count')) + 1)
   pd.putLong('aizen_r_next', Date.now() + 240000)
-  aizenSay(server, name, 'Sayılar tam. Sağ ol. Bu, emeğin karşılığı: ' + em + ' zümrüt.')
+  aizenSayDlg(server, name, 'Sayılar tam. Sağ ol. Bu, emeğin karşılığı: ' + em + ' zümrüt.')
   cinePlay(server, name, [{ t: 0, sound: ['minecraft:block.enchantment_table.use', 0.8, 1.3] }, { t: 0.2, title: ['GÖZLEM TAMAM', '+' + em + ' zümrüt', 'gold'] }])
-  if (AIZEN_NOTES[total]) aizenNote(server, name, AIZEN_NOTES[total], 'dark_aqua')
+  if (AIZEN_NOTES[total]) aizenLineDlg(server, name, AIZEN_NOTES[total], 'dark_aqua')
 }
 
 function aizenTaskDeath(event) {
@@ -392,18 +411,18 @@ function aizenBring(server, p, name) {
   var day = Math.floor(Date.now() / 86400000)
   if (Number(pd.getInt('aizen_g_day')) !== day) { pd.putInt('aizen_g_day', day); pd.putInt('aizen_g_day_count', 0) }
   if (Number(pd.getInt('aizen_g_day_count')) >= AIZEN_GETIR_GUNLUK) {
-    aizenSay(server, name, 'Yeter... bugünlük bu kadar. Nefes almak bile zor. Yarın... yine yardım edersin.')
+    aizenSayDlg(server, name, 'Yeter... bugünlük bu kadar. Nefes almak bile zor. Yarın... yine yardım edersin.')
     return
   }
   var left = Number(pd.getLong('aizen_g_next')) - Date.now()
   if (left > 0) {
-    aizenSay(server, name, 'Biraz... dinlenmem lazım. ' + Math.ceil(left / 60000) + ' dakika sonra tekrar gel.')
+    aizenSayDlg(server, name, 'Biraz... dinlenmem lazım. ' + Math.ceil(left / 60000) + ' dakika sonra tekrar gel.')
     return
   }
   var have = 0
   try { have = Number(p.inventory.count(AIZEN_GETIR_ITEM)) } catch (e) { have = 0 }
   if (isNaN(have) || have < AIZEN_GETIR_N) {
-    aizenSay(server, name, 'Ekmek... ' + AIZEN_GETIR_N + ' ekmek yeter. Karnım aç, kuvvetim yok. (sende ' + (isNaN(have) ? 0 : have) + ' var)')
+    aizenSayDlg(server, name, 'Ekmek... ' + AIZEN_GETIR_N + ' ekmek yeter. Karnım aç, kuvvetim yok. (sende ' + (isNaN(have) ? 0 : have) + ' var)')
     return
   }
   server.runCommandSilent('clear ' + name + ' ' + AIZEN_GETIR_ITEM + ' ' + AIZEN_GETIR_N)
@@ -417,25 +436,25 @@ function aizenBring(server, p, name) {
     m[name] = Number(m[name] || 0) + 1
     sd.putString('aizen_yardim_top', JSON.stringify(m))
   } catch (e) { sd.putString('aizen_yardim_top', '{}') }
-  aizenSay(server, name, aizenPick(['Teşekkür ederim... Sen çok iyi birisin. Bunu unutmayacağım.', 'İyi ki varsın. Bu... çok işime yaradı.', 'Ekmek... ne güzel. Sana borçluyum.']))
-  aizenNote(server, name, 'Aizen\'in şükranı: 1 zümrüt. (Sunucu geneli toplam yardım: ' + Number(sd.getInt('aizen_yardim_toplam')) + ')', 'gold')
+  aizenSayDlg(server, name, aizenPick(['Teşekkür ederim... Sen çok iyi birisin. Bunu unutmayacağım.', 'İyi ki varsın. Bu... çok işime yaradı.', 'Ekmek... ne güzel. Sana borçluyum.']))
+  aizenLineDlg(server, name, 'Aizen\'in şükranı: 1 zümrüt. (Sunucu geneli toplam yardım: ' + Number(sd.getInt('aizen_yardim_toplam')) + ')', 'gold')
 }
 
 function aizenExamine(server, p, name) {
   var pd = p.persistentData
   var i = Number(pd.getInt('aizen_kanit'))
   if (i >= AIZEN_INCELE.length) {
-    aizenNote(server, name, 'Aizen\'in yaralarını her yönüyle inceledin. Başka bir şey bulamıyorsun; ama bulduklarını ciddiye al.', 'dark_gray')
+    aizenLineDlg(server, name, 'Aizen\'in yaralarını her yönüyle inceledin. Başka bir şey bulamıyorsun; ama bulduklarını ciddiye al.', 'dark_gray')
     return
   }
-  aizenNote(server, name, 'İnceleme ' + (i + 1) + '/' + AIZEN_INCELE.length + ': ' + AIZEN_INCELE[i], 'dark_aqua')
+  aizenLineDlg(server, name, 'İnceleme ' + (i + 1) + '/' + AIZEN_INCELE.length + ': ' + AIZEN_INCELE[i], 'dark_aqua')
   pd.putInt('aizen_kanit', i + 1)
-  if (i + 1 === AIZEN_HEDIYE_KANIT) aizenNote(server, name, 'Bir şey ters... Bu yaralar sahte olabilir. Ama henüz kanıt yetmez.', 'yellow')
+  if (i + 1 === AIZEN_HEDIYE_KANIT) aizenLineDlg(server, name, 'Bir şey ters... Bu yaralar sahte olabilir. Ama henüz kanıt yetmez.', 'yellow')
 }
 
 function aizenWho(server, p, name) {
   if (aizenStage(server) === 3) {
-    aizenSay(server, name, aizenPick(['Kim... yaptı? Bilmiyorum. Karanlıktı. Yalnızca bir gölge... Sonra acı.', 'Bir saldırı... Nefesimi kesti. Birlik... beni korumuyordu. Kimse yoktu.']))
+    aizenSayDlg(server, name, aizenPick(['Kim... yaptı? Bilmiyorum. Karanlıktı. Yalnızca bir gölge... Sonra acı.', 'Bir saldırı... Nefesimi kesti. Birlik... beni korumuyordu. Kimse yoktu.']))
     return
   }
   var firstBy = String(server.persistentData.getString('aizen_ilk_yenen'))
@@ -445,10 +464,10 @@ function aizenWho(server, p, name) {
       'Bir gözlemci, bir yazar, bir kukla ustası. İstediğin adı seç; hepsi doğru.'
     ]
     if (firstBy !== '') l.push('Beni ilk yenen ' + firstBy + ' idi. Bunu unutmadım; benim de hafızam bir hediyedir.')
-    aizenSay(server, name, aizenPick(l))
+    aizenSayDlg(server, name, aizenPick(l))
     return
   }
-  aizenSay(server, name, aizenPick([
+  aizenSayDlg(server, name, aizenPick([
     'Yalnızca bir âlimim. Kitaplar, notlar, gözlemler... Dünya nasıl işliyor, onu anlamaya çalışıyorum.',
     'Adım Aizen. Bilgiyle uğraşırım ve bilgiyi paylaşmayı severim. Sis\'in kaynağını anlamaya çalışıyorum; Birliğe bu yüzden yardım ediyorum.'
   ]))
@@ -459,10 +478,10 @@ function aizenSuspicion(server, p, name) {
   pd.putInt('aizen_s_count', Number(pd.getInt('aizen_s_count')) + 1)
   var total = Number(pd.getInt('aizen_r_total'))
   if (Number(pd.getInt('aizen_s_count')) >= 3 && total >= 8) {
-    aizenSay(server, name, 'Zeki birisin. Bunu başkasına söyleme. Henüz zamanı değil.')
+    aizenSayDlg(server, name, 'Zeki birisin. Bunu başkasına söyleme. Henüz zamanı değil.')
     return
   }
-  aizenSay(server, name, aizenPick([
+  aizenSayDlg(server, name, aizenPick([
     'Hm? Ne fark ettin? Belki yorgunsun. Bir çay iyi gelir.',
     'Merak, insanı ya bilgeye ya deliye çevirir. Sen henüz hangisi olduğuna karar vermemişsin gibi.',
     'Bazen bir şey fark ettiğini sanırsın; aslında sana fark ettirilmiştir. Bunu düşün.'
@@ -470,7 +489,7 @@ function aizenSuspicion(server, p, name) {
 }
 
 function aizenWhy(server, p, name) {
-  aizenSay(server, name, aizenPick([
+  aizenSayDlg(server, name, aizenPick([
     'Sis\'i ben uyandırdım. Bu topraklar bir düzenin taklidiydi: krallar, rütbeler, kediler... Ben yalnızca düzeni kimin yazdığını sormanın yolunu kapattım.',
     'Erwin\'in Birliği Sis\'le savaşırken toplanan her veri, her sefer, her ölüm benim deneyimdi. Siz zümrüt için savaşırken ben cesaretinizi ölçtüm.',
     'Çay içtin, notları okudun, gözlem yaptın. Her gözlem, planımın eksik parçasını tamamladı. Teşekkür ederim.'
@@ -527,20 +546,20 @@ function aizenIntsOf(uuid) {
 function aizenChallenge(server, p, name) {
   var pd = p.persistentData
   if (aizenStage(server) < 5) {
-    aizenSay(server, name, 'Bana meydan mı okuyorsun? Ne için? Ben yalnızca bir âlimim.')
+    aizenSayDlg(server, name, 'Bana meydan mı okuyorsun? Ne için? Ben yalnızca bir âlimim.')
     return
   }
   if (global.aizenFight) {
-    aizenSay(server, name, 'Şu an başka biriyle ilgileniyorum. Sıranı bekle.')
+    aizenSayDlg(server, name, 'Şu an başka biriyle ilgileniyorum. Sıranı bekle.')
     return
   }
   var left = Number(pd.getLong('aizen_next')) - Date.now()
   if (left > 0) {
-    aizenSay(server, name, 'Yenilgiden yeni çıktın. Dinlen; ' + Math.ceil(left / 60000) + ' dakika sonra gel.')
+    aizenSayDlg(server, name, 'Yenilgiden yeni çıktın. Dinlen; ' + Math.ceil(left / 60000) + ' dakika sonra gel.')
     return
   }
   if (Number(erwinRank(p)) < AIZEN_RANK) {
-    aizenSay(server, name, 'Seninle savaşmak için henüz erken. Keşif Birliği\'nde Eşik Muhafızı ol; o zaman gerçekten bir savaş olur.')
+    aizenSayDlg(server, name, 'Seninle savaşmak için henüz erken. Keşif Birliği\'nde Eşik Muhafızı ol; o zaman gerçekten bir savaş olur.')
     return
   }
   var steps = [
@@ -842,7 +861,7 @@ ServerEvents.tick(event => {
         else if (tg === 'aizen_neden') aizenWhy(server, p, name)
         else if (tg === 'aizen_getir') { if (st === 3) aizenBring(server, p, name) }
         else if (tg === 'aizen_incele') { if (st === 3) aizenExamine(server, p, name) }
-        else if (st >= 3) aizenSay(server, name, 'Bu artık seni ilgilendirmiyor.')
+        else if (st >= 3) aizenSayDlg(server, name, 'Bu artık seni ilgilendirmiyor.')
         else if (tg === 'aizen_bilgi') aizenInfo(server, p, name)
         else if (tg === 'aizen_yardim') aizenHelp(server, p, name)
         else if (tg === 'aizen_arastirma') aizenResearch(server, p, name)

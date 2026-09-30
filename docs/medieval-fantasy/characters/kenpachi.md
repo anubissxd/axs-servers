@@ -3,7 +3,7 @@
 *(Kapışma sistemi yazıldı ve simülasyonda test edildi; gerçek oyunda test edilmedi.)*
 
 - **Tür:** İnsan (easy_npc:humanoid, klasik kol). Etiketleri: `korunan`, `kenpachi_npc`.
-- **Konum:** -629.5, 68, -437.5 (Drondra Krallığı, Kral Vargoth'un yanı)
+- **Konum:** -629.5, 68, -437.5 (Drondra Krallığı, Kral Vargoth'un yanı). UUID `078b6d17-96a0-49f6-b6c8-c88c78c6c45a` (npc_dialog cevapları için `kenpachi.js` içinde sabit)
 - **Krallık:** [Drondra](../kingdoms/drondra.md)
 - **Görevi:** Drondra Kralı'nı koruyan; fiziksel kuvvetin ve ham gücün simgesi. Kimseyi kendine denk görmez.
 - **Konsept:** Bleach'teki Kenpachi Zaraki'den ilham alınmıştır: savaş düşkünü, kaba, güçle hava atan, zayıfları küçümseyen.
