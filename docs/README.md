@@ -33,6 +33,17 @@ Bir sistemi değiştirdiğinde (yeni script, yeni kural, yeni klasör) ilgili do
 
 Genel proje kuralları (sunucuların bağımsızlığı, mod ekleme/kaldırma, yedek politikası) repo kökündeki `CLAUDE.md`'dedir.
 
+## Şu an neredeyiz (2026-09-30, devir teslim)
+
+Yeni oturuma başlayan Claude (Anubis'in veya swxff'in) önce burayı okur.
+
+- **VDS yok.** Eski VDS silindi, yenisi gelmedi. Sunucuda hiçbir şey yapılamaz; "Güncelle" ve yayın yeni VDS ayağa kalkana kadar bekler. Yeni VDS gelince: [vds-tasima.md](vds-tasima.md), ardından [vds-aktarma-notlari.md](vds-aktarma-notlari.md).
+- **Geliştirme yerelde.** swxff, VDS yedeğinden kurulan tek oyunculu dünyada çalışıyor (`saves/Medieval Fantasy VDS`, [lokal-dunya.md](lokal-dunya.md)). Buradaki KubeJS dosyalarının kopyası repoda: [tools/kubejs-yerel/](../tools/kubejs-yerel/README.md). NPC ve dünya değişiklikleri repoya girmez, yalnızca dokümanda izlenir.
+- **Son paket yayını:** 1.3.7 (2026-09-29). Sonrası yayınlanmadı: Watut/CoroUtil, Thorfinn, Kenpachi, Gojo, hocalar, Aizen.
+- **Üzerinde çalışılan iş:** Aizen'in yerleştirilmesi. Konum sonra seçilecek (öneri: Caddy spawn, Erwin ile Thorfinn arası), sonra `aizen_kur` ve test ([aizen.md](medieval-fantasy/characters/aizen.md)).
+- **Sıradaki büyük iş:** Yeni VDS'e taşıma. Havuz cümleleri [vds-aktarma-notlari.md](vds-aktarma-notlari.md) §3 ve Aizen bölümünde, yeni VDS'te yazılacak.
+- **Kim ne yapıyor:** swxff yerel oynanış geliştirmesi (NPC, hikâye, büyü); Anubis altyapı, VDS ve paket yayını (yedek, taşıma, göğüs modu).
+
 ## En önemli kurallar (özet)
 
 1. **VDS tek kaynaktır.** Sunucu da oyuncu paketi de `/root/servers/medieval-fantasy`'den gelir. Kimsenin yerel Modrinth profiline dosya koyulmaz.

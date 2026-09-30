@@ -1,0 +1,16 @@
+{
+  "spell.kubejs.amaterasu": "Amaterasu",
+  "spell.kubejs.chidori": "Chidori",
+  "spell.kubejs.flashstep": "Shunpo",
+  "spell.kubejs.flashstep.guide": "Instantaneously teleport to where you are looking, or directly behind any targeted creature. A creature struck from behind is stunned for a short time. Charges recharge over time; higher levels increase range and the number of charges.",
+  "spell.kubejs.gojo_blue": "Blue",
+  "spell.kubejs.gojo_blue.guide": "Collapse space at a point ahead: a small void pulls nearby creatures toward it. Gojo's Cursed Technique: Blue.",
+  "spell.kubejs.gojo_purple": "Purple",
+  "spell.kubejs.gojo_purple.guide": "Blue and Red merged into a single beam that erases what it touches. Gojo's Hollow Technique: Purple.",
+  "spell.kubejs.gojo_red": "Red",
+  "spell.kubejs.gojo_red.guide": "Reverse the pull: everything around you is repelled in a violent blast. Gojo's Reversal: Red.",
+  "spell.kubejs.kyoka_suigetsu": "Kyoka Suigetsu",
+  "spell.kubejs.kyoka_suigetsu.guide": "Weave a perfect illusion: mirror clones of yourself appear, copying your equipment and spells. Aizen's Complete Hypnosis.",
+  "spell.kubejs.rasengan": "Rasengan",
+  "spell.kubejs.tsukiyomi": "Tsukiyomi"
+}

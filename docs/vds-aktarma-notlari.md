@@ -6,7 +6,7 @@ Eski VDS kapatıldıktan sonra (2026-09-30) yeni işler **VDS yedeğinden kurula
 
 ## 1. Değişen ve yeni dosyalar
 
-Yerel profil: `%APPDATA%\.minecraft\versions\Medieval Fantasy\` (yeni VDS'te `/root/servers/medieval-fantasy/`).
+Yerel profil: `%APPDATA%\.minecraft\versions\Medieval Fantasy\` (yeni VDS'te `/root/servers/medieval-fantasy/`). Bu tablodaki KubeJS dosyalarının kopyası repoda: [tools/kubejs-yerel/](../tools/kubejs-yerel/README.md) (yerelde değişince kopya da güncellenir).
 
 | Dosya (kubejs/ altında) | Durum | Ne |
 |---|---|---|
