@@ -82,3 +82,9 @@ Yeni VDS'te havuz boşsa `havuz ekle swxff paket "..."` ile şunları yaz (yama 
 - Startup script değişikliği için sunucu **ve oyuncular** oyunu tamamen yeniden başlatmalı; paket güncellenmeden oyuncular Blue/Red/Purple'ı görmez.
 
 **Aizen'in hikâyesi (5 perde):** Oynanmış 23 saat sonra ihanet kendiliğinden oynar (10 saat misafir, 8 saat şüphe, 5 saat yaralı). Yaralı evrede NPC pozu `yoruichiPoseSnbt` (yoruichi_chase.js) ile yaslanma pozuna alınır; bu yüzden yoruichi_chase.js yüklü olmalı. Havuza ek cümle: "Aizen'in bir sırrı var; ona yardım edip etmeyeceğine dikkat et."
+
+## Havuza eklenecek ek oyuncu cümleleri (2026-10-01)
+
+- Thorfinn, Erwin ve Aizen artık altın elma, altın havuç ve büyülü altın elma vermiyor.
+- NPC'ler artık konuşmalarını sohbete değil diyalog penceresinde yapıyor; sefer teklifleri de pencereden seçiliyor.
+- Aizen'in yanına yaklaşınca Shunpo ile önüne gelir; NPC'lerin hızlı hareketleri artık Shunpo olarak görünür.
