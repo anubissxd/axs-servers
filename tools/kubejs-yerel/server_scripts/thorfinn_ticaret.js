@@ -15,11 +15,9 @@ const THOR_ORDER_COOLDOWN_MS = 180000
 // rank: gereken Birlik rütbesi (1-4), price: ZÜMRÜT (en çok 128), stock: oyuncu başına bir yenilenmede alınabilecek adet, hours: yenilenme süresi (gerçek saat).
 // Stok KİŞİYE ÖZELDİR (oyuncunun persistentData'sı: thor_shop_*), tembel yenilenir. Stoklar yarıya indirildi: en çok 1 adet; zaten 1 olanların yenilenme süresi iki katına çıktı.
 const THOR_SHOP = [
-  { key: 'havuc', stock: 1, hours: 8, rank: 1, id: 'minecraft:golden_carrot', n: 8, price: 8 },
   { key: 'ok', stock: 1, hours: 8, rank: 1, id: 'minecraft:arrow', n: 32, price: 6 },
   { key: 'et', stock: 1, hours: 8, rank: 1, id: 'minecraft:cooked_beef', n: 16, price: 6 },
   { key: 'tsisesi', stock: 1, hours: 12, rank: 1, id: 'minecraft:experience_bottle', n: 4, price: 12 },
-  { key: 'altinelma', stock: 1, hours: 24, rank: 2, id: 'minecraft:golden_apple', n: 1, price: 24 },
   { key: 'inci', stock: 1, hours: 24, rank: 2, id: 'minecraft:ender_pearl', n: 2, price: 32 },
   { key: 'tsisesi2', stock: 1, hours: 24, rank: 2, id: 'minecraft:experience_bottle', n: 12, price: 40 },
   { key: 'elmas', stock: 1, hours: 48, rank: 3, id: 'minecraft:diamond', n: 1, price: 40 },
@@ -397,9 +395,6 @@ function thorOrderDeliver(server, p, name) {
   } else if (tier === 1 && Math.random() < 0.3) {
     server.runCommandSilent('give ' + name + ' minecraft:bone_meal 8')
     extras.push('8 kemik unu')
-  } else if (tier === 2 && Math.random() < 0.25) {
-    server.runCommandSilent('give ' + name + ' minecraft:golden_carrot 8')
-    extras.push('8 altın havuç')
   }
   var before = thorLandRank(p)
   pd.putInt('thor_total', Number(pd.getInt('thor_total')) + 1)

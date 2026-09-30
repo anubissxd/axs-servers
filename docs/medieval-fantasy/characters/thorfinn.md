@@ -28,11 +28,9 @@ Fiyat zümrüt olarak; 64'ün üstü iki takas yuvasına bölünür. Kalan stok 
 
 | Rütbe | Mal | Fiyat (zümrüt) | Stok / yenilenme |
 |---|---|---|---|
-| Kül Bekçisi | 8 altın havuç | 8 | 1 / 8 sa |
 | Kül Bekçisi | 32 ok | 6 | 1 / 8 sa |
 | Kül Bekçisi | 16 pişmiş et | 6 | 1 / 8 sa |
 | Kül Bekçisi | 4 tecrübe şişesi | 12 | 1 / 12 sa |
-| Kan Yeminli | 1 altın elma | 24 | 1 / 24 sa |
 | Kan Yeminli | 2 ender incisi | 32 | 1 / 24 sa |
 | Kan Yeminli | 12 tecrübe şişesi | 40 | 1 / 24 sa |
 | Gece Avcısı | 1 elmas | 40 | 1 / 48 sa |
@@ -57,7 +55,7 @@ Thorfinn belirli mal ister; teslimde zümrüt öder. Bir seferde tek sipariş, g
 
 **Mevsim siparişleri (Serene Seasons):** Mevsim okunabiliyorsa siparişlerin yarısı o mevsime özel olur ve sipariş metninde "(İlkbahar siparişi)" yazar: ilkbaharda tohum, yazın karpuz ve yaban mersini, sonbaharda kabak ve elma, kışın pişmiş et ve ekmek. Mod yoksa (tek oyunculu paketinde da var) yalnızca normal siparişler verilir.
 
-**Küçük ekstralar:** Tür 1'de %30 kemik unu, Tür 2'de %25 altın havuç, Tür 3'te %4 zümrüt bloğu.
+**Küçük ekstralar:** Tür 1'de %30 kemik unu, Tür 3'te %4 zümrüt bloğu.
 
 ### Gece nöbeti (korkuluk)
 
