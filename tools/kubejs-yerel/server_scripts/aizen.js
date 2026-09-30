@@ -789,7 +789,9 @@ function aizenWander(server, p, name) {
   var hx = Number(sd.getDouble('aizen_hx'))
   var hz = Number(sd.getDouble('aizen_hz'))
   var dHome = Math.sqrt(Math.pow(Number(p.x) - hx, 2) + Math.pow(Number(p.z) - hz, 2))
-  if (dHome < 6 || dHome > 14) return
+  // yalnızca yakın (3,5-6 blok) ve aynı kat (en çok 3 blok yükseklik farkı): merdivenden çıkmadan aşağı inmesin, uzağa gitmesin
+  if (dHome < 3.5 || dHome > 6) return
+  if (Math.abs(Number(p.y) - Number(sd.getDouble('aizen_hy'))) > 3) return
   // oyuncu yakın ve NPC uzakta: Shunpo
   var npcE = aizenNpcPos(server)
   if (!npcE) return

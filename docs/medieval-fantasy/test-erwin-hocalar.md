@@ -90,7 +90,7 @@ Bu sistemler simülasyonla ve sunucu komutlarıyla sınandı ama **gerçek oyunc
 ## J. Aizen (5 perde)
 
 1. **Kurulum:** NPC'nin duracağı yerde `function yoruichi:aizen_kur` (oyunu yeniden başlattıktan sonra). Aizen doğmalı (dokusu aizen_v1), `/aizen_durum` sayacın başladığını göstermeli.
-2. **Perde I:** Bilgi (rütbene göre ipucu), yardım (çay), araştırma (öldür, ödül 1-2 zümrüt, defter sayfaları 1, 3, 5...). **Shunpo:** Aizen'in duruş noktasının 6-14 blok çevresine gel, ondan uzak dur: Aizen duman izi bırakıp önüne gelmeli, bir söz söylemeli, 30 sn sonra Shunpo ile dönmeli.
+2. **Perde I:** Bilgi (rütbene göre ipucu), yardım (çay), araştırma (öldür, ödül 1-2 zümrüt, defter sayfaları 1, 3, 5...). **Shunpo:** Aizen'in duruş noktasının 3,5-6 blok (aynı kat) çevresine gel, ondan uzak dur: Aizen duman izi bırakıp önüne gelmeli, bir söz söylemeli, 30 sn sonra Shunpo ile dönmeli.
 3. **Perde II:** `/aizen_evre 2`. Karşılama tuhaflaşmalı, "Bir şey fark ettim..." düğmesi çıkmalı, ipuçlarına ürkütücü ek gelmeli; sohbete 30 dk'da bir diğer NPC'lerin şüpheli sözü düşmeli.
 4. **Perde III (yaralı):** `/aizen_evre 3`. "AIZEN YARALANDI" sahnesi; Aizen yaslanma pozuna geçmeli. Diyalogda "Yiyecek getireyim" (12 ekmek → 1 zümrüt, sunucu geneli sayaç), "Yaralarına bakıyorum" (8 ipucu), "Kim yaptı?". `/aizen_durum` toplam yardımı göstermeli. Poz uygulanmazsa `logs/latest.log`'a bak.
 5. **Perde IV (ihanet):** `/aizen_evre 4`. Sessizlik, Erwin ve Kenpachi'nin sözü, cam kırılması, "AIZEN — Gözlük düştü", "Bu yara hiç yoktu", en çok yardım eden oyuncunun adı, ≥6 inceleme yapmışsan "Kırık Gözlük". Poz dikleşmeli, doku aizen_v2 olmalı, ~33 sn sonra evre 5.

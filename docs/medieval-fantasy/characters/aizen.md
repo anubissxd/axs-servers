@@ -3,7 +3,7 @@
 *(Sistem 5 perdelik hikâye olarak yazıldı ve simülasyonda test edildi; gerçek oyunda test edilmedi.)*
 
 - **Tür:** İnsan (easy_npc:humanoid, klasik kol). Etiketleri: `korunan`, `aizen_npc`. NPC uuid'si `727d69ef-1a95-4410-912e-287eed99b61a` (üreticinin çıktısı; kurulumdan sonra `data get entity @e[tag=aizen_npc,limit=1] UUID` ile doğrula).
-- **Konum:** **-1307, 80, -393** (swxff belirledi, 2026-10-01; önceki deneme -1310, 77, -392; Caddy bölgesinin batısı, spawn hub merkezinin -984, -375 yaklaşık 326 blok batısında, dolayısıyla hub güvenli bölgesinin (96 blok) dışında). Kurulum: orada dururken `function yoruichi:aizen_kur` (koordinat verilmez, komutu çalıştıranın yerine doğar; önce `/tp @s -1307 80 -393`). Sonra istenirse `/tp @e[tag=aizen_npc,limit=1] <x> <y> <z>`; script konumu yüklüyken 30 sn'de bir kaydeder. Gerçek dünyada henüz doğurulmadı. Not: Perde I-II Shunpo karşılaması yalnızca Aizen'in 6-14 blok çevresine gelen oyuncular için çalışır; spawn'dan uzak olduğu için oyuncular ona kendileri gitmeli.
+- **Konum:** **-1307, 80, -393** (swxff belirledi, 2026-10-01; önceki deneme -1310, 77, -392; Caddy bölgesinin batısı, spawn hub merkezinin -984, -375 yaklaşık 326 blok batısında, dolayısıyla hub güvenli bölgesinin (96 blok) dışında). Kurulum: orada dururken `function yoruichi:aizen_kur` (koordinat verilmez, komutu çalıştıranın yerine doğar; önce `/tp @s -1307 80 -393`). Sonra istenirse `/tp @e[tag=aizen_npc,limit=1] <x> <y> <z>`; script konumu yüklüyken 30 sn'de bir kaydeder. Gerçek dünyada henüz doğurulmadı. Not: Perde I-II Shunpo karşılaması yalnızca Aizen'in 3,5-6 blok çevresine (aynı kat, en çok 3 blok yükseklik farkı) gelen oyuncular için çalışır; spawn'dan uzak olduğu için oyuncular ona kendileri gitmeli.
 - **Krallık:** Caddy (önerilen). Bir yardımsever âlim olarak Erwin ve Thorfinn'in yanında güvenilir görünür.
 - **Konsept:** Bleach'teki Aizen: nazik ve bilge görünür, aslında her şeyi baştan kurmuştur. Sunucu **geneli** bir olayla maskesini düşürür ve boss olur.
 - **İlişkiler:** Erwin, Kenpachi ve diğerleri ihanet sahnesinde tepki verir. Gizli rolü oyunculara erken açık edilmez.
@@ -38,8 +38,8 @@ Toplam **23 saatlik oynanmış süre** sonra ihanet kendiliğinden oynar. Sürel
 
 ### Shunpo
 
-- **Shunpo görünümü (2026-10-01):** Aizen'in tüm görünür hızlı hareketleri (oyuncuya gelme, eve dönme, kapışmada arkana geçme) düz ışınlanma değil Shunpo: kalkışta siyah silüet ve kıvılcım, yolda hız çizgileri, varışta yer halkası ve flashstep sesi (`npc_shunpo.js`, Yoruichi'nin efekt fonksiyonlarını kullanır). İlk karşılama: oyuncu ilk kez evinin 6-14 blok çevresine gelince Shunpo ile önüne gelir.
-- **Perde I-II:** Oyuncu Aizen'in duruş noktasının 6-14 blok çevresine gelip ondan uzak durursa Aizen duman ve iz bırakarak **oyuncunun önüne Shunpo ile gelir**, bir söz söyler (evreye göre nazik ya da tuhaf), 30 saniye sonra Shunpo ile yerine döner. Oyuncu başına 20 dakikada bir, aynı anda tek gezinti.
+- **Shunpo görünümü (2026-10-01):** Aizen'in tüm görünür hızlı hareketleri (oyuncuya gelme, eve dönme, kapışmada arkana geçme) düz ışınlanma değil Shunpo: kalkışta siyah silüet ve kıvılcım, yolda hız çizgileri, varışta yer halkası ve flashstep sesi (`npc_shunpo.js`, Yoruichi'nin efekt fonksiyonlarını kullanır). İlk karşılama: oyuncu ilk kez evinin 3,5-6 blok çevresine gelince Shunpo ile önüne gelir.
+- **Perde I-II:** Oyuncu Aizen'in duruş noktasının 3,5-6 blok çevresine (aynı kat, en çok 3 blok yükseklik farkı) gelip ondan uzak durursa Aizen duman ve iz bırakarak **oyuncunun önüne Shunpo ile gelir**, bir söz söyler (evreye göre nazik ya da tuhaf), 30 saniye sonra Shunpo ile yerine döner. Oyuncu başına 20 dakikada bir, aynı anda tek gezinti.
 - **Perde V (boss):** Kenpachi'deki gibi 12 bloktan uzaklaşırsan arkana Shunpo yapar (3,5 sn bekleme).
 
 ## Sonrası
