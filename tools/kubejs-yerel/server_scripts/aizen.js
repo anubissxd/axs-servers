@@ -826,7 +826,7 @@ ServerEvents.tick(event => {
   if (aizenPhase % 200 === 0 && server.players.length > 0 && !global.aizenFight) {
     try { aizenAdvance(server, 10000) } catch (e) { console.error('aizen ilerleme hata: ' + e) }
   }
-  if (aizenPhase % 600 === 0 && !global.aizenFight && !global.aizenIntro) {
+  if (aizenPhase % 600 === 0 && !global.aizenFight && !global.aizenIntro && !global.aizenWander) {
     var npc = aizenNpcPos(server)
     if (npc && Number(npc.y) > 0) {
       server.persistentData.putInt('aizen_var', 1)
