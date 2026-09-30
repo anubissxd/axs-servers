@@ -103,6 +103,6 @@ Kurulum: oyunda `/reload`, sonra Erwin'in yakınında `function yoruichi:erwin_s
 1. "Seferi bırakıyorum" (sefer yokken) → "Bırakacak bir seferin yok." sohbette değil, **diyalog penceresinde**, "Tamam." düğmesiyle açılmalı.
 2. Bekleme süresindeyken sefer iste → "Biraz dinlen..." diyalogda.
 3. Sefer kabul edince başlık, özet ve kabul sözü **tek diyalogda birleşmiş** olmalı.
-4. Teklif listesi ([A] [B] [C]) hâlâ sohbette olmalı.
+4. Teklifler diyalogda açılmalı (üç seçenek, "Kan Bahsi ile seç" ve "Şimdilik kalsın" düğmeleri); seçince sefer başlamalı. Kan Bahsi alt penceresinde "Geri" çalışmalı. Sohbete düşüyorsa `logs/kubejs/server.log` içinde "erwin diyalog yazilamadi" satırına bak.
 5. Diyalog açılmıyor ya da boşsa `logs/latest.log`'a bak; metin sohbete düşüyorsa NPC yüklü değil ya da `erwin_setup` çalıştırılmamış demektir.
 6. İki oyuncu aynı anda konuşunca metinler karışmamalı.

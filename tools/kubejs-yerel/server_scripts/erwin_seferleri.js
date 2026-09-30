@@ -289,7 +289,26 @@ const ERWIN_NPC_UUID = '504788d8-3dc0-407e-aebf-ca04dc17cfcb'
 var erwinPending = {}
 
 function erwinSnbtEsc(s) {
-  return String(s).split('\\').join('\\\\').split('"').join('\\"')
+  return String(s).split('\\').join('\\\\').split('"').join('\\"').split('\n').join('\\n')
+}
+
+// Diyalog verisini yazar. 'data modify' değer zaten aynıysa başarısız (0) döner; bu yüzden önce farklı bir yer tutucu yazılır, sonra gerçek değer.
+function erwinDlgSet(server, dlg, path, value) {
+  var base = 'data modify entity ' + ERWIN_NPC_UUID + ' DialogData.DialogDataSet[{Name:"' + dlg + '"}].' + path + ' set value '
+  var ok = 0
+  try {
+    server.runCommandSilent(base + '"."')
+    ok = server.runCommandSilent(base + '"' + erwinSnbtEsc(value) + '"')
+  } catch (e) {
+    console.error('erwin diyalog yazma hata: ' + e)
+    ok = 0
+  }
+  if (!(ok > 0)) console.error('erwin diyalog yazilamadi: ' + dlg + ' ' + path + ' (erwin_setup calistirildi mi, NPC yuklu mu?)')
+  return ok > 0
+}
+
+function erwinDlgOpen(server, name, dlg) {
+  server.runCommandSilent('easy_npc dialog open ' + ERWIN_NPC_UUID + ' ' + name + ' ' + dlg)
 }
 
 function erwinSay(server, name, text) {
@@ -303,14 +322,8 @@ function erwinFlushSay(server, name) {
   var list = erwinPending[name]
   delete erwinPending[name]
   if (!list) return
-  var ok = 0
-  try {
-    ok = server.runCommandSilent('data modify entity ' + ERWIN_NPC_UUID + ' DialogData.DialogDataSet[{Name:"erwin_yanit"}].Texts[0].Text set value "' + erwinSnbtEsc(list.join(' ')) + '"')
-  } catch (e) {
-    ok = 0
-  }
-  if (ok > 0) {
-    server.runCommandSilent('easy_npc dialog open ' + ERWIN_NPC_UUID + ' ' + name + ' erwin_yanit')
+  if (erwinDlgSet(server, 'erwin_yanit', 'Texts[0].Text', list.join(' '))) {
+    erwinDlgOpen(server, name, 'erwin_yanit')
   } else {
     list.forEach(t => erwinSayChat(server, name, t))
   }
@@ -467,9 +480,8 @@ function erwinBuildOffers(p) {
   return offers
 }
 
-function erwinOfferLine(server, name, idx, raw) {
+function erwinOfferData(raw) {
   var parts = raw.split(':')
-  var labels = ['A', 'B', 'C']
   var head, info, tier, extra = ''
   if (parts[0] === 'C') {
     var ch = ERWIN_CHAIN_BY_ID[parts[1]]
@@ -485,6 +497,14 @@ function erwinOfferLine(server, name, idx, raw) {
     if (parts[3] === '1') extra = '  ☾ Kanlı Ay: ödül x2'
   }
   var rw = ERWIN_REWARDS[tier].em
+  return { chain: parts[0] === 'C', head: head, info: info, tier: tier, extra: extra, rw: rw }
+}
+
+function erwinOfferLine(server, name, idx, raw) {
+  var d = erwinOfferData(raw)
+  var labels = ['A', 'B', 'C']
+  var head = d.head, info = d.info, tier = d.tier, extra = d.extra, rw = d.rw
+  var parts = [d.chain ? 'C' : '']
   var comps = [
     '{"text":" [' + labels[idx] + '] ","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/trigger erwin_pick set ' + (idx + 1) + '"},"hoverEvent":{"action":"show_text","contents":"Bu seferi seç"}}',
     '{"text":"[☠] ","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/trigger erwin_pick set ' + (idx + 11) + '"},"hoverEvent":{"action":"show_text","contents":"Kan Bahsi: ödül x1.5, ama ölürsen sefer iptal olur"}}',
@@ -497,6 +517,31 @@ function erwinOfferLine(server, name, idx, raw) {
   server.runCommandSilent('tellraw ' + name + ' [' + comps.join(',') + ']')
 }
 
+// Teklifleri diyalog penceresinde gösterir: 'erwin_teklif_<n>' (seç, n = teklif sayısı 1-3) ve 'erwin_bahis_<n>' (Kan Bahsi ile seç).
+// Düğmeler 'erwin_pick' skorunu ayarlar (A/B/C = 1-3, Kan Bahsi = 11-13), geri kalanını tick döngüsü halleder. Yazılamazsa false döner (sohbete düşülür).
+function erwinOfferDialog(server, name, offers) {
+  var n = offers.length
+  var letters = ['A', 'B', 'C']
+  var lines = [], names = [], bahisNames = []
+  for (var i = 0; i < n; i++) {
+    var d = erwinOfferData(offers[i])
+    lines.push('[' + letters[i] + '] ' + d.head + d.info.replace(/\s+$/, '') + ' ' + erwinStars(d.tier) + ' ödül ≈ ' + d.rw[0] + '-' + d.rw[1] + ' zümrüt' + (d.extra !== '' ? ' (' + d.extra.trim() + ')' : ''))
+    names.push(letters[i] + ': ' + d.head)
+    bahisNames.push('☠ ' + letters[i] + ': ' + d.head)
+  }
+  var body = lines.join('\n')
+  var dlg = 'erwin_teklif_' + n
+  var bdlg = 'erwin_bahis_' + n
+  var ok = erwinDlgSet(server, dlg, 'Texts[0].Text', erwinPickOne(ERWIN_OFFER_HEAD) + '\n\n' + body + '\n\nTeklifler 10 dakika geçerli.')
+  ok = ok && erwinDlgSet(server, bdlg, 'Texts[0].Text', 'Kan Bahsi: ödül x1.5, ama ölürsen sefer iptal olur. Hangisine bahis oynuyorsun?\n\n' + body)
+  for (var j = 0; ok && j < n; j++) {
+    ok = erwinDlgSet(server, dlg, 'Buttons[' + j + '].Name', names[j]) && erwinDlgSet(server, bdlg, 'Buttons[' + j + '].Name', bahisNames[j])
+  }
+  if (!ok) return false
+  erwinDlgOpen(server, name, dlg)
+  return true
+}
+
 function erwinOffer(server, p, name) {
   var pd = p.persistentData
   var offers = erwinBuildOffers(p)
@@ -504,9 +549,12 @@ function erwinOffer(server, p, name) {
     erwinSay(server, name, 'Şu an sana verecek uygun bir seferim yok. Biraz sonra tekrar gel.')
     return
   }
-  erwinSayChat(server, name, erwinPickOne(ERWIN_OFFER_HEAD))
-  for (var i = 0; i < offers.length; i++) erwinOfferLine(server, name, i, offers[i])
-  erwinNote(server, name, 'Seçmek için [A] [B] [C]\'ye tıkla. [☠] = Kan Bahsi (ödül x1.5, ölürsen iptal). Teklifler 10 dakika geçerli.', 'white')
+  var shown = erwinOfferDialog(server, name, offers)
+  if (!shown) {
+    erwinSayChat(server, name, erwinPickOne(ERWIN_OFFER_HEAD))
+    for (var i = 0; i < offers.length; i++) erwinOfferLine(server, name, i, offers[i])
+    erwinNote(server, name, 'Seçmek için [A] [B] [C]\'ye tıkla. [☠] = Kan Bahsi (ödül x1.5, ölürsen iptal). Teklifler 10 dakika geçerli.', 'white')
+  }
   pd.putString('erwin_o_1', offers[0] || '')
   pd.putString('erwin_o_2', offers[1] || '')
   pd.putString('erwin_o_3', offers[2] || '')

@@ -92,6 +92,21 @@ const dialogs = [
     btn('Katılıyorum.', [tag('erwin_met'), open('erwin_hub_0')], 'erwin_kabul')
   ], 'erwin_ilk')
 ]
+// Sefer teklifleri: erwin_teklif_<n> (seç) ve erwin_bahis_<n> (Kan Bahsi); n = teklif sayısı. Metin ve düğme adları script tarafından (erwinOfferDialog) her teklifte yazılır.
+const PICK_LETTERS = ['A', 'B', 'C']
+const pick = v => action('/scoreboard players set @initiator erwin_pick ' + v)
+for (let n = 1; n <= 3; n++) {
+  const sel = [], bet = []
+  for (let i = 0; i < n; i++) {
+    sel.push(btn(PICK_LETTERS[i], [pick(i + 1), CLOSE]))
+    bet.push(btn('☠ ' + PICK_LETTERS[i], [pick(i + 11), CLOSE]))
+  }
+  sel.push(btn('☠ Kan Bahsi ile seç.', [open('erwin_bahis_' + n)]))
+  sel.push(btn('Şimdilik kalsın.', [CLOSE]))
+  bet.push(btn('Geri.', [open('erwin_teklif_' + n)]))
+  dialogs.push(dialog('erwin_teklif_' + n, '...', sel, 'erwin_teklif_' + n))
+  dialogs.push(dialog('erwin_bahis_' + n, '...', bet, 'erwin_bahis_' + n))
+}
 for (let r = 0; r < 5; r++) HUB_VARIANTS[r].forEach((t, k) => { const nm = k === 0 ? 'erwin_hub_' + r : 'erwin_hub_' + r + '_' + (k + 1); dialogs.push(dialog(nm, t, hubButtons(), nm)) })
 
 function route(dlg, cond) {
