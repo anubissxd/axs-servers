@@ -30,7 +30,7 @@ function yl3EntHasTag(ent, tag) {
 }
 
 function yl3Say(server, name, text) {
-  server.runCommandSilent('tellraw ' + name + ' [{"text":"Yoruichi","color":"light_purple","bold":true},{"text":": ' + text + '","color":"white","italic":true,"bold":false}]')
+  yoruichiSay(server, name, text)
 }
 
 function yl3ActionBar(server, name, text) {

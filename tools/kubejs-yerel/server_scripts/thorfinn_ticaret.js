@@ -43,6 +43,10 @@ function thorSayLine(server, name, text, color) {
   npcDlgSay(server, THOR_UUID, 'thorfinn_yanit', name, text, true, t => thorNote(server, name, t, color))
 }
 
+function thorBar(server, name, text, color) {
+  server.runCommandSilent('title ' + name + ' actionbar {"text":"' + thorJsonEsc(text) + '","color":"' + (color || 'gray') + '"}')
+}
+
 function thorNote(server, name, text, color) {
   server.runCommandSilent('tellraw ' + name + ' {"text":"' + thorJsonEsc(text) + '","color":"' + (color || 'gray') + '"}')
 }
@@ -191,7 +195,7 @@ function thorShopOpen(server, p, name) {
     thorSay(server, name, 'Ambarın kilidi takıldı. Biraz sonra gel.')
     return
   }
-  thorNote(server, name, 'Bedel zümrüttür. Stok sana özel ve az; tükenen mal uzun süre sonra yenilenir.', 'gold')
+  thorBar(server, name, 'Bedel zümrüttür. Stok sana özel ve az; tükenen mal uzun süre sonra yenilenir.', 'gold')
 }
 
 // ------------------------------------------------------------------ Hasat siparişleri
@@ -522,7 +526,7 @@ function thorNobetTick(server) {
       if (elapsed > THOR_NOBET_MAX_MS || (elapsed > 180000 && !thorIsNight(server) && Number(pd.getInt('thor_n_have')) < Number(pd.getInt('thor_n_need')))) {
         pd.putInt('thor_n_active', 0)
         pd.putLong('thor_n_next', Date.now() + THOR_NOBET_COOLDOWN_MS)
-        thorNote(server, String(p.username), 'Nöbet sona erdi: şafak söktü ya da süre doldu. Thorfinn yorulduğunu söyler.', 'gray')
+        thorBar(server, String(p.username), 'Nöbet sona erdi: şafak söktü ya da süre doldu. Thorfinn yorulduğunu söyler.', 'gray')
       }
     } catch (e) { }
   })
@@ -541,7 +545,7 @@ EntityEvents.death(event => {
     pd.putInt('thor_n_have', have)
     var name = String(src.username)
     if (have >= Number(pd.getInt('thor_n_need'))) {
-      thorNote(src.server, name, 'Nöbet tamam! Thorfinn\'e dön.', 'gold')
+      thorBar(src.server, name, 'Nöbet tamam! Thorfinn\'e dön.', 'gold')
       src.server.runCommandSilent('playsound minecraft:block.note_block.chime master ' + name + ' ~ ~ ~ 1 1.5')
     } else {
       src.server.runCommandSilent('title ' + name + ' actionbar {"text":"Nöbet: ' + have + '/' + Number(pd.getInt('thor_n_need')) + '","color":"dark_green"}')

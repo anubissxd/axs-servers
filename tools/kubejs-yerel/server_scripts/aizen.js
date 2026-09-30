@@ -86,7 +86,7 @@ function aizenStage(server) {
   return v >= 1 && v <= 5 ? v : 1
 }
 
-function aizenSay(server, name, text) {
+function aizenSayChat(server, name, text) {
   var st = aizenStage(server)
   var color = st >= 4 ? 'dark_purple' : 'gold'
   server.runCommandSilent('tellraw ' + name + ' [{"text":"Aizen","color":"' + color + '","bold":true},{"text":": ","color":"gray","bold":false},{"text":"' + aizenEsc(text) + '","color":"white","italic":true,"bold":false}]')
@@ -102,16 +102,22 @@ function aizenDlgUuid(server) {
   return e ? String(e.uuid) : ''
 }
 
-function aizenSayDlg(server, name, text) {
+function aizenSay(server, name, text) {
   var u = aizenDlgUuid(server)
-  if (u === '') { aizenSay(server, name, text); return }
-  npcDlgSay(server, u, 'aizen_yanit', name, text, false, t => aizenSay(server, name, t))
+  if (u === '') { aizenSayChat(server, name, text); return }
+  npcDlgSay(server, u, 'aizen_yanit', name, text, false, t => aizenSayChat(server, name, t))
 }
+
+function aizenSayDlg(server, name, text) { aizenSay(server, name, text) }
+
+// Kapışma içi replik/uyarı: pencere yerine ekranın altında (sohbete yazılmaz)
+function aizenSayBar(server, name, text) { npcBarSay(server, name, 'Aizen', text, aizenStage(server) >= 4 ? 'dark_purple' : 'gold') }
+function aizenBar(server, name, text, color) { server.runCommandSilent('title ' + name + ' actionbar {"text":"' + aizenEsc(text) + '","color":"' + (color || 'gray') + '"}') }
 
 function aizenLineDlg(server, name, text, color) {
   var u = aizenDlgUuid(server)
   if (u === '') { aizenNote(server, name, text, color); return }
-  npcDlgSay(server, u, 'aizen_yanit', name, text, true, t => aizenNote(server, name, t, color))
+  npcDlgSay(server, u, 'aizen_yanit', name, text, true, t => aizenBar(server, name, t, color))
 }
 
 // ------------------------------------------------------------------ Evre etiketleri ve gecikmeli komutlar
@@ -181,7 +187,7 @@ function aizenAdvance(server, dtMs) {
       var hh = list[i % list.length]
       pd.putInt(key, i + 1)
       server.players.forEach(p => {
-        server.runCommandSilent('tellraw ' + String(p.username) + ' [{"text":"' + hh[0] + '","color":"' + hh[1] + '","bold":true},{"text":": ","color":"gray","bold":false},{"text":"' + aizenEsc(hh[2]) + '","color":"white","italic":true,"bold":false}]')
+        npcSubtitleSay(server, String(p.username), hh[0], hh[2], hh[1])
       })
     }
     pd.putLong('aizen_hint_ms', hint)
@@ -399,7 +405,7 @@ function aizenTaskDeath(event) {
   pd.putInt('aizen_r_have', have)
   var name = String(src.username)
   if (have >= Number(pd.getInt('aizen_r_need'))) {
-    aizenNote(src.server, name, 'Gözlem tamam! Aizen\'e dön.', 'gold')
+    aizenBar(src.server, name, 'Gözlem tamam! Aizen\'e dön.', 'gold')
     src.server.runCommandSilent('playsound minecraft:block.note_block.chime master ' + name + ' ~ ~ ~ 1 1.5')
   } else {
     src.server.runCommandSilent('title ' + name + ' actionbar {"text":"Gözlem: ' + have + '/' + Number(pd.getInt('aizen_r_need')) + ' ' + aizenEsc(String(pd.getString('aizen_r_label'))) + '","color":"gold"}')
@@ -589,7 +595,7 @@ function aizenFightBegin(server, p, name) {
   var pd = server.persistentData
   server.runCommandSilent('execute in minecraft:overworld run summon easy_npc:humanoid ' + Number(pd.getDouble('aizen_hx')) + ' ' + Number(pd.getDouble('aizen_hy')) + ' ' + Number(pd.getDouble('aizen_hz')) + ' ' + nbt)
   global.aizenFight = { name: name, uuid: String(uuid), start: Date.now(), phase: 1, nextHit: Date.now() + 2500, nextKido: Date.now() + 5000, nextShunpo: Date.now() + 4000, nextIllusion: Date.now() + 22000, nextKuro: Date.now() + 15000, nextSay: Date.now() + 14000, kuro: false, decoyUntil: 0 }
-  aizenSay(server, name, 'Güzel. Şimdi izle. Ve gözlerine güvenme.')
+  aizenSayBar(server, name, 'Güzel. Şimdi izle. Ve gözlerine güvenme.')
 }
 
 function aizenFightEnd(server, won, reason) {
@@ -606,7 +612,7 @@ function aizenFightEnd(server, won, reason) {
   server.players.forEach(o => { if (String(o.username) === name) p = o })
   if (p) {
     p.persistentData.putLong('aizen_next', Date.now() + (won ? 600000 : 180000))
-    if (!won) aizenSay(server, name, reason || 'Bu kadar mı? Gerçekten bir oyun sanmıştım.')
+    if (!won) aizenSayBar(server, name, reason || 'Bu kadar mı? Gerçekten bir oyun sanmıştım.')
   }
 }
 
@@ -733,7 +739,7 @@ function aizenFightTick(server) {
     server.runCommandSilent('execute at ' + name + ' rotated as ' + name + ' run tp ' + f.uuid + ' ^ ^ ^-2.2')
     f.decoyUntil = now + 10000
     f.nextIllusion = now + 22000
-    aizenSay(server, name, aizenPick(['Hangisi gerçek?', 'Gördüğün, benim gösterdiğimdir.', 'Doğru olanı seçebilir misin?']))
+    aizenSayBar(server, name, aizenPick(['Hangisi gerçek?', 'Gördüğün, benim gösterdiğimdir.', 'Doğru olanı seçebilir misin?']))
   }
   if (Number(f.decoyUntil) > 0 && now >= Number(f.decoyUntil)) {
     server.runCommandSilent('kill @e[tag=aizen_decoy]')
@@ -745,7 +751,7 @@ function aizenFightTick(server) {
       f.kuro = { x: Number(p.x), y: Number(p.y), z: Number(p.z), at: now + 2200 }
       server.runCommandSilent('execute at ' + name + ' run particle minecraft:dust 0.1 0.0 0.1 3 ~ ~0.2 ~ 3 0.1 3 0 80')
       server.runCommandSilent('execute at ' + name + ' run playsound minecraft:block.beacon.power_select master ' + name + ' ~ ~ ~ 1 0.6')
-      aizenNote(server, name, 'Kurohitsugi! Bulunduğun yerden uzaklaş!', 'dark_purple')
+      aizenBar(server, name, 'Kurohitsugi! Bulunduğun yerden uzaklaş!', 'dark_purple')
     } else if (f.kuro && now >= Number(f.kuro.at)) {
       var kd = Math.sqrt(Math.pow(Number(p.x) - f.kuro.x, 2) + Math.pow(Number(p.z) - f.kuro.z, 2))
       server.runCommandSilent('particle minecraft:dust 0.1 0.0 0.1 3 ' + f.kuro.x + ' ' + (f.kuro.y + 1) + ' ' + f.kuro.z + ' 2 2 2 0 120 force')
@@ -759,7 +765,7 @@ function aizenFightTick(server) {
     }
   }
   if (now >= Number(f.nextSay)) {
-    aizenSay(server, name, aizenPick(['Hâlâ ayaktasın. Şaşırtıcı.', 'Her adımın benim gözlemimdeydi.', 'Bunu bekliyordum, ama yine de eğlenceli.']))
+    aizenSayBar(server, name, aizenPick(['Hâlâ ayaktasın. Şaşırtıcı.', 'Her adımın benim gözlemimdeydi.', 'Bunu bekliyordum, ama yine de eğlenceli.']))
     f.nextSay = now + 20000 + aizenRand(0, 8000)
   }
 }
@@ -884,7 +890,7 @@ EntityEvents.death(event => {
       if (s0 && s0.isPlayer()) {
         event.server.runCommandSilent('effect give ' + String(s0.username) + ' minecraft:blindness 3 0 true')
         event.server.runCommandSilent('effect give ' + String(s0.username) + ' minecraft:slowness 3 1 true')
-        aizenNote(event.server, String(s0.username), 'Sahte! Yanılsamaya kandın.', 'dark_gray')
+        aizenBar(event.server, String(s0.username), 'Sahte! Yanılsamaya kandın.', 'dark_gray')
       }
       return
     }

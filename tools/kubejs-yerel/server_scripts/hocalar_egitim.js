@@ -178,9 +178,11 @@ function hocaNpcOf(key) {
   return k === 'itachi' ? 'Itachi' : (k === 'gojo' ? 'Gojo' : 'Kakashi')
 }
 
-function hocaSayDlg(server, name, npc, text) {
-  npcDlgSay(server, HOCA_UUIDS[npc], String(npc).toLowerCase() + '_yanit', name, text, false, t => hocaSay(server, name, npc, t))
+function hocaSay(server, name, npc, text) {
+  npcDlgSay(server, HOCA_UUIDS[npc], String(npc).toLowerCase() + '_yanit', name, text, false, t => hocaSayChat(server, name, npc, t))
 }
+
+function hocaSayDlg(server, name, npc, text) { hocaSay(server, name, npc, text) }
 
 function hocaLineDlg(server, name, npc, text, color) {
   npcDlgSay(server, HOCA_UUIDS[npc], String(npc).toLowerCase() + '_yanit', name, text, true, t => hocaNote(server, name, t, color))
@@ -202,7 +204,7 @@ function hocaNearestNpc(server, name) {
   return best
 }
 
-function hocaSay(server, name, npc, text) {
+function hocaSayChat(server, name, npc, text) {
   var parts = String(text).split('**')
   var comps = ['{"text":"' + npc + '","color":"' + HOCA_COLOR[npc] + '","bold":true}', '{"text":": ","color":"gray","bold":false}']
   for (var i = 0; i < parts.length; i++) {
@@ -505,7 +507,7 @@ function hocaSceneStart(server, p, name, key) {
     server.runCommandSilent('tag @e[tag=hoca_new] remove hoca_new')
     for (var i = 0; i < HOCA_ILLUSION_DECOYS; i++) hocaIllusionDecoy(server, p, name)
   }
-  hocaNote(server, name, q.scene === 'bell' ? 'Gölge Kakashi belirdi. 90 saniyen var!' : 'Beş yanılsama belirdi. Gerçek olan yerinden kıpırdamaz. 2 dakikan var!', 'aqua')
+  hocaBar(server, name, q.scene === 'bell' ? 'Gölge Kakashi belirdi. 90 saniyen var!' : 'Beş yanılsama belirdi. Gerçek olan yerinden kıpırdamaz. 2 dakikan var!', 'aqua')
 }
 
 function hocaIllusionDecoy(server, p, name) {
@@ -516,7 +518,7 @@ function hocaIllusionDecoy(server, p, name) {
 
 function hocaSceneEnd(server, name, msg, color) {
   hocaSceneRemove(server, name)
-  hocaNote(server, name, msg, color)
+  hocaBar(server, name, msg, color)
 }
 
 function hocaSceneTick(server, phase) {
@@ -587,7 +589,7 @@ function hocaSceneDeath(event) {
     var pl = hocaFindPlayer(server, owner)
     pl.persistentData.putInt('hoca_have', 1)
     hocaSceneRemove(server, owner)
-    hocaNote(server, owner, isBell ? 'Zil senin! Sınav tamam. Hocana dönüp haber ver.' : 'Gerçek olanı buldun. Sınav tamam. Hocana dönüp haber ver.', 'gold')
+    hocaBar(server, owner, isBell ? 'Zil senin! Sınav tamam. Hocana dönüp haber ver.' : 'Gerçek olanı buldun. Sınav tamam. Hocana dönüp haber ver.', 'gold')
     hocaBar(server, owner, 'Sınav tamam. Hocana rapor ver.', 'gold')
     server.runCommandSilent('playsound minecraft:block.note_block.chime master ' + owner + ' ~ ~ ~ 1 1.5')
     return true
@@ -596,7 +598,7 @@ function hocaSceneDeath(event) {
   if (byOwner) {
     server.runCommandSilent('effect give ' + owner + ' minecraft:blindness 4 0 true')
     server.runCommandSilent('effect give ' + owner + ' minecraft:slowness 3 1 true')
-    hocaNote(server, owner, 'Sahte! Gözün karardı.', 'dark_gray')
+    hocaBar(server, owner, 'Sahte! Gözün karardı.', 'dark_gray')
   }
   sc.debt = Number(sc.debt) + 1
   sc.spawnAt = Date.now()
@@ -805,13 +807,13 @@ EntityEvents.death(event => {
       pd.putString('hoca_kills', list.join(','))
     } else {
       pd.putInt('hoca_have', before + 1)
-      if (q.need >= 4 && before + 1 === Math.ceil(q.need / 2)) hocaSay(src.server, String(src.username), spell.npc, HOCA_MILESTONE[spell.npc][Math.floor(Math.random() * 2)])
+      if (q.need >= 4 && before + 1 === Math.ceil(q.need / 2)) npcBarSay(src.server, String(src.username), spell.npc, HOCA_MILESTONE[spell.npc][Math.floor(Math.random() * 2)])
     }
     var name = String(src.username)
     var server = src.server
     if (before + 1 >= q.need) {
       hocaBar(server, name, spell.name + ' sınavı tamam. ' + spell.npc + '\'ye rapor ver.', 'gold')
-      hocaNote(server, name, 'Sınav tamamlandı! ' + spell.npc + '\'ye dönüp haber ver' + (q.win > 0 ? ' (pencere dolmadan)' : '') + '.', 'gold')
+      hocaBar(server, name, 'Sınav tamamlandı! ' + spell.npc + '\'ye dönüp haber ver' + (q.win > 0 ? ' (pencere dolmadan)' : '') + '.', 'gold')
       server.runCommandSilent('playsound minecraft:block.note_block.chime master ' + name + ' ~ ~ ~ 1 1.5')
     } else {
       hocaBar(server, name, hocaQuestText(src), 'aqua')

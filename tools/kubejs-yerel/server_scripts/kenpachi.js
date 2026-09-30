@@ -117,7 +117,7 @@ function kenpachiFightBegin(server, p, name) {
   server.runCommandSilent('execute in minecraft:overworld run summon easy_npc:humanoid ' + KENPACHI_HOME.x + ' ' + KENPACHI_HOME.y + ' ' + KENPACHI_HOME.z + ' ' + nbt)
   global.kenpachiFight = { name: name, uuid: String(uuid), start: Date.now(), phase: 1, nextHit: Date.now() + 2000, nextSay: Date.now() + 15000, nextShunpo: Date.now() + 3000, nextDoor: 0 }
   server.runCommandSilent('execute at ' + name + ' run playsound minecraft:entity.ravager.roar master ' + name + ' ~ ~ ~ 1 0.6')
-  kenpachiSay(server, name, 'Gel bakalım! Ağlama yeter ki.')
+  kenpachiSayBar(server, name, 'Gel bakalım! Ağlama yeter ki.')
 }
 
 function kenpachiFightEnd(server, won, reason) {
@@ -133,7 +133,7 @@ function kenpachiFightEnd(server, won, reason) {
   server.players.forEach(o => { if (String(o.username) === name) p = o })
   if (p) {
     p.persistentData.putLong('kenpachi_next', Date.now() + (won ? KENPACHI_COOLDOWN_MS : 120000))
-    if (!won) kenpachiSay(server, name, reason || 'Hah! Bu kadar mı? Sıkıcıydı. Git, biraz büyü, sonra tekrar dene.')
+    if (!won) kenpachiSayBar(server, name, reason || 'Hah! Bu kadar mı? Sıkıcıydı. Git, biraz büyü, sonra tekrar dene.')
   }
 }
 
@@ -239,7 +239,7 @@ function kenpachiFightTick(server) {
   // ara sıra sözler
   if (now >= Number(f.nextSay)) {
     var lines = ['Hah! Daha sert vur!', 'Bu kadar mı? Eğlendir beni!', 'Ölmeden önce biraz mücadele et!', 'Güzel... güzel! Devam et!']
-    kenpachiSay(server, name, kenpachiPick(lines))
+    kenpachiSayBar(server, name, kenpachiPick(lines))
     f.nextSay = now + 18000 + Math.floor(Math.random() * 8000)
   }
 }
@@ -250,11 +250,16 @@ function kenpachiEsc(s) { return String(s).split('\\').join('\\\\').split('"').j
 
 // Kenpachi'nin konuşma diyaloğuna verdiği cevaplar diyalog penceresinde açılır (npc_dialog.js); kapışma ve sahne repliği sohbette kalır.
 const KENPACHI_NPC_UUID = '078b6d17-96a0-49f6-b6c8-c88c78c6c45a'
-function kenpachiSayDlg(server, name, text) {
-  npcDlgSay(server, KENPACHI_NPC_UUID, 'kenpachi_yanit', name, text, false, t => kenpachiSay(server, name, t))
+function kenpachiSay(server, name, text) {
+  npcDlgSay(server, KENPACHI_NPC_UUID, 'kenpachi_yanit', name, text, false, t => kenpachiSayChat(server, name, t))
 }
 
-function kenpachiSay(server, name, text) {
+function kenpachiSayDlg(server, name, text) { kenpachiSay(server, name, text) }
+
+// Kapışma içi replik: pencere yerine ekranın altında (sohbete yazılmaz)
+function kenpachiSayBar(server, name, text) { npcBarSay(server, name, 'Kenpachi', text, 'dark_red') }
+
+function kenpachiSayChat(server, name, text) {
   server.runCommandSilent('tellraw ' + name + ' [{"text":"Kenpachi","color":"dark_red","bold":true},{"text":": ","color":"gray","bold":false},{"text":"' + kenpachiEsc(text) + '","color":"white","italic":true,"bold":false}]')
 }
 
@@ -270,7 +275,7 @@ function kenpachiPressure(server, name, line) {
     { t: 1.6, sound: ['minecraft:entity.warden.heartbeat', 1, 0.6] }
   ]
   cinePlay(server, name, steps)
-  kenpachiSay(server, name, line)
+  kenpachiSayBar(server, name, line)
 }
 
 var kenpachiPhase = 0

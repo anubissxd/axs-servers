@@ -18,7 +18,6 @@ function yoruichiL2HasTag(p, tag) {
 
 function yoruichiL2Progress(server, name, n) {
   server.runCommandSilent('title ' + name + ' actionbar {"text":"Shunpo: ' + n + '/' + YORUICHI_L2_TARGET + ' düşman","color":"light_purple"}')
-  server.runCommandSilent('tellraw ' + name + ' [{"text":"Yoruichi görevi","color":"light_purple","bold":true},{"text":": ' + n + '/' + YORUICHI_L2_TARGET + ' düşman.","color":"white","bold":false}]')
 }
 
 EntityEvents.death(event => {
@@ -50,7 +49,7 @@ EntityEvents.death(event => {
       event.server.runCommandSilent('tag ' + name + ' add yoruichi_l2_done')
       event.server.runCommandSilent('tag ' + name + ' remove yoruichi_l2')
       yoruichiL2Progress(event.server, name, n)
-      event.server.runCommandSilent('tellraw ' + name + ' [{"text":"Yoruichi","color":"light_purple","bold":true},{"text":": Beş gölge, beş sessiz son. Bana dön.","color":"white","italic":true,"bold":false}]')
+      yoruichiSay(event.server, name, 'Beş gölge, beş sessiz son. Bana dön.')
     } else {
       yoruichiL2Progress(event.server, name, n)
     }

@@ -61,3 +61,16 @@ function npcDlgFlush(server, uuid, dlg, name, key, chatFn) {
     list.forEach(it => chatFn(it.t))
   }
 }
+
+// Akış içindeki (kapışma, kovalama, sahne ortası) kısa replikler: pencere oyuncuyu kilitleyeceği için ekranın altında (actionbar) gösterilir, sohbete yazılmaz.
+function npcBarSay(server, name, speaker, text, color) {
+  var t = String(speaker) + ': ' + String(text).split('**').join('')
+  server.runCommandSilent('title ' + name + ' actionbar {"text":"' + npcDlgEsc(t) + '","color":"' + (color || 'white') + '"}')
+}
+
+// Tüm oyunculara giden arka plan söylentisi/duyuru: altyazı olarak gösterilir (başlık boş), sohbete yazılmaz.
+function npcSubtitleSay(server, name, speaker, text, color) {
+  server.runCommandSilent('title ' + name + ' times 10 100 20')
+  server.runCommandSilent('title ' + name + ' title {"text":""}')
+  server.runCommandSilent('title ' + name + ' subtitle {"text":"' + npcDlgEsc(String(speaker) + ': ' + String(text).split('**').join('')) + '","color":"' + (color || 'white') + '","italic":true}')
+}

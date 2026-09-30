@@ -1,6 +1,6 @@
 # NPC cevapları: sohbet yerine diyalog penceresi
 
-NPC'ler, bir diyalog düğmesine tıklandığında verdikleri cevapları (bekleme, red, rapor, bilgi ekranları, teklifler) sohbete değil, **Easy NPC diyalog penceresinde** gösterir. Kapışma, sahne, gezinme ve başlık/ses gibi **oyun akışının içindeki** replikler sohbette kalır (pencere bir sahnenin ortasına açılmasın diye).
+NPC'lerin **konuşmaları sohbete yazılmaz**: cevaplar, bilgi ekranları, sahne replikleri ve ilk karşılamalar (Aizen'in Shunpo ile gelip konuşması dahil) **Easy NPC diyalog penceresinde** açılır. Tek istisna, **oyuncunun hareket ettiği anlar** (kapışma, sınav sırasında ipucu, arka plan söylentisi): pencere oyuncuyu kilitleyeceği için bu kısa replikler ekranın altında (actionbar) ya da altyazı olarak gösterilir; yine sohbete yazılmaz. Sistem bilgi satırları (görev sayacı, ödül özeti) sohbette kalır.
 
 ## Nasıl çalışır
 
@@ -18,7 +18,7 @@ Bilinen tuzaklar (oyunda bulundu):
 
 ## Kapsam
 
-| NPC | Diyalog | Diyalog adı | Sohbette kalanlar |
+| NPC | Diyalog | Diyalog adı | Pencere yerine ekran altı/altyazı |
 |---|---|---|---|
 | Erwin | Tüm cevaplar, bilgi ekranları, sefer teklifleri (`erwin_teklif_<n>`, `erwin_bahis_<n>`: seç ve Kan Bahsi) | `erwin_yanit` | Sefer olay mesajları (ilerleme, ödül, terfi sahnesi) |
 | Thorfinn | Tüm cevaplar, stok, sipariş, nöbet, ikmal, rütbe | `thorfinn_yanit` | Ticaret ekranı sonrası uyarı, nöbet sona erdi, nöbet tamam |

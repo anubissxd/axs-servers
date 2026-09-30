@@ -368,14 +368,16 @@ ServerEvents.tick(event => {
 // Sahne sirasinda oyuncu cikarsa komutlar sessizce basarisiz olur, sorun degil.
 if (!global.yoruichiCutscenes) global.yoruichiCutscenes = []
 
-function yoruichiSay(server, name, text) {
+function yoruichiSayChat(server, name, text) {
   server.runCommandSilent('tellraw ' + name + ' [{"text":"Yoruichi","color":"light_purple","bold":true},{"text":": ' + text + '","color":"white","italic":true,"bold":false}]')
 }
 
 // Yoruichi'nin konuşma diyaloğuna verdiği cevaplar diyalog penceresinde açılır (npc_dialog.js); sahne ve kovalama repliği sohbette kalır.
-function yoruichiSayDlg(server, name, text) {
-  npcDlgSay(server, YORUICHI_UUID_STR, 'yoruichi_yanit', name, text, false, t => yoruichiSay(server, name, t))
+function yoruichiSay(server, name, text) {
+  npcDlgSay(server, YORUICHI_UUID_STR, 'yoruichi_yanit', name, text, false, t => yoruichiSayChat(server, name, t))
 }
+
+function yoruichiSayDlg(server, name, text) { yoruichiSay(server, name, text) }
 
 function yoruichiTitle(server, name, title, subtitle, color) {
   server.runCommandSilent('title ' + name + ' times 10 50 20')
