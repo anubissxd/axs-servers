@@ -172,10 +172,10 @@ function hocaEsc(s) { return String(s).split('\\').join('\\\\').split('"').join(
 
 function hocaSay(server, name, npc, text) {
   var parts = String(text).split('**')
-  var comps = ['{"text":"' + npc + '","color":"' + HOCA_COLOR[npc] + '","bold":true}', '{"text":": ","color":"gray"}']
+  var comps = ['{"text":"' + npc + '","color":"' + HOCA_COLOR[npc] + '","bold":true}', '{"text":": ","color":"gray","bold":false}']
   for (var i = 0; i < parts.length; i++) {
     if (parts[i] === '') continue
-    comps.push('{"text":"' + hocaEsc(parts[i]) + '","color":"white","italic":true' + (i % 2 === 1 ? ',"bold":true' : '') + '}')
+    comps.push('{"text":"' + hocaEsc(parts[i]) + '","color":"white","italic":true' + ',"bold":false' + '}')
   }
   server.runCommandSilent('tellraw ' + name + ' [' + comps.join(',') + ']')
 }

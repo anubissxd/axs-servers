@@ -369,7 +369,7 @@ ServerEvents.tick(event => {
 if (!global.yoruichiCutscenes) global.yoruichiCutscenes = []
 
 function yoruichiSay(server, name, text) {
-  server.runCommandSilent('tellraw ' + name + ' [{"text":"Yoruichi","color":"light_purple","bold":true},{"text":": ' + text + '","color":"white","italic":true}]')
+  server.runCommandSilent('tellraw ' + name + ' [{"text":"Yoruichi","color":"light_purple","bold":true},{"text":": ' + text + '","color":"white","italic":true,"bold":false}]')
 }
 
 function yoruichiTitle(server, name, title, subtitle, color) {

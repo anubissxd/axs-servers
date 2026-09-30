@@ -89,7 +89,7 @@ function aizenStage(server) {
 function aizenSay(server, name, text) {
   var st = aizenStage(server)
   var color = st >= 4 ? 'dark_purple' : 'gold'
-  server.runCommandSilent('tellraw ' + name + ' [{"text":"Aizen","color":"' + color + '","bold":true},{"text":": ","color":"gray"},{"text":"' + aizenEsc(text) + '","color":"white","italic":true}]')
+  server.runCommandSilent('tellraw ' + name + ' [{"text":"Aizen","color":"' + color + '","bold":true},{"text":": ","color":"gray","bold":false},{"text":"' + aizenEsc(text) + '","color":"white","italic":true,"bold":false}]')
 }
 function aizenNote(server, name, text, color) {
   server.runCommandSilent('tellraw ' + name + ' {"text":"' + aizenEsc(text) + '","color":"' + (color || 'gray') + '"}')
@@ -162,7 +162,7 @@ function aizenAdvance(server, dtMs) {
       var hh = list[i % list.length]
       pd.putInt(key, i + 1)
       server.players.forEach(p => {
-        server.runCommandSilent('tellraw ' + String(p.username) + ' [{"text":"' + hh[0] + '","color":"' + hh[1] + '","bold":true},{"text":": ","color":"gray"},{"text":"' + aizenEsc(hh[2]) + '","color":"white","italic":true}]')
+        server.runCommandSilent('tellraw ' + String(p.username) + ' [{"text":"' + hh[0] + '","color":"' + hh[1] + '","bold":true},{"text":": ","color":"gray","bold":false},{"text":"' + aizenEsc(hh[2]) + '","color":"white","italic":true,"bold":false}]')
       })
     }
     pd.putLong('aizen_hint_ms', hint)

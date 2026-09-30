@@ -248,7 +248,7 @@ function kenpachiPick(arr) { return arr[Math.floor(Math.random() * arr.length)] 
 function kenpachiEsc(s) { return String(s).split('\\').join('\\\\').split('"').join('\\"') }
 
 function kenpachiSay(server, name, text) {
-  server.runCommandSilent('tellraw ' + name + ' [{"text":"Kenpachi","color":"dark_red","bold":true},{"text":": ","color":"gray"},{"text":"' + kenpachiEsc(text) + '","color":"white","italic":true}]')
+  server.runCommandSilent('tellraw ' + name + ' [{"text":"Kenpachi","color":"dark_red","bold":true},{"text":": ","color":"gray","bold":false},{"text":"' + kenpachiEsc(text) + '","color":"white","italic":true,"bold":false}]')
 }
 
 // Reiatsu sahnesi: ekran kararır, kalp atışı, kırmızı parçacıklar, kısa yavaşlama. Yalnızca gövde gösterisi, hasar yok.

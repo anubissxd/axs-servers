@@ -280,10 +280,10 @@ function erwinJsonEsc(s) {
 // Erwin konuşuyor: "Erwin Smith: ..." (yeşil ad, italik metin). **kalın** işaretlerini kalın yapar.
 function erwinSay(server, name, text) {
   var parts = String(text).split('**')
-  var comps = ['{"text":"Erwin Smith","color":"dark_green","bold":true}', '{"text":": ","color":"gray"}']
+  var comps = ['{"text":"Erwin Smith","color":"dark_green","bold":true}', '{"text":": ","color":"gray","bold":false}']
   for (var i = 0; i < parts.length; i++) {
     if (parts[i] === '') continue
-    comps.push('{"text":"' + erwinJsonEsc(parts[i]) + '","color":"white","italic":true' + (i % 2 === 1 ? ',"bold":true' : '') + '}')
+    comps.push('{"text":"' + erwinJsonEsc(parts[i]) + '","color":"white","italic":true' + ',"bold":false' + '}')
   }
   server.runCommandSilent('tellraw ' + name + ' [' + comps.join(',') + ']')
 }

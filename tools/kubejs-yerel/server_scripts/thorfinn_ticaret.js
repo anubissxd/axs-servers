@@ -33,7 +33,7 @@ const THOR_SHOP = [
 function thorJsonEsc(s) { return String(s).split('\\').join('\\\\').split('"').join('\\"') }
 
 function thorSay(server, name, text) {
-  server.runCommandSilent('tellraw ' + name + ' [{"text":"Thorfinn","color":"gold","bold":true},{"text":": ' + thorJsonEsc(text) + '","color":"white","italic":true}]')
+  server.runCommandSilent('tellraw ' + name + ' [{"text":"Thorfinn","color":"gold","bold":true},{"text":": ' + thorJsonEsc(text) + '","color":"white","italic":true,"bold":false}]')
 }
 
 function thorNote(server, name, text, color) {
