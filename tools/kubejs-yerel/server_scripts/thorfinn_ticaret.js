@@ -24,8 +24,7 @@ const THOR_SHOP = [
   { key: 'pargasi', stock: 1, hours: 96, rank: 3, id: 'minecraft:netherite_scrap', n: 1, price: 96 },
   { key: 'totem', stock: 1, hours: 144, rank: 3, id: 'minecraft:totem_of_undying', n: 1, price: 128 },
   { key: 'tsisesi3', stock: 1, hours: 48, rank: 4, id: 'minecraft:experience_bottle', n: 32, price: 96 },
-  { key: 'pargasi2', stock: 1, hours: 96, rank: 4, id: 'minecraft:netherite_scrap', n: 1, price: 80 },
-  { key: 'buyulu', stock: 1, hours: 192, rank: 4, id: 'minecraft:enchanted_golden_apple', n: 1, price: 128 }
+  { key: 'pargasi2', stock: 1, hours: 96, rank: 4, id: 'minecraft:netherite_scrap', n: 1, price: 80 }
 ]
 
 function thorJsonEsc(s) { return String(s).split('\\').join('\\\\').split('"').join('\\"') }

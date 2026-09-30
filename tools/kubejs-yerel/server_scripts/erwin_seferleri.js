@@ -128,7 +128,6 @@ ERWIN_TEMPLATES.forEach(t => { ERWIN_BY_KEY[t.key] = t })
 const ERWIN_REWARDS = {
   1: { em: [1, 3], blockP: 0.03, blockN: [1, 1], bonus: [
     { id: 'minecraft:iron_ingot', n: [8, 16], p: 0.28, label: 'demir külçe' },
-    { id: 'minecraft:golden_carrot', n: [8, 16], p: 0.28, label: 'altın havuç' },
     { id: 'minecraft:experience_bottle', n: [4, 8], p: 0.24, label: 'tecrübe şişesi' },
     { id: 'irons_spellbooks:common_ink', n: [1, 2], p: 0.1, label: 'sıradan mürekkep' },
     { id: 'minecraft:diamond', n: [1, 1], p: 0.05, label: 'elmas' }
@@ -136,31 +135,26 @@ const ERWIN_REWARDS = {
   2: { em: [2, 4], blockP: 0.045, blockN: [1, 1], bonus: [
     { id: 'minecraft:gold_ingot', n: [8, 16], p: 0.24, label: 'altın külçe' },
     { id: 'minecraft:experience_bottle', n: [8, 16], p: 0.28, label: 'tecrübe şişesi' },
-    { id: 'minecraft:golden_apple', n: [1, 1], p: 0.12, label: 'altın elma' },
     { id: 'minecraft:diamond', n: [1, 2], p: 0.14, label: 'elmas' },
     { id: 'irons_spellbooks:uncommon_ink', n: [1, 1], p: 0.1, label: 'sıra dışı mürekkep' },
     { id: 'irons_spellbooks:arcane_essence', n: [2, 4], p: 0.12, label: 'gizemli öz' }
   ] },
   3: { em: [4, 7], blockP: 0.075, blockN: [1, 1], bonus: [
     { id: 'minecraft:experience_bottle', n: [16, 24], p: 0.28, label: 'tecrübe şişesi' },
-    { id: 'minecraft:golden_apple', n: [1, 2], p: 0.2, label: 'altın elma' },
     { id: 'minecraft:diamond', n: [2, 3], p: 0.24, label: 'elmas' },
     { id: 'irons_spellbooks:rare_ink', n: [1, 1], p: 0.08, label: 'nadir mürekkep' },
     { id: 'minecraft:netherite_scrap', n: [1, 1], p: 0.05, label: 'netherite parçası' },
-    { id: 'minecraft:enchanted_golden_apple', n: [1, 1], p: 0.02, label: 'büyülü altın elma' }
   ] },
   4: { em: [9, 14], blockP: 0.14, blockN: [1, 1], bonus: [
     { id: 'minecraft:experience_bottle', n: [32, 32], p: 0.32, label: 'tecrübe şişesi' },
     { id: 'minecraft:diamond', n: [3, 5], p: 0.28, label: 'elmas' },
     { id: 'minecraft:netherite_scrap', n: [1, 2], p: 0.16, label: 'netherite parçası' },
     { id: 'irons_spellbooks:epic_ink', n: [1, 1], p: 0.08, label: 'destansı mürekkep' },
-    { id: 'minecraft:enchanted_golden_apple', n: [1, 1], p: 0.08, label: 'büyülü altın elma' },
     { id: 'minecraft:totem_of_undying', n: [1, 1], p: 0.04, label: 'ölümsüzlük totemi' }
   ] },
   5: { em: [18, 26], blockP: 0.22, blockN: [1, 2], bonus: [
     { id: 'minecraft:experience_bottle', n: [64, 64], p: 0.4, label: 'tecrübe şişesi' },
     { id: 'minecraft:diamond', n: [6, 10], p: 0.32, label: 'elmas' },
-    { id: 'minecraft:enchanted_golden_apple', n: [1, 1], p: 0.16, label: 'büyülü altın elma' },
     { id: 'minecraft:netherite_ingot', n: [1, 1], p: 0.08, label: 'netherite külçe' },
     { id: 'irons_spellbooks:legendary_ink', n: [1, 1], p: 0.06, label: 'efsanevi mürekkep' },
     { id: 'minecraft:totem_of_undying', n: [1, 1], p: 0.06, label: 'ölümsüzlük totemi' }

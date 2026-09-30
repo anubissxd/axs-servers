@@ -295,10 +295,9 @@ function aizenHelp(server, p, name) {
   }
   server.runCommandSilent('effect give ' + name + ' minecraft:regeneration 30 1 true')
   server.runCommandSilent('effect give ' + name + ' minecraft:saturation 5 0 true')
-  server.runCommandSilent('give ' + name + ' minecraft:golden_carrot 4')
   pd.putLong('aizen_help_next', Date.now() + 6 * 3600000)
   aizenSay(server, name, aizenStage(server) === 2 ? 'İç. Çay yalnızca bedeni iyileştirir; zihni değil. O konuda sana güveniyorum.' : 'İç, sana iyi gelecek. Zor günlerde bir fincan çay çok şey değiştirir.')
-  aizenNote(server, name, 'Aizen\'in çayı: 30 sn yenilenme, doygunluk ve 4 altın havuç.', 'gold')
+  aizenNote(server, name, 'Aizen\'in çayı: 30 sn yenilenme ve doygunluk.', 'gold')
 }
 
 const AIZEN_TASKS = [

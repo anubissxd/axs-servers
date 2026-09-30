@@ -38,7 +38,6 @@ Fiyat zümrüt olarak; 64'ün üstü iki takas yuvasına bölünür. Kalan stok 
 | Gece Avcısı | 1 ölümsüzlük totemi | 128 | 1 / 144 sa |
 | Eşik Muhafızı | 32 tecrübe şişesi | 96 | 1 / 48 sa |
 | Eşik Muhafızı | 1 netherite parçası | 80 | 1 / 96 sa |
-| Eşik Muhafızı | 1 büyülü altın elma | 128 | 1 / 192 sa |
 
 Tablo `THOR_SHOP` (`thorfinn_ticaret.js`) ile aynıdır. Fiyatlar 1-128 zümrüt arasında olmalıdır (iki yuva sınırı).
 

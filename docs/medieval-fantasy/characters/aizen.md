@@ -56,7 +56,7 @@ Sunucunun evresi dünya verisinde (`server.persistentData` `aizen_evre`) tutulur
 ### Evre 1-2: yardımsever Aizen
 
 - **Bilgi:** Oyuncunun Erwin rütbesine göre gerçekten işe yarar ipucu; evre 2'de ürkütücü bir ek cümle.
-- **Yardım:** 6 saatte bir "Aizen'in çayı": 30 sn yenilenme, doygunluk ve 4 altın havuç.
+- **Yardım:** 6 saatte bir "Aizen'in çayı": 30 sn yenilenme ve doygunluk (altın havuç kaldırıldı).
 - **Araştırma (gözlem):** Küçük öldürme görevi (3-14 adet). Ödül **1-2 zümrüt**. Günde 5, arada 4 dakika. Tamamlanan görev sayısı 1, 3, 5, 8, 12, 16'ya ulaşınca defter sayfaları açılır.
 - **Kimsin sen?:** Evreye göre yanıt (evre 1 âlim, evre 3 "bir gölge", evre 5 gerçek yüzü).
 - **Bir şey fark ettim... (evre 2):** Aizen ustaca geçiştirir; 3 kez sorup 8 araştırma tamamlamış oyuncuya "Zeki birisin. Bunu başkasına söyleme." der.
