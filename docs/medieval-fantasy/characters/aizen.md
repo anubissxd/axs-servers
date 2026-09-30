@@ -92,4 +92,4 @@ Yönlendirme: evre etiketi `aizen_st_<n>` (1-5) ve karşılama sürümü `dv_aiz
 1. `node tools/yoruichi/gen_aizen.js <datapack> <owner-uuid>` (yerel dünyada fonksiyonlar zaten var).
 2. Oyunda NPC'nin duracağı yerde `/reload`, sonra `function yoruichi:aizen_kur`.
 3. Diyalogları yenilemek için NPC'nin yakınında `function yoruichi:aizen_diyalog` (3 sn bekle).
-4. Başka bir şey gerekmez: sayaç NPC kurulunca kendiliğinden başlar ve ihanet olayı oynanmış 18 saat sonra kendiliğinden oynar. `/aizen_durum` ile bakabilirsin; test için `/aizen_evre 2` ve `/aizen_evre 3` ile hızlandır.
+4. Başka bir şey gerekmez: sayaç NPC kurulunca kendiliğinden başlar ve ihanet olayı oynanmış 23 saat sonra kendiliğinden oynar. `/aizen_durum` ile bakabilirsin; test için `/aizen_evre 2` ve `/aizen_evre 3` ile hızlandır.
