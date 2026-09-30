@@ -110,7 +110,8 @@ fs.mkdirSync(fnDir, { recursive: true })
 fs.writeFileSync(path.join(fnDir, 'aizen_kur.mcfunction'), [
   '# Aizen NPC kurulumu: bu fonksiyonu NPC\'nin duracağı yerde dururken çalıştır. Üretici: tools/yoruichi/gen_aizen.js',
   'execute at @s run summon easy_npc:humanoid ~ ~ ~ ' + nbt,
-  'say Aizen kuruldu. Konumu değiştirmek için /tp @e[tag=aizen_npc,limit=1] <x> <y> <z>'
+  'tag @s add aizen_kuruldu',
+  'say Aizen kuruldu. Konumu değiştirmek için /tp @e[tag=aizen_npc,limit=1] <x> <y> <z> (script konumu 30 saniyede bir günceller)'
 ].join(NL) + NL)
 // diyalog yenileme: iki aşamalı
 const SEL = '@e[tag=aizen_npc,limit=1]'

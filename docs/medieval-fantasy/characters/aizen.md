@@ -13,18 +13,28 @@
 - **Dosyalar:** [`assets/npc-skins/aizen_v1.png`](../../../assets/npc-skins/aizen_v1.png) (yardımsever hâli, swxff'in `aizen-1.png`'si) ve `aizen_v2.png` (kötü hâli, swxff'in `aizen.png`'si). Detay: [assets/npc-skins/README.md](../../../assets/npc-skins/README.md).
 - **Oyunda:** `SkinData` `SECURE_REMOTE_URL`. İhanet olayında NPC `v1`'den `v2`'ye ve isim rengi altın kahveden mora geçer.
 
-## Evreler (sunucu geneli)
+## Hikâye
 
-Sunucunun evresi dünya verisinde (`server.persistentData` `aizen_evre`) tutulur; **yönetici belirler**. Script her oyuncuya evreye uygun etiketi verir (`aizen_st_1..4`); diyalog yönlendirmesi bu etiketle yapılır.
+**Aizen** Caddy'ye kendini "Sis'in kaynağını araştıran bir âlim" olarak tanıtır ve Birliğe yardım eder. Gerçek şu: **Sis'i o uyandırdı**, Keşif Birliği'ni ona karşı savaşsın diye kurdurdu; Erwin'in her seferi, her ölüm, oyuncuların her gözlemi onun deneyinin verisi oldu. Bleach'teki Aizen gibi: iyi biri gibi görünen, yıllardır herkesi yönlendiren, en sonunda "hepsi benim planımdı" diyen bir kukla ustası; gücü Kyōka Suigetsu (mükemmel yanılsama). Bu sunucuda yanılsama, "düzenin bir yazarı var mı?" sorusuna dönüşür: rütbeler, hocalar, ticaret, hepsi düzenli görünür ve düzeni yazan el hep oradadır.
 
-| Evre | Anlamı | Aizen |
-|---|---|---|
-| **1** | Yardımsever | Bilgi, günlük çay, küçük araştırma görevleri |
-| **2** | Şüphe (ince tuhaflıklar) | Aynı hizmetler ama diyaloglarda soğuk tuhaflıklar, "Bir şey fark ettim..." düğmesi |
-| **3** | İhanet olayı (geçiş) | Herkese sinematik sahne; ~16 sn sonra evre 4 olur, doku değişir |
-| **4** | Kötü | Yardım/araştırma kapanır; "Seninle savaşacağım", "Neden yaptın?", "Gerçekte kimsin?" |
+**İpuçları (oyuncunun görebileceği):** Evre 2'de diğer NPC'ler sohbete kendiliğinden şüpheli sözler düşürür (Kenpachi'nin gözlüklü âlimden hoşlanmaması, Erwin'in "defterlerde seferlerimin tarihleri var" demesi, Thorfinn'in "çayı demleyenin aklında ne var", Gojo'nun "fazla iyi biri", Itachi'nin yanılsama kokusu, Yoruichi'nin "kimi kovaladığını bilmeyen hızlı", vb.; 10 replik, 30 dakikada bir). Aizen'in **defteri**: araştırma görevleri tamamlandıkça 6 sayfa açılır (Sis'in kimse sorulmayan sebebi, güvenin en ucuz silah olması, seferlerin "veri" olarak yazılması, Kyōka Suigetsu'nun "gösterdiğini gerçek sandırma"sı, yardımın imzalanmış borç olması, "düzeni yazan hep bendim").
 
-Komutlar (op): `/aizen_evre <1-4>` (3 verilince ihanet olayı oynar ve evre 4'e geçer; 1-2 verilince yardımsever doku), `/aizen_sifirla <oyuncu>`, `/aizen_odul <oyuncu>` (büyü kayıtlı olduğunda Kyōka Suigetsu parşömenini verir). Oyun olayın ortasında kapanırsa evre 3'te takılmaz (script bunu evre 4'e çeker). Olay sırasında çevrimdışı olan oyuncu girişte "Sen yokken..." notunu görür.
+**İhanet (otomatik):** Yardımsever ve şüphe evreleri bitince herkese aynı sahne: sessizlik, Erwin ve Kenpachi'nin tepkisi, cam kırılma sesiyle "AIZEN — Gözlük düştü", sonra Aizen'in açıklaması: "Sis'i ben uyandırdım. Birliği ben kurdurdum. Seferleriniz, ölülerinizle birlikte, benim deneyimdi... Çay için, notlar için, kanınız için sağ olun."
+
+**Sonrası:** Aizen'i ilk yenen kişi tüm sunucuya duyurulur ("AIZEN İLK KEZ YENİLDİ" başlığı) ve Aizen sonraki konuşmalarda "Beni ilk yenen X idi" der.
+
+## Evreler (sunucu geneli, otomatik)
+
+Sunucunun evresi dünya verisinde (`server.persistentData` `aizen_evre`) tutulur ve **kendiliğinden ilerler**. Süre yalnızca sunucuda **en az bir oyuncu varken** işler (oynanan süre, `aizen_ms`); sunucu boşken ya da kapalıyken sayaç durur. Sayaç NPC kurulunca başlar (`aizen_kur` etiketiyle konumu kaydeder). Süreler `aizen.js` başında: `AIZEN_EVRE1_MS` = **10 saat**, `AIZEN_EVRE2_MS` = **8 saat**; yani toplam **18 saatlik oynanmış süre** sonra ihanet olayı kendiliğinden oynar. Script her oyuncuya evreye uygun etiketi verir (`aizen_st_1..4`); diyalog yönlendirmesi bu etiketle yapılır.
+
+| Evre | Süre | Anlamı | Aizen |
+|---|---|---|---|
+| **1** | ilk 10 saat | Yardımsever | Bilgi, günlük çay, küçük araştırma görevleri |
+| **2** | sonraki 8 saat | Şüphe | Aynı hizmetler ama soğuk tuhaflıklar, "Bir şey fark ettim..." düğmesi, sohbete ipuçları düşer |
+| **3** | ~27 sn | İhanet olayı (geçiş) | Herkese sinematik sahne, doku ve isim rengi değişir |
+| **4** | kalıcı | Kötü | Yardım/araştırma kapanır; "Seninle savaşacağım", "Neden yaptın?", "Gerçekte kimsin?" |
+
+**Yönetici (isteğe bağlı müdahale):** `/aizen_durum` (evre ve kalan süre), `/aizen_evre <1-4>` (sayacı o evrenin başlangıcına çeker; 3 hemen ihanet olayını oynatır), `/aizen_sifirla <oyuncu>`, `/aizen_odul <oyuncu>` (büyü kayıtlı olduğunda Kyōka Suigetsu parşömenini verir). Oyun olayın ortasında kapanırsa evre 3'te takılmaz (script evre 4'e çeker). Olay sırasında çevrimdışı olan oyuncu girişte "Sen yokken..." notunu görür.
 
 ### Evre 1-2: yardımsever Aizen
 
@@ -36,7 +46,7 @@ Komutlar (op): `/aizen_evre <1-4>` (3 verilince ihanet olayı oynar ve evre 4'e 
 
 ### Evre 3: ihanet olayı
 
-Herkese aynı anda: gök gürültüsü, kararma, "BİR ŞEY DEĞİŞTİ", Erwin ve Kenpachi'nin tepkisi, "AIZEN — Gözlük düştü" başlığı, ruh parçacıkları ve Aizen'in "Bu düzeni ben kurdum" sözü. Doku değişimi 9,5. saniyede, evre 4'e geçiş 16,5. saniyede. Doku komutları, NPC yüklü olmasa da çalışsın diye kayıtlı konumun yığını geçici yüklenir (`forceload`).
+Herkese aynı anda: gök gürültüsü, kararma, "CADDY SESSİZLEŞTİ", Erwin ve Kenpachi'nin tepkisi, cam kırılma sesi ve "AIZEN — Gözlük düştü", Aizen'in üç repliği (yanılsama, "Sis'i ben uyandırdım", "sağ olun"). Doku değişimi 10,2. saniyede, evre 4'e geçiş 27. saniyede. Doku komutları NPC yüklü olmasa da çalışsın diye kayıtlı konumun yığını geçici yüklenir (`forceload`). Sunucuda o an oyuncu yoksa olay tetiklenmez (sayaç zaten oyuncu yokken işlemez).
 
 ### Evre 4: boss kapışması (`aizen.js`, Kenpachi'nin motoruna benzer)
 
@@ -61,4 +71,4 @@ Yönlendirme: evre etiketi `aizen_st_<n>` ve karşılama sürümü `dv_aizen_<k>
 1. `node tools/yoruichi/gen_aizen.js <datapack> <owner-uuid>` (yerel dünyada fonksiyonlar zaten var).
 2. Oyunda NPC'nin duracağı yerde `/reload`, sonra `function yoruichi:aizen_kur`.
 3. Diyalogları yenilemek için NPC'nin yakınında `function yoruichi:aizen_diyalog` (3 sn bekle).
-4. `/aizen_evre 1` (varsayılan zaten 1). İhanet zamanı gelince `/aizen_evre 3`.
+4. Başka bir şey gerekmez: sayaç NPC kurulunca kendiliğinden başlar ve ihanet olayı oynanmış 18 saat sonra kendiliğinden oynar. `/aizen_durum` ile bakabilirsin; test için `/aizen_evre 2` ve `/aizen_evre 3` ile hızlandır.
