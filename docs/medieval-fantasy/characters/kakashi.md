@@ -52,7 +52,7 @@
 
 ## Yan görevler (pilot, 2026-10-01)
 
-Kakashi yalnızca büyü öğretmeni değil, küçük işler de verir. Hoca hub'ında **"Bir işin var mı?"** düğmesi (etiket `yg_kakashi`; `gen_hocalar.js`'te tanımlı ve `yan_gorev.js` çalışırken kod da ekler). Şart: yalnızca `rank_maceraci` (hoca eğitimi şart değil). Yeni bir iş istemek, sürenini sorgulamak ve sayfa görevini teslim etmek aynı düğmedir. Mantık: `kubejs/server_scripts/yan_gorev.js`, durum `yg_k_*`, yönetici `/yan_gorev_sifirla <oyuncu>`.
+Kakashi yalnızca büyü öğretmeni değil, küçük işler de verir. Hoca hub'ında **"Bir işin var mı?"** düğmesi (etiket `yg_kakashi`; `gen_hocalar.js`'te tanımlı ve `yan_gorev.js` çalışırken kod da ekler). Şart: yalnızca `rank_maceraci` (hoca eğitimi şart değil). Yeni bir iş istemek, durumu sorgulamak ve sayfa görevini teslim etmek aynı düğmedir. Mantık: `kubejs/server_scripts/yan_gorev.js`, durum `yg_k_*`, yönetici `/yan_gorev_sifirla <oyuncu>`.
 
 | Görev | Nasıl | Süre | Ödül |
 |---|---|---|---|
