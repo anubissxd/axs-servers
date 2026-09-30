@@ -36,7 +36,20 @@ Yerel profil: `%APPDATA%\.minecraft\versions\Medieval Fantasy\` (yeni VDS'te `/r
 
 Yeni VDS'te diyalogları tek seferde yazmak için: `reload`, sonra `function yoruichi:tum_diyaloglar_yenile` (Erwin, Thorfinn, Kenpachi, Yoruichi ve üç hocayı sırayla günceller; 3-4 sn bekle). Yoruichi'nin çeşitlilik fonksiyonu `gen_yoruichi_cesit.js` ile **orijinal** Yoruichi verisinden (`tools/nbt_tool.js dump`) üretilir; kalıcı olarak oyunda çalıştırılır.
 
-**Havuza eklenecek oyuncu cümleleri:** Erwin seferlerinin zümrüt ödülleri biraz düştü; NPC'ler artık her konuşmada farklı karşılama repliği söylüyor; Thorfinn'e gece nöbeti, Birlik ikmali, hayvancılık ve mevsim siparişleri ile hikâye bölümleri geldi; Kenpachi'ye meydan okuyup kapışabilirsin (Gece Avcısı ve üstü), yenersen Nozarashi kılıcını verir.
+### Aizen (2026-09-30)
+
+| Dosya | Ne |
+|---|---|
+| `server_scripts/aizen.js` | **yeni**: evreler, yardım/araştırma, ihanet olayı, boss kapışması, komutlar |
+| `startup_scripts/aizen_spell.js` | **yeni**: Kyōka Suigetsu büyüsü (oyun/sunucu yeniden başlatma) |
+| `assets/kubejs/lang/*.json`, `textures/gui/spell_icons/kyoka_suigetsu.png` | büyü adı ve ikonu |
+| `server_scripts/npc_cesitlilik.js`, `sinema_motoru.js` | `aizen` çeşitliliği, `aizenFightBegin` izinli fn |
+| datapack | `aizen_kur`, `aizen_diyalog(2)` (NPC yeni VDS'te bir kez `aizen_kur` ile doğurulur; evre `/aizen_evre`) |
+| `assets/npc-skins/aizen_v1.png`, `aizen_v2.png` | GitHub'da |
+
+Not: Aizen NPC'si yerel dünyada henüz doğurulmadıysa yeni VDS'te `aizen_kur` ile doğurulur (koordinat verilmez, yerinde durarak çalıştırılır). Sunucu evresi dünya verisindedir (`aizen_evre`); yeni VDS'te bu dünya kullanılırsa korunur, yeni dünyada 1'den başlar.
+
+**Havuza eklenecek oyuncu cümleleri:** Erwin seferlerinin zümrüt ödülleri biraz düştü; NPC'ler artık her konuşmada farklı karşılama repliği söylüyor; Thorfinn'e gece nöbeti, Birlik ikmali, hayvancılık ve mevsim siparişleri ile hikâye bölümleri geldi; Kenpachi'ye meydan okuyup kapışabilirsin (Gece Avcısı ve üstü), yenersen Nozarashi kılıcını verir. Caddy'ye yardımsever bir âlim olan Aizen geldi; ona dikkat et.
 
 ## 2. Yeni VDS'te sırayla
 

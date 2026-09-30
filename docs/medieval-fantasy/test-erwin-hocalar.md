@@ -86,3 +86,13 @@ Bu sistemler simülasyonla ve sunucu komutlarıyla sınandı ama **gerçek oyunc
 5. **Thorfinn hikâyesi:** `thor_total` 1, 8, 16... değerlerine ulaşınca başlık ve iki replik gelmeli ("İLK HASAT", "YARA"...).
 6. **Kenpachi kapışması:** Rütben 2 altındayken "Seninle dövüşmek istiyorum" reiatsu sahnesi ve uyarı vermeli. `/erwin_rutbe <oyuncu> 3` sonra kapışma başlamalı: sahne, savaşçı Kenpachi doğar (orijinali kaybolur), sana yürür ve vurur (7 hasar, 1,5 sn). Canı yarıya inince "GERÇEK GÜÇ" sahnesi, daha sert vurur. Kazanırsan Nozarashi kılıcı gelmeli ve orijinal Kenpachi yerine dönmeli. Ölürsen/kaçarsan savaşçı silinmeli ve orijinal geri gelmeli. `/kenpachi_sifirla` ile yeniden dene.
    - **Bilmediklerimiz:** Savaşçı Easy NPC'nin tp ile yürümesi ve `damage` ile vurması gerçek oyunda denenmedi; savaşçı doğmuyorsa/hareket etmiyorsa `logs/latest.log`'a bak ("kenpachi kapisma hata").
+
+## J. Aizen (evrelere göre)
+
+1. **Kurulum:** NPC'nin duracağı yerde `function yoruichi:aizen_kur`. Aizen doğmalı (dokusu aizen_v1). Diyalog: karşılama (3 sürümden biri), 5 düğme.
+2. **Evre 1:** "Bir bilgi istiyorum" rütbene göre ipucu; "Yardımına ihtiyacım var" çay (yenilenme, 4 altın havuç), tekrar edince bekleme; "Araştırmana yardım edebilirim" görev (öldür, ödül 1-2 zümrüt); notlar sayaç 1, 3, 5... olunca gelmeli.
+3. **Evre 2:** `/aizen_evre 2`. Karşılama tuhaflaşmalı, "Bir şey fark ettim..." düğmesi çıkmalı, ipuçlarına ürkütücü ek gelmeli.
+4. **İhanet:** `/aizen_evre 3`. Ekranda kararma, "BİR ŞEY DEĞİŞTİ", Erwin ve Kenpachi'nin sözü, "AIZEN — Gözlük düştü", sonra NPC dokusu aizen_v2 olup mora dönmeli, evre 4 (`/aizen_evre` olmadan da 16 sn sonra). Olay sırasında girişten çıkıp gelen oyuncu "Sen yokken..." notunu görmeli.
+5. **Evre 4 diyaloğu:** Yardım ve araştırma kapanmalı; "Seninle savaşacağım", "Neden yaptın?", "Gerçekte kimsin?" çalışmalı.
+6. **Boss:** `/erwin_rutbe <oyuncu> 4`, "Seninle savaşacağım". Sahne sonra savaşçı doğar (orijinal kaybolur). Kontrol: yakın vuruş (8), 5-14 blokta Kido (6), 12 bloktan uzaklaşınca Shunpo, can %66 altında Kyōka Suigetsu (körlük, mide bulantısı, 3 sahte Aizen; sahteye vurunca ceza), can %33 altında Kurohitsugi (2 sn içinde uzaklaş, yoksa 14 hasar). Kazanınca Kyōka Suigetsu parşömeni (büyü kayıtlıysa; oyunu yeniden başlattıktan sonra).
+7. **Sıfırlama:** `/aizen_sifirla <oyuncu>`, `/aizen_evre 1` (doku aizen_v1'e döner).
