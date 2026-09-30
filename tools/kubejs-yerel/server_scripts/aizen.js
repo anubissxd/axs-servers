@@ -695,10 +695,12 @@ function aizenFightTick(server) {
   if (dist > 4.2 && dist < 40 && dy < 6) server.runCommandSilent('execute as ' + f.uuid + ' at @s facing entity ' + name + ' feet rotated ~ 0 run tp @s ^ ^ ^' + speed)
   // Shunpo (Kenpachi'ninkine benzer): uzaklaşırsan arkana
   if ((dist > 12 || dy > 6) && now >= Number(f.nextShunpo)) {
-    server.runCommandSilent('execute at ' + f.uuid + ' run particle minecraft:smoke ~ ~1 ~ 0.3 0.6 0.3 0.05 25')
-    server.runCommandSilent('execute at ' + name + ' rotated as ' + name + ' run tp ' + f.uuid + ' ^ ^ ^-2.6')
-    server.runCommandSilent('execute at ' + f.uuid + ' run particle minecraft:end_rod ~ ~1 ~ 0.2 0.5 0.2 0.02 10')
-    server.runCommandSilent('execute at ' + f.uuid + ' run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 1.5')
+    var fe = aizenFighterEntity(server, f.uuid)
+    var pl = server.getPlayer(name)
+    if (fe && pl) {
+      var bp = npcShunpoPoint(pl, -2.6)
+      npcShunpoTo(server, fe, bp.x, bp.y, bp.z, name)
+    }
     f.nextShunpo = now + 3500
     return
   }
@@ -789,11 +791,10 @@ function aizenWander(server, p, name) {
   var dHome = Math.sqrt(Math.pow(Number(p.x) - hx, 2) + Math.pow(Number(p.z) - hz, 2))
   if (dHome < 6 || dHome > 14) return
   // oyuncu yakın ve NPC uzakta: Shunpo
-  var sel = '@e[tag=aizen_npc,limit=1]'
-  aizenShunpoFx(server, sel)
-  server.runCommandSilent('execute at ' + name + ' rotated as ' + name + ' run tp ' + sel + ' ^ ^ ^2.8')
-  server.runCommandSilent('execute as ' + sel + ' at @s facing entity ' + name + ' eyes run tp @s ~ ~ ~ ~ ~')
-  aizenShunpoFx(server, sel)
+  var npcE = aizenNpcPos(server)
+  if (!npcE) return
+  var dest = npcShunpoPoint(p, 2.8)
+  npcShunpoTo(server, npcE, dest.x, dest.y, dest.z, name)
   aizenSay(server, name, aizenPick(st === 1 ? AIZEN_GEZ_1 : AIZEN_GEZ_2))
   pd.putLong('aizen_wander_next', Date.now() + AIZEN_GEZ_MS)
   global.aizenWander = { until: Date.now() + 30000, home: true }
@@ -802,10 +803,8 @@ function aizenWander(server, p, name) {
 
 function aizenGoHome(server) {
   var sd = server.persistentData
-  var sel = '@e[tag=aizen_npc,limit=1]'
-  aizenShunpoFx(server, sel)
-  server.runCommandSilent('tp ' + sel + ' ' + Number(sd.getDouble('aizen_hx')) + ' ' + Number(sd.getDouble('aizen_hy')) + ' ' + Number(sd.getDouble('aizen_hz')))
-  aizenShunpoFx(server, sel)
+  var npcE = aizenNpcPos(server)
+  if (npcE) npcShunpoTo(server, npcE, Number(sd.getDouble('aizen_hx')), Number(sd.getDouble('aizen_hy')), Number(sd.getDouble('aizen_hz')), '')
   global.aizenWander = false
 }
 
@@ -942,6 +941,21 @@ ServerEvents.commandRegistry(event => {
     ctx.source.sendSuccess(Text.of('Aizen evresi ' + n + ' yapıldı.'), false)
     return 1
   })))
+  // /aizen_yer <x> <y> <z>: Aizen'in evini ayarlar ve Shunpo ile oraya götürür (konum kaydı/ev bu noktaya çekilir)
+  event.register(Commands.literal('aizen_yer').requires(s => s.hasPermission(2)).then(Commands.argument('x', Arguments.DOUBLE.create(event)).then(Commands.argument('y', Arguments.DOUBLE.create(event)).then(Commands.argument('z', Arguments.DOUBLE.create(event)).executes(ctx => {
+    var server = ctx.source.server
+    var x = Number(Arguments.DOUBLE.getResult(ctx, 'x')), y = Number(Arguments.DOUBLE.getResult(ctx, 'y')), z = Number(Arguments.DOUBLE.getResult(ctx, 'z'))
+    var e = aizenNpcPos(server)
+    if (!e) { ctx.source.sendFailure(Text.of('Aizen bulunamadı (yüklü değil ya da kurulmadı). Yakınına git ya da aizen_kur çalıştır.')); return 0 }
+    server.persistentData.putDouble('aizen_hx', x)
+    server.persistentData.putDouble('aizen_hy', y)
+    server.persistentData.putDouble('aizen_hz', z)
+    server.persistentData.putInt('aizen_var', 1)
+    global.aizenWander = false
+    npcShunpoTo(server, e, x, y, z, '')
+    ctx.source.sendSuccess(Text.of('Aizen evi ' + x + ' ' + y + ' ' + z + ' yapıldı.'), false)
+    return 1
+  })))))
   // /aizen_sifirla <oyuncu>: oyuncunun Aizen ilerlemesini sıfırlar (araştırma, yardım, boss ödül bayrağı, bekleme)
   event.register(Commands.literal('aizen_sifirla').requires(s => s.hasPermission(2)).then(Commands.argument('oyuncu', Arguments.PLAYER.create(event)).executes(ctx => {
     var p = Arguments.PLAYER.getResult(ctx, 'oyuncu')

@@ -208,11 +208,12 @@ function kenpachiFightTick(server) {
   var reach = 3.8
   // Shunpo: oyuncu uzaklaştıysa (ya da çok yukarıdaysa/başka yükseklikteyse) Kenpachi arkasına ışınlanır (siyah-beyaz duman, ışınlanma sesi)
   if ((dist > 9 || dy > 6) && now >= Number(f.nextShunpo || 0)) {
-    server.runCommandSilent('execute at ' + f.uuid + ' run particle minecraft:smoke ~ ~1 ~ 0.3 0.6 0.3 0.05 25')
-    server.runCommandSilent('execute at ' + f.uuid + ' run particle minecraft:end_rod ~ ~1 ~ 0.2 0.5 0.2 0.02 8')
-    server.runCommandSilent('execute at ' + name + ' rotated as ' + name + ' run tp ' + f.uuid + ' ^ ^ ^-2.4')
-    server.runCommandSilent('execute at ' + f.uuid + ' run particle minecraft:smoke ~ ~1 ~ 0.3 0.6 0.3 0.05 25')
-    server.runCommandSilent('execute at ' + f.uuid + ' run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 1.7')
+    var kfe = kenpachiFighterEntity(server, f.uuid)
+    var kpl = server.getPlayer(name)
+    if (kfe && kpl) {
+      var kbp = npcShunpoPoint(kpl, -2.4)
+      npcShunpoTo(server, kfe, kbp.x, kbp.y, kbp.z, name)
+    }
     f.nextShunpo = now + (Number(f.phase) === 1 ? 3500 : 2000)
     f.nextHit = Math.max(Number(f.nextHit), now + 500)
     return

@@ -11,7 +11,7 @@
 | [Kral Kaelen](vlorya-krali.md) | Vlorya Kralı | İnsan | -662, 85, -253 | Vlorya |
 | [Kraliçe Elyndra](granfos-kralicesi.md) | Granfos Kraliçesi | İnsan | -826, 79, -485 | Granfos |
 | [Usta Büyücü](usta-buyucu.md) | — | İnsan | -789, 89, -330 | Granfos |
-| [Aizen](aizen.md) | Yardımsever âlim, sonra boss | İnsan | -1310, 77, -392 (henüz doğurulmadı) | Caddy |
+| [Aizen](aizen.md) | Yardımsever âlim, sonra boss | İnsan | -1307, 80, -393 (henüz doğurulmadı) | Caddy |
 | [Kenpachi](kenpachi.md) | Drondra Kralı'nın koruyucusu | İnsan | -629.5, 68, -437.5 | Drondra |
 | [Gojo](gojo.md) | Mavi, Kırmızı, Mor hocası | İnsan | -819.5, 69, -472.5 | Caddy bölgesi |
 | [Kakashi](kakashi.md) | Chidori hocası | İnsan | -786.5, 72, -331.5 | Caddy bölgesi |
