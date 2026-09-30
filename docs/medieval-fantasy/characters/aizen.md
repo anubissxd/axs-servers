@@ -10,7 +10,7 @@
 
 ## Skin / Texture
 
-- **Dosyalar:** [`assets/npc-skins/aizen_v1.png`](../../../assets/npc-skins/aizen_v1.png) (yardımsever hâli) ve `aizen_v2.png` (kötü hâli; şimdilik aynı dosya). Detay: [assets/npc-skins/README.md](../../../assets/npc-skins/README.md).
+- **Dosyalar:** [`assets/npc-skins/aizen_v1.png`](../../../assets/npc-skins/aizen_v1.png) (yardımsever hâli, swxff'in `aizen-1.png`'si) ve `aizen_v2.png` (kötü hâli, swxff'in `aizen.png`'si). Detay: [assets/npc-skins/README.md](../../../assets/npc-skins/README.md).
 - **Oyunda:** `SkinData` `SECURE_REMOTE_URL`. İhanet olayında NPC `v1`'den `v2`'ye ve isim rengi altın kahveden mora geçer.
 
 ## Evreler (sunucu geneli)
