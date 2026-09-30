@@ -49,3 +49,14 @@
 
 
 **Karşılama:** Tanıştıktan sonra her gelişte hoca isteksiz bir karşılama repliğiyle başlar (5 farklı replik, `hoca_kars_1..5`); büyü menüsü ancak "öğrenmek istiyorum" denince açılır. Hangi replik açılacağı oyuncudaki `hoca_kn_<hoca>_<n>` etiketiyle belirlenir ve her konuşmadan sonra bir öncekinden farklı yeni biri seçilir (`hocalar_egitim.js` `hocaRerollGreeting`, etkileşimde `hoca_reroll_<hoca>` etiketi).
+
+## Yan görevler (pilot, 2026-10-01)
+
+Kakashi yalnızca büyü öğretmeni değil, küçük işler de verir. Hoca hub'ında **"Bir işin var mı?"** düğmesi (etiket `yg_kakashi`; `gen_hocalar.js`'te tanımlı ve `yan_gorev.js` çalışırken kod da ekler). Şart: yalnızca `rank_maceraci` (hoca eğitimi şart değil). Yeni bir iş istemek, sürenini sorgulamak ve sayfa görevini teslim etmek aynı düğmedir. Mantık: `kubejs/server_scripts/yan_gorev.js`, durum `yg_k_*`, yönetici `/yan_gorev_sifirla <oyuncu>`.
+
+| Görev | Nasıl | Süre | Ödül |
+|---|---|---|---|
+| **Geç Kalan Haberci** (teslimat) | "Mühürlü Rulo" (kağıt, `ykRulo`) verilir; Erwin, Thorfinn (Yeminsiz), Kenpachi ya da Yoruichi (Kül Bekçisi ve üstü) rastgele hedef olur. Hedef NPC'nin 4,5 blok yakınına gidince rulo alınır, hedef NPC kendi diyaloğunda teşekkür eder | 12 dk | 2-4 zümrüt |
+| **Kopya Defteri** (bulma) | Oyuncunun 25-60 blok çevresinde 4 görünmez `interaction` varlığı ("sayfa") oluşur; yakında parlayan iz (end_rod/enchant) bırakır, sağ tıkla toplanır. Hepsi toplanınca Kakashi'ye dönüp ödül alınır | 10 dk | 2-4 zümrüt |
+
+Günde en çok 4 iş, işler arası 3 dk. Rütbe Kan Yeminli ve üstüyse ödül +1. Altın elma gibi OP eşya yok. Gerçek oyunda denenmedi.

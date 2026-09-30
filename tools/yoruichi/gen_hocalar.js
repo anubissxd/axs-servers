@@ -68,6 +68,7 @@ const NPCS = {
       btn('Sınavı bildiriyorum.', [tag('hoca_rep_kakashi'), CLOSE]),
       btn('Eğitim durumum.', [tag('hoca_info'), CLOSE]),
       btn('Parşömenimi kaybettim.', [tag('hoca_lost_chidori'), CLOSE]),
+      btn('Bir işin var mı?', [tag('yg_kakashi'), CLOSE]), // yan görev (yan_gorev.js); kod da çalışırken bu düğmeyi ekler
       btn('Ayrılıyorum.', [CLOSE])
     ]
   },

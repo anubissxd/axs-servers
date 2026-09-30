@@ -116,3 +116,13 @@ Kurulum gerekmez (cevap diyaloğu kendiliğinden eklenir); oyunda `/reload` yete
 4. **Kenpachi:** meydan okuma reddi (rütbe/bekleme), "kral" ve "kim" cevapları. Kapışma içi replikler sohbette kalmalı.
 5. **Aizen** (NPC kurulduktan sonra): bilgi, çay, araştırma, yiyecek getirme, inceleme, "kim yaptı", meydan okuma reddi. Shunpo ile gelip konuşması ve kapışma replikleri sohbette kalmalı.
 6. **Yoruichi:** rütbe yetersizken ve zümrüt bloğu yetmezken cevapları pencerede; ücret/kabul sözü ve sahne sohbette.
+
+## M. Kakashi yan görevleri (pilot)
+
+Kurulum gerekmez (düğme kod tarafından eklenir, 10 sn içinde). Kakashi'ye git, menüde "Bir işin var mı?" düğmesi çıkmalı.
+1. **Rütbesiz:** Maceracı değilsen reddetmeli.
+2. **Teslimat:** Rulo envantere gelmeli, hedef NPC adı söylenmeli. Hedefe 4,5 blok yaklaşınca rulo silinmeli, hedef NPC pencerede teşekkür etmeli, zümrüt gelmeli. Ruloyu atıp Kakashi'ye tekrar sorunca yenisini vermeli.
+3. **Sayfa bulma:** 4 iz (parlayan parçacık) görünmeli; sağ tıklayınca "Sayfa bulundu 1/4", sonunda "Kakashi'ye dön"; Kakashi'de düğme ödülü vermeli. Başkası izi alamamalı ("Bu iz sana ait değil").
+4. **Süre:** 12/10 dk sonra görev iptal olmalı, izler silinmeli.
+5. **Sınırlar:** Art arda istekte "Biraz dinlen", günde 4 işten sonra "Bugünlük yeter". `/yan_gorev_sifirla <oyuncu>` hepsini sıfırlar.
+6. **Sorun:** Düğme çıkmazsa ya da sayfalar oluşmazsa `logs/kubejs/server.log`'ta "yan gorev" satırlarına bak.
