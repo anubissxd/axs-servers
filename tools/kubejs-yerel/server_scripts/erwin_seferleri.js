@@ -288,8 +288,9 @@ function erwinSayChat(server, name, text) {
 const ERWIN_NPC_UUID = '504788d8-3dc0-407e-aebf-ca04dc17cfcb'
 var erwinPending = {}
 
+// Not: Minecraft'ın tırnaklı SNBT dizgesinde '\n' kaçışı YOKTUR (yalnızca \\ ve \"); satır sonu gerçek satır sonu karakteri olarak girer.
 function erwinSnbtEsc(s) {
-  return String(s).split('\\').join('\\\\').split('"').join('\\"').split('\n').join('\\n')
+  return String(s).split('\\').join('\\\\').split('"').join('\\"')
 }
 
 // Diyalog verisini yazar. 'data modify' değer zaten aynıysa başarısız (0) döner; bu yüzden önce farklı bir yer tutucu yazılır, sonra gerçek değer.
@@ -299,6 +300,8 @@ function erwinDlgSet(server, dlg, path, value) {
   try {
     server.runCommandSilent(base + '"."')
     ok = server.runCommandSilent(base + '"' + erwinSnbtEsc(value) + '"')
+    // satır sonu kabul edilmezse satırlar boşlukla birleştirilerek yeniden denenir
+    if (!(ok > 0) && String(value).indexOf('\n') >= 0) ok = server.runCommandSilent(base + '"' + erwinSnbtEsc(String(value).split('\n').join(' ')) + '"')
   } catch (e) {
     console.error('erwin diyalog yazma hata: ' + e)
     ok = 0
@@ -315,7 +318,7 @@ function erwinSay(server, name, text) {
   var first = !erwinPending[name]
   if (first) erwinPending[name] = []
   erwinPending[name].push(String(text).split('**').join(''))
-  if (first) server.scheduleInTicks(2, () => erwinFlushSay(server, name))
+  if (first) server.scheduleInTicks(1, () => erwinFlushSay(server, name))
 }
 
 function erwinFlushSay(server, name) {
@@ -859,8 +862,8 @@ function erwinSyncFtbRank(server, p, name) {
   p.persistentData.putString('erwin_ftb', want)
 }
 
-function erwinHandleTags(server, p, name) {
-  erwinSyncFtbRank(server, p, name)
+function erwinHandleTags(server, p, name, fast) {
+  if (!fast) erwinSyncFtbRank(server, p, name)
   if (erwinHas(p, 'erwin_ambar')) {
     server.runCommandSilent('tag ' + name + ' remove erwin_ambar')
     erwinAmbar(server, name)
@@ -906,7 +909,15 @@ ServerEvents.tick(event => {
     server.runCommandSilent('scoreboard objectives add erwin_pick trigger')
   }
   erwinPhase++
-  if (erwinPhase % 10 !== 0) return
+  if (erwinPhase % 10 !== 0) {
+    // diyalog düğmeleri yanıt versin diye etiket/seçim kontrolü her 2 tikte (0,1 sn) yapılır
+    if (erwinPhase % 2 === 0) {
+      server.players.forEach(p => {
+        try { erwinHandleTags(server, p, String(p.username), true) } catch (e) { console.error('erwin etiket hata: ' + e) }
+      })
+    }
+    return
+  }
   server.players.forEach(p => {
     try {
       var name = String(p.username)
