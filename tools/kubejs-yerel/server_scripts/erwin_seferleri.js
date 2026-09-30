@@ -478,7 +478,7 @@ function erwinOffer(server, p, name) {
   }
   erwinSay(server, name, erwinPickOne(ERWIN_OFFER_HEAD))
   for (var i = 0; i < offers.length; i++) erwinOfferLine(server, name, i, offers[i])
-  erwinNote(server, name, 'Seçmek için [A] [B] [C]\'ye tıkla. [☠] = Kan Bahsi (ödül x1.5, ölürsen iptal). Teklifler 10 dakika geçerli.', 'dark_gray')
+  erwinNote(server, name, 'Seçmek için [A] [B] [C]\'ye tıkla. [☠] = Kan Bahsi (ödül x1.5, ölürsen iptal). Teklifler 10 dakika geçerli.', 'white')
   pd.putString('erwin_o_1', offers[0] || '')
   pd.putString('erwin_o_2', offers[1] || '')
   pd.putString('erwin_o_3', offers[2] || '')
