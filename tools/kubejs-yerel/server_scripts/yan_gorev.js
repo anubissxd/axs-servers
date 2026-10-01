@@ -260,4 +260,28 @@ ServerEvents.commandRegistry(event => {
     ctx.source.sendSuccess(Text.of(name + ' için yan görevler sıfırlandı.'), false)
     return 1
   })))
+  // /kakashi_menu_kontrol: Kakashi menüsünü kurar ve ana menü ile alt menünün düğmelerini yazar (tanı komutu)
+  event.register(Commands.literal('kakashi_menu_kontrol').requires(s => s.hasPermission(2)).executes(ctx => {
+    var server = ctx.source.server
+    ygEnsureButton(server)
+    var out = []
+    try {
+      var e = server.overworld().getEntity(Java.loadClass('java.util.UUID').fromString(YG_KAKASHI_UUID))
+      if (!e) { ctx.source.sendFailure(Text.of('Kakashi yüklü değil (yanına git).')); return 0 }
+      var set = e.nbt.getCompound('DialogData').getList('DialogDataSet', 10)
+      for (var i = 0; i < set.size(); i++) {
+        var d = set.getCompound(i)
+        var nm = String(d.getString('Name'))
+        if (nm !== 'hoca_hub' && nm !== 'hoca_diger') continue
+        var bl = d.getList('Buttons', 10)
+        var names = []
+        for (var j = 0; j < bl.size(); j++) names.push(String(bl.getCompound(j).getString('Name')))
+        out.push(nm + ' (' + names.length + '): ' + names.join(' | '))
+      }
+    } catch (err) {
+      out.push('okuma hata: ' + err)
+    }
+    ctx.source.sendSuccess(Text.of(out.length > 0 ? out.join('\n') : 'hub/diger bulunamadı'), false)
+    return 1
+  }))
 })
