@@ -157,7 +157,7 @@ function ygKakashiRequest(server, p, name) {
     pd.putString('yg_k_target', t.key)
     pd.putLong('yg_k_expire', now + YG_TIME_HABER_MS)
     server.runCommandSilent('give ' + name + ' minecraft:paper{ykRulo:1b,display:{Name:\'{"text":"Mühürlü Rulo","color":"gold","italic":false}\',Lore:[\'{"text":"Kakashi\\\'nin mührü. Açma.","color":"gray","italic":false}\']}} 1')
-    ygKakashiSay(server, name, ygPick(YG_KAKASHI_HABER).split('{h}').join(t.name).split('{dk}').join(String(YG_TIME_HABER_MS / 60000)))
+    ygKakashiSay(server, name, ygPick(YG_KAKASHI_HABER).split('{h}').join(t.name).split('{dk}').join(String(YG_TIME_HABER_MS / 60000)) + ' Ekranın altında hedefin yönü, mesafesi ve kalan süre yazar.')
   } else {
     var n = 4
     pd.putString('yg_k_task', 'iz')
@@ -170,11 +170,57 @@ function ygKakashiRequest(server, p, name) {
     }
     pd.putInt('yg_k_need', spawned)
     pd.putLong('yg_k_expire', now + YG_TIME_IZ_MS)
-    ygKakashiSay(server, name, ygPick(YG_KAKASHI_IZ).split('{n}').join(String(spawned)).split('{dk}').join(String(YG_TIME_IZ_MS / 60000)))
+    ygKakashiSay(server, name, ygPick(YG_KAKASHI_IZ).split('{n}').join(String(spawned)).split('{dk}').join(String(YG_TIME_IZ_MS / 60000)) + ' Ekranın altında kaç sayfa topladığın, en yakın izin yönü ve kalan süre yazar; izlerin üstünde yukarı doğru bir ışık sütunu görünür.')
   }
 }
 
 var ygPhase = 0
+
+// Yön adı (kuzey = -z, doğu = +x)
+function ygCompass(dx, dz) {
+  var names = ['kuzey', 'kuzeydoğu', 'doğu', 'güneydoğu', 'güney', 'güneybatı', 'batı', 'kuzeybatı']
+  var ang = Math.atan2(dx, -dz) * 180 / YG_PI
+  var idx = Math.round(((ang + 360) % 360) / 45) % 8
+  return names[idx]
+}
+
+// Oyuncuya ait en yakın sayfa izi: { d, dx, dz } ya da null
+function ygNearestIz(server, name, p) {
+  var best = null
+  try {
+    var it = server.overworld().getAllEntities().iterator()
+    while (it.hasNext()) {
+      var e = it.next()
+      var mine = false
+      e.getTags().forEach(x => { if (String(x) === 'yg_iz_' + name) mine = true })
+      if (!mine) continue
+      var dx = Number(e.x) - Number(p.x), dz = Number(e.z) - Number(p.z)
+      var d = Math.sqrt(dx * dx + dz * dz)
+      if (best === null || d < best.d) best = { d: d, dx: dx, dz: dz }
+    }
+  } catch (err) { best = null }
+  return best
+}
+
+// Ekranın altında sürekli görev durumu: ne yapılacak, kaç tane, ne kadar uzakta, hangi yönde, kalan süre.
+function ygProgress(server, p, name, task, pd, now) {
+  var left = Math.max(0, Math.ceil((Number(pd.getLong('yg_k_expire')) - now) / 1000))
+  var mm = Math.floor(left / 60), ss = left % 60
+  var time = mm + ':' + (ss < 10 ? '0' : '') + ss
+  if (task === 'haber') {
+    var tg = YG_TARGETS.filter(t => t.key === String(pd.getString('yg_k_target')))[0]
+    if (!tg) return
+    var dx = tg.x - Number(p.x), dz = tg.z - Number(p.z)
+    var d = Math.round(Math.sqrt(dx * dx + dz * dz))
+    ygBar(server, name, 'Rulo: ' + tg.name + '\'e ulaştır, ' + d + ' blok ' + ygCompass(dx, dz) + ' · ' + time, 'gold')
+  } else if (task === 'iz') {
+    var have = Number(pd.getInt('yg_k_have')), need = Number(pd.getInt('yg_k_need'))
+    if (have >= need) { ygBar(server, name, 'Sayfalar: ' + have + '/' + need + ' · Kakashi\'ye dön · ' + time, 'green'); return }
+    var n = ygNearestIz(server, name, p)
+    var where = n ? ' · en yakın iz ' + Math.round(n.d) + ' blok ' + ygCompass(n.dx, n.dz) : ' · izleri ara'
+    ygBar(server, name, 'Sayfalar: ' + have + '/' + need + where + ' · ' + time, 'gold')
+  }
+}
 
 ServerEvents.tick(event => {
   ygPhase++
@@ -197,6 +243,7 @@ ServerEvents.tick(event => {
         ygBar(server, name, 'Kakashi\'nin işi için süre doldu.', 'gray')
         return
       }
+      if (ygPhase % 20 === 0) ygProgress(server, p, name, task, pd, now)
       if (task === 'haber' && ygPhase % 8 === 0) {
         var tg = YG_TARGETS.filter(t => t.key === String(pd.getString('yg_k_target')))[0]
         if (!tg) return
@@ -211,6 +258,8 @@ ServerEvents.tick(event => {
       if (task === 'iz' && ygPhase % 10 === 0) {
         server.runCommandSilent('execute as @e[tag=yg_iz_' + name + '] at @s run particle minecraft:end_rod ~ ~1.2 ~ 0.15 0.4 0.15 0.01 4 force ' + name)
         server.runCommandSilent('execute as @e[tag=yg_iz_' + name + '] at @s run particle minecraft:enchant ~ ~1.0 ~ 0.3 0.5 0.3 0.4 6 force ' + name)
+        // uzaktan görünen ışık sütunu: sayfanın üstünde yukarı doğru dizilen parıltı
+        server.runCommandSilent('execute as @e[tag=yg_iz_' + name + '] at @s run particle minecraft:end_rod ~ ~5 ~ 0.04 4 0.04 0.01 14 force ' + name)
       }
     } catch (e) {
       console.error('yan gorev hata: ' + e)

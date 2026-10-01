@@ -60,3 +60,5 @@ Kakashi yalnızca büyü öğretmeni değil, küçük işler de verir. Hoca men�
 | **Kopya Defteri** (bulma) | Oyuncunun 25-60 blok çevresinde 4 görünmez `interaction` varlığı ("sayfa") oluşur; yakında parlayan iz (end_rod/enchant) bırakır, sağ tıkla toplanır. Hepsi toplanınca Kakashi'ye dönüp ödül alınır | 10 dk | 2-4 zümrüt |
 
 Günde en çok 4 iş, işler arası 3 dk. Rütbe Kan Yeminli ve üstüyse ödül +1. Altın elma gibi OP eşya yok. Gerçek oyunda denenmedi.
+
+**Görev takibi:** Görev sürerken ekranın altında sürekli durum yazar: teslimatta "Rulo: <NPC>'e ulaştır, <mesafe> blok <yön> · <kalan süre>", sayfa bulmada "Sayfalar: <bulunan>/<toplam> · en yakın iz <mesafe> blok <yön> · <kalan süre>". Sayfa izlerinin üstünde yukarı doğru uzaktan görünen bir ışık sütunu vardır. Kakashi'nin görev teklifi metni de bunu anlatır. "Bir işin var mı?" tekrar basılırsa durumu sözle söyler.
