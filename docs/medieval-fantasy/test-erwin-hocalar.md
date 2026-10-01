@@ -126,3 +126,7 @@ Kurulum gerekmez (düğme kod tarafından eklenir, 10 sn içinde). Kakashi'ye gi
 4. **Süre:** 12/10 dk sonra görev iptal olmalı, izler silinmeli.
 5. **Sınırlar:** Art arda istekte "Biraz dinlen", günde 4 işten sonra "Bugünlük yeter". `/yan_gorev_sifirla <oyuncu>` hepsini sıfırlar.
 6. **Sorun:** Düğme çıkmazsa ya da sayfalar oluşmazsa `logs/kubejs/server.log`'ta "yan gorev" satırlarına bak.
+
+## N. Mentor yan görevleri
+
+Ayrıntılı test adımları: [yan-gorevler.md](yan-gorevler.md) "Test" bölümü. (Bölüm M yalnızca Kakashi pilotuydu.)

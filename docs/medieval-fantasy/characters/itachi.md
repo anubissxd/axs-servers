@@ -52,3 +52,7 @@ Toplam: Amaterasu 37, Tsukiyomi 50 zümrüt bloğu.
 
 
 **Karşılama:** Tanıştıktan sonra her gelişte hoca isteksiz bir karşılama repliğiyle başlar (5 farklı replik, `hoca_kars_1..5`); büyü menüsü ancak "öğrenmek istiyorum" denince açılır. Hangi replik açılacağı oyuncudaki `hoca_kn_<hoca>_<n>` etiketiyle belirlenir ve her konuşmadan sonra bir öncekinden farklı yeni biri seçilir (`hocalar_egitim.js` `hocaRerollGreeting`, etkileşimde `hoca_reroll_<hoca>` etiketi).
+
+## Yan görevler
+
+Itachi 5 yan görev verir (haber, iz, av, topla, ulas): [yan-gorevler.md](../yan-gorevler.md).

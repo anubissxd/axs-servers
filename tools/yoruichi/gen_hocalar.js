@@ -129,6 +129,7 @@ const NPCS = {
       btn('Eğitim durumum.', [tag('hoca_info'), CLOSE]),
       btn('Amaterasu parşömenimi kaybettim.', [tag('hoca_lost_amaterasu'), CLOSE]),
       btn('Tsukiyomi parşömenimi kaybettim.', [tag('hoca_lost_tsukiyomi'), CLOSE]),
+      btn('Bir işin var mı?', [tag('yg_itachi'), CLOSE]), // yan görev (yan_gorev.js; kod da ekler)
       btn('Geri.', [CLOSE])
     ],
     buttons: () => [

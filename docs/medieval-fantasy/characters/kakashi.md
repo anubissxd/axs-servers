@@ -50,15 +50,6 @@
 
 **Karşılama:** Tanıştıktan sonra her gelişte hoca isteksiz bir karşılama repliğiyle başlar (5 farklı replik, `hoca_kars_1..5`); büyü menüsü ancak "öğrenmek istiyorum" denince açılır. Hangi replik açılacağı oyuncudaki `hoca_kn_<hoca>_<n>` etiketiyle belirlenir ve her konuşmadan sonra bir öncekinden farklı yeni biri seçilir (`hocalar_egitim.js` `hocaRerollGreeting`, etkileşimde `hoca_reroll_<hoca>` etiketi).
 
-## Yan görevler (pilot, 2026-10-01)
+## Yan görevler
 
-Kakashi yalnızca büyü öğretmeni değil, küçük işler de verir. Hoca menüsünde **Diğer işler → "Bir işin var mı?"** düğmesi (etiket `yg_kakashi`; Easy NPC bir diyalogda en fazla 6 düğmeyi düzgün dizdiği için ana menüde değil alt menüde; `gen_hocalar.js` ve `yan_gorev.js` aynı düzeni kurar). Şart: yalnızca `rank_maceraci` (hoca eğitimi şart değil). Yeni bir iş istemek, durumu sorgulamak ve sayfa görevini teslim etmek aynı düğmedir. Mantık: `kubejs/server_scripts/yan_gorev.js`, durum `yg_k_*`, yönetici `/yan_gorev_sifirla <oyuncu>`.
-
-| Görev | Nasıl | Süre | Ödül |
-|---|---|---|---|
-| **Geç Kalan Haberci** (teslimat) | "Mühürlü Rulo" (kağıt, `ykRulo`) verilir; Erwin, Thorfinn (Yeminsiz), Kenpachi ya da Yoruichi (Kül Bekçisi ve üstü) rastgele hedef olur. Hedef NPC'nin 4,5 blok yakınına gidince rulo alınır, hedef NPC kendi diyaloğunda teşekkür eder | 12 dk | 2-4 zümrüt |
-| **Kopya Defteri** (bulma) | Oyuncunun 25-60 blok çevresinde 4 görünmez `interaction` varlığı ("sayfa") oluşur; yakında parlayan iz (end_rod/enchant) bırakır, sağ tıkla toplanır. Hepsi toplanınca Kakashi'ye dönüp ödül alınır | 10 dk | 2-4 zümrüt |
-
-Günde en çok 4 iş, işler arası 3 dk. Rütbe Kan Yeminli ve üstüyse ödül +1. Altın elma gibi OP eşya yok. Gerçek oyunda denenmedi.
-
-**Görev takibi:** Görev sürerken ekranın altında sürekli durum yazar: teslimatta "Rulo: <NPC>'e ulaştır ↗ <mesafe> blok · <kalan süre>", sayfa bulmada "Sayfalar: <bulunan>/<toplam> ↗ <mesafe> blok · <kalan süre>". Ok oyuncunun baktığı yöne göredir (↑ önünde, → sağında, ↓ arkanda, ← solunda). Her sayfa dünyada uzaktan ve duvar arkasından bile görünen **parlayan altın bir kitap** (`item_display`, etiket `yg_izv`) olarak durur; yanında sağ tıklanan görünmez `interaction` kutusu vardır. Kakashi'nin teklif metni bunu anlatır. "Bir işin var mı?" tekrar basılırsa durumu sözle söyler.
+Kakashi 5 yan görev verir (haber, iz, av, topla, ulas): [yan-gorevler.md](../yan-gorevler.md). Menüde **Diğer işler → "Bir işin var mı?"**.
