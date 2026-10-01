@@ -119,7 +119,7 @@ Kurulum gerekmez (cevap diyaloğu kendiliğinden eklenir); oyunda `/reload` yete
 
 ## M. Kakashi yan görevleri (pilot)
 
-Kurulum gerekmez (düğme kod tarafından eklenir, 10 sn içinde). Kakashi'ye git, menüde "Bir işin var mı?" düğmesi çıkmalı.
+Kurulum gerekmez (düğme kod tarafından eklenir, 10 sn içinde). Kakashi'ye git, "Bir şey öğrenmek istiyorum" de, ana menüde (4 düğme) "Diğer işler" çıkmalı; içinde "Bir işin var mı?" olmalı. Düğmeler üst üste binmemeli.
 1. **Rütbesiz:** Maceracı değilsen reddetmeli.
 2. **Teslimat:** Rulo envantere gelmeli, hedef NPC adı söylenmeli. Hedefe 4,5 blok yaklaşınca rulo silinmeli, hedef NPC pencerede teşekkür etmeli, zümrüt gelmeli. Ruloyu atıp Kakashi'ye tekrar sorunca yenisini vermeli.
 3. **Sayfa bulma:** 4 iz (parlayan parçacık) görünmeli; sağ tıklayınca "Sayfa bulundu 1/4", sonunda "Kakashi'ye dön"; Kakashi'de düğme ödülü vermeli. Başkası izi alamamalı ("Bu iz sana ait değil").

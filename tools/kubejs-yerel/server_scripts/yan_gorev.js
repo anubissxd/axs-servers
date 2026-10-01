@@ -59,10 +59,22 @@ function ygDone(p) {
   return String(pd.getString('yg_k_day')) === ygToday() ? Number(pd.getInt('yg_k_day_count')) : 0
 }
 
-// Hub diyaloğuna 'Bir işin var mı?' düğmesini ekler (yoksa). Yeniden üretilen diyalog düğmeyi silerse bir sonraki kontrolde geri gelir.
+// Kakashi'nin menüsünü kurar. Easy NPC bir diyalogda en fazla 6 düğmeyi düzgün dizer ([Admin] Kapat dahil, fazlası üst üste biner), bu yüzden
+// ana menüde (hoca_hub) yalnızca 'Diğer işler.' düğmesi vardır; durum, parşömen yenileme ve yan görev alt menüdedir (hoca_diger).
+// Yeniden üretilen diyalog düzeni bozarsa bir sonraki kontrolde (10 sn) yeniden kurulur. Üretici (gen_hocalar.js) aynı düzeni kurar.
 function ygEnsureButton(server) {
-  var btn = '{Name:"' + YG_BUTTON_NAME + '",Actions:[{Type:"COMMAND",PermLevel:3,Cmd:"/tag @initiator add yg_kakashi"},{Type:"CLOSE_DIALOG"}]}'
-  server.runCommandSilent('execute unless data entity ' + YG_KAKASHI_UUID + ' DialogData.DialogDataSet[{Name:"hoca_hub"}].Buttons[{Name:"' + YG_BUTTON_NAME + '"}] run data modify entity ' + YG_KAKASHI_UUID + ' DialogData.DialogDataSet[{Name:"hoca_hub"}].Buttons insert 4 value ' + btn)
+  var u = YG_KAKASHI_UUID
+  var opts = '{AllowEscClose:0,ShowCloseButton:0,ButtonConditionMode:"HIDE"}'
+  var adm = '{Conditions:[{Type:"PLAYER_TAG",Name:"rank_admin"}],Name:"[Admin] Kapat",Actions:[{Type:"CLOSE_DIALOG"}]}'
+  var tagBtn = function (n, tg) { return '{Name:"' + n + '",Actions:[{Type:"COMMAND",PermLevel:3,Cmd:"/tag @initiator add ' + tg + '"},{Type:"CLOSE_DIALOG"}]}' }
+  var diger = '{Options:' + opts + ',Texts:[{Text:"Başka ne var?"}],Label:"hoca_diger",Buttons:[' +
+    [tagBtn('Eğitim durumum.', 'hoca_info'), tagBtn('Parşömenimi kaybettim.', 'hoca_lost_chidori'), tagBtn(YG_BUTTON_NAME, 'yg_kakashi'), '{Name:"Geri.",Actions:[{Type:"CLOSE_DIALOG"}]}', adm].join(',') +
+    '],Name:"hoca_diger"}'
+  var set = 'data modify entity ' + u + ' DialogData.DialogDataSet'
+  var hub = ' DialogData.DialogDataSet[{Name:"hoca_hub"}].Buttons'
+  server.runCommandSilent('execute unless data entity ' + u + ' DialogData.DialogDataSet[{Name:"hoca_diger"}] run ' + set + ' append value ' + diger)
+  server.runCommandSilent('execute unless data entity ' + u + hub + '[{Name:"Diğer işler."}] run data modify entity ' + u + hub + ' insert 2 value {Name:"Diğer işler.",Actions:[{Type:"OPEN_NAMED_DIALOG",Cmd:"hoca_diger"}]}')
+  ;['Eğitim durumum.', 'Parşömenimi kaybettim.', YG_BUTTON_NAME].forEach(n => server.runCommandSilent('data remove entity ' + u + hub + '[{Name:"' + n + '"}]'))
 }
 
 function ygClearTask(server, name, p) {
@@ -167,7 +179,7 @@ var ygPhase = 0
 ServerEvents.tick(event => {
   ygPhase++
   var server = event.server
-  if (ygPhase % 200 === 0) ygEnsureButton(server)
+  if (ygPhase === 40 || ygPhase % 200 === 0) ygEnsureButton(server)
   if (ygPhase % 4 !== 0) return
   server.players.forEach(p => {
     try {

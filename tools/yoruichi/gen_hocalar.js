@@ -66,10 +66,15 @@ const NPCS = {
     buttons: () => [
       btn('Chidori öğrenmek istiyorum.', [tag('hoca_req_chidori'), CLOSE]),
       btn('Sınavı bildiriyorum.', [tag('hoca_rep_kakashi'), CLOSE]),
+      btn('Diğer işler.', [open('hoca_diger')]),
+      btn('Ayrılıyorum.', [CLOSE])
+    ],
+    // Easy NPC bir diyalogda en fazla 6 düğmeyi düzgün dizer ([Admin] Kapat dahil); yan görev düğmesi bu yüzden alt menüde (yan_gorev.js bunu kodla da kurar)
+    diger: () => [
       btn('Eğitim durumum.', [tag('hoca_info'), CLOSE]),
       btn('Parşömenimi kaybettim.', [tag('hoca_lost_chidori'), CLOSE]),
-      btn('Bir işin var mı?', [tag('yg_kakashi'), CLOSE]), // yan görev (yan_gorev.js); kod da çalışırken bu düğmeyi ekler
-      btn('Ayrılıyorum.', [CLOSE])
+      btn('Bir işin var mı?', [tag('yg_kakashi'), CLOSE]),
+      btn('Geri.', [CLOSE])
     ]
   },
   gojo: {
