@@ -85,6 +85,7 @@ function ygClearTask(server, name, p) {
   pd.putInt('yg_k_need', 0)
   pd.putLong('yg_k_expire', 0)
   server.runCommandSilent('kill @e[tag=yg_iz_' + name + ']')
+  server.runCommandSilent('kill @e[tag=yg_izv_' + name + ']')
   server.runCommandSilent('clear ' + name + ' minecraft:paper{ykRulo:1b}')
 }
 
@@ -111,6 +112,8 @@ function ygSpawnNotes(server, name, p, n) {
     var x = cx + Math.cos(ang) * dist
     var z = cz + Math.sin(ang) * dist
     server.runCommandSilent('execute in minecraft:overworld positioned ' + x.toFixed(1) + ' 0 ' + z.toFixed(1) + ' positioned over motion_blocking_no_leaves run summon minecraft:interaction ~ ~ ~ {Tags:["yg_iz","yg_iz_' + name + '"],width:1.0f,height:1.4f,response:1b}')
+    // uzaktan ve duvar arkasından bile görünen parlayan kitap (yalnızca görsel; sayılmaz, etiketi 'yg_izv')
+    server.runCommandSilent('execute in minecraft:overworld positioned ' + x.toFixed(1) + ' 0 ' + z.toFixed(1) + ' positioned over motion_blocking_no_leaves run summon minecraft:item_display ~ ~ ~ {Tags:["yg_izv","yg_izv_' + name + '"],item:{id:"minecraft:writable_book",Count:1b},item_display:"fixed",billboard:"vertical",Glowing:1b,glow_color_override:16766720,view_range:3.0f,transformation:{left_translation:[0f,0.9f,0f],left_rotation:[0f,0f,0f,1f],scale:[0.9f,0.9f,0.9f],right_rotation:[0f,0f,0f,1f]}}')
   }
   return Number(server.runCommandSilent('execute if entity @e[tag=yg_iz_' + name + ']'))
 }
@@ -170,11 +173,19 @@ function ygKakashiRequest(server, p, name) {
     }
     pd.putInt('yg_k_need', spawned)
     pd.putLong('yg_k_expire', now + YG_TIME_IZ_MS)
-    ygKakashiSay(server, name, ygPick(YG_KAKASHI_IZ).split('{n}').join(String(spawned)).split('{dk}').join(String(YG_TIME_IZ_MS / 60000)) + ' Ekranın altında kaç sayfa topladığın, en yakın izin yönü ve kalan süre yazar; izlerin üstünde yukarı doğru bir ışık sütunu görünür.')
+    ygKakashiSay(server, name, ygPick(YG_KAKASHI_IZ).split('{n}').join(String(spawned)).split('{dk}').join(String(YG_TIME_IZ_MS / 60000)) + ' Ekranın altında kaç sayfa topladığın, en yakın sayfanın oku (baktığın yöne göre) ve kalan süre yazar; sayfalar uzaktan, duvar arkasından bile parlayan altın bir kitap olarak görünür.')
   }
 }
 
 var ygPhase = 0
+
+// Oyuncunun baktığı yöne göre ok: ↑ önünde, → sağında, ↓ arkanda, ← solunda (yaw 0 = güney, 90 = batı)
+function ygArrow(dx, dz, yaw) {
+  var arrows = ['↑', '↗', '→', '↘', '↓', '↙', '←', '↖']
+  var bearing = Math.atan2(dx, -dz) * 180 / YG_PI
+  var rel = (bearing - (Number(yaw) + 180) + 720) % 360
+  return arrows[Math.round(rel / 45) % 8]
+}
 
 // Yön adı (kuzey = -z, doğu = +x)
 function ygCompass(dx, dz) {
@@ -212,12 +223,12 @@ function ygProgress(server, p, name, task, pd, now) {
     if (!tg) return
     var dx = tg.x - Number(p.x), dz = tg.z - Number(p.z)
     var d = Math.round(Math.sqrt(dx * dx + dz * dz))
-    ygBar(server, name, 'Rulo: ' + tg.name + '\'e ulaştır, ' + d + ' blok ' + ygCompass(dx, dz) + ' · ' + time, 'gold')
+    ygBar(server, name, 'Rulo: ' + tg.name + '\'e ulaştır  ' + ygArrow(dx, dz, p.yaw) + ' ' + d + ' blok · ' + time, 'gold')
   } else if (task === 'iz') {
     var have = Number(pd.getInt('yg_k_have')), need = Number(pd.getInt('yg_k_need'))
     if (have >= need) { ygBar(server, name, 'Sayfalar: ' + have + '/' + need + ' · Kakashi\'ye dön · ' + time, 'green'); return }
     var n = ygNearestIz(server, name, p)
-    var where = n ? ' · en yakın iz ' + Math.round(n.d) + ' blok ' + ygCompass(n.dx, n.dz) : ' · izleri ara'
+    var where = n ? '  ' + ygArrow(n.dx, n.dz, p.yaw) + ' ' + Math.round(n.d) + ' blok' : '  izleri ara'
     ygBar(server, name, 'Sayfalar: ' + have + '/' + need + where + ' · ' + time, 'gold')
   }
 }
@@ -286,6 +297,7 @@ ItemEvents.entityInteracted(event => {
     if (String(pd.getString('yg_k_task')) !== 'iz') return
     server.runCommandSilent('execute at ' + String(t.uuid) + ' run particle minecraft:end_rod ~ ~1 ~ 0.3 0.5 0.3 0.05 20 force ' + name)
     server.runCommandSilent('playsound minecraft:entity.experience_orb.pickup master ' + name + ' ~ ~ ~ 0.8 1.2')
+    server.runCommandSilent('execute at ' + String(t.uuid) + ' run kill @e[tag=yg_izv_' + name + ',distance=..2]')
     server.runCommandSilent('kill ' + String(t.uuid))
     var have = Number(pd.getInt('yg_k_have')) + 1
     pd.putInt('yg_k_have', have)
