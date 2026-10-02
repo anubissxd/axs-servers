@@ -12,14 +12,16 @@
 // Not: server_scripts dosyaları aynı scope'ta çalışır, isimler benzersiz olmalı (yg önekli). Math.PI NaN dönebilir: sabit kullan.
 
 const YG_PI = 3.141592653589793
-const YG_DAILY_LIMIT = 4
 const YG_COOLDOWN_MS = 180000
 const YG_BUTTON_NAME = 'Bir işin var mı?'
 
 const YG_MENTORS = {
-  kakashi: { name: 'Kakashi', uuid: '6de0f631-c97e-44de-a0ea-d1778f073f74', tag: 'yg_kakashi', color: 16766720 },
-  itachi: { name: 'Itachi', uuid: '6ea2c950-4873-485e-afb6-6b74c244f238', tag: 'yg_itachi', color: 11141290 },
-  yoruichi: { name: 'Yoruichi', uuid: 'fff2c1ae-28c0-4f9c-858b-94f7cbc0ca8e', tag: 'yg_yoruichi', color: 16733695 }
+  kakashi: { name: 'Kakashi', uuid: '6de0f631-c97e-44de-a0ea-d1778f073f74', tag: 'yg_kakashi', color: 16766720,
+    idle: 'Şimdilik sana verecek işim kalmadı. Yolda yeni bir şey çıkarsa... ya da çıkmazsa, bir şekilde haber veririm. Yine uğra.' },
+  itachi: { name: 'Itachi', uuid: '6ea2c950-4873-485e-afb6-6b74c244f238', tag: 'yg_itachi', color: 11141290,
+    idle: 'Gölgeler şimdilik sessiz. Yeni bir iş çıkarsa seni bulurum.' },
+  yoruichi: { name: 'Yoruichi', uuid: 'fff2c1ae-28c0-4f9c-858b-94f7cbc0ca8e', tag: 'yg_yoruichi', color: 16733695,
+    idle: 'Hmph, şimdilik eğlence bitti. Yeni bir yarış ya da kovalamaca çıkarsa seni çağırırım, hazır ol.' }
 }
 
 // Teslimat hedefleri (konumlar NPC dokümanlarından). minRank: Erwin Birliği rütbesi (0 = Yeminsiz).
@@ -117,9 +119,9 @@ function ygSay(m, server, name, text) {
 
 function ygTaskOf(m, id) { return YG_TASKS[m] ? YG_TASKS[m].filter(t => t.id === id)[0] : undefined }
 
-function ygDone(p, m) {
-  var pd = p.persistentData
-  return String(pd.getString('yg_day_' + m)) === ygToday() ? Number(pd.getInt('yg_cnt_' + m)) : 0
+// Oyuncunun bu mentorda tamamladığı görev kimlikleri (her görev oyuncu başına bir kez)
+function ygDoneList(p, m) {
+  return String(p.persistentData.getString('yg_done_' + m)).split(',').filter(x => x !== '')
 }
 
 // ------------------------------------------------------------------ Menü düğmeleri
@@ -165,12 +167,13 @@ function ygClearTask(server, name, p) {
   server.runCommandSilent('clear ' + name + ' minecraft:paper{ykRulo:1b}')
 }
 
-function ygReward(server, p, name, m) {
+// Ödül: 3-6 zümrüt (Kan Yeminli ve üstünde +2). Her görev bir kez yapılabildiği için Erwin/Thorfinn'in küçük işlerinden biraz yüksek.
+function ygReward(server, p, name, m, t) {
   var pd = p.persistentData
-  var em = 2 + Math.floor(Math.random() * 2) + (erwinRank(p) >= 2 ? 1 : 0)
+  var em = 3 + Math.floor(Math.random() * 4) + (erwinRank(p) >= 2 ? 2 : 0)
   server.runCommandSilent('give ' + name + ' minecraft:emerald ' + em)
-  if (String(pd.getString('yg_day_' + m)) !== ygToday()) { pd.putString('yg_day_' + m, ygToday()); pd.putInt('yg_cnt_' + m, 0) }
-  pd.putInt('yg_cnt_' + m, Number(pd.getInt('yg_cnt_' + m)) + 1)
+  var done = ygDoneList(p, m)
+  if (t && done.indexOf(t.id) < 0) { done.push(t.id); pd.putString('yg_done_' + m, done.join(',')) }
   pd.putLong('yg_next_' + m, Date.now() + YG_COOLDOWN_MS)
   return em
 }
@@ -223,13 +226,15 @@ function ygRequest(server, p, name, m) {
   if (am !== '' && am !== m) { say('Önce ' + YG_MENTORS[am].name + '\'in verdiği işi bitir; sonra benimle konuşursun.'); return }
   if (am === m) { ygReport(server, p, name, m); return }
   // yeni iş
-  if (ygDone(p, m) >= YG_DAILY_LIMIT) { say('Bugünlük yeter. Yarın gel.'); return }
+  var doneIds = ygDoneList(p, m)
+  var open = YG_TASKS[m].filter(x => doneIds.indexOf(x.id) < 0)
+  if (open.length === 0) { say(YG_MENTORS[m].idle); return }
   var wait = Number(pd.getLong('yg_next_' + m)) - now
   if (wait > 0) { say('Biraz dinlen. ' + Math.ceil(wait / 60000) + ' dakika sonra yeni bir işim olabilir.'); return }
   // son 2 görev hariç rastgele seç
   var last = String(pd.getString('yg_last_' + m)).split(',').filter(x => x !== '')
-  var pool = YG_TASKS[m].filter(t => last.indexOf(t.id) < 0)
-  if (pool.length === 0) pool = YG_TASKS[m]
+  var pool = open.filter(t => last.indexOf(t.id) < 0)
+  if (pool.length === 0) pool = open
   var t = ygPick(pool)
   var rank = erwinRank(p)
   var vars = { dk: t.time, n: t.n || '', l: t.label || '' }
@@ -268,7 +273,7 @@ function ygRequest(server, p, name, m) {
 }
 
 function ygComplete(server, p, name, m, t) {
-  var em = ygReward(server, p, name, m)
+  var em = ygReward(server, p, name, m, t)
   ygClearTask(server, name, p)
   ygSay(m, server, name, t.done)
   ygBar(server, name, 'Ödül: ' + em + ' zümrüt', 'green')
@@ -397,7 +402,7 @@ ServerEvents.tick(event => {
         if (!tg) return
         var dx = Number(p.x) - tg.x, dz = Number(p.z) - tg.z, dy = Math.abs(Number(p.y) - tg.y)
         if (Math.sqrt(dx * dx + dz * dz) <= 4.5 && dy <= 4 && ygHasRulo(server, name)) {
-          var em = ygReward(server, p, name, m)
+          var em = ygReward(server, p, name, m, t)
           ygClearTask(server, name, p)
           npcDlgSay(server, tg.uuid, tg.dlg, name, tg.line, false, x => ygBar(server, name, tg.name + ': ' + x, 'gold'))
           ygBar(server, name, 'Ödül: ' + em + ' zümrüt. ' + YG_MENTORS[m].name + '\'e haber vermene gerek yok.', 'green')
@@ -406,7 +411,7 @@ ServerEvents.tick(event => {
       if (t.type === 'ulas' && ygPhase % 8 === 0) {
         var pl = YG_PLACES[Number(pd.getString('yg_target'))]
         if (pl && Math.sqrt(Math.pow(Number(p.x) - pl.x, 2) + Math.pow(Number(p.z) - pl.z, 2)) <= pl.r) {
-          var em2 = ygReward(server, p, name, m)
+          var em2 = ygReward(server, p, name, m, t)
           ygClearTask(server, name, p)
           npcBarSay(server, name, YG_MENTORS[m].name, t.done, 'gold')
           ygBar(server, name, 'Ödül: ' + em2 + ' zümrüt', 'green')
@@ -480,7 +485,7 @@ ServerEvents.commandRegistry(event => {
     var name = String(p.username)
     ygClearTask(ctx.source.server, name, p)
     var pd = p.persistentData
-    Object.keys(YG_MENTORS).forEach(m => { pd.putLong('yg_next_' + m, 0); pd.putInt('yg_cnt_' + m, 0); pd.putString('yg_last_' + m, '') })
+    Object.keys(YG_MENTORS).forEach(m => { pd.putLong('yg_next_' + m, 0); pd.putInt('yg_cnt_' + m, 0); pd.putString('yg_last_' + m, ''); pd.putString('yg_done_' + m, '') })
     ctx.source.sendSuccess(Text.of(name + ' için yan görevler sıfırlandı.'), false)
     return 1
   })))

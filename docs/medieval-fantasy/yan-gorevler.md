@@ -1,12 +1,12 @@
 # Mentor yan görevleri (Kakashi, Itachi, Yoruichi)
 
-Mentor NPC'ler yalnızca büyü öğretmen olmasın diye karaktere uygun, tekrarlanabilir küçük işler verir. Her mentorun **5 görevi** vardır. Arka arkaya aynı görev verilmez (son 2 görev hariç tutulur). Mantık: `kubejs/server_scripts/yan_gorev.js` (kopya: [tools/kubejs-yerel/](../../tools/kubejs-yerel/README.md)). Durum oyuncunun `persistentData`'sında `yg_*`. Yönetici: `/yan_gorev_sifirla <oyuncu>`, tanı: `/kakashi_menu_kontrol`. **Gerçek oyunda denenmedi.**
+Mentor NPC'ler yalnızca büyü öğretmen olmasın diye karaktere uygun, tekrarlanabilir küçük işler verir. Her mentorun **5 görevi** vardır. Her görev oyuncu başına bir kez yapılır; hepsi bitince mentor "şimdilik iş yok" der. Mantık: `kubejs/server_scripts/yan_gorev.js` (kopya: [tools/kubejs-yerel/](../../tools/kubejs-yerel/README.md)). Durum oyuncunun `persistentData`'sında `yg_*`. Yönetici: `/yan_gorev_sifirla <oyuncu>`, tanı: `/kakashi_menu_kontrol`. **Gerçek oyunda denenmedi.**
 
 ## Kurallar
 
 - **Erişim:** Maceracı rütbesi (`rank_maceraci`); hoca eğitimi şart değil. Gojo şimdilik pasif olduğu için dışarıda.
-- **Aynı anda tek yan görev** (başka mentorun işi varsa "önce onu bitir" der). Mentor başına günde 4 iş, işler arası 3 dk.
-- **Ödül:** 2-4 zümrüt (Kan Yeminli ve üstünde +1). Altın elma gibi OP eşya yok.
+- **Aynı anda tek yan görev** (başka mentorun işi varsa "önce onu bitir" der). **Her görev oyuncu başına yalnızca bir kez** yapılır; mentorun 5 görevi bitince mentor karaktere uygun bir sözle şimdilik iş kalmadığını söyler (ileride yeni görevler eklenecek). Görevler arası 3 dk bekleme. Süresi dolan ya da bırakılan görev tamamlanmış sayılmaz, tekrar verilebilir.
+- **Ödül:** 3-6 zümrüt (Kan Yeminli ve üstünde +2). Her görev bir kez yapılabildiği için Erwin/Thorfinn'in küçük işlerinden biraz yüksek. Altın elma gibi OP eşya yok.
 - **Düğme:** Kakashi: Diğer işler → "Bir işin var mı?"; Itachi: Diğer işler → aynı; Yoruichi: reddetme ve bitiş diyaloglarında (`Kovulma*`, `l3_bitti*`). Düğmeler kodla eklenir (10 sn içinde), üreticide (`gen_hocalar.js`) de var. Easy NPC bir diyalogda en fazla 6 düğmeyi düzgün dizdiği için ana menüler şişirilmedi.
 - **Takip:** Ekran altında sürekli durum (sayaç, yön oku baktığın yöne göre, yaklaşık mesafe, kalan süre).
 
