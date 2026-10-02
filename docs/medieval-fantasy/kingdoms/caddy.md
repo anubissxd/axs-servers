@@ -1,6 +1,6 @@
 # Caddy Krallığı
 
-- **Kale:** henüz yok (kullanıcı oluşturacak)
+- **Kale:** yapıldı (swxff bildirdi, 2026-10-02); **koordinatı henüz docs'a yazılmadı** (swxff söyleyince buraya eklenecek, `ulas` yan görev hedeflerine de girer)
 
 ## Nasıl bir yer
 
