@@ -167,10 +167,10 @@ function ygClearTask(server, name, p) {
   server.runCommandSilent('clear ' + name + ' minecraft:paper{ykRulo:1b}')
 }
 
-// Ödül: 3-6 zümrüt (Kan Yeminli ve üstünde +2). Her görev bir kez yapılabildiği için Erwin/Thorfinn'in küçük işlerinden biraz yüksek.
+// Ödül: 2-4 zümrüt (Kan Yeminli ve üstünde +1): Erwin tür I-II (1-4) ve Thorfinn tür I siparişleri (2-4) ile aynı düzeyde, bilerek düşük.
 function ygReward(server, p, name, m, t) {
   var pd = p.persistentData
-  var em = 3 + Math.floor(Math.random() * 4) + (erwinRank(p) >= 2 ? 2 : 0)
+  var em = 2 + Math.floor(Math.random() * 3) + (erwinRank(p) >= 2 ? 1 : 0)
   server.runCommandSilent('give ' + name + ' minecraft:emerald ' + em)
   var done = ygDoneList(p, m)
   if (t && done.indexOf(t.id) < 0) { done.push(t.id); pd.putString('yg_done_' + m, done.join(',')) }

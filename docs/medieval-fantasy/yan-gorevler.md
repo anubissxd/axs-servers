@@ -6,7 +6,7 @@ Mentor NPC'ler yalnızca büyü öğretmen olmasın diye karaktere uygun, tekrar
 
 - **Erişim:** Maceracı rütbesi (`rank_maceraci`); hoca eğitimi şart değil. Gojo şimdilik pasif olduğu için dışarıda.
 - **Aynı anda tek yan görev** (başka mentorun işi varsa "önce onu bitir" der). **Her görev oyuncu başına yalnızca bir kez** yapılır; mentorun 5 görevi bitince mentor karaktere uygun bir sözle şimdilik iş kalmadığını söyler (ileride yeni görevler eklenecek). Görevler arası 3 dk bekleme. Süresi dolan ya da bırakılan görev tamamlanmış sayılmaz, tekrar verilebilir.
-- **Ödül:** 3-6 zümrüt (Kan Yeminli ve üstünde +2). Her görev bir kez yapılabildiği için Erwin/Thorfinn'in küçük işlerinden biraz yüksek. Altın elma gibi OP eşya yok.
+- **Ödül:** 2-4 zümrüt (Kan Yeminli ve üstünde +1), Erwin tür I-II (1-4) ve Thorfinn tür I siparişleri (2-4) ile aynı düzeyde; her görev bir kez yapılabildiği için bir mentorun 5 görevinden toplam en çok ~20 zümrüt. Altın elma gibi OP eşya yok.
 - **Düğme:** Kakashi: Diğer işler → "Bir işin var mı?"; Itachi: Diğer işler → aynı; Yoruichi: reddetme ve bitiş diyaloglarında (`Kovulma*`, `l3_bitti*`). Düğmeler kodla eklenir (10 sn içinde), üreticide (`gen_hocalar.js`) de var. Easy NPC bir diyalogda en fazla 6 düğmeyi düzgün dizdiği için ana menüler şişirilmedi.
 - **Takip:** Ekran altında sürekli durum (sayaç, yön oku baktığın yöne göre, yaklaşık mesafe, kalan süre).
 
