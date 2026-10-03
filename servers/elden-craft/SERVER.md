@@ -1,4 +1,4 @@
-# EldenCraft
+# Elden Craft
 
 Minecraft Version: 1.20.1
 Mod Loader: Forge 47.4.20

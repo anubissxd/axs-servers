@@ -1,4 +1,4 @@
-# EldenCraft modları
+# Elden Craft modları
 
 Toplam 83 dosya (78 aktif). Jar'lar repoda yok (boyut ve lisans nedeniyle), aşağıdaki sha1/sha512 ile doğrulanır.
 
