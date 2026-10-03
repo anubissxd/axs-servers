@@ -1,0 +1,73 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"punch_gomu_gatling2": {
+			"animation_length": 0.6,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": [22.5, 0, 0]
+					},
+					"position": {
+						"vector": [0, -1, 0]
+					}
+				},
+				"torso": {
+					"rotation": {
+						"vector": [10, 0, 0]
+					},
+					"position": {
+						"vector": [0, -2, -4]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [80, 0, 0]
+					},
+					"position": {
+						"vector": [0, -3, -4]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [-74.08473, 19.29099, -27.11848]
+					},
+					"position": {
+						"vector": [0.7889, -99999, -1.46163]
+					},
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-74.08473, -19.29099, 27.11848]
+					},
+					"position": {
+						"vector": [-0.7889, -99999, -1.46163]
+					},
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": [9.61722, -3.31521, 15.71725]
+					},
+					"position": {
+						"vector": [0, -1, -2]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": [9.30633, 5.68422, -13.9042]
+					},
+					"position": {
+						"vector": [0, -1, -2]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

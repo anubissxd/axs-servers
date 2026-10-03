@@ -1,0 +1,65 @@
+{
+  "collider": {
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.8
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.75
+    ]
+  },
+  "hit_particle": "epicfight:hit_blunt",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+      "idle": "wom:biped/living/enderblaster_onehand_idle",
+      "block": "epicfight:biped/skill/guard_greatsword",
+      "run": "wom:biped/living/solar_obscuridad_run",
+      "walk": "wom:biped/living/moonless_walk"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "category": "fist",
+      "predicate": "epicfight:offhand_item_category"
+    }
+  ],
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "combos": {
+    "two_hand": [
+      "wom:biped/combat/enderblaster_onehand_auto_1",
+      "wom:biped/combat/enderblaster_onehand_auto_2",
+      "wom:biped/combat/enderblaster_onehand_auto_3",
+      "wom:biped/skill/antitheus_ascended_auto_1",
+      "wom:biped/skill/antitheus_ascended_auto_2",
+      "wom:biped/skill/antitheus_ascended_auto_3",
+      "wom:biped/combat/enderblaster_onehand_jumpkick",
+      "wom:biped/combat/agony_airslash",
+      "wom:biped/skill/ruine_expiation",
+      "wom:biped/combat/enderblaster_twohand_tishnaw"
+    ]
+  },
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "fist"
+          }
+        ]
+      }
+    ]
+  },
+  "category": "greatsword",
+  "innate_skills": {
+    "two_hand": "wom:agony_plunge"
+  },
+  "usable_in_offhand": false
+}

@@ -1,0 +1,59 @@
+{
+  "collider": {
+    "number": 5,
+    "size": [
+      0.4,
+      0.4,
+      0.7
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.7
+    ]
+  },
+  "hit_particle": "minecraft:campfire_cosy_smoke",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+    		"block": "epicfight:biped/skill/guard_greatsword",
+      "idle": "wom:biped/living/ruine_idle",
+      "walk": "wom:biped/living/ruine_walk",
+      "run": "wom:biped/living/katana_run"
+    }
+  },
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "fist"
+          }
+        ]
+      }
+    ]
+  },
+  "combos": {
+    "two_hand": [
+      "wom:biped/combat/agony_auto_2",
+      "wom:biped/skill/ruine_expiation",
+      "wom:biped/combat/agony_counter",
+      "wom:biped/combat/herrscher_auto_2",
+      "wom:biped/skill/torment_berserk_auto_1",
+      "wom:biped/combat/solar_obscuridad_auto_2",
+      "wom:biped/combat/solar_auto_1",
+      "wom:biped/skill/solar_auto_2_polvora",
+      "wom:biped/combat/agony_auto_3",
+      "wom:biped/combat/ruine_comet"
+    ]
+  },
+  "category": "uchigatana",
+  "innate_skills": {
+    "two_hand": "epicfight:blade_rush"
+  },
+  "usable_in_offhand": false
+}

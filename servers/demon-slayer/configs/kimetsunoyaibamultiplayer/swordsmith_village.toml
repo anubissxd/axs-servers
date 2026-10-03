@@ -1,0 +1,7 @@
+#Maximum stored population target for the Swordsmith Village dimension.
+#Range: 0 ~ 10000
+maxPopulation = 50
+#Chance at each noon to recover 1 stored population if below the configured maximum.
+#Range: 0.0 ~ 1.0
+noonRecoveryChance = 0.3
+

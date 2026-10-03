@@ -1,0 +1,10 @@
+{
+    "type": "kimetsunoyaiba:blooddemonart_zohakuten",
+    "attributes": {
+        "common": {
+            "armor_negation": 15.0,
+                "impact": 0.6,
+           "max_strikes": 1
+        }
+    }
+ }

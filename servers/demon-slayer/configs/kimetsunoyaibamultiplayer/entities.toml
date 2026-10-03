@@ -1,0 +1,52 @@
+
+#Entity Enhancement Configuration
+[entities]
+
+	#Kasugai Crow Enhancement Configuration
+	[entities.kasugai_crow]
+		#Enable all kasugai crow enhancements (master toggle)
+		enhancements-enabled = true
+		#Enable the flying dodge mechanic where tamed crows fly away from danger
+		flying-dodge-enabled = true
+		#Height in blocks the crow flies to when dodging (above its current position)
+		#Range: 10.0 ~ 50.0
+		flight-height = 15.0
+		#How long the crow stays flying in ticks (20 ticks = 1 second)
+		#Range: 200 ~ 2400
+		flight-duration = 600
+		#Radius in blocks of the circular flying pattern
+		#Range: 10.0 ~ 50.0
+		circle-radius = 15.0
+		#Enable particle arrow pointing to quest locations when crow gives a quest
+		quest-arrow-enabled = true
+		#Enable waypoint marker at quest target locations
+		waypoint-enabled = true
+		#How often to update the quest arrow particles in ticks (lower = smoother but more particles)
+		#Range: 1 ~ 20
+		arrow-update-interval = 5
+		#Length of the quest arrow in blocks
+		#Range: 1.0 ~ 10.0
+		arrow-length = 3.0
+		#How long waypoint markers last in ticks (20 ticks = 1 second)
+		#Range: 200 ~ 6000
+		waypoint-duration = 300
+		#Distance in blocks (X/Z only, Y is ignored) to complete waypoint
+		#Range: 1.0 ~ 10.0
+		waypoint-complete-distance = 2.0
+		#Automatically detect crow quest messages in chat and set waypoints
+		auto-detect-quests = true
+
+		#Quest Familiar Protection Configuration
+		[entities.kasugai_crow.quest_familiars]
+			#Make kasugai crows immune to damage
+			kasugai-crow-damage-immune = false
+			#Make Orochi familiars immune to damage
+			orochi-damage-immune = false
+			#Make Eye Familiar entities immune to damage
+			eye-familiar-damage-immune = false
+
+	#Kizuki Fear Configuration
+	[entities.kizuki_fear]
+		#Enable Kokushibo and Akaza fear auras and aggro fear
+		enabled = true
+

@@ -1,0 +1,65 @@
+{
+  "collider": {
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.8
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.75
+    ]
+  },
+  "hit_particle": "epicfight:hit_blunt",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+    		"block": "epicfight:biped/skill/guard_uchigatana",
+      "idle": "wom:biped/living/katana_idle",
+      "walk": "wom:biped/living/katana_walk",
+      "run": "wom:biped/living/katana_sheathed_run"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "category": "fist",
+      "predicate": "epicfight:offhand_item_category"
+    }
+  ],
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "fist"
+          }
+        ]
+      }
+    ]
+  },
+  "combos": {
+    "two_hand": [
+      "wom:biped/combat/solar_obscuridad_auto_2",
+      "wom:biped/combat/katana_auto_1",
+      "wom:biped/combat/herrscher_auto_1",
+      "epicfight:biped/skill/rushing_tempo1",
+      "wom:biped/combat/katana_harusaki",
+      "epicfight:biped/combat/spear_dash",
+      "wom:biped/combat/ruine_chatiment",
+      "wom:biped/combat/agony_counter",
+      "wom:biped/combat/staff_dash",
+      "wom:biped/combat/torment_charged_attack_1"
+    ]
+  },
+  "category": "uchigatana",
+  "innate_skills": {
+    "two_hand": "epicfight:eviscerate"
+  },
+  "usable_in_offhand": false
+}

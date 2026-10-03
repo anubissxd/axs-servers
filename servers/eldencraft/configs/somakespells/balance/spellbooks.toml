@@ -1,0 +1,6441 @@
+
+[spellbookBalance]
+
+	[spellbookBalance.ironsSpellbooks]
+
+		[spellbookBalance.ironsSpellbooks.wimpySpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.legendarySpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.netheriteSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.diamondSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.goldSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.ironSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.copperSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.rottenSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.blazeSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.dragonskinSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.druidicSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.villagerSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.iceSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.evokerSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.necronomiconSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.ironsSpellbooks.cursedDollSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+	[spellbookBalance.somake]
+
+		[spellbookBalance.somake.tideboundSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.tidebound2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.tidebound3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.aquamancerSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.stormScripturesSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.starlessGrimoireSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.starlessGrimoire2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.starlessGrimoire3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.voidboundCodexSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.voidboundCodex2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.voidboundCodex3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.invokerCanonSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.invokerCanon2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.invokerCanon3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.burningMagmaSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.burningMagma2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.burningMagma3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.dawnlitGospelSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.dawnlitGospel2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.dawnlitGospel3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.frostveinCodexSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.frostveinCodex2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.frostveinCodex3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.stormcallerLexiconSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.stormcallerLexicon2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.stormcallerLexicon3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.verdantTestamentSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.verdantTestament2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.verdantTestament3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.sanguineTestamentSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.sanguineTestament2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.sanguineTestament3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.soullitTestamentSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.soullitTestament2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.soullitTestament3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.axiomaticCodexSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.axiomaticCodex2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.axiomaticCodex3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.stoneheartCodexSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.stoneheartCodex2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.stoneheartCodex3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.resonanceCanticleSpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.resonanceCanticle2SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.somake.resonanceCanticle3SpellBook]
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+	[spellbookBalance.custom]
+
+		[spellbookBalance.custom.entry1]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry2]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry3]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry4]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry5]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry6]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry7]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry8]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry9]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry10]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry11]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry12]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry13]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry14]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry15]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry16]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry17]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry18]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry19]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry20]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry21]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry22]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry23]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+
+		[spellbookBalance.custom.entry24]
+			#Spellbook item ID to override, for example 'othermod:my_spellbook'. Leave empty to disable this slot.
+			itemId = ""
+			#If true, overrides this item's default attributes. If false, keeps original mod defaults.
+			enabled = false
+			overrideMaxMana = false
+			#Range: -100000.0 ~ 100000.0
+			maxMana = 0.0
+			overrideManaRegen = false
+			#Range: -100.0 ~ 100.0
+			manaRegen = 0.0
+			overrideSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spellPower = 0.0
+			overrideCastTimeReduction = false
+			#Range: -100.0 ~ 100.0
+			castTimeReduction = 0.0
+			overrideCooldownReduction = false
+			#Range: -100.0 ~ 100.0
+			cooldownReduction = 0.0
+			overrideSpellResist = false
+			#Range: -100.0 ~ 100.0
+			spellResist = 0.0
+			overrideSummonDamage = false
+			#Range: -100.0 ~ 100.0
+			summonDamage = 0.0
+			overrideFireSpellPower = false
+			#Range: -100.0 ~ 100.0
+			fireSpellPower = 0.0
+			overrideIceSpellPower = false
+			#Range: -100.0 ~ 100.0
+			iceSpellPower = 0.0
+			overrideLightningSpellPower = false
+			#Range: -100.0 ~ 100.0
+			lightningSpellPower = 0.0
+			overrideEnderSpellPower = false
+			#Range: -100.0 ~ 100.0
+			enderSpellPower = 0.0
+			overrideBloodSpellPower = false
+			#Range: -100.0 ~ 100.0
+			bloodSpellPower = 0.0
+			overrideNatureSpellPower = false
+			#Range: -100.0 ~ 100.0
+			natureSpellPower = 0.0
+			overrideHolySpellPower = false
+			#Range: -100.0 ~ 100.0
+			holySpellPower = 0.0
+			overrideEvocationSpellPower = false
+			#Range: -100.0 ~ 100.0
+			evocationSpellPower = 0.0
+			overrideEldritchSpellPower = false
+			#Range: -100.0 ~ 100.0
+			eldritchSpellPower = 0.0
+			overrideAquaSpellPower = false
+			#Range: -100.0 ~ 100.0
+			aquaSpellPower = 0.0
+			overrideSpiritSpellPower = false
+			#Range: -100.0 ~ 100.0
+			spiritSpellPower = 0.0
+			overrideSymmetrySpellPower = false
+			#Range: -100.0 ~ 100.0
+			symmetrySpellPower = 0.0
+			overrideSoundSpellPower = false
+			#Range: -100.0 ~ 100.0
+			soundSpellPower = 0.0
+			overrideGeoSpellPower = false
+			#Range: -100.0 ~ 100.0
+			geoSpellPower = 0.0
+			overrideAttackDamage = false
+			#Range: -1024.0 ~ 1024.0
+			attackDamage = 0.0
+			overrideAttackSpeed = false
+			#Range: -1024.0 ~ 1024.0
+			attackSpeed = 0.0
+			overrideEntityInteractionRange = false
+			#Range: -1024.0 ~ 1024.0
+			entityInteractionRange = 0.0
+

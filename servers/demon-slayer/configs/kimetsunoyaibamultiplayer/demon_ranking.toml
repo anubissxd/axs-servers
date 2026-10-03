@@ -1,0 +1,17 @@
+
+#Demon Ranking (Twelve Kizuki) Configuration
+[demon_ranking]
+	#Master switch for the Demon Ranking (Twelve Kizuki) system.
+	#
+	#When disabled, kills never change anyone's rank, no rank buffs are applied,
+	#and the Bloody Battle entry is hidden from the Meditation Menu Navigation tab.
+	enable_demon_ranking = true
+	#How many minutes a ranked player must be offline before their rank
+	#can be taken by killing that rank's fallback entity instead of the player.
+	#
+	#Use /freerank to bypass this timer for a specific rank immediately.
+	#
+	#Default: 4320 (3 days)
+	#Range: > 0
+	offline_takeover_minutes = 4320
+

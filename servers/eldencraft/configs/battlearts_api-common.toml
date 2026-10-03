@@ -1,0 +1,15 @@
+#Allows Battle Arts API to override footsteps and replace it with keyframed ones (will break footsteps) [Not compatible with Prescence Footsteps]
+allowSoundOverrides = false
+#Super Meter X Position
+#Range: -10000.0 ~ 10000.0
+superMeterPositionX = -200.0
+#Super Meter Y Position
+#Range: -10000.0 ~ 10000.0
+superMeterPositionY = 0.0
+#Super Meter Y Scale
+#Range: 4.9E-324 ~ 1.7976931348623157E308
+superMeterScaleY = 1.0
+#Super Meter X Scale
+#Range: 4.9E-324 ~ 1.7976931348623157E308
+superMeterScaleX = 1.0
+

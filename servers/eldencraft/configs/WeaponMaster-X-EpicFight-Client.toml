@@ -1,0 +1,5 @@
+
+[holster]
+	#Use Alt Shield Holster
+	"Instead of Holstering the Shield in the Hotbar, It Will instead Holster The Shieled In The Offhand when appropriate" = true
+

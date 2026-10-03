@@ -1,0 +1,346 @@
+
+#Spawn Priority Configuration
+#Priority values control natural spawn chances for kimetsunoyaiba mobs and tweaks demon replacements:
+#  0 = Never spawns naturally
+#  50 = 50% chance to spawn when selected
+#  100 = Always spawns when selected (default)
+#  >100 = Treated as 100
+#Note: Does NOT affect structure spawns, spawn eggs, or commands
+[spawn_priority]
+	#Spawn priority for kimetsunoyaiba:honoikaduchi (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_honoikaduchi_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:temple_demon (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_temple_demon_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:rui_mother (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_rui_mother_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:nakime (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_nakime_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:rengoku (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_rengoku_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kanae (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kanae_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:yushiro (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_yushiro_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:school_tanjiro (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_school_tanjiro_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:tomioka (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_tomioka_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:hantengu (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_hantengu_priority = 100.0
+	#Spawn priority for kimetsunoyaibamultiplayer:swamp_demon (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaibamultiplayer_swamp_demon_priority = 20.0
+	#Spawn priority for kimetsunoyaiba:kaigaku (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kaigaku_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:yachan (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_yachan_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:gyokko (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_gyokko_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:dice_steak_senior_super (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_dice_steak_senior_super_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:school_inosuke (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_school_inosuke_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:yachan_brother (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_yachan_brother_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:doma (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_doma_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:muzan (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_muzan_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:demon (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_demon_priority = 100.0
+	#Spawn priority for kimetsunoyaibamultiplayer:demon_zuri (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaibamultiplayer_demon_zuri_priority = 20.0
+	#Spawn priority for kimetsunoyaiba:tanjiro_demon (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_tanjiro_demon_priority = 100.0
+	#Spawn priority for kimetsunoyaibamultiplayer:demon_makena (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaibamultiplayer_demon_makena_priority = 20.0
+	#Spawn priority for kimetsunoyaiba:rui_brother (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_rui_brother_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:rui_father (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_rui_father_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:hand_demon (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_hand_demon_priority = 100.0
+	#Spawn priority for kimetsunoyaibamultiplayer:demon_sunny (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaibamultiplayer_demon_sunny_priority = 20.0
+	#Spawn priority for kimetsunoyaiba:boar (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_boar_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:swamp_demon (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_swamp_demon_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kanroji (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kanroji_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:hairo (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_hairo_priority = 100.0
+	#Spawn priority for kimetsunoyaibamultiplayer:demon_kai (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaibamultiplayer_demon_kai_priority = 20.0
+	#Spawn priority for kimetsunoyaiba:hakuji (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_hakuji_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:nezuko (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_nezuko_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:enmu (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_enmu_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:toyosan (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_toyosan_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:zohakuten (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_zohakuten_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:pandan (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_pandan_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:hasu (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_hasu_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:school_nezuko (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_school_nezuko_priority = 100.0
+	#Spawn priority for kimetsunoyaibamultiplayer:demon_efe (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaibamultiplayer_demon_efe_priority = 20.0
+	#Spawn priority for kimetsunoyaiba:tanjiro (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_tanjiro_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:michikatsu (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_michikatsu_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:yahaba (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_yahaba_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:dice_steak_senior_golden (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_dice_steak_senior_golden_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kanawo (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kanawo_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kyogai (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kyogai_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:rokuro (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_rokuro_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:school_kocho (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_school_kocho_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:inosuke (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_inosuke_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:makomo (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_makomo_priority = 100.0
+	#Spawn priority for kimetsunoyaibamultiplayer:six_eye_demon (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaibamultiplayer_six_eye_demon_priority = 20.0
+	#Spawn priority for kimetsunoyaiba:iguro (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_iguro_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:muscular_mouse (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_muscular_mouse_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:school_tomioka (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_school_tomioka_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:dice_steak_senior_demon (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_dice_steak_senior_demon_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kotetsu (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kotetsu_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:susamaru (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_susamaru_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:uzui (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_uzui_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:haganeduka (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_haganeduka_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kokushibo (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kokushibo_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kuwajima (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kuwajima_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kakushi (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kakushi_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:yorichi_0 (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_yorichi_0_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kamanue (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kamanue_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kocho (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kocho_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:mob_slayer (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_mob_slayer_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:enko (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_enko_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:rui_human (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_rui_human_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:demon10 (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_demon10_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:akaza (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_akaza_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kokushirinten (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kokushirinten_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:muichirou (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_muichirou_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:dice_steak_senior (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_dice_steak_senior_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kasugai_crow (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kasugai_crow_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:kaigaku_human (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_kaigaku_human_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:shinazugawa (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_shinazugawa_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:spider_demon (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_spider_demon_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:suirenbosatsu (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_suirenbosatsu_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:suigokubati (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_suigokubati_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:wakuraba (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_wakuraba_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:himejima (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_himejima_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:urokodaki (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_urokodaki_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:grandmother (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_grandmother_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:masachika (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_masachika_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:yoriichi (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_yoriichi_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:boar_golden (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_boar_golden_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:murata (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_murata_priority = 100.0
+	#Spawn priority for kimetsunoyaibamultiplayer:demon_ari (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaibamultiplayer_demon_ari_priority = 20.0
+	#Spawn priority for kimetsunoyaiba:tamayo (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_tamayo_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:rui (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_rui_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:school_zenitsu (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_school_zenitsu_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:yoriichi_old (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_yoriichi_old_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:sabito (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_sabito_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:doctor (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_doctor_priority = 100.0
+	#Spawn priority for kimetsunoyaibamultiplayer:demon_noor (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaibamultiplayer_demon_noor_priority = 20.0
+	#Spawn priority for kimetsunoyaiba:daki (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_daki_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:demon9 (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_demon9_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:ubuyashiki (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_ubuyashiki_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:demon8 (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_demon8_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:gyutaro (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_gyutaro_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:demon7 (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_demon7_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:goldfishbig (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_goldfishbig_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:demon6 (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_demon6_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:genya (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_genya_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:demon5 (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_demon5_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:mukago (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_mukago_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:demon4 (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_demon4_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:rui_sister (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_rui_sister_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:demon3 (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_demon3_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:zennitsu (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_zennitsu_priority = 100.0
+	#Spawn priority for kimetsunoyaiba:demon2 (0 = never, 50 = 50% chance, 100 = always)
+	#Range: 0.0 ~ 200.0
+	kimetsunoyaiba_demon2_priority = 100.0
+

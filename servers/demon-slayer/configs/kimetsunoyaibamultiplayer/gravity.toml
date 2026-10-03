@@ -1,0 +1,18 @@
+#Master switch for KNY gravity changing. When false, public gravity helpers return vanilla-safe values and field sources are inert.
+enable-gravity-changing = false
+#Default visual rotation time for gravity changes, in milliseconds.
+#Range: 0 ~ 5000
+rotation-time-ms = 500
+#Multiplier for custom gravity acceleration.
+#Range: 0.0 ~ 10.0
+gravity-strength-multiplier = 1.0
+#Reset player base gravity to DOWN after death respawn.
+reset-gravity-on-respawn = true
+#Reserved for the full movement/collision mixin layer.
+adjust-position-after-changing-gravity = true
+#Maximum gravity projector field range.
+#Range: 1 ~ 256
+max-field-range = 32
+#Enable client-side gravity field debug rendering when implemented.
+field-debug-render = false
+

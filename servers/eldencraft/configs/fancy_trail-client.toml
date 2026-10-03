@@ -1,0 +1,86 @@
+
+#Fancy Trail Client Configuration
+[starry_trail]
+	#The intensity of the starry trail effect (0.0 - ...)
+	#Default: 0.5
+	#Range: 0.0 ~ 3.4028234663852886E38
+	intensity = 0.5
+	#The scale of individual stars in the trail (0.5 - ...)
+	#Default: 1.2
+	#Range: 0.5 ~ 3.4028234663852886E38
+	starScale = 1.2
+	#The opacity of the starry trail effect (0.0 - ...)
+	#Default: 0.2
+	#Range: 0.0 ~ 3.4028234663852886E38
+	opacity = 0.2
+	#The number of layers for the starry trail effect (1 - ...)
+	#Default: 1
+	#Range: > 1
+	layers = 1
+	#The texture resource location for stars
+	#Format: modid:path/to/texture.png
+	#Default: fancy_trail:textures/effect/star.png
+	texture = "fancy_trail:textures/effect/star.png"
+
+[chromatic_aberration]
+	#The strength of chromatic aberration effect (0.0 - ...)
+	#0.0 = No effect, 1.0 = Maximum effect
+	#Default: 0.3
+	#Range: 0.0 ~ 3.4028234663852886E38
+	chromaticEffect = 2.4
+
+[additional_particles]
+	#The speed multiplier for additional particles (0.0 - ...)
+	#0.0 = No movement, 1.0 = Normal speed, 2.0 = Double speed
+	#Default: 0.64
+	#Range: 0.0 ~ 3.4028234663852886E38
+	speed = 0.64
+	#The particle type for additional effects
+	#Format: modid:particle_registry_name
+	#Examples: minecraft:end_rod, minecraft:portal, epicfight:blood, etc.
+	#Default: minecraft:end_rod
+	particleType = "minecraft:end_rod"
+
+[flowing_effect]
+	#The intensity of the flowing effect (0.0 - ...)
+	#0.0 = No flowing, 0.1 = Subtle, 0.5 = Moderate, 1.0 = Strong
+	#Default: 0.4
+	#Range: 0.0 ~ 3.4028234663852886E38
+	intensity = 0.4
+	#The speed/frequency of the flowing animation (0.0 - ...)
+	#0.0 = Static, 0.5 = Slow, 1.0 = Normal, 2.0 = Fast, 3.0 = Very Fast
+	#Default: 0.8
+	#Range: 0.0 ~ 3.4028234663852886E38
+	speed = 0.8
+
+[common_air_trail]
+	#enable common air trail
+	isOpenAir = true
+
+[weapon_afterimage]
+	#Enable weapon 3D model ghost afterimages during attacks
+	#Default: true
+	enabled = true
+	#Number of ghost copies trailing behind the weapon
+	#Higher values = longer trail but more GPU work
+	#Range: 1 - 16
+	#Default: 5
+	#Range: 1 ~ 16
+	ghostCount = 5
+	#Maximum opacity of the ghost copies (oldest ghosts are most transparent)
+	#Range: 0.0 - 1.0
+	#Default: 0.4
+	#Range: 0.0 ~ 1.0
+	maxAlpha = 0.4
+	#Controls how quickly ghosts fade out
+	#1.0 = linear fade, 2.0 = quadratic (faster fade), 0.5 = square root (slower fade)
+	#Range: 0.5 - 5.0
+	#Default: 2.0
+	#Range: 0.5 ~ 5.0
+	fadeExponent = 2.0
+	#Maximum age of a ghost snapshot in ticks (20 ticks = 1 second)
+	#Range: 2 - 40
+	#Default: 10
+	#Range: 2 ~ 40
+	maxAgeTicks = 10
+

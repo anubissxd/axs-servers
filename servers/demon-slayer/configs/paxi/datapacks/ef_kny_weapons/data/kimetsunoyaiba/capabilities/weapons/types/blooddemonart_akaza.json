@@ -1,0 +1,69 @@
+{
+  "collider": {
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.8
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.75
+    ]
+  },
+  "hit_particle": "epicfight:hit_blunt",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+    		"block": "epicfight:biped/skill/guard_dualsword",
+      "idle": "wom:biped/living/solar_obscuridad_idle",
+      "walk": "epicfight:biped/living/walk",
+      "run": "wom:biped/living/enderblaster_onehand_run"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "category": "fist",
+      "predicate": "epicfight:offhand_item_category"
+    }
+  ],
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "fist"
+          }
+        ]
+      }
+    ]
+  },
+  "combos": {
+    "two_hand": [
+      "wom:biped/combat/solar_obscuridad_auto_2",
+      "wom:biped/combat/herrscher_auto_3",
+      "wom:biped/combat/enderblaster_onehand_auto_1",
+      "wom:biped/combat/enderblaster_onehand_jumpkick",
+      "wom:biped/combat/enderblaster_twohand_dash",
+      "wom:biped/skill/strong_punch",
+      "wom:biped/skill/mob_ender_obscuris",
+      "wom:biped/skill/kick",
+      "wom:biped/skill/torment_berserk_airslam",
+      "wom:biped/combat/enderblaster_twohand_dash",
+      "wom:biped/combat/enderblaster_onehand_dash",
+      "wom:biped/combat/enderblaster_twohand_tishnaw",
+      "wom:biped/skill/torment_berserk_dash",
+      "wom:biped/combat/solar_obscuridad_auto_4"
+    ]
+  },
+  "category": "fist",
+  "innate_skills": {
+    "two_hand": "wom:agony_plunge"
+  },
+  "usable_in_offhand": true
+}

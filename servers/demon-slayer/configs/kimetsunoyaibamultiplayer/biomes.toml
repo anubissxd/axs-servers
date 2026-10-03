@@ -1,0 +1,82 @@
+#Enable custom biome additions to the overworld
+#Controls spawning of custom biomes (wisteria_forest)
+enableBiomeFix = true
+#Log biome addition information to console
+logBiomeChanges = true
+#
+#=== Wisteria Forest Biome Replacement Settings ===
+#Chance to START replacing vanilla forest/plains/birch_forest/flower_forest with main wisteria_forest (0.0 - 1.0)
+#When replacement starts, it creates large continuous forests via cluster expansion
+#This uses deterministic replacement - same world seed = same biome distribution
+#0.025 = 2.5% chance to start a wisteria forest, but forest will be large when it spawns
+#RECOMMENDED: 0.02-0.03 for rare but large, impressive wisteria forests
+#Range: 0.0 ~ 1.0
+wisteriaForestReplacementChance = 0.025
+#Chance to START replacing vanilla forests with cyan wisteria_forest (0.0 - 1.0)
+#Creates large continuous cyan forests when replacement starts
+#RECOMMENDED: 0.01-0.015 for rare, impressive cyan forests
+#Range: 0.0 ~ 1.0
+wisteriaForestCyanReplacementChance = 0.01
+#Chance to START replacing vanilla forests with cream wisteria_forest (0.0 - 1.0)
+#Creates large continuous cream forests when replacement starts
+#RECOMMENDED: 0.01-0.015 for rare, impressive cream forests
+#Range: 0.0 ~ 1.0
+wisteriaForestCreamReplacementChance = 0.01
+#Cluster size for wisteria forest biome replacement (1-10)
+#When a replacement starts, this many adjacent biome points are also replaced
+#Higher values create larger, more continuous wisteria forests
+#1 = small patches, 4-6 = medium forests, 8-10 = huge forests
+#Total world coverage is limited by the replacement chances, not this value
+#RECOMMENDED: 8 for large impressive forests that stay rare
+#Range: 1 ~ 10
+wisteriaForestClusterSize = 8
+#
+#=== Legacy Settings (currently not used) ===
+#Size multiplier for wisteria_forest_cyan biome (1.0 = default, higher = larger biomes)
+#NOTE: Currently not used - biome replacement approach is active
+#Range: 0.5 (small) to 3.0 (very large)
+#Range: 0.5 ~ 3.0
+wisteriaForestCyanSizeMultiplier = 2.0
+#Spawn frequency for wisteria_forest_cyan biome
+#NOTE: Currently not used - biome replacement approach is active
+#Range: 1 to 5
+#Range: 1 ~ 5
+wisteriaForestCyanSpawnFrequency = 1
+#Size multiplier for wisteria_forest_cream biome
+#NOTE: Currently not used - biome replacement approach is active
+#Range: 0.5 (small) to 3.0 (very large)
+#Range: 0.5 ~ 3.0
+wisteriaForestCreamSizeMultiplier = 2.0
+#Spawn frequency for wisteria_forest_cream biome
+#NOTE: Currently not used - biome replacement approach is active
+#Range: 1 to 5
+#Range: 1 ~ 5
+wisteriaForestCreamSpawnFrequency = 1
+#Size multiplier for wisteria_forest biome (lavender+pink, default)
+#NOTE: Currently not used - biome replacement approach is active
+#Range: 0.5 (small) to 3.0 (very large)
+#Range: 0.5 ~ 3.0
+wisteriaForestSizeMultiplier = 2.5
+#Spawn frequency for wisteria_forest biome (lavender+pink, default)
+#NOTE: Currently not used - biome replacement approach is active
+#Range: 1 to 5
+#Range: 1 ~ 5
+wisteriaForestSpawnFrequency = 2
+#
+#=== Mount Fujikasane Settings ===
+#Size multiplier for mt_fujikasane biome (1.0 = default, higher = larger mountain)
+#Larger values create a bigger mountain area (300-400 block radius at 1.0)
+#Range: 0.5 (small) to 2.0 (huge)
+#Range: 0.5 ~ 2.0
+mtFujikasaneSizeMultiplier = 1.0
+#Spawn frequency for mt_fujikasane biome (1 = default, higher = more common)
+#RECOMMENDED: Keep at 1 for rarity. Higher values make multiple mountains spawn
+#Range: 1 to 3
+#Range: 1 ~ 3
+mtFujikasaneSpawnFrequency = 1
+#Width multiplier for the Wisteria forest ring around Mt Fujikasane (1.0 = default)
+#Controls how wide the protective Wisteria ring is around the mountain
+#Range: 0.5 (narrow) to 2.0 (wide)
+#Range: 0.5 ~ 2.0
+wisteriaRingWidthMultiplier = 1.0
+

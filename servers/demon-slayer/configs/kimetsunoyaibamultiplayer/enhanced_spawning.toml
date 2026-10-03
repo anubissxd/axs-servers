@@ -1,0 +1,127 @@
+
+#Enhanced Spawning Rules Configuration
+#Controls advanced spawning mechanics for demons, demon slayers, and other entities
+[enhanced_spawning]
+	#Master switch for enhanced spawning rules.
+	#If true, uses complex biome/structure/dimension rules.
+	#If false, falls back to simple spawn priority system.
+	enhanced_spawning_rules = true
+	#Disable natural spawning of demons added by kimetsunoyaibamultiplayer.
+	#This disables tweaks demon replacements and timed/natural demon spawns in the Infinity Castle.
+	#Commands, raids, and spawn eggs are unaffected.
+	disable_tweaks_demons = false
+	#Replace base mod generic demon slayers with kimetsunoyaibamultiplayer demon slayers.
+	#Replaces:
+	#- kimetsunoyaiba:demon_slayer -> multiplayer demon slayer (rank 0-3)
+	#- kimetsunoyaiba:dice_steak_senior -> multiplayer demon slayer (rank 4)
+	#- kimetsunoyaiba:dice_steak_senior_super -> multiplayer demon slayer (rank 12)
+	replace_base_generic_demon_slayers = true
+	#Replace base mod Nezuko with kimetsunoyaibamultiplayer Nezuko.
+	#Replaces:
+	#- kimetsunoyaiba:nezuko -> kimetsunoyaibamultiplayer:nezuko
+	replace_base_nezuko = true
+	#Prevent Yorichi Type 0 from spawning naturally.
+	#When enabled, kimetsunoyaiba:yorichi_0 is blocked from natural spawning anywhere.
+	#Commands, spawn eggs, and other manual spawn paths are unaffected.
+	prevent_yorichi_type_0_natural_spawns = true
+
+	#Generic spawn rate reductions
+	[enhanced_spawning.generic_spawn_rates]
+		#Spawn rate multiplier for generic demons outside designated areas (0.0-1.0).
+		#0.4 = 40% of normal spawn rate, 1.0 = 100% normal rate, 0.0 = never spawn
+		#Range: 0.0 ~ 1.0
+		generic_demon_spawn_rate = 0.4
+		#Spawn rate multiplier for demon slayers outside designated areas (0.0-1.0).
+		#0.1 = 10% of normal spawn rate
+		#Range: 0.0 ~ 1.0
+		generic_demon_slayer_spawn_rate = 0.1
+
+	#Maximum entity tracking configuration
+	[enhanced_spawning.max_entity_tracking]
+		#Radius in blocks to check for maximum entity limits.
+		#Used to prevent multiple unique entities from spawning too close together.
+		#Range: 50 ~ 2000
+		max_entity_check_radius = 500
+
+	#Protective spawning mechanics (Iron Golem style)
+	#Spawns demon slayers/hashira when civilians are threatened
+	[enhanced_spawning.protective_spawning]
+		#Enable protective spawning mechanics
+		enable_protective_spawning = true
+		#Chance for a hashira to spawn when a civilian sees/is attacked by a twelve kizuki (0.0-1.0)
+		#Range: 0.0 ~ 1.0
+		hashira_spawn_chance = 0.05
+		#Chance for a kamaboko member to spawn when a civilian sees/is attacked by a twelve kizuki (0.0-1.0)
+		#Range: 0.0 ~ 1.0
+		kamaboko_spawn_chance = 0.05
+		#Chance for demon slayers to spawn when a civilian sees/is attacked by a demon (0.0-1.0)
+		#Range: 0.0 ~ 1.0
+		demon_slayer_spawn_chance = 0.15
+		#Minimum number of demon slayers to spawn in a protective spawn
+		#Range: 1 ~ 10
+		demon_slayer_group_size_min = 2
+		#Maximum number of demon slayers to spawn in a protective spawn
+		#Range: 1 ~ 20
+		demon_slayer_group_size_max = 4
+
+	#Entity replacement system
+	#Replaces kimetsunoyaiba entities with kimetsu mod entities if loaded
+	[enhanced_spawning.entity_replacer]
+		#Enable replacement of kimetsunoyaiba entities with kimetsu mod entities
+		#Requires kimetsu mod to be installed
+		#Currently only replaces: nakime -> nakime_spawn_egg
+		enable_kimetsu_replacer = true
+		#Enable replacement with kimetsu mod movie versions
+		#Requires kimetsu mod to be installed
+		#Replaces: nakime, daki, gyutaro, kaigaku, gyokko, zohakuten, akaza, doma, kokushibo, himejima, kocho
+		enable_kimetsu_movie_replacer = false
+		#Enable replacement for nakime
+		replace_nakime = true
+		#Enable replacement for daki
+		replace_daki = true
+		#Enable replacement for gyutaro
+		replace_gyutaro = true
+		#Enable replacement for kaigaku
+		replace_kaigaku = true
+		#Enable replacement for gyokko
+		replace_gyokko = true
+		#Enable replacement for zohakuten
+		replace_zohakuten = true
+		#Enable replacement for akaza
+		replace_akaza = true
+		#Enable replacement for doma
+		replace_doma = true
+		#Enable replacement for kokushibo
+		replace_kokushibo = true
+		#Enable replacement for himejima
+		replace_himejima = true
+		#Enable replacement for kocho
+		replace_kocho = true
+
+	#Mt Fujikasane dimension spawning configuration
+	[enhanced_spawning.mt_fujikasane_dimension]
+		#X coordinate of demon spawn center in Mt Fujikasane
+		#Range: -10000 ~ 10000
+		demon_spawn_center_x = 227
+		#Y coordinate of demon spawn center in Mt Fujikasane
+		#Range: 0 ~ 500
+		demon_spawn_center_y = 319
+		#Z coordinate of demon spawn center in Mt Fujikasane
+		#Range: -10000 ~ 10000
+		demon_spawn_center_z = 70
+		#Radius around demon spawn center where demons can spawn
+		#Range: 50 ~ 1000
+		demon_spawn_radius = 400
+		#X coordinate of kamaboko spawn area in Mt Fujikasane
+		#Range: -10000 ~ 10000
+		kamaboko_spawn_x = 311
+		#Y coordinate of kamaboko spawn area in Mt Fujikasane
+		#Range: 0 ~ 500
+		kamaboko_spawn_y = 76
+		#Z coordinate of kamaboko spawn area in Mt Fujikasane
+		#Range: -10000 ~ 10000
+		kamaboko_spawn_z = 736
+		#Radius around kamaboko spawn point where kamaboko can spawn
+		#Range: 5 ~ 100
+		kamaboko_spawn_radius = 20
+

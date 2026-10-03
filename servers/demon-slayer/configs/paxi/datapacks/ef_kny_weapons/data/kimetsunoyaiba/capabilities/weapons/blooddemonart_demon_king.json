@@ -1,0 +1,10 @@
+{
+    "type": "kimetsunoyaiba:blooddemonart_demon_king",
+    "attributes": {
+        "common": {
+            "armor_negation": 30.0,
+                "impact": 0.6,
+           "max_strikes": 1
+        }
+    }
+ }

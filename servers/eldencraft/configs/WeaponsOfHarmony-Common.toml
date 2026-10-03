@@ -1,0 +1,18 @@
+
+["Chance Values"]
+	#Ronin Skeleton Spawn Chance
+	#Range: 0.0 ~ 1.0
+	"The chance for a skeleton to spawn as a ronin skeleton" = 0.07999999821186066
+	#War Fan Pillager Spawn Chance
+	#Range: 0.0 ~ 1.0
+	"The chance for a pillager to spawn as a war fan pillager" = 0.20000000298023224
+	#Clawed Zombie Villager Spawn Chance
+	#Range: 0.0 ~ 1.0
+	"The chance for a zombie villager to spawn as a clawed zombie villager" = 0.25
+	#Ronin Skeleton Surrender Chance
+	#Range: 0.0 ~ 1.0
+	"The chance for a ronin skeleton to surrender when low on health" = 0.36000001430511475
+	#War Fan Pillager OffHand Chance
+	#Range: 0.0 ~ 1.0
+	"The chance for a War Fan Pillager to spawn dual wielding tessen's" = 0.44999998807907104
+

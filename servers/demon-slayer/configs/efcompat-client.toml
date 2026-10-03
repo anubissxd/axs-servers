@@ -1,0 +1,69 @@
+
+[essential]
+	#Make Essential's cosmetics and store outfits follow Epic Fight's animations.
+	#Off: cosmetics keep playing the vanilla walk/idle pose while the body fights.
+	fixCosmetics = true
+	#While an Essential emote is playing, hand that player's rendering back to
+	#vanilla so the emote (and the cosmetics riding on it) actually shows.
+	#Off: the body keeps playing Epic Fight's idle and the emote is invisible.
+	fixEmotes = true
+
+[playeranimator]
+	#While a playerAnimator animation is playing (Iron's Spellbooks and
+	#Cataclysm Spellbooks casting, and any other playerAnimator mod), hand that
+	#player's rendering back to vanilla so the animation shows.
+	#Off: the body keeps playing Epic Fight's pose while casting.
+	fixCastAnimations = true
+	#Also step aside in first person while a first-person-enabled playerAnimator
+	#animation is playing, so casts show in first person in battle mode too.
+	fixFirstPersonCasts = true
+
+[curios]
+	#Draw Curios items through Curios' own renderers, posed by Epic Fight.
+	#Epic Fight's built-in Curios handling only draws two kinds of curio: one
+	#whose renderer implements ICurioRenderer.HumanoidRender, and one that
+	#implements Epic Fight's own EpicFightCurioRenderer interface. Every other
+	#curio renderer, which is most of them, is skipped and never appears.
+	#Off: Epic Fight's handling is used, and those curios stay invisible.
+	#Note: curios that Epic Fight did draw are skinned to its skeleton, while
+	#this draws every curio rigidly from the body parts. Turn this off if you
+	#only use humanoid-model curios and prefer the skinned look.
+	fixRendering = true
+
+[geckolib]
+	#Render GeckoLib armor (Hazen 'n Stuff and friends) through GeckoLib itself,
+	#posed by Epic Fight, instead of Epic Fight's one-time static bake.
+	#Off: Epic Fight's bake is used, which drops the armor's own animations and
+	#its emissive/glow render layers, and falls back to a plain vanilla-shaped
+	#mesh entirely when the bake throws.
+	fixArmor = true
+
+[azurelib]
+	#Render AzureLib armor (Cataclysm Spellbooks) through AzureLib itself,
+	#posed by Epic Fight.
+	#AzureLib draws armor from a mixin into vanilla's armor layer, which Epic
+	#Fight replaces outright, so with this off the armor falls back to the
+	#vanilla armor texture path these items do not ship - the purple
+	#missing-texture boxes.
+	fixArmor = true
+
+[custom_model_armor]
+	#Render armor that ships its own vanilla-style model (Armor of Remnants
+	#and friends) directly, posed by Epic Fight, instead of letting Epic Fight
+	#bake it.
+	#Epic Fight's bake only understands the six standard body parts, so the extra
+	#parts these models add - wings, capes, halos - get stretched into long light
+	#beams through the body. Off: that bake is used.
+	fixArmor = true
+
+[vehicles]
+	#While riding, hand rendering back to vanilla so the vanilla sitting pose
+	#applies. Epic Fight's own sit animation is built for its armature and leaves
+	#riders standing upright inside modded vehicle seats.
+	#Off: Epic Fight poses riders.
+	fixSitting = true
+	#Also hand off for vanilla rideables (boats, horses, pigs, striders).
+	#Off by default: Epic Fight ships sit and mount animations that already fit
+	#those, so only modded vehicles are handed over.
+	includeVanillaRides = false
+

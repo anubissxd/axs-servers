@@ -1,0 +1,96 @@
+{
+  "collider": {
+    "number": 5,
+    "size": [
+      0.4,
+      0.4,
+      0.7
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.7
+    ]
+  },
+  "hit_particle": "kimetsunoyaiba:particle_moon_2",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+      "idle": "wom:biped/living/torment_idle",
+      "block": "wom:biped/skill/solar_guard",
+      "run": "wom:biped/living/solar_run",
+      "sneak": "wom:biped/living/torment_idle",
+      "walk": "wom:biped/living/solar_walk",
+      "kneel": "wom:biped/living/solar_idle"
+    },
+    "one_hand": {
+      "idle": "wom:biped/living/torment_berserk_idle",
+      "block": "epicfight:biped/skill/guard_uchigatana",
+      "run": "wom:biped/living/solar_run",
+      "sneak": "wom:biped/living/torment_berserk_idle",
+      "walk": "wom:biped/living/torment_berserk_walk",
+      "kneel": "wom:biped/living/torment_berserk_idle"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "category": "fist",
+      "predicate": "epicfight:offhand_item_category"
+    }
+  ],
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "combos": {
+    "two_hand": [
+      "wom:biped/combat/ruine_auto_1",
+      "wom:biped/combat/ruine_chatiment",
+      "epicfight:biped/combat/uchigatana_dash",
+      "wom:biped/skill/ruine_redemption",
+      "wom:biped/combat/agony_counter",
+      "wom:biped/combat/solar_obscuridad_auto_2",
+      "wom:biped/combat/herrscher_auto_3",
+      "wom:biped/skill/solar_auto_2_polvora",
+      "wom:biped/combat/agony_airslash",
+      "wom:biped/combat/solar_obscuridad_dinamita",
+      "wom:biped/combat/ruine_comet"
+    ],
+    "one_hand": [
+      "wom:biped/skill/torment_berserk_auto_1",
+      "wom:biped/combat/ruine_chatiment",
+      "wom:biped/combat/agony_clawstrike",
+      "wom:biped/combat/agony_airslash",
+      "wom:biped/combat/agony_auto_1",
+      "wom:biped/skill/mob_ender_obscuris",
+      "wom:biped/combat/agony_airslash",
+      "wom:biped/combat/solar_obscuridad_auto_2",
+      "wom:biped/skill/kick",
+      "wom:biped/skill/mob_ender_obscuris",
+      "epicfight:biped/skill/eviscerate_first",
+      "epicfight:biped/skill/eviscerate_second",
+      "wom:biped/skill/solar_auto_2_polvora",
+      "wom:biped/combat/agony_airslash",
+      "wom:biped/skill/torment_berserk_airslam",
+      "wom:biped/skill/torment_berserk_dash",
+      "wom:biped/combat/solar_obscuridad_auto_4"
+    ]
+  },
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "one_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:skill_active",
+            "skill": "wom:true_berserk"
+          }
+        ]
+      }
+    ]
+  },
+  "category": "greatsword",
+  "innate_skills": {
+    "two_hand": "wom:true_berserk",
+    "one_hand": "wom:true_berserk"
+  },
+  "usable_in_offhand": false
+}

@@ -1,0 +1,66 @@
+{
+  "collider": {
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.8
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.75
+    ]
+  },
+  "hit_particle": "kimetsunoyaiba:purple_smoke",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+    		"block": "epicfight:biped/skill/guard_uchigatana",
+      "idle": "wom:biped/living/torment_berserk_idle",
+      "walk": "wom:biped/living/torment_berserk_walk",
+      "run": "wom:biped/living/ruine_run"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "category": "dagger",
+      "predicate": "epicfight:offhand_item_category"
+    }
+  ],
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "dagger"
+          }
+        ]
+      }
+    ]
+  },
+  "combos": {
+    "two_hand": [
+      "wom:biped/combat/herrscher_auto_1",
+      "epicfight:biped/combat/sword_dual_auto2",
+      "wom:biped/combat/torment_auto_2",
+      "epicfight:biped/combat/dagger_dual_auto4",
+      "wom:biped/combat/agony_counter",
+      "wom:biped/combat/solar_obscuridad_auto_2",
+      "wom:biped/combat/enderblaster_onehand_auto_1",
+      "wom:biped/combat/enderblaster_onehand_jumpkick",
+      "wom:biped/combat/ruine_comet",
+      "wom:biped/combat/solar_quemadura",
+      "wom:biped/skill/ruine_redemption"
+    ]
+  },
+  "category": "dagger",
+  "innate_skills": {
+    "two_hand": "epicfight:blade_rush"
+  },
+  "usable_in_offhand": true
+}

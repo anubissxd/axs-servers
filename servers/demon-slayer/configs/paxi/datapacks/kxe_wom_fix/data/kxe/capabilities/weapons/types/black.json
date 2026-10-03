@@ -1,0 +1,40 @@
+{
+  "collider": {
+    "number": 5,
+    "size": [
+      0.4,
+      0.4,
+      0.7
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.7
+    ]
+  },
+  "hit_particle": "epicfight:hit_blade",
+  "hit_sound": "epicfight:entity.hit.blade",
+  "livingmotion_modifier": {
+    "one_hand": {
+      "idle": "epicfight:biped/living/hold_uchigatana",
+      "run": "wom:biped/living/katana_sheathed_run",
+      "walk": "epicfight:biped/living/walk_uchigatana"
+    }
+  },
+  "swing_sound": "epicfight:entity.weapon.whoosh",
+  "styles": {
+    "default": "one_hand",
+    "cases": []
+  },
+  "combos": {
+    "one_hand": [
+      "wom:biped/combat/herrscher_auto_3",
+      "wom:biped/combat/katana_auto_2",
+      "wom:biped/combat/ruine_auto_3",
+      "wom:biped/combat/katana_auto_3",
+      "epicfight:biped/combat/uchigatana_dash",
+      "wom:biped/combat/katana_tsukuyomi"
+    ]
+  },
+  "category": "uchigatana"
+}

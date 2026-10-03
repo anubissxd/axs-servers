@@ -1,0 +1,63 @@
+{
+  "collider": {
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.8
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.75
+    ]
+  },
+  "hit_particle": "epicfight:hit_blunt",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+    		"block": "epicfight:biped/skill/guard_greatsword",
+      "idle": "wom:biped/living/enderblaster_onehand_idle",
+      "walk": "wom:biped/living/enderblaster_twohand_walk",
+      "run": "wom:biped/living/enderblaster_onehand_run"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "category": "fist",
+      "predicate": "epicfight:offhand_item_category"
+    }
+  ],
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "fist"
+          }
+        ]
+      }
+    ]
+  },
+  "combos": {
+    "two_hand": [
+      "wom:biped/combat/agony_auto_1",
+      "wom:biped/combat/enderblaster_onehand_auto_3",
+      "wom:biped/combat/agony_clawstrike",
+      "wom:biped/combat/enderblaster_onehand_auto_2",
+      "wom:biped/skill/gezets_auto_2",
+      "wom:biped/combat/enderblaster_onehand_auto_4",
+      "wom:biped/combat/enderblaster_onehand_dash",
+      "wom:biped/combat/enderblaster_twohand_dash"
+    ]
+  },
+  "category": "fist",
+  "innate_skills": {
+    "two_hand": "epicfight:relentless_combo"
+  },
+  "usable_in_offhand": true
+}

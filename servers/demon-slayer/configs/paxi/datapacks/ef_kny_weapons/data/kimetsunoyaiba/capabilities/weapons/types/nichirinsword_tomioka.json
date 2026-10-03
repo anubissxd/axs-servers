@@ -1,0 +1,65 @@
+{
+  "collider": {
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.8
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.75
+    ]
+  },
+  "hit_particle": "epicfight:hit_blunt",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+    		"block": "wom:biped/skill/katana_guard",
+      "idle": "epicfight:biped/living/hold_uchigatana",
+      "walk": "wom:biped/living/katana_walk",
+      "run": "wom:biped/living/katana_sheathed_run"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "category": "fist",
+      "predicate": "epicfight:offhand_item_category"
+    }
+  ],
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "fist"
+          }
+        ]
+      }
+    ]
+  },
+  "combos": {
+    "two_hand": [
+      "epicfight:biped/combat/tachi_auto3",
+      "wom:biped/combat/herrscher_auto_1",
+      "wom:biped/combat/katana_auto_2",
+      "wom:biped/combat/katana_harusaki",
+      "wom:biped/skill/ruine_expiation",
+      "wom:biped/combat/solar_obscuridad_auto_1",
+      "wom:biped/combat/ruine_auto_2",
+      "epicfight:biped/combat/tachi_auto1",
+      "wom:biped/combat/agony_clawstrike",
+      "wom:biped/combat/herrscher_ausrottung"
+    ]
+  },
+  "category": "uchigatana",
+  "innate_skills": {
+    "two_hand": "wom:agony_plunge"
+  },
+  "usable_in_offhand": false
+}

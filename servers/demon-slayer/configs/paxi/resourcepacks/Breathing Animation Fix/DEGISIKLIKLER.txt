@@ -1,0 +1,6 @@
+Orca animasyon duzeltmesi (orca_animation_fix)
+Neden: Orca animasyonlari son pozu "animation_length" suresi dolana kadar tutuyor (bazilarinda 10-360 sn), ama gercek hareket 0.1-0.75 sn. Bitirmek icin cancel gonderen yalnizca 2 yer var. Sonuc: karakter pozda donuyor.
+Cozum: animation_length son kareden ~0.4 sn sonrasina (min 0.6 sn) kisaltildi. Orca'nin kendi dosyalarina dokunulmadi, bu paket ustune biner.
+Degistirilen: breath_beast1/2, breath_sun2_2, energy_charge, hakoku_left2/right2, headbutt_2, kaishin1-4, kamusari2/3, kick_rotate2/3/5, punch_gomu_gatling2, ragnaraku3, raimei_hakke2, rashin, sanzen_sekai2, speed_attack1, sword_overhead, sword_to_right_reverse, togen_totsuka2, ul_zugan
+Bilerek dokunulmayan: fly (dongu), death (olum pozu), breath1/breath2 (Total Concentration durusu, iksir bitince cancel var), punch_right_jinbe (Messhiki2 cancel gonderiyor), statik kisa pozlar (hakoku_*1, headbutt_1 vb.)
+Geri almak: bu klasoru kaynak paketlerinden cikar.

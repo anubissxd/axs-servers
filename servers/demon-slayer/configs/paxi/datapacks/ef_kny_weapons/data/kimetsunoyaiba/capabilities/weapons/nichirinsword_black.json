@@ -1,0 +1,10 @@
+{
+    "type": "wom:satsujin",
+    "attributes": {
+        "common": {
+            "armor_negation": 2.0,
+                "impact": 0.6,
+            "max_strikes": 1
+        }
+    }
+ }

@@ -1,0 +1,132 @@
+
+#Entity 3D Skin Layer Configuration
+#Translations use model units; 0.0625 is approximately one model pixel.
+#Rotations are in degrees and are applied after the GeckoLib bone transform.
+[entity_skin_layers]
+
+	#Head / hat layer offsets
+	[entity_skin_layers.head]
+		#Local X translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_x = 0.0
+		#Local Y translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_y = 1.5
+		#Local Z translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_z = 0.0
+		#Local X rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_x = 0.0
+		#Local Y rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_y = 0.0
+		#Local Z rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_z = 180.0
+
+	#Torso / jacket layer offsets
+	[entity_skin_layers.torso]
+		#Local X translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_x = 0.0
+		#Local Y translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_y = 1.6
+		#Local Z translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_z = 0.0
+		#Local X rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_x = 0.0
+		#Local Y rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_y = 0.0
+		#Local Z rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_z = 180.0
+
+	#Right sleeve layer offsets
+	[entity_skin_layers.right_arm]
+		#Local X translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_x = 0.3
+		#Local Y translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_y = 1.42
+		#Local Z translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_z = 0.0
+		#Local X rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_x = 0.0
+		#Local Y rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_y = 0.0
+		#Local Z rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_z = 180.0
+
+	#Left sleeve layer offsets
+	[entity_skin_layers.left_arm]
+		#Local X translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_x = -0.3
+		#Local Y translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_y = 1.42
+		#Local Z translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_z = 0.0
+		#Local X rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_x = 0.0
+		#Local Y rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_y = 0.0
+		#Local Z rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_z = 180.0
+
+	#Right pants layer offsets
+	[entity_skin_layers.right_leg]
+		#Local X translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_x = 0.13
+		#Local Y translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_y = 0.75
+		#Local Z translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_z = 0.0
+		#Local X rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_x = 0.0
+		#Local Y rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_y = 0.0
+		#Local Z rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_z = 180.0
+
+	#Left pants layer offsets
+	[entity_skin_layers.left_leg]
+		#Local X translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_x = -0.13
+		#Local Y translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_y = 0.75
+		#Local Z translation in model units
+		#Range: -5.0 ~ 5.0
+		translate_z = 0.0
+		#Local X rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_x = 0.0
+		#Local Y rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_y = 0.0
+		#Local Z rotation in degrees
+		#Range: -360.0 ~ 360.0
+		rotate_z = 180.0
+

@@ -1,0 +1,49 @@
+{
+  "collider": {
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.4
+    ],
+    "center": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "hit_particle": "kimetsunoyaiba:particle_punch_1",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "one_hand": {
+      "idle": "wom:biped/living/solar_obscuridad_idle",
+      "run": "wom:biped/living/solar_obscuridad_run",
+      "block": "wom:biped/skill/herrscher_guard",
+      "walk": "epicfight:biped/living/walk"
+    }
+  },
+  "swing_sound": "epicfight:entity.weapon.whoosh_rod",
+  "combos": {
+    "one_hand": [
+      "wom:biped/combat/solar_obscuridad_auto_3",
+      "wom:biped/combat/solar_obscuridad_auto_2",
+      "wom:biped/combat/solar_obscuridad_auto_3",
+      "wom:biped/combat/enderblaster_onehand_auto_2",
+      "wom:biped/combat/enderblaster_onehand_auto_3",
+      "wom:biped/combat/agony_auto_4",
+      "wom:biped/combat/herrscher_auto_3",
+      "wom:biped/skill/strong_punch",
+      "wom:biped/combat/solar_obscuridad_impacto",
+      "wom:biped/combat/solar_obscuridad_dinamita"
+    ]
+  },
+  "styles": {
+    "default": "one_hand",
+    "cases": []
+  },
+  "category": "fist",
+  "innate_skills": {
+    "common": "wom:agony_plunge",
+    "one_hand": "wom:agony_plunge"
+  }
+}

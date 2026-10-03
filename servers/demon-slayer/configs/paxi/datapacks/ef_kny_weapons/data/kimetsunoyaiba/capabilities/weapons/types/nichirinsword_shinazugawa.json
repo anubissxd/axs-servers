@@ -1,0 +1,59 @@
+{
+  "collider": {
+    "number": 5,
+    "size": [
+      0.4,
+      0.4,
+      0.7
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.7
+    ]
+  },
+  "hit_particle": "kimetsunoyaiba:particle_wind",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+    		"block": "epicfight:biped/skill/guard_longsword",
+      "idle": "epicfight:biped/living/hold_liechtenauer",
+      "walk": "epicfight:biped/living/hold_liechtenauer",
+      "run": "wom:biped/living/katana_run"
+    }
+  },
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "fist"
+          }
+        ]
+      }
+    ]
+  },
+  "combos": {
+    "two_hand": [
+      "wom:biped/combat/agony_auto_1",
+      "wom:biped/skill/ruine_redemption",
+      "wom:biped/combat/agony_counter",
+      "wom:biped/combat/katana_auto_2",
+      "wom:biped/skill/torment_berserk_auto_1",
+      "wom:biped/combat/torment_auto_3",
+      "wom:biped/combat/solar_obscuridad_auto_4",
+      "wom:biped/combat/ruine_auto_4",
+      "wom:biped/combat/katana_harusaki",
+      "wom:biped/combat/agony_airslash"
+    ]
+  },
+  "category": "uchigatana",
+  "innate_skills": {
+    "two_hand": "wom:agony_plunge"
+  },
+  "usable_in_offhand": false
+}

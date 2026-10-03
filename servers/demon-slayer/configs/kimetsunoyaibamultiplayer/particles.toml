@@ -1,0 +1,53 @@
+
+#Sword Particle Configuration
+[particles]
+	#Enable sword particle effects during kimetsunoyaiba animations
+	sword-particles-enabled = true
+	#Enable sword particle effects for other biped-based entities that perform animations (only if they are close enough to the player for particles to render).
+	sword-particles-for-other-entities = true
+	#When to spawn sword particles: ATTACK_ONLY = only during normal attacks (left click), ALL_ANIMATIONS = during any kimetsunoyaiba animation including special moves
+	#Allowed Values: ATTACK_ONLY, ALL_ANIMATIONS
+	particle-trigger-mode = "ATTACK_ONLY"
+
+	#Animation Timing Configuration
+	[particles.animation]
+		#Angle increment in degrees per step during particle arc animation
+		#Range: 1.0 ~ 20.0
+		angle-increment = 10.0
+		#Number of angle increments to process per tick (higher = faster animation)
+		#Range: 1 ~ 20
+		steps-per-tick = 6
+		#Total arc length in degrees for sword swing animations
+		#Range: 60.0 ~ 240.0
+		arc-degrees = 160.0
+
+	#Visual Appearance Configuration
+	[particles.appearance]
+		#Number of radial layers in the particle ribbon (more = thicker)
+		#Range: 3 ~ 10
+		radial-layers = 5
+		#Base radius distance from player center
+		#Range: 1.0 ~ 6.0
+		base-radius = 2.8
+		#Distance between each radial layer
+		#Range: 0.05 ~ 0.6
+		radius-increment = 0.2
+		#Number of particles to spawn at each calculated position
+		#Range: 1 ~ 5
+		particles-per-position = 1
+		#Maximum total particles to spawn per tick (0 = unlimited)
+		#Range: 0 ~ 1000
+		max-particles-per-tick = 0
+
+	#Particle Mappings Configuration
+	[particles.mappings]
+		#Particle mappings in format 'item_id:particle_type[:size:red:green:blue]'
+		#For dust and energy particles, add size (0.1-2.0) and RGB values (0.0-1.0)
+		#Energy particles drift in random direction and shrink before despawning
+		#Examples:
+		#  'kimetsunoyaiba:nichirinsword_thunder:minecraft:dust:1.2:1.0:1.0:0.2'
+		#  'kimetsunoyaiba:nichirinsword_kanroji:kimetsunoyaibamultiplayer:energy:0.9:1.0:0.9:0.9'
+		#  'kimetsunoyaiba:nichirinsword_water:kimetsunoyaiba:particle_blue_smoke'
+		#  'minecraft:diamond_sword:minecraft:enchanted_hit'
+		particle-mappings = ["kimetsunoyaiba:nichirinsword_thunder:minecraft:dust:0.8:1.0:1.0:0.2", "kimetsunoyaiba:nichirinsword_water:kimetsunoyaiba:particle_blue_smoke", "kimetsunoyaiba:nichirinsword_flame:minecraft:dust:0.8:1.0:0.8:0.1", "kimetsunoyaiba:nichirinsword_stone:minecraft:dust:0.8:0.6:0.6:0.6", "kimetsunoyaiba:nichirinsword_wind:minecraft:dust:0.8:0.1:1.0:0.1", "kimetsunoyaiba:nichirinsword_sun:minecraft:flame", "kimetsunoyaiba:nichirinswordmoon:minecraft:end_rod", "kimetsunoyaiba:nichirinsword_flower:kimetsunoyaiba:particle_flower", "kimetsunoyaiba:nichirinsword_insect:minecraft:dust:0.6:0.8:1.0:0.9", "kimetsunoyaiba:nichirinsword_sound:kimetsunoyaiba:particle_sound", "kimetsunoyaiba:nichirinsword_love:kimetsunoyaiba:particle_love", "kimetsunoyaiba:nichirinsword_mist:minecraft:dust:1.0:1.0:1.0:1.0", "kimetsunoyaiba:nichirinsword_serpent:minecraft:dust:1.0:1.0:1.0:1.0", "kimetsunoyaiba:nichirinsword_beast:kimetsunoyaiba:particle_beast", "kimetsunoyaiba:nichirinsword_black:minecraft:dust:0.8:1.0:1.0:1.0", "kimetsunoyaiba:nichirinsword_inosuke:minecraft:crit", "kimetsunoyaiba:nichirinsword_basic:minecraft:crit", "kimetsunoyaiba:nichirinsword_generic:minecraft:enchanted_hit", "kimetsunoyaiba:nichirinsword_tanjiro:kimetsunoyaiba:particle_blue_smoke", "kimetsunoyaiba:nichirinsword_tanjiro_2:minecraft:flame", "kimetsunoyaiba:nichirinsword_zenitsu:minecraft:dust:0.8:1.0:1.0:1.0", "kimetsunoyaiba:nichirinsword_kanawo:kimetsunoyaiba:particle_flower", "kimetsunoyaiba:nichirinsword_tomioka:kimetsunoyaiba:particle_blue_smoke", "kimetsunoyaiba:nichirinsword_kocho:minecraft:dust:0.8:1.0:0.9:0.9", "kimetsunoyaiba:nichirinsword_rengoku:minecraft:dust:0.9:1.0:0.8:0.1", "kimetsunoyaiba:nichirinsword_uzui:minecraft:firework", "kimetsunoyaiba:nichirinsword_tokito:minecraft:dust:1.0:1.0:1.0:1.0", "kimetsunoyaiba:nichirinsword_kanroji:kimetsunoyaibamultiplayer:energy:0.9:1.0:0.9:0.9", "kimetsunoyaiba:nichirinsword_iguro:minecraft:dust:1.0:1.0:1.0:1.0", "kimetsunoyaiba:nichirinsword_shinazugawa:minecraft:dust:0.8:0.1:1.0:0.1", "kimetsunoyaiba:nichirinsword_kanae:minecraft:dust:0.7:1.0:0.9:0.9", "kimetsunoyaiba:nichirinsword_yoriichi:minecraft:flame", "kimetsunoyaibamultiplayer:nichirinsword_komorebi:minecraft:snowflake", "kimetsunoyaibamultiplayer:nichirinsword_frost:minecraft:snowflake", "kimetsunoyaibamultiplayer:nichirinsword_ice:minecraft:dust:1.5:0.5:0.8:1.0", "kimetsunoyaibamultiplayer:nichirinsword_shimizu:minecraft:dust:1.5:0.5:0.8:1.0"]
+

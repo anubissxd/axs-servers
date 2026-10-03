@@ -1,0 +1,832 @@
+[
+  {
+    "file": "2.0.1-WeaponsOfHarmony-Forge-EFM-20.14.11.jar",
+    "enabled": true,
+    "size": 42607272,
+    "sha1": "2e25d8cb8c0b3787b379431501ab474a7ac42a7a",
+    "sha512": "347ea0df9625cc5b568fea77c3de051eaeda138009ceeb325a547af8c39259edfe4ee9144e1bc33239d2d624d8ce150aa314f4244c7a871d06f46011e8299a7e",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "aaa_particles-forge-1.20.1-2.3.1.jar",
+    "enabled": true,
+    "size": 5780115,
+    "sha1": "d13afd60cfb98da78e398d7d7e3db60ad74b9357",
+    "sha512": "098c8f0df45c4e09e3f9fcf77b17429a8d165dcd634db28ccf8d67625d2e71b19f6a52a7d4cf4fb05da0ef349661cfda3c8860347e231948b8ab123854b652f2",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "alexscaves-2.0.2.jar",
+    "enabled": true,
+    "size": 74871657,
+    "sha1": "a1e5c7b7c7eadda4c8e954acbcbaf75a7b500d53",
+    "sha512": "d23092cf507f4cf66ead45d7b393393ea83a9002056962ee6c341e91323ae39e10f2aefbbbc9f5e54409eb3ee522ad0c2dd5661077b09f1e37d034cfdd4333a0",
+    "source": "modrinth",
+    "project": "alexs-caves",
+    "version": "2.0.2"
+  },
+  {
+    "file": "alshanex_familiars-1.20.1_v3.8_HOTFIX.jar",
+    "enabled": true,
+    "size": 23131109,
+    "sha1": "47884d7680396fff177a19ad9a19a7bf032d8b24",
+    "sha512": "8ec27c1b7ee09d8cc3f71664a2be70f717e044bfae50c1fddb077a668e854da17f7a3a7dcddaadb39efef056c297679c0c30e7c57aa11b702dda06eddaf4b092",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "ApothicAttributes-1.20.1-1.3.7.jar",
+    "enabled": true,
+    "size": 227511,
+    "sha1": "1dc0744d17f0861fe6b067798d39abce9d8e0e86",
+    "sha512": "d0b7a9dac9e0d34cdec49afd9a3c9f5382dcfac69b18a7c7a600d4537cf2653368a00333389c8e7c9fdacf952e0e4f921464309e257a3dd992f1ba26f4ce6836",
+    "source": "modrinth",
+    "project": "apothic-attributes",
+    "version": "1.3.7"
+  },
+  {
+    "file": "apprentice_codex-0.9.8.2+mc1.20.1.jar",
+    "enabled": true,
+    "size": 10956547,
+    "sha1": "d0cbaf66a4de631d4f68bc687dbca1a0e4d06eaa",
+    "sha512": "2e9154d0bfaf49c14122766f4dc53cbe0f9c6a85737e042f941ef78e91afdad919f068549a897effc1a484f04e0b6644d3d4f90382f9d6b8431dbbc6f47dd84a",
+    "source": "modrinth",
+    "project": "apprentices-codex",
+    "version": "0.9.8.2"
+  },
+  {
+    "file": "arcanists_equipage-1.0.2-20.1.jar",
+    "enabled": true,
+    "size": 364101,
+    "sha1": "d42fbe7bff723e8865665a7296c62dd90930ea31",
+    "sha512": "6d3f68a75d07e3828e1ada6426eb5b6ba5ade95a37465d32ac2d4738fc9a7883272c3f6281de26bd88728dcadc5c6a59d25c309088c656f9e27a88c76d444e95",
+    "source": "modrinth",
+    "project": "arcanists-equipage",
+    "version": "1.0.2-20.1"
+  },
+  {
+    "file": "architectury-9.2.14-forge.jar",
+    "enabled": true,
+    "size": 580602,
+    "sha1": "a52918a500ff421180a1cbd1a0cabee712134ec4",
+    "sha512": "cf67f2050cafa00f0bee42e6d7bef77fdb808ac4f71742f7b4d6d5c1e6ffb49561a5a252f332d2b78a9767bdb5faa284611790dba303fbdc736ae36d794f61c7",
+    "source": "modrinth",
+    "project": "architectury-api",
+    "version": "9.2.14+forge"
+  },
+  {
+    "file": "awakenedmobs-1.1.3.jar",
+    "enabled": true,
+    "size": 48313,
+    "sha1": "2ad0d9f0c18e63418d45532c6482de25ad0bab4f",
+    "sha512": "8136f735d458c3f6cf4ec0fda131ffc2c0f6340cf4736a6683502600899c775134d8243f54a86de64a7c72b532c8016ddead14c77069585aeeb9849756f1e566",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "azurelib-neo-1.20.1-3.1.14.jar",
+    "enabled": true,
+    "size": 1094117,
+    "sha1": "19fe3a56b7ef5e7ca633826f07d78027dc3976e4",
+    "sha512": "7bcc76c5b4bc1ab75fe9275ec502c4eea0bd9ea390d271c068fc33b8e0b93f940021961938553f036b0bc750e78f8a191625e0013bdfcb980f5827a6e4bf3369",
+    "source": "modrinth",
+    "project": "azurelib",
+    "version": "3.1.14"
+  },
+  {
+    "file": "BattleArts-20.14.16.10.jar.disabled",
+    "enabled": false,
+    "size": 11414761,
+    "sha1": "164e7bf3096cc26b0654fd615e44c8ad7be44ec6",
+    "sha512": "ca8c37036a02f2d0d0f046ca1156b5b7f646ce4948d6ba157ea301bc940bfae935b302847da330f63e95438ff0febfabde13f46a194ad24a82fef76d364e67e8",
+    "source": "modrinth",
+    "project": "battle-arts",
+    "version": "20.14.16.10"
+  },
+  {
+    "file": "BattleartsApi-20.14.16.5.jar.disabled",
+    "enabled": false,
+    "size": 237072,
+    "sha1": "d40f23cb69db234c854c0c34294a81a39c9cc5c4",
+    "sha512": "d560f0ce7b7d0fb271bc099851fa94a1dc4ea46d23b238fdc13f32bfa91e1da19946a65e059fbe79e67741cbbbb3675130647f2df3ae56a4b421835dc84855ab",
+    "source": "modrinth",
+    "project": "battle-arts-api",
+    "version": "20.14.16.5"
+  },
+  {
+    "file": "betterlockon-2.0.10-forge.jar",
+    "enabled": true,
+    "size": 453274,
+    "sha1": "788d87356c9caa273810aed5abed06b64a39e628",
+    "sha512": "273f4818bbefaa0991856559e886000511d4694cb1a420f1de903054ca817b965ae49b6b2ca8eda211b031a62a3aae12d5ad1c6c8ced7736919d5ff3fe504776",
+    "source": "modrinth",
+    "project": "better-lock-on",
+    "version": "2.0.10-forge"
+  },
+  {
+    "file": "bielgg_spells-1.5-patchwork.jar",
+    "enabled": true,
+    "size": 33309934,
+    "sha1": "2df3379558e7571eca3f1a3a4411a3cb7b733d70",
+    "sha512": "b8dfc548fa8da2ac0149ffda185792fcdcc477e64be446089cca66f7214736c4554c2dd4e9c6189c0bb30b0ace981133e2a711a0f97e5f4e82d56a46eebe180e",
+    "source": "modrinth",
+    "project": "bielggs-spells-addon",
+    "version": "1.5-patchwork"
+  },
+  {
+    "file": "bosses_of_miracle-2.1.4-forge-1.20.1.jar",
+    "enabled": true,
+    "size": 14508463,
+    "sha1": "0a6d891ad9c218733c168e254704154e820bcc9d",
+    "sha512": "006a51da2495f75785bfc00bff064c04708f5c0d3c2933cc70d8fc3190df5f0956200987a06c0766f47c82772b19a0670113b6d5ae0e0c65e3d5ce159594e6e9",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "caelus-forge-3.2.0+1.20.1.jar",
+    "enabled": true,
+    "size": 40125,
+    "sha1": "d14e8ee892d4d8764f523ad0e89bdcfc061fb007",
+    "sha512": "906baad404c33288d8daf8937bc6a85d3bcc03db67a4a68395b8f01eea57f773420ff97919aadb08a7618b62b0c6c3db72270f9c3af836b822385464f509cf78",
+    "source": "modrinth",
+    "project": "caelus",
+    "version": "3.2.0+1.20.1"
+  },
+  {
+    "file": "cataclysm_spellbooks-1.2.9-1.20.1-all.jar",
+    "enabled": true,
+    "size": 1266452,
+    "sha1": "57fbb161849fca19aa12632944b01ce12760c4c4",
+    "sha512": "abeda81f433753de9ecb2f6b4653eabe78f8d5bbd242e9a2072e502cc964fd3639c59df3fc5adf753226c951cd7ad70c1217650a88c8ace687329c7065e920a9",
+    "source": "modrinth",
+    "project": "cataclysm-spellbooks",
+    "version": "1.2.9-1.20.1"
+  },
+  {
+    "file": "citadel-2.6.3-1.20.1.jar",
+    "enabled": true,
+    "size": 3185275,
+    "sha1": "fb0b1fa96ce28e4be77b38ad95d83c3da7ec8316",
+    "sha512": "42e3fa0ddefb1ebdbba4242d81caede834cd0bbd96e4e90b12b2157a5b07c68b625f64046de1f9e1ad4d6056d3536e17207be5f4b24960582052d713b13f22c0",
+    "source": "modrinth",
+    "project": "citadel",
+    "version": "2.6.3"
+  },
+  {
+    "file": "CombatEvolution-2.3.0-Forge-1.20.1.jar",
+    "enabled": true,
+    "size": 3090317,
+    "sha1": "61966a1cade12498fc6dea2fbe40c3937b798208",
+    "sha512": "2c8ed15dd54fc4f7b7c47cdd66984275fe2b7b7de715211e3f80f3e88b1c9bae169b33faaf856c55b6c7059b190289e337120bc3b8173756d9cb7bc33d7638e0",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "CrashAssistant-forge-1.19-1.20.1-1.11.12.jar",
+    "enabled": true,
+    "size": 3503813,
+    "sha1": "b309bd4803d5fcf27397b5ea60bbe4bb332bc809",
+    "sha512": "ec1e471ce72c5e920d110ef38ba6bb2d256fdca62e1a4edde1761021b394e40717943af53e64a57e332e1d2aea8fc8666d88bb8ca7bc624d526ecfc460535f3d",
+    "source": "modrinth",
+    "project": "crash-assistant",
+    "version": "1.11.12"
+  },
+  {
+    "file": "curios-forge-5.14.1+1.20.1.jar",
+    "enabled": true,
+    "size": 398066,
+    "sha1": "452175b95ad3db6ff58bb8968f6bf7a9d1e0f480",
+    "sha512": "1373f95fd111c977db2f6adcef8e4eb486a2d926a3e17374692dee4ac3d65857de6446c16922b531aa5ace2c23c666a7fcc28c720b2917c1e04808d15648ba87",
+    "source": "modrinth",
+    "project": "curios",
+    "version": "5.14.1+1.20.1"
+  },
+  {
+    "file": "darkdoppelganger-9.9.0-1.20.1.jar",
+    "enabled": true,
+    "size": 4502086,
+    "sha1": "b0c081c1927f9d7ee743be90b01b9b3fffdd8fba",
+    "sha512": "adb817c089f0466275e065363d28b0fde2b1a8229199d8d18c8269c833ebdc0c6c8575f846cf69d4ef61b5d96308e6359916ffdd20fdd65b97708bcdb9ca8a64",
+    "source": "modrinth",
+    "project": "dark-doppelganger",
+    "version": "9.9.0-1.20.1"
+  },
+  {
+    "file": "darkermagic-1.3.1-1.20.1-ver.b.jar",
+    "enabled": true,
+    "size": 100035,
+    "sha1": "fc828f6396862b827a4b916f879c56042cef538c",
+    "sha512": "6af1bad7c88fe7f5fcb4be676c518fb17da3250d6e942a14a89eebec55be8d9230540a8011da321fb83ce91cba6d2bc8bfa59a2378d2210a16dab4931210ae60",
+    "source": "modrinth",
+    "project": "deeper-and-darker-spellbooks",
+    "version": "1.3.1-1.20.1"
+  },
+  {
+    "file": "deeperdarker-forge-1.20.1-1.3.3.jar",
+    "enabled": true,
+    "size": 17844266,
+    "sha1": "12f95fa85c62123140d1962702a97a3bb746bbf5",
+    "sha512": "fcf08e2d1bfb0bf40120f426826b25e6d483a83cf7f04d221798bcc8cb46cedb9065dc5c0d33213f5c708cebd0081aba4ca7265fcd96c76b16d2f99bd4297aae",
+    "source": "modrinth",
+    "project": "deeperdarker",
+    "version": "1.3.3-forge+1.20.1"
+  },
+  {
+    "file": "dodge_parry_reward-1.20.1forge-20.14.3.jar",
+    "enabled": true,
+    "size": 287404,
+    "sha1": "8a0301b8a55b3349b029dfcbbea3d9438b05e82c",
+    "sha512": "9e2860fb88704ed8908a1d16dcb1920e7bf001ae544eef6e64b0d76dfdeb382df046572845bb3c9fda805ed671ab4b1463b3fea714b24c12e8fc8107dd850d1e",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "doomarmors-1.1.0-forge-1.20.1.jar",
+    "enabled": true,
+    "size": 2101453,
+    "sha1": "bcb3c68c42f46b2dd0f2c539247212886d8c7b6d",
+    "sha512": "be48fb75e8a61b921880cacd925b617b341105d3c6edcebc15a14b5dfaf154fefb296506ede08f91a01bc5c8654aaae61849ba030f6e32efdc99ca7d3f83b2b5",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "efcompat-1.4.0.jar",
+    "enabled": true,
+    "size": 52686,
+    "sha1": "e2c68e3108985e5f6bd56f55711eeb4e00b40b35",
+    "sha512": "4e6d916a029d6a88878db23bd9346c549f442c44c3760ab3a0148c81a3240d345a7593f33f0df36530388aa888de9850bf153b7bd7a02e94cb8db1182d47e89c",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "EFM-20.14.4-WeaponMaster-X-EpicFight-Forge-1.2.0.jar",
+    "enabled": true,
+    "size": 61026,
+    "sha1": "54f4829f750c7e3829ece7ec43e94a12a6185e3e",
+    "sha512": "b34773c3f9748c84e416488685032e5bd143266a21b110f21b73e8aceca075eb561f2ff134811e56f600507f00699ce3b32a87db9eba97880eb82c909bfb5b2f",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "EFMCompat 2.0.jar",
+    "enabled": true,
+    "size": 6694088,
+    "sha1": "7ad9bd7aee63f2cea9e5d8fdc132d9d029cd5e63",
+    "sha512": "eccac214a5ef2243f685c5fd027da67c42913c68be76958073892856bdd1b62597b50b4805fe4535828606cd9367935b8bceb2f8d0129f88f1e5ee5fbcccde56",
+    "source": "modrinth",
+    "project": "efmcompat",
+    "version": "2.0"
+  },
+  {
+    "file": "efnbossesvjakr-1.8.2-forge-1.20.1.jar",
+    "enabled": true,
+    "size": 78031052,
+    "sha1": "9b983d10f6aa8c4bd4940a7060fc67660d5e77d9",
+    "sha512": "b708a95ce1a4425dd2e494383d8f0eae58cd1c19c99b100c018794d6816a5e705fbd2bfa3e324f604fdb4097336ae84653e9dbd13364efde18af25730dc379d1",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "efs_iss-1.0.3.jar",
+    "enabled": true,
+    "size": 299741,
+    "sha1": "24af46b91147b096713f8693e03fc70d240b5c03",
+    "sha512": "36c64b60a73dfe0c54001f03d871daeff17bd0919fe66f4449d0a316148161063908145398dccbb5789c60a9f640432cf10bbb1da27f13fafc56bd6e3038ee3c",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "epic x parcool-forge-20.12.0.1-1.20.1.jar",
+    "enabled": true,
+    "size": 408094,
+    "sha1": "d38194b73c91e5af84ef28a7a07e0eb4340ef76d",
+    "sha512": "211d4c252ddabaa7cd91e612a6cc37d1b746499567125818852650a284c119587a1728e7766aac30ba41c25ce550818628a2f5b7ddd929bff1fcce9cc5a1067d",
+    "source": "modrinth",
+    "project": "official-epic-x-parcool",
+    "version": "20.12.0.1"
+  },
+  {
+    "file": "epic_fight_avalon-20.12.6.5.jar",
+    "enabled": true,
+    "size": 645350,
+    "sha1": "f83685fa026aa1bf779e48930c23ae64ccd7b138",
+    "sha512": "f9745ed1ceee7a7b66e9b0340edd5b926d99adb6fdfa6928f5629f792dc686faaab79c6e6a545dd57e39874d8c8c06d54f1fc3cad8607b3388e3e1c450d35622",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "epic_mobs-1.5.4.jar",
+    "enabled": true,
+    "size": 96021896,
+    "sha1": "e2984d11e14ef1a5d7bd7ca18b3c79106cc07fd9",
+    "sha512": "6f80f92f26409d0720d6ce4dc29d0de970abc5331754f78c1b77af23f8d84ac25a23cac096dc68f14db3a3c0a8f83417ed3305afad45229a3fa4f02d36138f4c",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "epic_parcool_momentum-3.8.0.jar.disabled",
+    "enabled": false,
+    "size": 379249,
+    "sha1": "ea2c96a49123a5bea2e36b4f8cf9cd398a35ea05",
+    "sha512": "bea8b1e3c765be14b13777a5af0e1be5c8f2890fd401f649216f95dc24127442db08fd4ef1c84d7aed73bfe0e6ec94e5dc1fd1d04f9360247d4f951c586ff46b",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "epic-fight-20.14.17-mc1.20.1-forge.jar",
+    "enabled": true,
+    "size": 8071119,
+    "sha1": "faa8eddad9d80adb9c4ba81fd0a8a21c81989d3d",
+    "sha512": "cfb8ab5c6f2014ce10dae59947f9f4e35e7bbe88c2ffbb66da9bfe78876d7a0a65de843a62e324971d5a923ec6e96d9b7e5c72248a262a6e220a071c6d05a8cf",
+    "source": "modrinth",
+    "project": "epic-fight",
+    "version": "20.14.17-mc1.20.1-forge"
+  },
+  {
+    "file": "epic-fight-invincible-lib-20.14.8.2-mc1.20.1-forge.jar",
+    "enabled": true,
+    "size": 268536,
+    "sha1": "1a8ba86606705c2c2ea4ca6bfd9f9add177cd7cd",
+    "sha512": "ebb999382e8ed783830127f7c8bdc75b008c9cae504035fe2f86de35cd40789121dbb546c57bad822439d52a1cb98f3e098a0cf53d5f640c6d97106fc8dd3fc2",
+    "source": "modrinth",
+    "project": "epic-fight-invincible-lib",
+    "version": "20.14.8.2-mc1.20.1-forge"
+  },
+  {
+    "file": "EpicFight Nightfall-3.4.2-all.jar",
+    "enabled": true,
+    "size": 53821862,
+    "sha1": "b99cb2c78e94ef8f0071ea88e7002a42051068ae",
+    "sha512": "126e6f62c576a675a9c706c7b614370d4309462aa3591038df19240560e3b65c0fd062ee1a974b316b58d8de3a8058315ef203fef50636e9170322d1481d4b36",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "epicfight_arachne-1.0.0.jar",
+    "enabled": true,
+    "size": 7338704,
+    "sha1": "d394e6c4ea4ea96f40c5ef0c00bcbec67cc78d8f",
+    "sha512": "1fa3141219480ca032aeeb7aec07e1d266506f60bad1b3f2a5986f06d76af47ec05042fb1f2a2ff01a75b253acfe5eb800c324fdcb6fafed8a3704828476b2d2",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "epicfight_awaken-1.2.7.3-forge-1.20.1.jar",
+    "enabled": true,
+    "size": 5764340,
+    "sha1": "568e9d64d0714e06de4cbdc04cbd42480bd78652",
+    "sha512": "6fbe403ba8eec1cab6a4737587a0117717b5e55625b0447411328bb6fa718014a64b1a127afb0e9e3fff7c3594caa6be2255c00322b624c0aaee0ceac5ed956f",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "epicfight_leonidas-1.0.1.jar",
+    "enabled": true,
+    "size": 8366555,
+    "sha1": "b8a4bb398cdd3639206c07ca4c1957856cdf684f",
+    "sha512": "9a9fb932bc0284f82f4c7898026b15adccd36d8ee2514e06cfc17430d3822883bb5725b94f42bed60d55b9c9678c6de1adf0d208d3ed25298ab12cf5baef9fbc",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "epicfight_moreskillslots-0.0.1-mc1.20.1-forge.jar",
+    "enabled": true,
+    "size": 102997,
+    "sha1": "3a122faefa4ec95f89e3f2be9146861138dc5842",
+    "sha512": "bea5430932a9320126bcb232f57d7902097d5f5f664dc6464939950895ff452994340d93eb5832542040680d5ce49aabab2100e5ccdf85cb338b87232cb79e56",
+    "source": "modrinth",
+    "project": "epic-fight-more-skill-slots",
+    "version": "0.0.1"
+  },
+  {
+    "file": "epicfight-extra-1.2.1-mc1.20.1-forge-all.jar",
+    "enabled": true,
+    "size": 23712049,
+    "sha1": "68568991be84ce368d3adf4ef08d52ce122ec305",
+    "sha512": "e535d5c9283cf9c39214d0280f0d4a60731074518598eeca93d4e9a31005f7c696e64885e831575136ea4e5716d730712f9c13ad95f28982c4e6c347b55dbc59",
+    "source": "modrinth",
+    "project": "epicfight-extra",
+    "version": "1.2.1-mc1.20.1-forge"
+  },
+  {
+    "file": "Epicfight-FPM-Fix-1.20.1-1.3.jar",
+    "enabled": true,
+    "size": 14926,
+    "sha1": "ea354cabb230aa28a11bddae05fd863daab292ae",
+    "sha512": "df98fa41ce9f2e08c72d11e0b620a202e4da3c952b87d22ce35157f3570e3694add96c8bdc5bdde2808a398889aa99e7ad259e299ca0d462612be2152ef65c3e",
+    "source": "modrinth",
+    "project": "ef-fpm",
+    "version": "1.3"
+  },
+  {
+    "file": "Epicfight-KickSkill-1.20.1-1.0.jar",
+    "enabled": true,
+    "size": 223345,
+    "sha1": "774f6d6440f364e6bed787ceca969320bd699075",
+    "sha512": "460ace56497f16b101b5db7243ff2261ec08073a8dc9fada1bb4b6c006aa70d9128d3e4ceb04462a08488acba5602b75855022a69021dd2a9844d74d2c879061",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "EpicFight-Resurrection-forge1.20.1-0.20.12.2.jar",
+    "enabled": true,
+    "size": 19348884,
+    "sha1": "418e4329ad4c6a2fa81bdff093b21bded6d64e68",
+    "sha512": "06f373fcee35b8764b009304df6e87dbcfcdea269a53ed8e30c9c12036bf4d35fd8a59f90d3ea0e06f9f69b1af6040289549767c5edd044328083d1d699db3fd",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "epicfight-skilltree-forge-20.2.9-1.20.1.jar",
+    "enabled": true,
+    "size": 327927,
+    "sha1": "b6346a8a88569d13f76b6c2d035a93fd7ff59878",
+    "sha512": "1f4da6241403721fb57af8ff5badd4b74b6ba241d913474149e8d552c13c1d1d6a662fdcd21efe22a759fccd0be193dc1218a05ef1e78e0990421db6c954bd3a",
+    "source": "modrinth",
+    "project": "epic-fight-skill-tree",
+    "version": "20.2.9-1.20.1"
+  },
+  {
+    "file": "EpicfightDd-20.14.1.18.0.jar",
+    "enabled": true,
+    "size": 34520859,
+    "sha1": "51893957b6da06b7287c056fce9a567ebd52928f",
+    "sha512": "7a3072ad8cfeb55b85eb6e8db34874cb2f409b92f5bacb07a5fb403095673a142ea85fd872d8f02a7b5dccc241dda6d8c5211a1d46918289125a44d0eab39976",
+    "source": "modrinth",
+    "project": "epic-fight-dawn-day",
+    "version": "20.14.1.18.0"
+  },
+  {
+    "file": "familiarslib-1.20.1-1.6.jar",
+    "enabled": true,
+    "size": 336013,
+    "sha1": "9d02581ff108ce370a78a0f75332197fe4fe9ade",
+    "sha512": "412a4382586bc687478e98701d1bacd8f33c7a56f5f0f000b915ccdf3a5277457c00159d8dbea455456630fec5ebb99778cb052c150d75f533606809d5f83c99",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "Fancy-Trail-1.2.7-1.20.1-all.jar",
+    "enabled": true,
+    "size": 5940930,
+    "sha1": "1ea82342a75326c319bc14b21fa933b59bb76d76",
+    "sha512": "232179b08ec9ef4745124c41f510931659465e742410ccc5fc3cadf5f200a57a72b438e88f06d2c571c7604baa140c9c8efbb2d32cb026b862bb505973abb706",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "farmers_spell-1.0.6-1.20.1.jar",
+    "enabled": true,
+    "size": 5548907,
+    "sha1": "3b08ac086426627dcb5c418647132ba793a30a29",
+    "sha512": "be2ae430b045d7eb2f94d73ae2b50f60ac3e5c5b0e668733fa1d16dcaa9a98b231bba0e102880b28e865dce783867b86dbcaf3e876cedba80725d8561653b7dc",
+    "source": "modrinth",
+    "project": "farmers-spell",
+    "version": "1.0.6-1.20.1"
+  },
+  {
+    "file": "FarmersDelight-1.20.1-1.3.4.jar",
+    "enabled": true,
+    "size": 3311051,
+    "sha1": "26f615fd35f652021f5b0f1cba68afa7d578fe15",
+    "sha512": "932ae0ab95fa0755bb5a79fbf1d1e31d0e86f3c0f5186796ed06973a3019a618ee8c66a4eae5b901909aed6232abb2bd3b1ff0e1905f74fc70644fada94a80b5",
+    "source": "modrinth",
+    "project": "farmers-delight",
+    "version": "1.20.1-1.3.4"
+  },
+  {
+    "file": "firstperson-forge-2.7.3-mc1.20.1.jar",
+    "enabled": true,
+    "size": 1726107,
+    "sha1": "229a85332b026a027e960919a263742f1eafbbc2",
+    "sha512": "ffa51fac726c907ff70f77ce3abdeee3cd5b5e6110a89013ec0d4c4749fa73183c06f5828f159ae4dfa6252bb0d52ab2d6c6ad0941e996823b2795de4229e4ad",
+    "source": "modrinth",
+    "project": "first-person-model",
+    "version": "2.7.3"
+  },
+  {
+    "file": "Galosphere-1.20.1-1.5.2-Forge.jar",
+    "enabled": true,
+    "size": 35767244,
+    "sha1": "c75060ce1eaa42e044f409717b771b59fe63adb1",
+    "sha512": "05cfab57e4c90da7d6b6810540a44f397e4a813e8663e37744bb1cb6ad17f7271739f627b410c8fb16c14c2ead9115afdf696024c2e3d88c5bdaa0f86a575f65",
+    "source": "modrinth",
+    "project": "galosphere",
+    "version": "1.20.1-1.5.2"
+  },
+  {
+    "file": "geckolib-forge-1.20.1-4.8.4.jar",
+    "enabled": true,
+    "size": 1038209,
+    "sha1": "50e1407869ef0e909e3bdda9328b8bd7db03fdc0",
+    "sha512": "443a321a293e3cb92fbbc3c97a38b179a45d1db703cd7bdb123270a9e04e7b7d67d5b06cd8e77a6d4d9139e033e901b9660cccf53ad5f9beaae6d06eae68febf",
+    "source": "modrinth",
+    "project": "geckolib",
+    "version": "4.8.4"
+  },
+  {
+    "file": "gliders-forge-1.2.0.jar.disabled",
+    "enabled": false,
+    "size": 745598,
+    "sha1": "4698bea8e7a3edb4a2556a3dafdda8ccb935e917",
+    "sha512": "21e5dab556cd34979a82915d740073f871b202ff6171b68613d793b24793eaa55c3965309ad68bc1e4b355967440a25d46fe6bc6fdd0d2a3e799ea717228c7a2",
+    "source": "modrinth",
+    "project": "gliders",
+    "version": "1.2.0+forge"
+  },
+  {
+    "file": "gtbcs_spell_lib-2.2.0-1.20.1.jar",
+    "enabled": true,
+    "size": 293807,
+    "sha1": "753917963574a7087fa10999b7646e2efe5772b2",
+    "sha512": "9fd0d41d81b49784dfa1b1f6d5bf338859062086a2161edfc14a83c76196618f86a604be1fcd92c90b1b599b38c6b9cdfb752bec1ce4cfb20327f26fe609576e",
+    "source": "modrinth",
+    "project": "gtbcs-spelllib",
+    "version": "2.2.0-1.20.1"
+  },
+  {
+    "file": "hazennstuff-watered-down-edition-1.1.2.jar",
+    "enabled": true,
+    "size": 1204816,
+    "sha1": "6c1f91348f92e77e830a569d20733ab13251afe0",
+    "sha512": "2b120543258d29ba2d68ca75bdc21dd748b3dd2f2a3090e80bae032ca4c3124fb89ee608ff9f6ed1f4cd4fedc368a300fb71ef99097eef8fba7879d63f9116cb",
+    "source": "modrinth",
+    "project": "hazen-n-stuff",
+    "version": "1.1.2"
+  },
+  {
+    "file": "huge-structure-blocks-forge-1.1.10.jar",
+    "enabled": true,
+    "size": 102150,
+    "sha1": "a79c4645c1bfda2a18c8a019db1137f4353604af",
+    "sha512": "6de595a756bc0e4dcc4b40c312a7235d4aaf81750fc7b6c47a8b9618fbbba777ef18ea2b4e2bdeab47804c9958a7b17e9d6b947edad310ededb873324f37f064",
+    "source": "modrinth",
+    "project": "huge-structure-blocks",
+    "version": "1.20.1-1.1.10"
+  },
+  {
+    "file": "indestructible-1.19-0.5.jar",
+    "enabled": true,
+    "size": 40926,
+    "sha1": "dcc5c1d47745070827a7d004139b9c5e8785bf27",
+    "sha512": "9415de6eee6da12d56d381f602cc836f1169e496d26657f08470426a2c015ab69d18971c919bd862a04166cf7b3641bac68a74b0b5bccbf727cf6125df369eb1",
+    "source": "modrinth",
+    "project": "indestructible",
+    "version": "1.20-0.5"
+  },
+  {
+    "file": "irons_lib-1.20.1-2.1.0.jar",
+    "enabled": true,
+    "size": 428969,
+    "sha1": "c2fa494d679ac912f8fb52ed6f832c1f3817401c",
+    "sha512": "160a442442c32c16a6aaf79dd42b9e75132176cbb5475a81f7bf152c5beb8cd8a2f7f20048bfcbf34a5d7a213ec2215caee76fbd2b2903919aaf4240892eaf77",
+    "source": "modrinth",
+    "project": "irons-lib",
+    "version": "1.20.1-2.1.0"
+  },
+  {
+    "file": "irons_spellbooks-1.20.1-3.16.3.jar",
+    "enabled": true,
+    "size": 15570397,
+    "sha1": "726345aa215756bd30b7cf8c338c9ae6bbc59799",
+    "sha512": "a699631fa56568d39a30773b8fe96d7a49f1cd7f8e243340ce7ad91b09ccf49c9a6802a944f4bd04b2d88d9fc796a70add1d18d8f326bb2be238b02a8c8076da",
+    "source": "modrinth",
+    "project": "irons-spells-n-spellbooks",
+    "version": "1.20.1-3.16.3"
+  },
+  {
+    "file": "irons_spells_js-1.20.1-6.5-3.14-r2-release.jar",
+    "enabled": true,
+    "size": 343899,
+    "sha1": "d4ae87daa0003861d2fc949962b3e9a1c488e7b3",
+    "sha512": "8a384f2842f7ba4727bf48d0176b63bc7452e2c24796fd2e310f82900b938733e396e36ddfff610e739a9658822446e854a2e7ff087188a8cc502f48df0997d1",
+    "source": "modrinth",
+    "project": "isskjs",
+    "version": "6.5-3.14-r2"
+  },
+  {
+    "file": "kubejs-forge-2001.6.5-build.26.jar",
+    "enabled": true,
+    "size": 1658792,
+    "sha1": "8b0cc9797d4ed00fd2d1002d58960af8b32012ae",
+    "sha512": "71ef9e5eb5f3bead86b635b42ad305d075c6487e631217b281d938193dcdc5fe0ff6bae8c86dd4e069726223a66e8690c0610f736c5a62910f60fd80edd575c1",
+    "source": "modrinth",
+    "project": "kubejs",
+    "version": "2001.6.5-build.26+forge"
+  },
+  {
+    "file": "L_Enders_Cataclysm-3.31.jar",
+    "enabled": true,
+    "size": 73916104,
+    "sha1": "4f1165cb39521292e826b471b4808bb89f0f4f3f",
+    "sha512": "0dccedd79e3e555f5a38075612d91aec23e1f6ca674e7637ea88c669095b44554385abb75826dfa5a0170585c6b3c3b6d9465bed049c0186d80f75d88f45c5e8",
+    "source": "modrinth",
+    "project": "l_enders-cataclysm",
+    "version": "3.31"
+  },
+  {
+    "file": "lionfishapi-3.0.jar",
+    "enabled": true,
+    "size": 101931,
+    "sha1": "79d0404f87fa066480b18c844c1e0b1c5f5475f9",
+    "sha512": "a7cf6c9bf27a77b45efe434a166f9c99efdb6db14e5d88ce8417c6364aea9d250a9f43627e9e0ac162e106517fccf51cebb5035852c8449fb7fb299a083770c4",
+    "source": "modrinth",
+    "project": "lionfish-api",
+    "version": "3.0"
+  },
+  {
+    "file": "magiccircles-1.2.2-1.20.1.jar",
+    "enabled": true,
+    "size": 7658528,
+    "sha1": "cf7d8d202a668541045ed0351032850fdabc74c5",
+    "sha512": "071631cd2163e0236cb04e46cffacbc61d764ec9281cb10401d7a0ac1251cb7b6b22c32b4a4f30a4dff1599312ed907c7477d507b3cd9e8f86c0756eee78bc56",
+    "source": "modrinth",
+    "project": "magic-circles-isas-addon",
+    "version": "1.2.2-1.20.1"
+  },
+  {
+    "file": "MobsPlus-Forge-EFM-20.14.11-1.1.5.jar",
+    "enabled": true,
+    "size": 2392589,
+    "sha1": "ff0818fcaf5846562458a83370eb2a4b521b3543",
+    "sha512": "ec2c7b22171844f791030bbcad3af42bd543c1127f452388402f56de0ec940d51b919786cfc4ac325ca9876757d0f8c091dd817972313c8549856665d88f2a99",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "Nightfall Enhance-1.1.6-all.jar",
+    "enabled": true,
+    "size": 8816284,
+    "sha1": "d5976c3bba3083b1bd64688d60bfe63521094f52",
+    "sha512": "85e41563fa0ab201a79f8d79a8363bdeef4de404d0bd278cb7aa4aeb6dc361af934e4a0df4ebf1e4bddd8b9ceca225d13181bf785c4726cb1ccc01993b6d4449",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "notenoughanimations-forge-1.12.6-mc1.20.1.jar",
+    "enabled": true,
+    "size": 1870649,
+    "sha1": "993252c9946e22aa4ba0b28cb5b81183d5bcf50d",
+    "sha512": "deb10b44e923a5ead4379651328f28c7e7aa862f825f0938ffc4d641119671fedeb5129161553618efb7e4b578d23393c225ade7ce486d1e6e36de256b2ec793",
+    "source": "modrinth",
+    "project": "not-enough-animations",
+    "version": "1.12.6"
+  },
+  {
+    "file": "palladium-4.5.9+1.20.1-forge.jar.disabled",
+    "enabled": false,
+    "size": 2869419,
+    "sha1": "d3866bebe8d4890535005fe7978d0bf5a08dbe72",
+    "sha512": "0c44a6d30fbfd57c1c44231ebaf0ca43011cd9996bcf2ae3d789228db7206f047b430ab2f2c261895677e2b7244a79968c156c41e61959e2d5613f89b884aca4",
+    "source": "modrinth",
+    "project": "threetag-palladium",
+    "version": "4.5.9+1.20.1-forge"
+  },
+  {
+    "file": "ParCool-1.20.1-3.4.3.3.jar",
+    "enabled": true,
+    "size": 1154052,
+    "sha1": "55f8b8a9fd9e23cd0dccff56461a8ae88464caed",
+    "sha512": "42f4da16b008343e39b7df17b8d52b8fc04ba6d52b2ea5deaeb7eb7cd19b70dc9d955d3e71d1357988d0e7ba05089dd1617e303ffdc7482357d1df98ac6f688a",
+    "source": "modrinth",
+    "project": "parcool",
+    "version": "1.20.1-3.4.3.3"
+  },
+  {
+    "file": "Placebo-1.20.1-8.6.3.jar",
+    "enabled": true,
+    "size": 282474,
+    "sha1": "e85f53de2e582a79ce25ff1df1e7b5b5fc08440f",
+    "sha512": "c23990465e26336f476c3b05a897bcf0c8660ae7338756b325f6bf81d0dee34b609474c62293f394acac818637ab03f92c776d104c8b8e86f3786395f5c4d623",
+    "source": "modrinth",
+    "project": "placebo",
+    "version": "8.6.3"
+  },
+  {
+    "file": "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
+    "enabled": true,
+    "size": 181437,
+    "sha1": "16808f94a41d45d8e986b4e4ea6b02ba57fa058a",
+    "sha512": "cb9f6a3aaa943823a85fdd716ddb3c7623af2b3520926c3a98d170c52d31908894808fb61c52bea39bae622dbab59d50b4bad56f7ca0533a9c3350d412c33729",
+    "source": "modrinth",
+    "project": "playeranimator",
+    "version": "1.0.2-rc1+1.20-forge"
+  },
+  {
+    "file": "reforge_the_sword_edge-evolution-1.0.1.jar",
+    "enabled": true,
+    "size": 1502005,
+    "sha1": "54a748f483601086cfa98319e430acab3a95843a",
+    "sha512": "a9413df3e9b88b9c00336542385a509fb7d3db7f22dc76d666e600b6bb772f5b1de8f094d0e843597f66497f5da717e78b43958e99a80f05e8837d9f6cd31870",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "rhino-forge-2001.2.3-build.10.jar",
+    "enabled": true,
+    "size": 1798244,
+    "sha1": "c83c9b719a6bab33fbd2b3f2f680eb3adbfc1aa1",
+    "sha512": "4eb6a635f3eff3baa158539bd55344421cf69b15e28f7da8bf55f370a11c071f3525063a6f81b67fbfca550ad8aaab7e6208df87f65ca6ed2851edd46f032b58",
+    "source": "modrinth",
+    "project": "rhino",
+    "version": "2001.2.3-build.10+forge"
+  },
+  {
+    "file": "somakespells-1.0.9-1.20.1-fixaltar.jar",
+    "enabled": true,
+    "size": 2598141,
+    "sha1": "2a0b1cafc5559c1f2d854415f2546ba4b6709df5",
+    "sha512": "9a369817303a8cb4845adefea9aacbc4cfde39c8af0414d48987e197d1921740ad6b841833731cf73e232741d2dfc1168786e086efd24a61eeedc636e4fb4fb6",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "traveloptics-6.3.0-1.20.1.jar",
+    "enabled": true,
+    "size": 27486118,
+    "sha1": "e1a52c88a538e62a4b739ebcef81ab9cf5e19b20",
+    "sha512": "9e85f703de8ba9e13c94987b1e29b1a62a666901f8dfd980c902a29ca208740e04dc0ffb4ad96730c8612ffda4c5c3afb3d19225070e5ba92d3e7db9fa88f3c0",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "VIX-1.20-1.3.5-all.jar",
+    "enabled": true,
+    "size": 1266734,
+    "sha1": "ba08d219f06125d15d465e3843f2767d6599d7ae",
+    "sha512": "a71842b4a9bdf8b32e085baa76c91c4edba0da919f20d96721b4c36e8e5cd75b676b2047d09ecd537aa6da95f879798747efab1a9136b0284e3ff728f8796bf5",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  },
+  {
+    "file": "weaponmaster_ydm-forge-1.20.1-4.2.3.jar",
+    "enabled": true,
+    "size": 283977,
+    "sha1": "9fe819dc110461f55909dabbed73e4fe3bdde158",
+    "sha512": "1e1e3f3a999bca1737edd06170562bdee614d87fb2f1d7788ff0d4d1ac25f999fb4dd48b3f77962d385a330f5e5389b2f6703934f2ed3e083abf7ca47e54f424",
+    "source": "modrinth",
+    "project": "weaponmaster",
+    "version": "1.20.1+forge+4.2.3"
+  },
+  {
+    "file": "WeaponsOfMiracles-2.0.171-mc1.20.1-forge.jar",
+    "enabled": true,
+    "size": 20945819,
+    "sha1": "25eaf24b3062a4491565936a5588cb22223a9ffe",
+    "sha512": "60e2590e521d01338b3f1ae0b7e614c88311e6e4e3f5735f733d49c40b043a16a3832e1f25c75f94bc5702a3f4a2ee299d517fd517c19622371524bf4e42f4da",
+    "source": "modrinth",
+    "project": "weapons-of-miracles",
+    "version": "2.0.171-mc1.20.1-forge"
+  },
+  {
+    "file": "wind_spellbooks-1.20.1-1.0.0.jar",
+    "enabled": true,
+    "size": 482113,
+    "sha1": "a219c1d13056784add75491e524ff747015d399f",
+    "sha512": "c7a30e6090a0a0ff77e1e525ebe5a1f49acc1d22804643560537046bf95302763ed5ecaf461e71327cdb4e1637922a9c6008fb5fa8662bd3a231f5fcb604d93b",
+    "source": "modrinth",
+    "project": "winds-spellbooks",
+    "version": "1.0.0"
+  },
+  {
+    "file": "womplus-20.14.1.3.1.jar",
+    "enabled": true,
+    "size": 9079255,
+    "sha1": "aac791de84d7ecb4bbf16fb07f388bd7e9ec02b7",
+    "sha512": "9405210de558a11e373f9a8160d1c394bb1bca5ce5f0c7b863e3379c5f5468ec427ecbe93816a3900321fcfcd53b2f63cff57c82d693823a89715b12aee9fd8c",
+    "source": "local/curseforge",
+    "project": "",
+    "version": ""
+  }
+]

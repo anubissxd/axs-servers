@@ -1,0 +1,48 @@
+
+#Final Selection Raid Configuration
+[final_selection_raids]
+	#Enable Final Selection raid logic
+	enable_final_selection_raid = true
+	#Bossbar participation radius around raid center
+	#Range: 64 ~ 1000
+	raid_radius = 480
+	#Duration of one Final Selection night for non-boss waves
+	#Range: 60 ~ 3600
+	night_duration_seconds = 600
+	#Duration of daytime break between nights
+	#Range: 10 ~ 600
+	day_duration_seconds = 90
+	#Duration for accelerated midnight->sunrise after boss death
+	#Range: 5 ~ 300
+	sunrise_acceleration_seconds = 20
+	#Maximum distance from a candidate for non-boss spawns
+	#Range: 32 ~ 500
+	entity_spawn_near_player_radius = 200
+	#Enable temporary boss direction arrow
+	enable_boss_arrow = true
+	#Boss glow duration on spawn (ticks)
+	#Range: 20 ~ 1200
+	boss_glow_duration_ticks = 100
+	#Boss arrow duration on spawn (ticks)
+	#Range: 20 ~ 1200
+	boss_arrow_duration_ticks = 100
+	#While boss alive, how often the escort cycle repeats
+	#Range: 20 ~ 1800
+	boss_escort_respawn_interval_seconds = 300
+	#Delay between each escort spawn step in a cycle; if 0, uses interval/4
+	#Range: 0 ~ 600
+	boss_escort_spawn_step_seconds = 75
+	#Maximum non-boss demons allowed per player in Mt Fujikasane during Final Selection
+	#Range: 0 ~ 200
+	max_demons_per_player = 30
+	#Allow vanilla non-demon hostile mobs to spawn naturally during Final Selection when they are not replaced by demons
+	allow_vanilla_monsters_in_final_selection = true
+	#Spawn passive animals during daytime breaks between nights
+	enable_daytime_passive_animals = true
+	#Maximum passive animals spawned per player during each daytime break
+	#Range: 0 ~ 20
+	daytime_passive_animals_per_player_max = 5
+	#Radius around each player for daytime passive animal spawns
+	#Range: 16 ~ 300
+	daytime_passive_animal_spawn_radius = 100
+

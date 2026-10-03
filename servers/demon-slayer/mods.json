@@ -1,0 +1,142 @@
+[
+  {
+    "file": "cloth-config-11.1.136-forge.jar",
+    "enabled": true,
+    "size": 1181413,
+    "sha1": "c65d07748acc57ceb45d53b3964368b84f34d54f",
+    "sha512": "137c4af99c53d77317cbfb1cc8c49fc2761708b49d1992f51fd846960df41dde3a83519c987e081508d4ed90c603566f3d5a6cb620ad9d85b8f4de59aa9115ef",
+    "source": "modrinth",
+    "project": "cloth-config",
+    "version": "11.1.136+forge"
+  },
+  {
+    "file": "epic-fight-20.14.17-mc1.20.1-forge.jar",
+    "enabled": true,
+    "size": 8071119,
+    "sha1": "faa8eddad9d80adb9c4ba81fd0a8a21c81989d3d",
+    "sha512": "cfb8ab5c6f2014ce10dae59947f9f4e35e7bbe88c2ffbb66da9bfe78876d7a0a65de843a62e324971d5a923ec6e96d9b7e5c72248a262a6e220a071c6d05a8cf",
+    "source": "modrinth",
+    "project": "epic-fight",
+    "version": "20.14.17-mc1.20.1-forge"
+  },
+  {
+    "file": "geckolib-forge-1.20.1-4.8.4.jar",
+    "enabled": true,
+    "size": 1038209,
+    "sha1": "50e1407869ef0e909e3bdda9328b8bd7db03fdc0",
+    "sha512": "443a321a293e3cb92fbbc3c97a38b179a45d1db703cd7bdb123270a9e04e7b7d67d5b06cd8e77a6d4d9139e033e901b9660cccf53ad5f9beaae6d06eae68febf",
+    "source": "modrinth",
+    "project": "geckolib",
+    "version": "4.8.4"
+  },
+  {
+    "file": "KimetsunoYaiba-ver3-forge-1.20.1.jar",
+    "enabled": true,
+    "size": 13141272,
+    "sha1": "4fc3946254754a8a09625dce54d43c9590c1b3e8",
+    "sha512": "e3507ff2798746268628e2b217be3cc34af3bbf3b96fe2dcb3438cf08e50df0229085f010adc719bec8eb18f09201a4b57a256798d354f5dc2c702d1bfa77662",
+    "source": "modrinth",
+    "project": "orca-kimetsu-no-yaiba",
+    "version": "3"
+  },
+  {
+    "file": "kny_worlds-1.0.0.jar",
+    "enabled": true,
+    "size": 516655665,
+    "sha1": "1dea8e8fd0b8b5753c4a6851f23aeae454a0416d",
+    "sha512": "8f87031c9aac723d72d24c06370d8b6495c27b19ed2e456457a5a1b232934c08b5b76d93473fc36b95633bd6969c22fa1bbaeafe1b7dd0c3c9b01669932f8b5d",
+    "source": "modrinth",
+    "project": "kny-worlds",
+    "version": "1.0.0"
+  },
+  {
+    "file": "knyextraadditions-1.1.127.jar",
+    "enabled": true,
+    "size": 1815584,
+    "sha1": "74e1c2cfdd2f56e4c8ac41ace45f7cd742277cef",
+    "sha512": "6bf4d380e2766352a0b13983abe0a51fd81df26a6499be6e3f46be97073cad7a0b5aa9bde655bd929def5a50a2bae3ff523188eccd9c44afcf92917a11dc01de",
+    "source": "modrinth",
+    "project": "kny-extra-additions",
+    "version": "1.1.127"
+  },
+  {
+    "file": "kxecomp-0.4-1.20.1.jar",
+    "enabled": true,
+    "size": 6527041,
+    "sha1": "b94d05337aeae6efcbaeb7dbc564acf494b276d4",
+    "sha512": "861cdc65d2c1b2b0f1d7ffc79b9f5bdf478512badcf2dc195ed77eceb17d93929ae7da90b9e62a7867351e0c82ee106a8a596e593cb29dd40045fa414e23bfb6",
+    "source": "modrinth",
+    "project": "kimetsu-no-yaiba-x-epic-fight-by-omen15",
+    "version": "0.4-1.20.1"
+  },
+  {
+    "file": "mobplayeranimator-forge-1.20.1-1.3.3-all.jar",
+    "enabled": true,
+    "size": 223397,
+    "sha1": "5767ecee24e34efb138403a45de1589e38ddc624",
+    "sha512": "32137589e18619b506cae3d8d08fee8025befed2a47b9389544e6af3b4c6a34eed019f4266ceeab2d1ea8c4b5b32357068a6e02c7f5675ee0e478c6a88c79a4a",
+    "source": "modrinth",
+    "project": "mob-player-animator",
+    "version": "1.3.3"
+  },
+  {
+    "file": "Paxi-1.20-Forge-4.0.jar",
+    "enabled": true,
+    "size": 96892,
+    "sha1": "a3a7008e07a27b3c831af7e4c82fbbc10a4da328",
+    "sha512": "50ed8c99981b9860c846a18cda215d388b67019b76a172833fa4e4b52cbd122eb8e49e594e5789790f95af06e0a98dcf2433b001b1f559b3e7071d2e6b7c1dd7",
+    "source": "modrinth",
+    "project": "paxi",
+    "version": "1.20-Forge-4.0"
+  },
+  {
+    "file": "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
+    "enabled": true,
+    "size": 181437,
+    "sha1": "16808f94a41d45d8e986b4e4ea6b02ba57fa058a",
+    "sha512": "cb9f6a3aaa943823a85fdd716ddb3c7623af2b3520926c3a98d170c52d31908894808fb61c52bea39bae622dbab59d50b4bad56f7ca0533a9c3350d412c33729",
+    "source": "modrinth",
+    "project": "playeranimator",
+    "version": "1.0.2-rc1+1.20-forge"
+  },
+  {
+    "file": "refm-0.3.11-1.20.1.jar",
+    "enabled": true,
+    "size": 2850059,
+    "sha1": "cbe0b2cc4682b6b20767b6e39568221bef4d7917",
+    "sha512": "79f9f59571249a15f0805cb12eaa62ea2b1e4f556a24ddfe155c9d999d88d01e5b60af4cca30bfa879bb71326c8eaba6441632e2deb032a78ee42761303847c9",
+    "source": "modrinth",
+    "project": "epic-fight-rapier-moveset-addon",
+    "version": "0.3.11-1.20.1"
+  },
+  {
+    "file": "reobf-kimetsunoyaibamultiplayer-1.6.5693.jar",
+    "enabled": true,
+    "size": 157334324,
+    "sha1": "d76d134303063ea18a18a6535276c5ec112e4597",
+    "sha512": "cf59dccd16ebbdb03426bd2acc74c7c533ff29cdc2b23278f7ade52b46e0e4c5e86ad35b4117477310972c2814afca92e6e43e8a040343e06b3ba46d78f2a103",
+    "source": "modrinth",
+    "project": "kimetsunoyaiba-tweaks",
+    "version": "1.6.5693"
+  },
+  {
+    "file": "WeaponsOfMiracles-2.0.171-mc1.20.1-forge.jar",
+    "enabled": true,
+    "size": 20945819,
+    "sha1": "25eaf24b3062a4491565936a5588cb22223a9ffe",
+    "sha512": "60e2590e521d01338b3f1ae0b7e614c88311e6e4e3f5735f733d49c40b043a16a3832e1f25c75f94bc5702a3f4a2ee299d517fd517c19622371524bf4e42f4da",
+    "source": "modrinth",
+    "project": "weapons-of-miracles",
+    "version": "2.0.171-mc1.20.1-forge"
+  },
+  {
+    "file": "YungsApi-1.20-Forge-4.0.6.jar",
+    "enabled": true,
+    "size": 370524,
+    "sha1": "af584b690f5646c6032002b58abc4591beed3833",
+    "sha512": "7d83d94a90e55a712f6508485c044ff202916e9b9b9166b75177cb8f2eb919543bbbe1547d11c41cfd4763820f934235f47c0b26dd9e89bc1030954afa9fb889",
+    "source": "modrinth",
+    "project": "yungs-api",
+    "version": "1.20-Forge-4.0.6"
+  }
+]

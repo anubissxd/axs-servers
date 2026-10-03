@@ -1,0 +1,19 @@
+
+[general]
+	#Enable/disable the sphere mask effect
+	effectEnabled = true
+
+[effek]
+	#Enable/disable all EFN Enhance Effek effects
+	enabled = true
+	#Enable/disable the Mortal Blade Effek effect
+	mortalBlade = true
+	#Enable/disable the Red Dragon Flash Effek effect
+	redDragonFlash = true
+	#Enable/disable the first Red Dragon Flash finish Effek effect
+	redDragonFlashFinish1 = true
+	#Enable/disable the second Red Dragon Flash finish Effek effect
+	redDragonFlashFinish2 = true
+	#Enable/disable the Spark Ba Effek effect
+	sparkBa = true
+

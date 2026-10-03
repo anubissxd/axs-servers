@@ -1,0 +1,66 @@
+{
+  "collider": {
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.8
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.75
+    ]
+  },
+  "hit_particle": "kimetsunoyaiba:particle_flame",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+    		"block": "wom:biped/skill/katana_guard",
+      "idle": "epicfight:biped/living/hold_greatsword",
+      "walk": "epicfight:biped/living/hold_tachi",
+      "run": "wom:biped/living/katana_run"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "category": "fist",
+      "predicate": "epicfight:offhand_item_category"
+    }
+  ],
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "fist"
+          }
+        ]
+      }
+    ]
+  },
+  "combos": {
+    "two_hand": [
+      "wom:biped/combat/herrscher_auto_3",
+      "wom:biped/combat/ruine_chatiment",
+      "wom:biped/combat/katana_auto_1",
+      "wom:biped/skill/ruine_redemption",
+      "wom:biped/combat/agony_counter",
+      "wom:biped/combat/solar_obscuridad_auto_2",
+      "epicfight:biped/skill/revelation_twohand",
+      "epicfight:biped/combat/uchigatana_auto2",
+      "epicfight:biped/skill/rushing_tempo2",
+      "wom:biped/combat/katana_harusaki",
+      "wom:biped/combat/katana_tsukuyomi"
+    ]
+  },
+  "category": "uchigatana",
+  "innate_skills": {
+    "two_hand": "epicfight:steel_whirlwind"
+  },
+  "usable_in_offhand": false
+}

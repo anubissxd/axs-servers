@@ -1,0 +1,65 @@
+{
+  "collider": {
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.8
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.75
+    ]
+  },
+  "hit_particle": "epicfight:hit_blunt",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+    		"block": "refm:biped/skill/guard_rapier",
+      "idle": "refm:biped/living/hold_rapier",
+      "walk": "refm:biped/living/walk_rapier",
+      "run": "wom:biped/living/ruine_run"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "category": "fist",
+      "predicate": "epicfight:offhand_item_category"
+    }
+  ],
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "fist"
+          }
+        ]
+      }
+    ]
+  },
+  "combos": {
+    "two_hand": [
+      "refm:biped/combat/rapier_auto1",
+      "wom:biped/combat/agony_auto_4",
+      "wom:biped/combat/herrscher_auto_2",
+      "wom:biped/living/wall_backflip",
+      "wom:biped/combat/ruine_comet",
+      "wom:biped/combat/solar_obscuridad_auto_2",
+      "refm:biped/combat/rapier_auto2",
+      "refm:biped/combat/rapier_auto3",
+      "wom:biped/combat/ruine_auto_4",
+      "refm:biped/combat/rapier_airslash_ender"
+    ]
+  },
+  "category": "uchigatana",
+  "innate_skills": {
+    "two_hand": "refm:deadlybackflip_ender"
+  },
+  "usable_in_offhand": true
+}

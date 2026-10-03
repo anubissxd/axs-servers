@@ -1,0 +1,18 @@
+
+#Breathing Form Variations Configuration
+#Controls which breathing form variations are enabled
+[variations]
+	#Blacklist of disabled variation IDs
+	#Variations are ENABLED by default. Add IDs here to DISABLE specific variations.
+	#
+	#Variation ID format: "styleId:formIndex:variationIndex"
+	#Examples:
+	#  - "mist_breathing:0:1" = First variation of Mist Breathing First Form
+	#  - "mist_breathing:1:2" = Second variation of Mist Breathing Second Form
+	#
+	#To disable all variations for a form, blacklist all indices:
+	#  ["mist_breathing:0:1", "mist_breathing:0:2", "mist_breathing:0:3"]
+	#
+	#Default: [] (all variations enabled)
+	variationBlacklist = []
+

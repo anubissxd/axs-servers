@@ -1,0 +1,8 @@
+
+#Client-side particle rendering settings
+[particles]
+	#Percentage of KimetsunoYaiba and KimetsunoYaiba Multiplayer ability particles to render on this client.
+	#100 renders all eligible particles, 50 renders about every other particle, and 0 suppresses them all.
+	#Range: 0 ~ 100
+	ability-particle-render-percent = 100
+

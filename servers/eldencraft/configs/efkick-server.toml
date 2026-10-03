@@ -1,0 +1,4 @@
+#Mob's stamina will be decreased by this percentage when get hit by Kick
+#Range: 0.0 ~ 1.0
+kickStaminaDecreasePercentage = 0.3
+

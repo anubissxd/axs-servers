@@ -1,0 +1,101 @@
+
+#Raid System Configuration
+#Controls demon raids (omen_of_muzan) and demon slayer raids (omen_of_ubuyashiki)
+#Note: kimetsu_raids gamerule is the master switch for enabling/disabling raids
+[raids]
+
+	#Master Switches
+	[raids.switches]
+		#Enable raid system (fallback if gamerule not available)
+		enable_raids = true
+		#Enable debug logging for raid events
+		enable_debug_logging = false
+
+	#Structure Spawn Radii
+	#Defines how far from structure center entities spawn
+	[raids.spawn_radii]
+		#Spawn radius for small structures (houses)
+		#Range: 16 ~ 128
+		small_structure_spawn_radius = 32
+		#Spawn radius for medium structures (temples, trains)
+		#Range: 24 ~ 128
+		medium_structure_spawn_radius = 48
+		#Spawn radius for large structures (villages)
+		#Range: 48 ~ 256
+		large_structure_spawn_radius = 96
+
+	#Timing Settings
+	#All times in seconds
+	[raids.timing]
+		#Time between waves (preparation phase)
+		#Range: 5 ~ 60
+		wave_preparation_time = 10
+		#Time between individual entity spawns (prevents lag)
+		#Range: 1 ~ 10
+		entity_spawn_interval = 2
+		#Maximum raid duration before automatic defeat (30 minutes)
+		#Range: 600 ~ 7200
+		raid_timeout = 1800
+		#Time before raid is cancelled when all players leave area (2 minutes)
+		#Range: 30 ~ 1800
+		raid_abandonment_timeout = 120
+		#Time between abandonment warnings (30 seconds)
+		#Range: 10 ~ 120
+		raid_abandonment_warning_interval = 30
+
+	#Participation and Tracking
+	[raids.participation]
+		#Radius for raid participation and boss bar display
+		#Range: 100 ~ 1000
+		raid_participation_radius = 500
+
+	#Reward Settings
+	[raids.rewards]
+		#Enable omen potion rewards for completing raids
+		enable_omen_potion_rewards = true
+		#Chance to receive same level omen potion (vs +1 level)
+		#Range: 0.0 ~ 1.0
+		omen_potion_same_level_chance = 0.5
+
+	#Entity Restrictions
+	#Disable specific powerful entities from spawning in raids
+	[raids.entity_restrictions]
+		#Disable Yoriichi from spawning in demon slayer raids
+		disable_yoriichi = false
+		#Disable Old Yoriichi from spawning in demon slayer raids
+		disable_yoriichi_old = false
+		#Enable kimetsu addon mod entities in raids
+		#When true, entities from the 'kimetsu' mod can spawn in raids
+		#This includes additional upper moons, hashira, and other powerful entities
+		#Only works if the kimetsu addon mod is installed
+		enable_kimetsu_addon_entities = true
+
+	#Mugen Door Settings
+	#Configure mugen door behavior for kizuki demon spawns
+	[raids.mugen_door]
+		#Enable mugen door teleportation to Mugen Castle
+		#When enabled, players within 2 blocks of a mugen door will be teleported to the Mugen Castle dimension
+		enable_mugen_door_teleportation = true
+
+	#Containment Boundary
+	#Controls the invisible barrier that keeps raid entities within the raid area
+	[raids.containment]
+		#Containment radius for small structures (houses)
+		#Range: 50 ~ 400
+		small_structure_containment_radius = 150
+		#Containment radius for medium structures (temples, trains)
+		#Range: 75 ~ 500
+		medium_structure_containment_radius = 200
+		#Containment radius for large structures (villages)
+		#Range: 100 ~ 600
+		large_structure_containment_radius = 250
+		#Distance inside boundary to push entities back to
+		#Range: 5 ~ 50
+		containment_push_back_distance = 10
+		#Distance beyond boundary that triggers teleportation instead of push-back
+		#Range: 5 ~ 100
+		containment_teleport_threshold = 10
+		#Ticks between containment boundary checks (20 ticks = 1 second)
+		#Range: 5 ~ 100
+		containment_check_interval = 20
+

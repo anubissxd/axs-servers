@@ -1,0 +1,27 @@
+
+#VIX Camera FOV Settings
+[camera]
+	#Maximum FOV cap for camera animations.
+	#Default: 150.0 | Range: [30.0, 99999.0]
+	#Range: 30.0 ~ 99999.0
+	maxFov = 150.0
+
+#AAA Particles lossless performance optimizations
+[aaaparticles]
+	#Master switch for VIX AAA Particles optimizations.
+	enabled = true
+	#Skip AAA render dispatch when the requested context has no active emitters.
+	skipEmptyRenderPasses = true
+	#Skip depth capture and restore when no active AAA effect can use it.
+	skipUnusedDepthCopies = true
+	#Skip background copies for effects explicitly declared not to require scene color.
+	skipUnusedBackgroundCopies = true
+	#Use indexed OpenGL sampler queries and direct sampler restoration.
+	optimizeSamplerState = false
+	#Cache native emitter existence checks for one client game tick.
+	cacheEmitterExists = true
+	#Skip native transforms when exact position, rotation and scale values are unchanged.
+	deduplicateEmitterTransforms = true
+	#Periodically remove already-finished detached first-person emitters.
+	cleanupDetachedHandEmitters = true
+

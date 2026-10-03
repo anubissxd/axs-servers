@@ -1,0 +1,11 @@
+{
+    "type": "kimetsunoyaiba:nichirinsword_tomioka",
+    "attributes": {
+        "common": {
+            "armor_negation": 10.0,
+                "impact": 0.6,
+	   "speed_bonus": 0.5,
+           "max_strikes": 1
+        }
+    }
+ }

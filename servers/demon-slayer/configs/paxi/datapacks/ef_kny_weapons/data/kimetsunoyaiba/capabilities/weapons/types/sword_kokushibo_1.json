@@ -1,0 +1,69 @@
+{
+  "collider": {
+    "number": 5,
+    "size": [
+      0.4,
+      0.4,
+      0.7
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.7
+    ]
+  },
+  "hit_particle": "kimetsunoyaiba:particle_moon_1",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+    		"block": "wom:biped/skill/katana_guard",
+      "idle": "wom:biped/living/katana_sheathed_idle",
+      "walk": "wom:biped/living/katana_sheathed_idle",
+      "run": "wom:biped/living/katana_sheathed_run",
+      "sneak": "wom:biped/living/katana_sheathed_idle",
+      "kneel": "wom:biped/living/katana_sheathed_idle"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "category": "fist",
+      "predicate": "epicfight:offhand_item_category"
+    }
+  ],
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "fist"
+          }
+        ]
+      }
+    ]
+  },
+  "combos": {
+    "two_hand": [
+      "epicfight:biped/combat/tachi_auto3",
+      "epicfight:biped/skill/rushing_tempo3",
+      "wom:biped/combat/katana_auto_2",
+      "wom:biped/combat/herrscher_auto_3",
+      "wom:biped/combat/herrscher_auto_1",
+      "epicfight:biped/skill/rushing_tempo1",
+      "epicfight:biped/skill/rushing_tempo2",
+      "epicfight:biped/combat/uchigatana_dash",
+      "wom:biped/skill/ruine_redemption",
+      "wom:biped/combat/ruine_auto_2",
+      "epicfight:biped/combat/uchigatana_sheath_dash",
+      "wom:biped/combat/solar_obscuridad_auto_1"
+    ]
+  },
+  "category": "uchigatana",
+  "innate_skills": {
+    "two_hand": "wom:sakura_state"
+  },
+  "usable_in_offhand": true
+}

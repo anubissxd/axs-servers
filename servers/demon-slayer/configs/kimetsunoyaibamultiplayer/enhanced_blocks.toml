@@ -1,0 +1,13 @@
+#Enable enhanced chest of drawers replacement
+#When true, base mod chest of drawers items/blocks are replaced with the multiplayer version:
+#  - kimetsunoyaiba:chest_of_drawer -> kimetsunoyaibamultiplayer:chest_of_drawers
+#Right-clicking a base mod chest of drawers will convert it and immediately pass the click through.
+#Default: true
+enhancedChestOfDrawers = true
+#Enable enhanced vial rack replacement
+#When true, base mod medicine holder items/blocks are replaced with the multiplayer vial rack:
+#  - kimetsunoyaiba:medicine_holder -> kimetsunoyaibamultiplayer:vial_rack
+#Existing base mod medicine holder blocks are converted when right-clicked.
+#Default: true
+enhancedVialRack = true
+

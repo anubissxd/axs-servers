@@ -1,0 +1,89 @@
+{
+  "collider": {
+    "number": 5,
+    "size": [
+      0.4,
+      0.4,
+      0.7
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.7
+    ]
+  },
+  "hit_particle": "kimetsunoyaiba:particle_flame",
+  "hit_sound": "epicfight:entity.hit.blade",
+  "livingmotion_modifier": {
+    "two_hand": {
+      "idle": "wom:biped/living/katana_sheathed_idle",
+      "block": "wom:biped/skill/katana_guard",
+      "run": "wom:biped/living/katana_sheathed_run",
+      "sneak": "wom:biped/living/katana_sheathed_idle",
+      "walk": "wom:biped/living/katana_sheathed_idle",
+      "kneel": "wom:biped/living/katana_sheathed_idle"
+    },
+    "one_hand": {
+      "idle": "epicfight:biped/living/hold_liechtenauer",
+      "block": "wom:biped/skill/katana_guard",
+      "run": "wom:biped/living/katana_run",
+      "walk": "epicfight:biped/living/hold_liechtenauer"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "category": "fist",
+      "predicate": "epicfight:offhand_item_category"
+    }
+  ],
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "combos": {
+    "two_hand": [
+      "wom:biped/combat/katana_auto_1",
+      "wom:biped/combat/katana_auto_1",
+      "wom:biped/combat/katana_harusaki",
+      "epicfight:biped/combat/uchigatana_dash",
+      "wom:biped/skill/ruine_expiation",
+      "wom:biped/combat/katana_auto_1",
+      "wom:biped/combat/agony_counter",
+      "epicfight:biped/combat/uchigatana_auto2",
+      "epicfight:biped/combat/uchigatana_sheath_dash",
+      "wom:biped/skill/ruine_redemption"
+    ],
+    "one_hand": [
+      "epicfight:biped/combat/longsword_liechtenauer_auto1",
+      "epicfight:biped/combat/longsword_liechtenauer_auto2",
+      "epicfight:biped/combat/longsword_liechtenauer_auto3",
+      "epicfight:biped/combat/uchigatana_dash",
+      "wom:biped/skill/ruine_redemption",
+      "epicfight:biped/combat/uchigatana_dash",
+      "wom:biped/skill/ruine_expiation",
+      "epicfight:biped/combat/uchigatana_dash",
+      "wom:biped/skill/mob_ender_obscuris",
+      "wom:biped/combat/katana_harusaki",
+      "epicfight:biped/combat/longsword_dash",
+      "epicfight:biped/combat/uchigatana_dash",
+      "wom:biped/combat/agony_airslash"
+    ]
+  },
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "one_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:skill_active",
+            "skill": "epicfight:liechtenauer"
+          }
+        ]
+      }
+    ]
+  },
+  "category": "uchigatana",
+  "innate_skills": {
+    "two_hand": "epicfight:liechtenauer",
+    "one_hand": "epicfight:liechtenauer"
+  },
+  "usable_in_offhand": false
+}

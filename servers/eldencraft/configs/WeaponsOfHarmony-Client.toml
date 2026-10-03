@@ -1,0 +1,7 @@
+
+[holster]
+	#Items that should render holstered weapons
+	hidden_items = []
+	#disables a certain method within epic fight that is used for certain effects | This is mainly used for compatibility with some shaders like Bliss (The Player Turns Red) or Eclipse (Black Screen)
+	"Epic Fight Shader Fix" = false
+

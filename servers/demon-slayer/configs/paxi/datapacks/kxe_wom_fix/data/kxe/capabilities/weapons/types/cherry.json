@@ -1,0 +1,48 @@
+{
+  "collider": {
+    "number": 5,
+    "size": [
+      0.4,
+      0.4,
+      0.7
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.7
+    ]
+  },
+
+  "livingmotion_modifier": {
+    "one_hand": {
+      "idle": "epicfight:biped/living/hold_uchigatana",
+      "run": "wom:biped/living/katana_sheathed_run",
+      "walk": "epicfight:biped/living/walk_uchigatana"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "predicate": "epicfight:offhand_item_category",
+      "category": "uchigatana"
+    }
+  ],
+  "combos": {
+    "one_hand": [
+      "wom:biped/combat/katana_auto_1",
+      "wom:biped/combat/herrscher_auto_3",
+      "wom:biped/combat/katana_auto_2",
+      "wom:biped/combat/katana_auto_3",
+      "epicfight:biped/combat/uchigatana_dash",
+      "wom:biped/combat/katana_tsukuyomi"
+    ]
+  },
+  "styles": {
+    "default": "one_hand",
+    "cases": []
+  },
+  "category": "uchigatana",
+  "innate_skills": {
+    "sheath": "wom:sakura_state",
+    "one_hand": "wom:sakura_state"
+  }
+}

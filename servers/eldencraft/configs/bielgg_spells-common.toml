@@ -1,0 +1,104 @@
+
+[lightweight]
+	#Enables The Broken Script, Unstable spells, items, structures and related mechanics.
+	#Restart the game/server after changing this option.
+	enableUnstableContent = true
+	#Enables the Relicron school and EEEAB's Mobs integration content.
+	#This option only has an effect while eeeabsmobs is installed.
+	#Restart the game/server after changing this option.
+	enableRelicronContent = true
+	#Enables the Infinity school and Avaritia integration content.
+	#This option only has an effect while avaritia is installed.
+	#Restart the game/server after changing this option.
+	enableInfinityContent = true
+	#Enables the Tainted school and Cracker's Wither Storm Mod integration content.
+	#This option only has an effect while witherstormmod is installed.
+	#Restart the game/server after changing this option.
+	enableTaintedContent = true
+	#Enables the Blood spell expansion for Vampirism and Vampirism Spells Addon.
+	#This option only has an effect while both optional mods are installed.
+	#Restart the game/server after changing this option.
+	enableVampirismBloodContent = true
+	#Enables the Mirroring spell and its creative-tab scroll.
+	#Restart the game/server after changing this option.
+	enableMirroringSpell = true
+	#Uses Iron's Spellbooks' legacy Wicked Bone Ring in the ThornRing recipe and Frozen Village loot.
+	#When enabled, the current Bone Ring stays available by ID but is hidden from this mod's creative tab and loot.
+	#Restart the game/server after changing this option.
+	useWickedBoneRing = false
+	#Shows BielGG's Spells message when a player joins a world or server.
+	showLoginMessage = true
+	#Makes BielGG's summon spells use Iron's Spells 'n Spellbooks summon/recast logic.
+	#While enabled, a second cast of the same summon spell uses ISS recast behavior instead of creating another group.
+	#The custom simultaneous Summoned Knight, Shade and Relicron summon limits are ignored.
+	#Restart the game/server after changing this option.
+	issSummonLogic = false
+	#Power and resistance multiplier for any Iron's Spellbooks school.
+	#School power controls spell damage, range, duration and other spell-specific scaling.
+	#Values below 1.0 weaken a school: 0.5 = 50%, 0.25 = 25%, and 0.0 = no scaling power.
+	#Format: modid:school=multiplier. Examples:
+	#bielgg_spells:shadow=0.5
+	#bielgg_spells:unstable=1.0
+	#irons_spellbooks:fire=1.25
+	schoolMultipliers = ["bielgg_spells:shadow=1.0", "bielgg_spells:unstable=1.0", "bielgg_spells:relicron=1.0", "bielgg_spells:infinity=1.0", "bielgg_spells:tainted=1.0"]
+	#Individual power multiplier for BielGG's Spells.
+	#This is combined with the spell's school multiplier and Iron's native power_multiplier.
+	#Values below 1.0 nerf one spell without weakening its entire school.
+	#Format: bielgg_spells:spell_name=multiplier.
+	spellMultipliers = ["bielgg_spells:the_final_breath=1.0", "bielgg_spells:death_sorrows=1.0", "bielgg_spells:mirroring=1.0", "bielgg_spells:snowgrave=1.0", "bielgg_spells:rude_buster=1.0", "bielgg_spells:ice_shock=1.0", "bielgg_spells:fire_shock=1.0", "bielgg_spells:pacify=1.0", "bielgg_spells:x_slash=1.0", "bielgg_spells:red_buster=1.0", "bielgg_spells:heal_prayer=1.0", "bielgg_spells:dual_heal=1.0", "bielgg_spells:fluffy_guard=1.0", "bielgg_spells:sleep_mist=1.0", "bielgg_spells:revive_song=1.0", "bielgg_spells:pirouette=1.0", "bielgg_spells:bone_volley=1.0", "bielgg_spells:bone_corridor=1.0", "bielgg_spells:blue_bone_barrage=1.0", "bielgg_spells:gravity_slam=1.0", "bielgg_spells:gaster_blaster=1.0", "bielgg_spells:bad_time=1.0", "bielgg_spells:laser_ex3=1.0", "bielgg_spells:glitch_projectiles=1.0", "bielgg_spells:file_collection=1.0", "bielgg_spells:earth_corruption=1.0", "bielgg_spells:unstable_blink=1.0", "bielgg_spells:unstable_bombardment=1.0", "bielgg_spells:multi_task=1.0"]
+
+	[lightweight.spells]
+		#Enables the Snowgrave spell. Restart the game/server after changing this option.
+		enableSnowgrave = true
+		#Enables the Rude Buster spell. Restart the game/server after changing this option.
+		enableRudeBuster = true
+		#Enables the IceShock spell. Restart the game/server after changing this option.
+		enableIceShock = true
+		#Enables the FireShock spell. Restart the game/server after changing this option.
+		enableFireShock = true
+		#Enables the Pacify spell. Restart the game/server after changing this option.
+		enablePacify = true
+		#Allows eligible hostile mobs below 40% health to become Tired.
+		#Disabling Pacify also disables this mechanic.
+		enableTiredMechanic = true
+		#Volume multiplier for the sound played when an enemy becomes Tired.
+		#1.0 preserves the current loudness and 0.0 mutes only this sound.
+		#Range: 0.0 ~ 1.0
+		tiredSoundVolume = 1.0
+		#Enables the X-Slash spell. Restart the game/server after changing this option.
+		enableXSlash = true
+		#Enables the Red Buster spell. Restart the game/server after changing this option.
+		enableRedBuster = true
+		#Enables the Heal Prayer spell. Restart the game/server after changing this option.
+		enableHealPrayer = true
+		#Enables the Dual Heal spell. Restart the game/server after changing this option.
+		enableDualHeal = true
+		#Enables the FluffyGuard spell. Restart the game/server after changing this option.
+		enableFluffyGuard = true
+		#Enables the Sleep Mist spell. Restart the game/server after changing this option.
+		enableSleepMist = true
+		#Enables the ReviveSong spell. Restart the game/server after changing this option.
+		enableReviveSong = true
+		#Enables the Pirouette spell. Restart the game/server after changing this option.
+		enablePirouette = true
+		#Enables the complete Bone & Blaster Evocation spells content package.
+		#Restart the game/server after changing this option.
+		enableBoneAndBlasterEvocationSpells = true
+		#Base damage in hearts dealt by every Bone & Blaster Evocation hit.
+		#Individual spellMultipliers are applied afterwards and may reduce a spell to zero.
+		#The final damage can never exceed one heart per hit.
+		#Range: 0.1 ~ 1.0
+		boneAndBlasterDamageHearts = 0.5
+		#Enables the Bone Volley spell. Restart the game/server after changing this option.
+		enableBoneVolley = true
+		#Enables the Bone Corridor spell. Restart the game/server after changing this option.
+		enableBoneCorridor = true
+		#Enables the Blue Bone Barrage spell. Restart the game/server after changing this option.
+		enableBlueBoneBarrage = true
+		#Enables the Gravity Slam spell. Restart the game/server after changing this option.
+		enableGravitySlam = true
+		#Enables the Gaster Blaster spell. Restart the game/server after changing this option.
+		enableGasterBlaster = true
+		#Enables the Bad Time spell. Restart the game/server after changing this option.
+		enableBadTime = true
+

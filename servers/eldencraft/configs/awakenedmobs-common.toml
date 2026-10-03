@@ -1,0 +1,89 @@
+
+#Awakened Mobs settings
+[general]
+	#Chance that a zombie or skeleton spawns holding an Epic Fight melee weapon (1.0 = always).
+	#Range: 0.0 ~ 1.0
+	weaponChance = 0.5
+	#Master switch for mob armor. Set to false to have mobs spawn without any armor (useful with a resource pack that would otherwise clash). Weapons are unaffected.
+	armorEnabled = true
+	#Per-slot chance (helmet, chestplate, leggings, boots) that armor is equipped. Ignored when armorEnabled is false.
+	#Range: 0.0 ~ 1.0
+	armorChance = 0.5
+	#Chance that a mob spawns as a runner that chases at sprinting-player speed.
+	#Range: 0.0 ~ 1.0
+	runnerChance = 0.13
+	#Movement-speed bonus applied to a runner (0.3 = +30%, roughly a sprinting player).
+	#Range: 0.0 ~ 5.0
+	runnerSpeedBonus = 0.3
+
+#How weapon-holding mobs react to a player's melee hit. Parry is rolled first, then dodge, then guard. Only mobs this mod armed can defend; a guard stance breaks once it has absorbed guardStability damage. The chances below are what a fresh mob gets: defending of any kind makes a mob much worse at defending again for a while (see defenseFalloff), so mobs cannot chain evasions. Every defense also only covers the direction the mob is facing, so flanking a mob beats all three outright (see directionalDefense).
+[defense]
+	#Master switch for mob guard / parry / dodge. Set to false when another combat mod (Combat Evolution, ...) already gives mobs their own blocking or stamina system, so the two do not fight over the same hit.
+	defenseEnabled = true
+	#When the Combat Evolution mod is installed, automatically switch our mob guard/parry/dodge off and let its own mob stamina, guard and execution system own mob defense. Set to false to run both (expect mobs to block twice as often and executions to feel inconsistent).
+	deferToCombatEvolution = true
+	#Only let a mob answer hits that come from the front. Its guard, parry and dodge all point the way its body points, so stepping around it and striking from the flank or the back goes through untouched — and, with flankBreaksGuard on, shatters a stance it had up. Set to false to have mobs defend against hits from any direction.
+	directionalDefense = true
+	#How wide that front arc is, measured across the whole cone: 120 means 60 degrees to either side of where the mob's body points. Lower is easier to flank (90 is roughly 'only what it squarely faces'), 360 covers every direction and is the same as switching directionalDefense off. Note this is measured against the mob's BODY, which turns far slower than its head: a mob can be watching you and still be facing the wrong way to block, which is what makes circling it work.
+	#Range: 0.0 ~ 360.0
+	defenseArcDegrees = 120.0
+	#When a hit lands on a guarding mob from outside its arc, shatter the guard outright: the hit deals full damage and the mob is locked out of defending for guardBreakCooldownTicks, exactly as if the stance had been worn down. Set to false to have flanking hits merely bypass the stance and leave it standing.
+	flankBreaksGuard = true
+	#Chance a melee hit is parried: damage fully negated and the player is knocked back and briefly slowed.
+	#Range: 0.0 ~ 1.0
+	parryChance = 0.1
+	#Chance a melee hit is dodged: the mob rolls or steps out of the way, fully negating the hit.
+	#Range: 0.0 ~ 1.0
+	dodgeChance = 0.1
+	#Chance that, just after being hit, a mob raises a guard stance.
+	#Range: 0.0 ~ 1.0
+	guardChance = 0.125
+	#How long the guard stance is held once raised (20 = 1 second, 60 = 3 seconds).
+	#Range: 1 ~ 1200
+	guardDurationTicks = 60
+	#Fraction of damage removed while guarding (0.5 = half damage, 1.0 = full block).
+	#Range: 0.0 ~ 1.0
+	guardReduction = 0.5
+	#Total raw damage a single guard stance can absorb before it breaks. When it breaks, the mob staggers wide open and cannot guard again for guardBreakCooldownTicks (0 = the first blocked hit always breaks the guard).
+	#Range: 0.0 ~ 10000.0
+	guardStability = 10.0
+	#Ticks a mob cannot raise a new guard after its guard is broken (20 = 1 second).
+	#Range: 0 ~ 1200
+	guardBreakCooldownTicks = 100
+	#Ticks before the same mob can guard/parry again (20 = 1 second).
+	#Range: 0 ~ 1200
+	defenseCooldownTicks = 30
+	#How hard a recent defense suppresses the next one. Every successful guard, parry or dodge multiplies all three of the mob's defense chances by this, so at 0.25 a mob that just dodged is four times less likely to defend the follow-up, and one that defended twice is sixteen times less likely. Stacks up to 4 times. Set to 1.0 to disable the falloff.
+	#Range: 0.0 ~ 1.0
+	defenseFalloff = 0.25
+	#Ticks a mob must go without defending to shed one step of the defenseFalloff penalty and drift back toward its full defense chances (20 = 1 second, 100 = 5 seconds).
+	#Range: 1 ~ 12000
+	defenseRecoveryTicks = 100
+
+#When badly wounded, a mob may panic and run away from the player instead of fighting. Checked after each hit it survives.
+[flee]
+	#Flee is only considered once the mob's remaining health is at or below this fraction of its max (0.1 = under 10% HP).
+	#Range: 0.0 ~ 1.0
+	fleeHealthFraction = 0.1
+	#Chance that a mob below the health threshold turns and flees. Rolled once; once a mob starts fleeing it keeps fleeing.
+	#Range: 0.0 ~ 1.0
+	fleeChance = 0.05
+	#Movement-speed bonus applied while fleeing (0.15 = +15%, a slight panic boost).
+	#Range: 0.0 ~ 5.0
+	fleeSpeedBonus = 0.15
+
+#Relative weights for which material tier a weapon/armor rolls. Higher = more common.
+[tier_weights]
+	#Range: 0 ~ 10000
+	wood = 35
+	#Range: 0 ~ 10000
+	stone = 25
+	#Range: 0 ~ 10000
+	iron = 20
+	#Range: 0 ~ 10000
+	gold = 8
+	#Range: 0 ~ 10000
+	diamond = 8
+	#Range: 0 ~ 10000
+	netherite = 4
+

@@ -1,0 +1,5 @@
+#Enable debug logging to console for animation sync debugging. Shows detailed information about animation detection, packet sending/receiving, and sync status.
+log-debug = false
+#Enable on-screen debug messages for animation sync. Shows colored chat messages when animations are detected, sent, or received from other players.
+on-screen-debug = false
+

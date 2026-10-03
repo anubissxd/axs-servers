@@ -1,0 +1,11 @@
+{
+    "type": "kimetsunoyaiba:demon_hand",
+    "attributes": {
+        "common": {
+            "armor_negation": 20.0,
+                "impact": 0.8,
+	   "speed_bonus": 0.6,
+           "max_strikes": 1
+        }
+    }
+ }

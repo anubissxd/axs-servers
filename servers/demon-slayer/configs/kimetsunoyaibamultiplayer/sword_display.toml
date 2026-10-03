@@ -1,0 +1,204 @@
+
+#Sword Display Configuration
+[sword_display]
+	#Enable displaying swords on player model when not actively held
+	enabled = true
+	#Per-sword position overrides. Format: 'modid:itemname=POSITION' (e.g., 'kimetsunoyaiba:nichirinsword_uzui=BACK')
+	sword_position_overrides = ["kimetsunoyaiba:nichirinsword_uzui=BACK", "kimetsunoyaibamultiplayer:nichirinsword_sound=BACK", "kimetsunoyaiba:nichirinsword_inosuke=HIP", "kimetsunoyaibamultiplayer:nichirinsword_inosuke=HIP"]
+	#Scale of displayed swords (0.5 = half size, 1.0 = normal size, 2.0 = double size)
+	#Range: 0.1 ~ 5.0
+	scale = 1.0
+	#Additional scale multiplier for sheaths (applied on top of sword scale)
+	#Example: sword scale=0.5, sheath scale=1.2 → sheath displays at 0.6 (0.5 * 1.2)
+	#Range: 0.1 ~ 5.0
+	sheath_scale = 1.0
+	#Enable rendering sword sheaths on the hip/back
+	render_sheaths = true
+	#Enable draw and sheath animations when swords are drawn from or returned to sheaths
+	draw_sheath_animations = true
+
+	#Hip Display Position Configuration
+	[sword_display.hip_position]
+		#Left hip X translation
+		#Range: -5.0 ~ 5.0
+		left_translate_x = 0.3
+		#Left hip Y translation
+		#Range: -5.0 ~ 5.0
+		left_translate_y = 0.55
+		#Left hip Z translation
+		#Range: -5.0 ~ 5.0
+		left_translate_z = -0.1
+		#Left hip Z rotation (degrees)
+		#Range: -360.0 ~ 360.0
+		left_rotate_z = 0.0
+		#Left hip Y rotation (degrees)
+		#Range: -360.0 ~ 360.0
+		left_rotate_y = 180.0
+		#Left hip X rotation (degrees)
+		#Range: -360.0 ~ 360.0
+		left_rotate_x = -65.0
+		#Right hip X translation
+		#Range: -5.0 ~ 5.0
+		right_translate_x = -0.3
+		#Right hip Y translation
+		#Range: -5.0 ~ 5.0
+		right_translate_y = 0.55
+		#Right hip Z translation
+		#Range: -5.0 ~ 5.0
+		right_translate_z = -0.1
+		#Right hip Z rotation (degrees)
+		#Range: -360.0 ~ 360.0
+		right_rotate_z = 0.0
+		#Right hip Y rotation (degrees)
+		#Range: -360.0 ~ 360.0
+		right_rotate_y = 180.0
+		#Right hip Z rotation (degrees)
+		#Range: -360.0 ~ 360.0
+		right_rotate_x = -65.0
+
+	#Back Display Position Configuration
+	[sword_display.back_position]
+		#Left back X translation
+		#Range: -2.0 ~ 2.0
+		left_translate_x = 0.3
+		#Left back Y translation
+		#Range: -2.0 ~ 2.0
+		left_translate_y = -0.1
+		#Left back Z translation
+		#Range: -2.0 ~ 2.0
+		left_translate_z = 0.2
+		#Left back Z rotation (degrees)
+		#Range: -360.0 ~ 360.0
+		left_rotate_z = 35.0
+		#Left back Y rotation (degrees)
+		#Range: -360.0 ~ 360.0
+		left_rotate_y = 90.0
+		#Left back X rotation (degrees)
+		#Range: -360.0 ~ 360.0
+		left_rotate_x = 0.0
+		#Right back X translation
+		#Range: -2.0 ~ 2.0
+		right_translate_x = -0.3
+		#Right back Y translation
+		#Range: -2.0 ~ 2.0
+		right_translate_y = -0.1
+		#Right back Z translation
+		#Range: -2.0 ~ 2.0
+		right_translate_z = 0.2
+		#Right back Z rotation (degrees)
+		#Range: -360.0 ~ 360.0
+		right_rotate_z = -35.0
+		#Right back Y rotation (degrees)
+		#Range: -360.0 ~ 360.0
+		right_rotate_y = -90.0
+		#Right back X rotation (degrees)
+		#Range: -360.0 ~ 360.0
+		right_rotate_x = 0.0
+
+	#Nezuko Box Back Display Configuration
+	[sword_display.nezuko_box]
+		#Render the Nezuko box on a player's back when the item is anywhere in their hotbar
+		render = true
+		#Scale multiplier for the Nezuko box back render
+		#Range: 0.1 ~ 5.0
+		scale = 0.65
+		#Nezuko box X translation after attaching to the torso/body
+		#Range: -5.0 ~ 5.0
+		translate_x = 0.0
+		#Nezuko box Y translation after attaching to the torso/body
+		#Range: -5.0 ~ 5.0
+		translate_y = -0.25
+		#Nezuko box Z translation after attaching to the torso/body
+		#Range: -5.0 ~ 5.0
+		translate_z = 0.0
+		#Nezuko box X rotation in degrees after attaching to the torso/body
+		#Range: -360.0 ~ 360.0
+		rotate_x = 0.0
+		#Nezuko box Y rotation in degrees after attaching to the torso/body
+		#Range: -360.0 ~ 360.0
+		rotate_y = 0.0
+		#Nezuko box Z rotation in degrees after attaching to the torso/body
+		#Range: -360.0 ~ 360.0
+		rotate_z = 180.0
+
+	#Entity Display Overrides (non-player)
+	[sword_display.entity_display]
+
+		#Back display overrides for entities
+		[sword_display.entity_display.back]
+
+			#Translation overrides for entity sword/sheath display on back
+			[sword_display.entity_display.back.translation]
+				#Entity translation X offset (added after optional flip)
+				#Range: -5.0 ~ 5.0
+				offset_x = 0.0
+				#Entity translation Y offset (added after optional flip)
+				#Range: -5.0 ~ 5.0
+				offset_y = 1.5
+				#Entity translation Z offset (added after optional flip)
+				#Range: -5.0 ~ 5.0
+				offset_z = 0.0
+				#Flip entity translation X (multiply base by -1)
+				flip_x = false
+				#Flip entity translation Y (multiply base by -1)
+				flip_y = true
+				#Flip entity translation Z (multiply base by -1)
+				flip_z = false
+
+			#Rotation overrides for entity sword/sheath display on back
+			[sword_display.entity_display.back.rotation]
+				#Entity rotation X offset in degrees (added after optional flip)
+				#Range: -360.0 ~ 360.0
+				offset_x = 180.0
+				#Entity rotation Y offset in degrees (added after optional flip)
+				#Range: -360.0 ~ 360.0
+				offset_y = 0.0
+				#Entity rotation Z offset in degrees (added after optional flip)
+				#Range: -360.0 ~ 360.0
+				offset_z = 0.0
+				#Flip entity rotation X (multiply base by -1)
+				flip_x = false
+				#Flip entity rotation Y (multiply base by -1)
+				flip_y = true
+				#Flip entity rotation Z (multiply base by -1)
+				flip_z = true
+
+		#Hip display overrides for entities
+		[sword_display.entity_display.hip]
+
+			#Translation overrides for entity sword/sheath display on hip
+			[sword_display.entity_display.hip.translation]
+				#Entity translation X offset (added after optional flip)
+				#Range: -5.0 ~ 5.0
+				offset_x = 0.0
+				#Entity translation Y offset (added after optional flip)
+				#Range: -5.0 ~ 5.0
+				offset_y = 1.5
+				#Entity translation Z offset (added after optional flip)
+				#Range: -5.0 ~ 5.0
+				offset_z = 0.0
+				#Flip entity translation X (multiply base by -1)
+				flip_x = false
+				#Flip entity translation Y (multiply base by -1)
+				flip_y = true
+				#Flip entity translation Z (multiply base by -1)
+				flip_z = false
+
+			#Rotation overrides for entity sword/sheath display on hip
+			[sword_display.entity_display.hip.rotation]
+				#Entity rotation X offset in degrees (added after optional flip)
+				#Range: -360.0 ~ 360.0
+				offset_x = 0.0
+				#Entity rotation Y offset in degrees (added after optional flip)
+				#Range: -360.0 ~ 360.0
+				offset_y = 0.0
+				#Entity rotation Z offset in degrees (added after optional flip)
+				#Range: -360.0 ~ 360.0
+				offset_z = 180.0
+				#Flip entity rotation X (multiply base by -1)
+				flip_x = false
+				#Flip entity rotation Y (multiply base by -1)
+				flip_y = false
+				#Flip entity rotation Z (multiply base by -1)
+				flip_z = false
+

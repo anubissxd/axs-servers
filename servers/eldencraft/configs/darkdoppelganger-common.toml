@@ -1,0 +1,61 @@
+
+#Dark Doppelganger Configuration
+[dark_doppelganger]
+	#Health of the Dark Doppelganger
+	#Range: 1.0 ~ 100000.0
+	health = 6000.0
+	#Attack Damage of the Dark Doppelganger
+	#Range: 1.0 ~ 100.0
+	attack_damage = 20.0
+	#Movement Speed of the Dark Doppelganger
+	#Range: 0.1 ~ 1.0
+	movement_speed = 0.2
+	#Knockback Resistance of the Dark Doppelganger
+	#Range: 0.0 ~ 1.0
+	knockback_resistance = 0.6
+	#Armor of the Dark Doppelganger
+	#Range: 0.0 ~ 100.0
+	armor = 20.0
+	#Follow Range of the Dark Doppelganger
+	#Range: 1.0 ~ 128.0
+	follow_range = 64.0
+	#Hard mode of the Dark Doppelganger
+	hard_mode = false
+	#Maximum damage the Dark Doppelganger can take from a single hit.
+	#Set to 0 to disable the cap.
+	#Range: 0.0 ~ 100000.0
+	damage_cap_per_hit = 150.0
+	#Multiplier applied to all of the Dark Doppelganger's spell power attributes
+	#after copying them from the summoner.
+	#1.0 = same as player, 1.5 = +50%, 2.0 = double, etc.
+	#Range: 0.0 ~ 10.0
+	spell_power_multiplier = 1.25
+	#List of banned armor items (e.g., modid:item_name or modid:*) that should not be copied to the Dark Doppelganger
+	banned_armor = ["cataclysm:cursium_helmet", "cataclysm:cursium_chestplate", "cataclysm:cursium_leggings", "cataclysm:cursium_boots", "mycoolmod:*"]
+	#List of all spells the Dark Doppelganger can use in the final phase (Hard mode must be enabled)
+	final_phase_spells = ["irons_spellbooks:eldritch_blast", "irons_spellbooks:shadow_slash", "irons_spellbooks:oakskin", "traveloptics:tidal_grasp", "traveloptics:spectral_blink", "traveloptics:shadowed_miasma"]
+
+#Summoning Configuration
+[summoning]
+	#When true, the Shadow Altar can only summon the Dark Doppelganger in The End
+	altar_end_only = true
+
+#Minion Configuration
+[minion]
+	#Range: 1.0 ~ 1000.0
+	health = 100.0
+	#Health of spell-created minion summon
+	#Range: 1.0 ~ 1000.0
+	spell_minion_health = 200.0
+	#Range: 0.1 ~ 100.0
+	attack_damage = 8.0
+	#Range: 0.01 ~ 1.0
+	movement_speed = 0.28
+	#Range: 0.0 ~ 100.0
+	armor = 5.0
+	#Spell used for the minion's SpellBarrageGoal (string id)
+	barrage_spell = "irons_spellbooks:devour"
+	#List of spells the minion can use (string ids).
+	#These will be shuffled and split into groups for the Warlock attack goal.
+	spells = ["traveloptics:spectral_blink", "irons_spellbooks:burning_dash", "irons_spellbooks:charge", "irons_spellbooks:oakskin", "irons_spellbooks:shadow_slash", "irons_spellbooks:invisibility"]
+

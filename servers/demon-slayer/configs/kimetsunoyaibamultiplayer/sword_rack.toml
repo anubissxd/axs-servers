@@ -1,0 +1,136 @@
+
+#Sword Rack Configuration
+[sword_rack]
+
+	#Sword transforms when the rack is placed on the floor
+	[sword_rack.floor]
+
+		#Transforms for slot1
+		[sword_rack.floor.slot1]
+			#Local X translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_x = 1.05
+			#Local Y translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_y = 1.1
+			#Local Z translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_z = 0.35
+			#Rotation around X in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_x = 0.0
+			#Rotation around Y in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_y = -60.0
+			#Rotation around Z in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_z = 90.0
+
+		#Transforms for slot2
+		[sword_rack.floor.slot2]
+			#Local X translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_x = 1.05
+			#Local Y translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_y = 0.8
+			#Local Z translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_z = 0.35
+			#Rotation around X in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_x = 0.0
+			#Rotation around Y in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_y = -60.0
+			#Rotation around Z in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_z = 90.0
+
+		#Transforms for slot3
+		[sword_rack.floor.slot3]
+			#Local X translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_x = 1.05
+			#Local Y translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_y = 0.5
+			#Local Z translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_z = 0.35
+			#Rotation around X in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_x = 0.0
+			#Rotation around Y in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_y = -60.0
+			#Rotation around Z in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_z = 90.0
+
+	#Sword transforms when the rack is mounted on a wall
+	[sword_rack.wall]
+
+		#Transforms for slot1
+		[sword_rack.wall.slot1]
+			#Local X translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_x = 1.05
+			#Local Y translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_y = 1.0
+			#Local Z translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_z = 0.8
+			#Rotation around X in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_x = 0.0
+			#Rotation around Y in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_y = -60.0
+			#Rotation around Z in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_z = 90.0
+
+		#Transforms for slot2
+		[sword_rack.wall.slot2]
+			#Local X translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_x = 1.05
+			#Local Y translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_y = 0.7
+			#Local Z translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_z = 0.8
+			#Rotation around X in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_x = 0.0
+			#Rotation around Y in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_y = -60.0
+			#Rotation around Z in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_z = 90.0
+
+		#Transforms for slot3
+		[sword_rack.wall.slot3]
+			#Local X translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_x = 1.05
+			#Local Y translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_y = 0.35
+			#Local Z translation in block space
+			#Range: -8.0 ~ 8.0
+			translate_z = 0.8
+			#Rotation around X in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_x = 0.0
+			#Rotation around Y in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_y = -60.0
+			#Rotation around Z in degrees
+			#Range: -360.0 ~ 360.0
+			rotate_z = 90.0
+

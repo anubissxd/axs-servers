@@ -1,0 +1,56 @@
+
+[Items]
+	#Enable cape animation for the Apprentice Mage Robe.
+	enableApprenticeMageRobeCapeAnimation = true
+	#Show Spellgun ammo HUD near the crosshair.
+	enableSpellgunAmmoHud = true
+	#Render the Mana Force Blade sheath on your hip when the blade is in your hotbar.
+	#Always disabled in Epic Fight environments.
+	enableManaForceBladeHotbarSheathRendering = true
+	#Render temporary block tremors when Smashcast Scepter smash attacks hit.
+	enableSmashcastScepterTremorBlockRendering = true
+	#Epic Fight weapon categories that suppress the Scrollcaster Gauntlet's extra offhand visual rendering.
+	#This affects only the client-side visual workaround and does not change combat behavior.
+	#Examples: UCHIGATANA, TACHI, GREATSWORD.
+	scrollcasterGauntletOffhandVisualDisabledMainhandCategories = ["UCHIGATANA"]
+	#Main-hand item IDs that suppress the Scrollcaster Gauntlet's extra offhand visual rendering.
+	#Use this for weapons that share a broad Epic Fight category with unrelated items.
+	#Default entries cover vanilla crossbow, Iron's Autoloader Crossbow, Multipurpose Staffrifle, and Fullauto Rapidcast Spellrifle.
+	scrollcasterGauntletOffhandVisualDisabledMainhandItems = ["minecraft:crossbow", "irons_spellbooks:autoloader_crossbow", "apprenticecodex:multipurpose_staffrifle", "apprenticecodex:fullauto_rapidcast_spellrifle"]
+	#Render the offhand Scrollcaster Gauntlet in first person while casting through Better Combat's two-handed offhand hiding.
+	#This controls only the normal first-person hand renderer used for casting, not Better Combat attack animations.
+	#This affects only the client-side visual workaround and does not change combat behavior.
+	enableBetterCombatScrollcasterGauntletFirstPersonOffhandVisual = true
+	#Render the offhand Scrollcaster Gauntlet in third person while Better Combat hides offhand equipment for two-handed weapons.
+	#Better Combat first-person attack animations can use the third-person player model, so this may also affect first-person attack animations.
+	#This affects only the client-side visual workaround and does not change combat behavior.
+	enableBetterCombatScrollcasterGauntletThirdPersonOffhandVisual = true
+	#Main-hand item IDs that suppress Better Combat's third-person Scrollcaster Gauntlet offhand visual workaround.
+	#This denylist also applies when Better Combat renders first-person attack animations through the third-person player model.
+	#Use this only for specific weapons whose model visually conflicts with the gauntlet.
+	betterCombatScrollcasterGauntletThirdPersonOffhandVisualDeniedMainhandItems = []
+
+	[Items.SpellcasterAccessoryCase]
+		#Maximum number of Curios columns shown beside the Spellcaster Accessory Case.
+		#The entire Curios panel is hidden when it needs more columns than this value.
+		#Set to 0 to always show every Curios slot even when the panel may extend off-screen.
+		#Range: > 0
+		maxVisibleCuriosColumns = 5
+
+[Spells]
+
+	[Spells.Rendering]
+		#Choose when wall-through highlights are rendered.
+		#WORLD: Render during world rendering and integrate them into the shader's world presentation.
+		#COMPAT_OVERLAY: Render after world rendering to prioritize shader mod compatibility.
+		#Allowed Values: WORLD, COMPAT_OVERLAY
+		wallThroughHighlightRenderMode = "WORLD"
+
+	[Spells.HeavenlyFist]
+		#Render temporary block tremors when Heavenly Fist impacts the ground.
+		enableTremorBlockRendering = true
+
+[Blocks]
+	#Disable Essence Smoker particle texture analysis and always use fallback colors.
+	disableEssenceSmokerParticleTextureAnalysis = false
+

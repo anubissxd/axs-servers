@@ -1,0 +1,32 @@
+
+#Survival Raid Configuration
+[survival_raids]
+	#Enable survival raid system
+	enable_survival_raids = true
+	#Preparation time before each wave starts (seconds)
+	#Range: 0 ~ 120
+	wave_preparation_time = 8
+	#Delay between each entity spawn (seconds)
+	#Range: 1 ~ 20
+	entity_spawn_interval = 1
+	#Base interval between waves/reinforcements (seconds)
+	#Range: 20 ~ 600
+	wave_interval = 90
+	#Default raid radius used by command
+	#Range: 50 ~ 1000
+	default_radius = 200
+	#Boss spawn radius around raid center
+	#Range: 16 ~ 500
+	boss_spawn_radius = 100
+	#Maximum distance from raid players for non-boss spawns
+	#Range: 32 ~ 500
+	entity_spawn_near_player_radius = 200
+	#Enable temporary boss direction arrow effect
+	enable_boss_arrow = true
+	#Boss glow duration on spawn (ticks)
+	#Range: 20 ~ 1200
+	boss_glow_duration = 100
+	#Boss arrow duration on spawn (ticks)
+	#Range: 20 ~ 1200
+	boss_arrow_duration = 100
+

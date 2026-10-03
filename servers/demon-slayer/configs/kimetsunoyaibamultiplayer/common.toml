@@ -1,0 +1,146 @@
+
+#Common Configuration
+[common]
+	#Enable debug logging for the mod
+	log-debug = false
+	#Enable info logging for the mod
+	log-info = false
+	#Enable warning logging for the mod
+	log-warning = false
+	#Enable error logging for the mod
+	log-error = true
+	#Enable on-screen debug information display
+	on-screen-debug = false
+	#Show the raw breathes NBT value in the breathing display (useful for debugging form IDs)
+	show-breathes-value = false
+	#Show on-screen breathing form display when holding a nichirin sword
+	show-breathing-display = true
+	#Position of the breathing form display on screen: TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT, CENTER_BELOW_CROSSHAIR
+	#Allowed Values: TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT, CENTER_BELOW_CROSSHAIR
+	breathing-display-position = "TOP_LEFT"
+	#Scale/size of the breathing form display text (0.5 = half size, 1.0 = normal, 2.0 = double size)
+	#Range: 0.1 ~ 5.0
+	breathing-display-scale = 0.75
+	#Suppress chat messages when cycling breathing forms with R key
+	suppress-form-cycle-chat = false
+	#Enable sword clashing system where attacks can be deflected or mitigated
+	enable-sword-clashing = true
+	#Enable custom sprint animation when holding a nichirin sword
+	enable-nichirin-sprint-animation = true
+	#Disable sword swing particles from the base KimetsunoYaiba mod (left-click particles only, does not affect breathing form or right-click particles)
+	disable-base-mod-sword-swing-particles = false
+	#Demons (entities or demonized players) using Serpent Breathing emit black dust particles instead of white ones
+	demonized-breathing-styles = true
+	#Require line of sight for demon/demon-slayer aggro
+	#When enabled, demons and demon slayers (from the base mod and this mod) cannot aggro
+	#entities they cannot see, e.g. a demon far underground will not target a player on the surface.
+	require-line-of-sight-aggro = true
+	#Show the base KimetsunoYaiba backstep charge HUD icon and count
+	show-backstep-hud = true
+	#Horizontal offset as a percentage of the GUI-scaled window width for the backstep charge HUD. 0 keeps the base mod position.
+	#Range: -100.0 ~ 100.0
+	backstep-hud-offset-x = 0.0
+	#Vertical offset as a percentage of the GUI-scaled window height for the backstep charge HUD. 0 keeps the base mod position.
+	#Range: -100.0 ~ 100.0
+	backstep-hud-offset-y = 0.0
+	#Max distance in blocks to send mob sword slash packets to clients
+	#Lower to reduce network traffic; Default: 100
+	#Range: 8.0 ~ 512.0
+	mob-slash-broadcast-range = 100.0
+	#Maximum MobEffect amplifier for wisteria poison from overlapping lit wisteria incense auras
+	#Range: 0 ~ 255
+	wisteria-incense-max-poison-amplifier = 50
+	#X offset for Kanroji entity sword position to compensate for model alignment (in pixels, divided by 16)
+	#Range: -16.0 ~ 16.0
+	kanroji-entity-hand-offset-x = -9.3
+	#Y offset for Kanroji entity sword position to compensate for model alignment (in pixels, divided by 16)
+	#Range: -16.0 ~ 16.0
+	kanroji-entity-hand-offset-y = -7.5
+	#Z offset for Kanroji entity sword position to compensate for model alignment (in pixels, divided by 16)
+	#Range: -16.0 ~ 16.0
+	kanroji-entity-hand-offset-z = -8.7
+
+	#Breathing form announcements
+	[common.breathing-form-announcements]
+		#Announce breathing forms used by players in chat to nearby players
+		players-announce-breathing-forms = false
+		#Announce breathing forms used by entities in chat to nearby players
+		entities-announce-breathing-forms = false
+		#Radius in blocks for breathing form chat announcements
+		#Range: 1.0 ~ 256.0
+		breathing-form-announcement-radius = 20.0
+
+	#First-Person Sword Swing Animation Settings
+	[common.first_person_sword_swing]
+		#Enable custom first-person swing animations for nichirin swords
+		#Default: true
+		customSwingEnabled = true
+
+		#Counter Vanilla Swing - Adjusts how vanilla swing animation is reversed
+		[common.first_person_sword_swing.counter_vanilla_swing]
+			#X-axis rotation counter (pitch)
+			#Adjusts how much vanilla's pitch swing is reversed
+			#Default: 0.0
+			#Range: -180.0 ~ 180.0
+			rotateX = 0.0
+			#X-axis square root rotation counter (pitch)
+			#Adjusts how much vanilla's pitch swing is reversed
+			#Default: 85.0
+			#Range: -180.0 ~ 180.0
+			rotateX2 = 85.0
+			#Y-axis rotation counter (yaw)
+			#Adjusts how much vanilla's yaw swing is reversed
+			#Default: 0.0
+			#Range: -180.0 ~ 180.0
+			rotateY = 0.0
+			#Y-axis square root rotation counter (yaw)
+			#Adjusts how much vanilla's yaw swing is reversed
+			#Default: -23.0
+			#Range: -180.0 ~ 180.0
+			rotateY2 = -23.0
+			#Z-axis rotation counter (roll)
+			#Adjusts how much vanilla's roll swing is reversed
+			#Default: 0.0
+			#Range: -180.0 ~ 180.0
+			rotateZ = 0.0
+			#Z-axis square root rotation counter (roll)
+			#Adjusts how much vanilla's roll swing is reversed
+			#Default: 25.0
+			#Range: -180.0 ~ 180.0
+			rotateZ2 = 25.0
+			#X-axis translation counter
+			#Adjusts how much vanilla's X translation is reversed
+			#Default: 0.0
+			#Range: -2.0 ~ 2.0
+			translateX = 0.0
+			#X-axis square root translation counter
+			#Adjusts how much vanilla's X translation is reversed
+			#Default: -1.2
+			#Range: -2.0 ~ 2.0
+			translateX2 = -1.2
+			#Y-axis translation counter
+			#Adjusts how much vanilla's Y translation is reversed
+			#Default: 0.0
+			#Range: -2.0 ~ 2.0
+			translateY = 0.0
+			#Y-axis square root translation counter
+			#Adjusts how much vanilla's Y translation is reversed
+			#Default: -1.05
+			#Range: -2.0 ~ 2.0
+			translateY2 = -1.05
+			#Z-axis translation counter
+			#Adjusts how much vanilla's Z translation is reversed
+			#Default: 0.5
+			#Range: -2.0 ~ 2.0
+			translateZ = 0.5
+			#Z-axis square root translation counter
+			#Adjusts how much vanilla's Z translation is reversed
+			#Default: 0.0
+			#Range: -2.0 ~ 2.0
+			translateZ2 = 0.0
+			#Translate Scale
+			#Adjusts the translation scale for first person sword swing animations
+			#Default: 1.3
+			#Range: -64.0 ~ 64.0
+			translateScale = 1.3
+

@@ -1,0 +1,8 @@
+
+#Generic Demon Slayer Configuration
+[demon_slayer]
+	#Chance (0.0-1.0) that a demon slayer spawns as female instead of male.
+	#0.0 = always male, 1.0 = always female, 0.3 = 30% female (default)
+	#Range: 0.0 ~ 1.0
+	femaleSpawnChance = 0.3
+

@@ -1,0 +1,13 @@
+#Enable Death Sound Effect (Default: true)
+deathsound = true
+#Enables the Particles on DawnDays Custom Death Animations (Default: false)
+death_particles = false
+#Enable custom death animations on humanoid mob (Default: true) <<Only affects mobs with vanilla ef death animation>>
+mob_death_anim = true
+#Sepukku attack damage multiplier (Default: 0.3)(0.3 = 30%)
+#Range: -10.0 ~ 10.0
+sepukku_attack_damage = 0.3
+#Sepukku impact bonus(Default: 0.6)
+#Range: -100.0 ~ 100.0
+sepukku_impact = 0.6
+

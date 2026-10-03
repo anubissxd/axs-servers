@@ -1,0 +1,257 @@
+
+#============================================================
+#Sword Swing 3D Model Configuration
+#Configure 3D sword slash models that replace particles
+#============================================================
+[general]
+	#Enable 3D sword slash models instead of particles
+	#Set to true for animated 3D slashes, false for particle effects
+	#Default: true
+	use_sword_swing_model = true
+	#Scale/size of the sword slash models
+	#Higher values = larger slashes
+	#Range: 0.1 to 5.0, Default: 0.5
+	#Range: 0.01 ~ 5.0
+	model_scale = 0.5
+	#Duration of slash animation in milliseconds
+	#Lower values = faster slashes
+	#Range: 50 to 1000, Default: 150 (3 ticks)
+	#Range: 50 ~ 1000
+	animation_duration_ms = 150
+	#Brightness multiplier for sword slash models
+	#Higher values = brighter glow (values >1.0 create bloom with shaders)
+	#Range: 1.0 to 10.0, Default: 5.0
+	#Range: 1.0 ~ 10.0
+	brightness_multiplier = 5.0
+	#Add voxel-style thickness to the opaque edges of slash textures
+	#Set to false to render the original flat slash planes
+	#Default: true
+	enable_voxel_thickness = true
+	#Thickness of the voxel-style slash edge extrusion, in blocks
+	#Range: 0.0 to 1.0, Default: 0.04
+	#Range: 0.0 ~ 1.0
+	voxel_thickness = 0.04
+	#Spawn breathing-style particles along each 3D sword slash
+	#Set to true to add a particle trail whenever a slash model spawns
+	#Default: false
+	enable_particle_trail = false
+	#Angular spacing between particles along the slash path, in degrees
+	#Lower values create a denser trail
+	#Range: 0.1 to 180.0, Default: 10.0
+	#Range: 0.1 ~ 180.0
+	particle_trail_spacing_degrees = 10.0
+
+#
+#============================================================
+#ADVANCED SETTINGS
+#Fine-tune rotation and positioning for each slash direction
+#WARNING: Only modify these if you know what you're doing!
+#============================================================
+[advanced]
+
+	#
+	#Global offsets applied to ALL slash types
+	#Use these for overall adjustments across all animations
+	[advanced.global]
+		#Global yaw rotation offset (degrees)
+		#Range: -180 to 180, Default: 0
+		#Range: -180.0 ~ 180.0
+		yaw_offset = 0.0
+		#Global pitch rotation offset (degrees)
+		#Range: -180 to 180, Default: 0
+		#Range: -180.0 ~ 180.0
+		pitch_offset = 0.0
+		#Global roll rotation offset (degrees)
+		#Range: -180 to 180, Default: 0
+		#Range: -180.0 ~ 180.0
+		roll_offset = 0.0
+		#Global radius multiplier
+		#Default: 0.7
+		#Range: -5.0 ~ 5.0
+		radius_mult = 0.7
+
+	#
+	#Horizontal slash from left to right
+	#Animation: sword_to_right
+	[advanced.sword_to_right]
+		#Yaw offset for right slash (degrees)
+		#Default: 90
+		#Range: -180.0 ~ 180.0
+		yaw_offset = 90.0
+		#Pitch angle for right slash (degrees)
+		#Default: 0
+		#Range: -180.0 ~ 180.0
+		pitch = 0.0
+		#Roll angle for right slash (degrees)
+		#Default: -20
+		#Range: -180.0 ~ 180.0
+		roll = -20.0
+		#Arc angle offset for right slash (degrees)
+		#Default: -50
+		#Range: -180.0 ~ 180.0
+		arc_offset = -50.0
+		#Radius multiplier for right slash
+		#Default: 1
+		#Range: -5.0 ~ 5.0
+		right_radius_mult = 1.0
+		#Yaw offset for right slash (degrees)
+		#Default: 90
+		#Range: -180.0 ~ 180.0
+		yaw_offset_offhand = 90.0
+		#Pitch angle for right slash (degrees)
+		#Default: 0
+		#Range: -180.0 ~ 180.0
+		pitch_offhand = 0.0
+		#Roll angle for right slash (degrees)
+		#Default: -20
+		#Range: -180.0 ~ 180.0
+		roll_offhand = 20.0
+		#Arc angle offset for right slash (degrees)
+		#Default: -50
+		#Range: -180.0 ~ 180.0
+		arc_offset_offhand = -50.0
+		#Radius multiplier for right slash
+		#Default: 1
+		#Range: -5.0 ~ 5.0
+		right_radius_mult_offhand = 1.0
+
+	#
+	#Horizontal slash from right to left
+	#Animation: sword_to_left
+	[advanced.sword_to_left]
+		#Yaw offset for left slash (degrees)
+		#Default: -90
+		#Range: -180.0 ~ 180.0
+		yaw_offset = -90.0
+		#Pitch angle for left slash (degrees)
+		#Default: 0
+		#Range: -180.0 ~ 180.0
+		pitch = 0.0
+		#Roll angle for left slash (degrees)
+		#Default: -20
+		#Range: -180.0 ~ 180.0
+		roll = -20.0
+		#Arc angle offset for left slash (degrees)
+		#Default: -50
+		#Range: -180.0 ~ 180.0
+		arc_offset = -50.0
+		#Radius multiplier for left slash
+		#Default: 1
+		#Range: -5.0 ~ 5.0
+		left_radius_mult = 1.0
+		#Yaw offset for left slash (degrees)
+		#Default: -90
+		#Range: -180.0 ~ 180.0
+		yaw_offset_offhand = -90.0
+		#Pitch angle for left slash (degrees)
+		#Default: 0
+		#Range: -180.0 ~ 180.0
+		pitch_offhand = 0.0
+		#Roll angle for left slash (degrees)
+		#Default: -20
+		#Range: -180.0 ~ 180.0
+		roll_offhand = 20.0
+		#Arc angle offset for left slash (degrees)
+		#Default: -50
+		#Range: -180.0 ~ 180.0
+		arc_offset_offhand = -50.0
+		#Radius multiplier for left slash
+		#Default: 1
+		#Range: -5.0 ~ 5.0
+		left_radius_mult_offhand = 1.0
+
+	#
+	#Vertical slash from top to bottom
+	#Animation: sword_overhead
+	[advanced.sword_overhead]
+		#Yaw offset for overhead slash (degrees)
+		#Default: 0
+		#Range: -180.0 ~ 180.0
+		yaw_offset = 0.0
+		#Pitch angle for overhead slash (degrees)
+		#Default: -90
+		#Range: -180.0 ~ 180.0
+		pitch = -90.0
+		#Roll angle for overhead slash (degrees)
+		#Default: 110
+		#Range: -180.0 ~ 180.0
+		roll = 110.0
+		#Arc angle offset for overhead slash (degrees)
+		#Default: -20
+		#Range: -180.0 ~ 180.0
+		arc_offset = -20.0
+		#Radius multiplier for overhead slash
+		#Default: 1
+		#Range: -5.0 ~ 5.0
+		overhead_radius_mult = 1.0
+		#Yaw offset for overhead slash (degrees)
+		#Default: 0
+		#Range: -180.0 ~ 180.0
+		yaw_offset_offhand = 0.0
+		#Pitch angle for overhead slash (degrees)
+		#Default: -90
+		#Range: -180.0 ~ 180.0
+		pitch_offhand = -90.0
+		#Roll angle for overhead slash (degrees)
+		#Default: 110
+		#Range: -180.0 ~ 180.0
+		roll_offhand = 70.0
+		#Arc angle offset for overhead slash (degrees)
+		#Default: -20
+		#Range: -180.0 ~ 180.0
+		arc_offset_offhand = -20.0
+		#Radius multiplier for overhead slash
+		#Default: 1
+		#Range: -5.0 ~ 5.0
+		overhead_radius_mult_offhand = 1.0
+
+	#
+	#Vertical slash from bottom to top
+	#Animation: sword_to_upper
+	[advanced.sword_to_upper]
+		#Yaw offset for upward slash (degrees)
+		#Default: 0
+		#Range: -180.0 ~ 180.0
+		yaw_offset = 0.0
+		#Pitch angle for upward slash (degrees)
+		#Default: 90
+		#Range: -180.0 ~ 180.0
+		pitch = 90.0
+		#Roll angle for upward slash (degrees)
+		#Default: 90
+		#Range: -180.0 ~ 180.0
+		roll = 90.0
+		#Arc angle offset for upward slash (degrees)
+		#Default: 0
+		#Range: -180.0 ~ 180.0
+		arc_offset = 0.0
+		#Radius multiplier for upper slash
+		#Default: 1
+		#Range: -5.0 ~ 5.0
+		upper_radius_mult = 1.0
+
+	#
+	#360-degree spin attack
+	#Animation: sword_rotate
+	[advanced.sword_rotate]
+		#Yaw offset for spin attack (degrees)
+		#Default: -90
+		#Range: -180.0 ~ 180.0
+		yaw_offset = -90.0
+		#Pitch angle for spin attack (degrees)
+		#Default: 0
+		#Range: -180.0 ~ 180.0
+		pitch = 0.0
+		#Roll angle for spin attack (degrees)
+		#Default: 0
+		#Range: -180.0 ~ 180.0
+		roll = 0.0
+		#Arc angle offset for spin attack (degrees)
+		#Default: 50
+		#Range: -180.0 ~ 180.0
+		arc_offset = 50.0
+		#Radius multiplier for spin attack
+		#Default: 1
+		#Range: -5.0 ~ 5.0
+		rotate_radius_mult = 1.0
+

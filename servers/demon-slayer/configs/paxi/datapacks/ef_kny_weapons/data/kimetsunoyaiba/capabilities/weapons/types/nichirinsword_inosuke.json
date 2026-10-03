@@ -1,0 +1,62 @@
+{
+  "collider": {
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.8
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.75
+    ]
+  },
+  "hit_particle": "epicfight:hit_blunt",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "livingmotion_modifier": {
+    "two_hand": {
+    		"block": "epicfight:biped/skill/guard_dualsword",
+      "idle": "epicfight:biped/skill/guard_dualsword",
+      "walk": "epicfight:biped/skill/guard_dualsword",
+      "run": "wom:biped/living/katana_run"
+    }
+  },
+  "offhand_item_compatible_predicate": [
+    {
+      "category": "uchigatana",
+      "predicate": "epicfight:offhand_item_category"
+    }
+  ],
+  "swing_sound": "epicfight:entity.hit.blunt",
+  "styles": {
+    "default": "two_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "uchigatana"
+          }
+        ]
+      }
+    ]
+  },
+  "combos": {
+    "two_hand": [
+      "epicfight:biped/combat/sword_dual_auto1",
+      "wom:biped/combat/herrscher_auto_3",
+      "epicfight:biped/combat/dagger_dual_auto4",
+      "epicfight:biped/combat/sword_dual_auto3",
+      "wom:biped/combat/torment_auto_1",
+      "wom:biped/combat/staff_dash",
+      "epicfight:biped/combat/mob_sword_dual3"
+    ]
+  },
+  "category": "uchigatana",
+  "innate_skills": {
+    "two_hand": "epicfight:steel_whirlwind"
+  },
+  "usable_in_offhand": true
+}

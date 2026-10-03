@@ -1,0 +1,60 @@
+
+["Custom NPCs Compatibility"]
+	#Enable Custom NPCs mod compatibility.
+	#When enabled, NPCs holding nichirin swords or blood demon arts will use those abilities when attacking.
+	enableCustomNPCCompat = true
+	#Cooldown multiplier for NPCs.
+	#Multiplies the base cooldown of breathing forms and demon arts for NPCs.
+	#1.0 = same as players, 2.0 = twice as long, 0.5 = half as long
+	#Range: 0.1 ~ 10.0
+	npcCooldownMultiplier = 1.0
+	#Probability that an NPC will use an ability when attacking (if not on cooldown).
+	#0.0 = never use abilities, 1.0 = always use abilities, 0.8 = 90% chance
+	#Range: 0.0 ~ 1.0
+	npcTriggerChance = 0.9
+	#Enable debug logging for NPC ability usage.
+	#Prints detailed information to console when NPCs trigger abilities.
+	debugNPCAbilities = false
+	#Enable NPCs to use abilities from range (not just melee attacks).
+	#When enabled, NPCs will use breathing forms when they have a target within range.
+	enableRangedAbilities = true
+	#Maximum range for NPCs to trigger abilities (in blocks).
+	#NPCs will use abilities when their attack target is within this range.
+	#Range: 0.0 ~ 500.0
+	rangedAbilityRange = 15.0
+	#How often to check for ranged ability triggering (in ticks).
+	#Lower values = more frequent checks but more processing.
+	#20 ticks = 1 second, 40 ticks = 2 seconds
+	#Range: 5 ~ 1000
+	rangedAbilityCheckInterval = 20
+	#Enable basic attack animations for NPCs (sword_to_left, sword_to_right, sword_overhead).
+	#When enabled, NPCs will play random sword swing animations on normal attacks.
+	enableAttackAnimations = true
+	#Enable automatic cooldown clearing after maximum time.
+	#If enabled, all NPC cooldowns will be cleared after the max cooldown time passes.
+	#This prevents cooldowns from getting stuck indefinitely.
+	enableMaxCooldownClear = true
+	#Maximum cooldown time in seconds before auto-clearing all cooldowns.
+	#After an NPC uses any breathing form, if this many seconds pass, all cooldowns are cleared.
+	#This timer resets every time the NPC uses a breathing form.
+	#Range: 1 ~ 300
+	maxCooldownSeconds = 10
+
+	["Custom NPCs Compatibility"."Form Selection Weights"]
+		#Weighted probability for form selection. Lower forms are used more often.
+		#These weights determine how often each form tier is selected.
+		#Higher values = more likely to be selected.
+		#Weight for Form 1 (First Form)
+		#Range: 0.0 ~ 100.0
+		form1Weight = 40.0
+		#Weight for Form 2 (Second Form)
+		#Range: 0.0 ~ 100.0
+		form2Weight = 25.0
+		#Weight for Form 3 (Third Form)
+		#Range: 0.0 ~ 100.0
+		form3Weight = 15.0
+		#Weight for Form 4+ (Fourth Form and higher)
+		#This weight is divided equally among all remaining forms
+		#Range: 0.0 ~ 100.0
+		form4PlusWeight = 20.0
+

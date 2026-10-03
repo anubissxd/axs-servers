@@ -1,0 +1,141 @@
+
+#Enhanced Breathing Forms Configuration
+#Controls which breathing styles use enhanced versions with improved forms
+[enhanced_breathing]
+	#Enable enhanced Mist Breathing forms
+	#When true, automatically replaces base mod mist swords with enhanced versions:
+	#  - kimetsunoyaiba:nichirinsword_mist -> kimetsunoyaibamultiplayer:nichirinsword_mist
+	#  - kimetsunoyaiba:nichirinsword_tokito -> kimetsunoyaibamultiplayer:nichirinsword_muichiro
+	#
+	#Enhanced features:
+	#  - 7th Form: Obscuring Clouds (Muichiro's original technique)
+	#  - Improved particle effects and animations
+	#  - Custom sword slash models
+	#
+	#Default: true
+	enhancedMistBreathing = true
+	#Enable enhanced Flower Breathing sword replacement
+	#When true, automatically replaces base mod flower swords with enhanced versions:
+	#  - kimetsunoyaiba:nichirinsword_kanawo -> kimetsunoyaibamultiplayer:nichirinsword_kanawo
+	#  - kimetsunoyaiba:nichirinsword_kanae -> kimetsunoyaibamultiplayer:nichirinsword_kanae
+	#
+	#Enhanced features:
+	#  - Hashira-exclusive forms (7th, 8th, 9th for Kanae's sword)
+	#  - Final Form: Equinoctial Vermillion Eye
+	#  - Improved particle effects and animations
+	#
+	#Default: true
+	enhancedFlowerBreathing = true
+	#Enable enhanced Beast Breathing forms
+	#When true, automatically replaces base mod Inosuke swords with enhanced versions:
+	#  - kimetsunoyaiba:nichirinsword_inosuke -> kimetsunoyaibamultiplayer:nichirinsword_inosuke
+	#
+	#Enhanced features:
+	#  - Uses Enhanced Beast Breathing technique implementation
+	#  - Integrates with dual-wield behavior when paired in offhand
+	#
+	#Default: true
+	enhancedBeastBreathing = true
+	#Enable enhanced Love Breathing forms
+	#When true, automatically replaces base mod love swords with enhanced versions:
+	#  - kimetsunoyaiba:nichirinsword_kanroji -> kimetsunoyaibamultiplayer:nichirinsword_kanroji
+	#
+	#Enhanced features:
+	#  - Flexible whip-like sword rendering
+	#  - 6 Love Breathing forms
+	#  - Dual-layer emissive rendering with heart particle trails
+	#  - Physics-based whip motion with keyframe animations
+	#
+	#Default: true
+	enhancedLoveBreathing = true
+	#Use vanilla dust particles for enhanced Love Breathing color effects instead of energy particles
+	#The Love particle colors are unchanged. This applies to enhanced Love forms and variations.
+	#Default: false
+	loveUseDustParticles = false
+	#Enable enhanced Black Sword replacement
+	#When true, automatically replaces base mod black sword with enhanced version:
+	#  - kimetsunoyaiba:nichirinsword_black -> kimetsunoyaibamultiplayer:nichirinsword_black
+	#
+	#Enhanced features:
+	#  - Uses enhanced Black Sword technique implementation
+	#  - Improved particle effects and animations
+	#
+	#Default: true
+	enhancedBlackSword = true
+	#Enable enhanced Combustible Blood replacement
+	#When true, automatically replaces base mod Nezuko Blood Demon Art with the enhanced version:
+	#  - kimetsunoyaiba:blooddemonart_nezuko -> kimetsunoyaibamultiplayer:combustible_blood
+	#
+	#Enhanced features:
+	#  - Uses the Combustible Blood technique implementation
+	#  - Expanded Nezuko-inspired forms and effects
+	#
+	#Default: true
+	enhancedCombustibleBlood = true
+
+#Love Breathing Whip Physics Configuration
+#Controls the visual and physics behavior of Mitsuri's whip sword
+[love_whip_physics]
+	#Whether or not to disable the love sword swing particles
+	#Default: false
+	disableLoveM1TrailParticles = true
+	#Number of whip segments (higher = smoother but more expensive)
+	#Default: 12
+	#Range: 4 ~ 24
+	segmentCount = 12
+	#Rest length of each whip segment in blocks
+	#Default: 0.3
+	#Range: 0.1 ~ 1.0
+	segmentLength = 0.3
+	#Spring stiffness (higher = stiffer, less floppy)
+	#Default: 0.4
+	#Range: 0.1 ~ 1.0
+	stiffness = 0.4
+	#Damping factor (higher = less bouncy)
+	#Default: 0.85
+	#Range: 0.5 ~ 0.99
+	damping = 0.85
+	#Gravity effect on whip (blocks/tick²)
+	#Default: 0.02
+	#Range: 0.0 ~ 0.1
+	gravity = 0.02
+	#Whip length when idle (in blocks)
+	#Default: 2.5
+	#Range: 1.0 ~ 5.0
+	idleLength = 2.5
+	#Whip length when fully extended during attacks (in blocks)
+	#Default: 8.0
+	#Range: 3.0 ~ 15.0
+	extendedLength = 8.0
+	#Ticks to transition between idle and extended length
+	#Default: 10
+	#Range: 1 ~ 40
+	extensionTicks = 10
+	#Number of interpolation samples along curve (higher = smoother)
+	#Default: 24
+	#Range: 6 ~ 64
+	curveResolution = 24
+	#Whip ribbon width
+	#Default: 0.08
+	#Range: 0.02 ~ 0.3
+	width = 0.08
+	#Enable emissive (glowing) rendering for whip
+	#Default: true
+	emissive = true
+	#Emissive layer brightness (0.0 - 1.0)
+	#Default: 0.9
+	#Range: 0.0 ~ 1.0
+	emissiveBrightness = 0.9
+	#Particle spawn density (particles per block of whip length per tick)
+	#0 = disabled, higher = more particles
+	#Default: 2
+	#Range: 0 ~ 10
+	particleDensity = 2
+	#Spawn particles when whip is idle (not attacking)
+	#Default: false
+	particleIdle = false
+	#Blend factor between keyframe animation and physics (0.0 = pure physics, 1.0 = pure keyframe)
+	#Default: 0.7
+	#Range: 0.0 ~ 1.0
+	keyframeBlend = 0.7
+

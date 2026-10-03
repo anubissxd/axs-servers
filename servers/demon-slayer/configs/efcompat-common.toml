@@ -1,0 +1,10 @@
+
+[cataclysm]
+	#Give L'Ender's Cataclysm weapons Epic Fight movesets.
+	#Turn this off if another addon - P1nero's Epic Fight Addon, Weapons of
+	#Traveloptics - already provides movesets for them and you want that one to
+	#own them outright. Requires a restart.
+	#They are also registered as a low-priority datapack, so another pack that
+	#defines the same weapon can override them without turning this off.
+	weaponMovesets = true
+

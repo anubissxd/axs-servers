@@ -1,0 +1,12 @@
+
+[visuals]
+	enableRoaringKnightArmorAfterimage = true
+	showTiredEffects = true
+
+[armorAbilityBars]
+	showArmorAbilityBars = true
+	#Range: -4096 ~ 4096
+	armorAbilityBarXOffset = 0
+	#Range: -4096 ~ 4096
+	armorAbilityBarYOffset = 0
+

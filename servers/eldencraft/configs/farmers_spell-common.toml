@@ -1,0 +1,6 @@
+
+["Spell Settings"]
+	#Max health of mobs that can be affected by Phantom Loot spell
+	#Range: 1.0 ~ 1000.0
+	phantomLootMaxHp = 100.0
+

@@ -1,0 +1,11 @@
+{
+    "type": "kimetsunoyaiba:nichirinsword_himejima",
+    "attributes": {
+        "common": {
+            "armor_negation": 20.0,
+                "impact": 0.8,
+	   "speed_bonus": 0.5,
+           "max_strikes": 3
+        }
+    }
+ }

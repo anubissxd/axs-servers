@@ -1,0 +1,10 @@
+{
+    "type": "kimetsunoyaiba:chigama",
+    "attributes": {
+        "common": {
+            "armor_negation": 10.0,
+                "impact": 0.6,
+           "max_strikes": 1
+        }
+    }
+ }

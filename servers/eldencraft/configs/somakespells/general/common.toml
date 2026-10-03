@@ -1,0 +1,38 @@
+#If true, removes the Movement Speed bonus from Iron's Spells 'n Spellbooks Charge effect while keeping its other bonuses intact.
+removeChargeSpeedBoost = false
+#If true, players must learn spells before using them. If false, all spells are unlocked by default.
+enableSpellLockSystem = false
+#The maximum number of familiars a player can tame from the Alshanex Familiars mod (if installed). Default is 10.
+#Range: > 1
+familiarLimit = 10
+#If true, Krampus and Krampus Henchman from Born in Chaos can no longer disarm players (item steal/drop is blocked).
+disableKrampusItemSteal = true
+#If true, Missionary enemies from Born in Chaos can force rain. If false, their forced rain is blocked.
+enableMissionaryRain = false
+#Maximum charges for the Soul Fire Necklace.
+#Range: > 1
+soulFireNecklaceMaxCharges = 100
+#Maximum charges for the Infernal Fire Necklace.
+#Range: > 1
+infernalFireNecklaceMaxCharges = 100
+#Base bonus damage percent applied to supported Fire spells while Soul Fire mode is active.
+#Range: 0.0 ~ 1000.0
+soulFireBaseDamageBonusPercent = 20.0
+#Base bonus damage percent applied to supported Fire spells while Infernal Fire mode is active.
+#Range: 0.0 ~ 1000.0
+infernalFireBaseDamageBonusPercent = 30.0
+#If true, staff magic attributes use the legacy offhand slot. If false, they use the main hand.
+staffsUseLegacyOffhand = false
+#If true, Soul Breaker from ISS: Magic From The East no longer deals its bonus soul damage.
+disableSoulBreakerBonusSoulDamage = false
+#If true, Custodia Caeli can no longer be crafted and will no longer appear in loot sources such as chests.
+disableCustodiaCaeliCraftingAndLooting = false
+#If true, Jingle Bell cannot appear as random scroll loot or be crafted onto scrolls.
+disableJingleBellCraftingAndLooting = false
+#If true, Withered Rose Vortex and Funeral Bloom cannot appear as random scroll loot or be crafted onto scrolls. The Rose's Secret always remains exclusive to the Withered Rose Staff.
+disableWitheredRoseSpellsCraftingAndLooting = false
+#If true, Centauri is hidden from the SomakeSpells creative tab.
+hideCentauriFromCreativeTab = true
+#If true, Scorn is hidden from the SomakeSpells creative tab.
+hideScornFromCreativeTab = true
+
