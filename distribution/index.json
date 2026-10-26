@@ -28,6 +28,29 @@
       "banner_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/main/distribution/medieval-fantasy/banner.png",
       "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/9df7a80b04efd88fcdcd526293db6f2129ed7759/distribution/medieval-fantasy/manifest.json",
       "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/9df7a80b04efd88fcdcd526293db6f2129ed7759/distribution/medieval-fantasy/patchnotes.md"
+    },
+    {
+      "id": "cobblemon",
+      "name": "Cobblemon",
+      "folder_name": "Cobblemon",
+      "description": "Cobblemon survival paketi (Pokémon, starter kiti, Pasture işçileri).",
+      "version": "1.0.0",
+      "mc_version": "1.21.1",
+      "loader": "NeoForge",
+      "loader_version": "21.1.256",
+      "enabled_resourcepacks": [
+        "SodiumTranslations.zip",
+        "Cobblemon_Turkce_Kaynak_Paketi.zip",
+        "RCT Trainers+ [1.7] v2.2.zip",
+        "Cobblemon Interface v1.6.0.zip",
+        "Cobblemon Interface Modded v1.9.4.zip",
+        "E19 Cobblemon Minimap Icons.zip",
+        "enchant icons 1.21 v1.3.zip",
+        "Cobblemon Classic Grass Pack v2.1 MC1.21.1.zip",
+        "Low Fire.zip"
+      ],
+      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/e100dadfdc5c1966255b6589052fb2813cb50579/distribution/cobblemon/manifest.json",
+      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/e100dadfdc5c1966255b6589052fb2813cb50579/distribution/cobblemon/patchnotes.md"
     }
   ]
 }

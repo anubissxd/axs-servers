@@ -19,7 +19,7 @@ AnuDownloader, arkadaşların mod paketini kurup güncel tuttuğu Windows uygula
 | Paket üretici | `tools/anudownloader/Build-Manifest-VDS.ps1` | Paketi **VDS'teki sunucu klasöründen** üretir |
 | Dosyalar | GitHub Releases (`medieval-fantasy-pack`, `medieval-fantasy-pack-overflow`) | Mod/config dosyalarının indirildiği yer |
 
-Şu an `index.json`'da yalnızca **Medieval Fantasy** paketi var.
+Şu an `index.json`'da **Medieval Fantasy** (Forge 1.20.1) ve **Cobblemon** (NeoForge 1.21.1) paketleri var. Cobblemon paketi oyuncunun bilgisayarındaki `Cobblemon` adlı Modrinth profiline kurulur; dosyalar `cobblemon-pack` release'inde durur, manifest `Build-Manifest.ps1` ile oyuncu profilinin kopyasından üretilir (VDS yok). Duyuru atılmaz.
 
 ---
 
