@@ -91,7 +91,9 @@ $i = 0
 foreach ($entry in $toUpload) {
     $i++
     $item = $entry.item
-    $assetName = $item.RelPath -replace '/', '__'
+    # GitHub rewrites every run of characters outside A-Za-z0-9_.+- to a single
+    # dot in the asset name, so do the same here or the manifest URL 404s.
+    $assetName = ($item.RelPath -replace '/', '__') -replace '[^A-Za-z0-9_.+\-]+', '.'
     Write-Host "[$i/$($toUpload.Count)] Yükleniyor: $($item.RelPath)"
     # gh always uses the LOCAL filename as the remote asset name, so a
     # collision-free upload means uploading a temp copy named $assetName.
