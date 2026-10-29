@@ -1,6 +1,6 @@
 {
   "app": {
-    "version": "2.16.13",
+    "version": "2.17.0",
     "setup_url": "https://github.com/anubissxd/minecraft-servers/releases/download/anudownloader/AnuDownloader-Setup.exe"
   },
   "packs": [
@@ -34,7 +34,7 @@
       "name": "Cobblemon",
       "folder_name": "Cobblemon",
       "description": "Cobblemon survival paketi (Pokémon, starter kiti, Pasture işçileri).",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "mc_version": "1.21.1",
       "loader": "NeoForge",
       "loader_version": "21.1.256",
@@ -49,8 +49,13 @@
         "Cobblemon Classic Grass Pack v2.1 MC1.21.1.zip",
         "Low Fire.zip"
       ],
-      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/e100dadfdc5c1966255b6589052fb2813cb50579/distribution/cobblemon/manifest.json",
-      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/e100dadfdc5c1966255b6589052fb2813cb50579/distribution/cobblemon/patchnotes.md"
+      "manifest_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/152b56b31f05fb32fff310b1f023b2c387a47c86/distribution/cobblemon/manifest.json",
+      "patchnotes_url": "https://raw.githubusercontent.com/anubissxd/minecraft-servers/152b56b31f05fb32fff310b1f023b2c387a47c86/distribution/cobblemon/patchnotes.md",
+      "always_sync": [
+        "config/paxi/",
+        "config/anubis-options.txt"
+      ],
+      "options_file": "config/anubis-options.txt"
     }
   ]
 }
