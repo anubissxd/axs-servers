@@ -1,8 +1,5 @@
-# Cobblemon - 1.0.0
+# Cobblemon - 1.0.1
 
-- Cobblemon paketinin ilk sürümü: Minecraft 1.21.1, NeoForge 21.1.256.
-- Cobblemon 1.8.2 ile birlikte Cobblenav, Cobbreeding, Mega Showdown, Radical Trainers, Cobbleworkers ve diğer eklentiler dahil.
-- Oyun başlarken starter seçince Pokédex, Badge Box, Backpack, 10 Poké Ball, 3 Potion ve 32 pişmiş sığır eti kiti veriliyor.
-- Yakalayabileceğin Pokémon'un seviyesi, en yüksek seviyeli Pokémon'unun 5 üstüne kadar (CatchCap).
-- Vanilla mobları kapalı; köylüler kalıyor. Pasture Block işçilerine Rock/Ground/Steel madenciler ve avcı Pokémon işleri eklendi.
-- Essential modu pakete dahil.
+- Cobblemon 1.8.4'e güncellendi. Mega Showdown, Raid Dens, Cobblemon Quests ve bağlı modlar da yeni sürümde.
+- Tuş atamaları ve görüntü ayarları herkeste aynı olacak şekilde güncellendi (harita, Pokémon, menü ve Mekanism tuşları ayrı ayrı yerleştirildi). Bu değişiklik için önce AnuDownloader'ı güncelle.
+- Madenci Pokémon'lar (Rock, Ground, Steel) artık nadiren elmas ve Create, Mekanism, AE2 madenleri çıkarıyor.

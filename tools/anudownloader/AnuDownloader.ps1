@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$AppVersion = "2.16.13"
+$AppVersion = "2.17.0"
 $ConfigDir  = Join-Path $env:APPDATA "AnuDownloader"
 $ConfigFile = Join-Path $ConfigDir "config.json"
 # index.json sources, tried in order. The GitHub contents API is never cached
@@ -1134,6 +1134,12 @@ function Test-AnuSeedOnlyPath($manifestPath) {
         "config/apotheosis/adventure.cfg"
     )
     if ($alwaysSync -contains $p) { return $false }
+    # Packs can list their own always-synced paths in index.json ("always_sync"):
+    # an exact path, or a folder prefix ending in "/".
+    foreach ($entry in @($script:selectedPack.always_sync)) {
+        if (-not $entry) { continue }
+        if ($p -eq $entry -or ($entry.EndsWith('/') -and $p.StartsWith($entry))) { return $false }
+    }
     # The quest book: on the server it is sent from the server, but single player
     # reads the local copy, which is where quests are tested. It has to follow
     # the server's quests or single player keeps showing an old quest book.
@@ -1456,6 +1462,35 @@ function Set-AnuEnabledResourcePacks([string]$profileRoot, $packNames, [string]$
     }
 }
 
+# A pack can ship "options_file" (index.json): a text file of options.txt lines
+# (key bindings, video settings). Its lines are merged into the player's
+# options.txt, replacing the same keys and leaving everything else alone. It is
+# only applied when the file was downloaded in this run, so a player's own later
+# changes survive until the pack changes the file again.
+function Merge-AnuOptionsFile([string]$profileRoot, [string]$sourceFile) {
+    if (-not (Test-Path -LiteralPath $sourceFile)) { return }
+    $incoming = @([System.IO.File]::ReadAllLines($sourceFile, [System.Text.Encoding]::UTF8) | Where-Object { $_ -match '^[^:#\s][^:]*:' })
+    if ($incoming.Count -eq 0) { return }
+    $optionsPath = Join-Path $profileRoot "options.txt"
+    $lines = @()
+    if (Test-Path -LiteralPath $optionsPath) {
+        $lines = @([System.IO.File]::ReadAllLines($optionsPath, [System.Text.Encoding]::UTF8))
+    }
+    foreach ($line in $incoming) {
+        $key = $line.Substring(0, $line.IndexOf(':'))
+        $idx = -1
+        for ($i = 0; $i -lt $lines.Count; $i++) {
+            if ($lines[$i].StartsWith("${key}:")) { $idx = $i; break }
+        }
+        if ($idx -ge 0) { $lines[$idx] = $line } else { $lines += $line }
+    }
+    try {
+        [System.IO.File]::WriteAllLines($optionsPath, [string[]]$lines, (New-Object System.Text.UTF8Encoding $false))
+    } catch {
+        Write-AnuDebugLog "options.txt yazilamadi ($optionsPath): $($_.Exception.Message)"
+    }
+}
+
 Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     $ProgressPreference = 'SilentlyContinue'
     Close-AnuLauncherApps
@@ -1582,6 +1617,13 @@ Add-ButtonClick $btnUpdate "Yüklenecek mod paketini seçiniz." {
     }
 
     Set-AnuEnabledResourcePacks $profileRoot $script:selectedPack.enabled_resourcepacks $script:selectedPack.mc_version
+
+    if ($script:selectedPack.options_file) {
+        $optRel = ("$($script:selectedPack.options_file)" -replace '/', '')
+        if (@($toDownload | Where-Object { $_.rel -eq $optRel }).Count -gt 0) {
+            Merge-AnuOptionsFile $profileRoot (Join-Path $profileRoot $optRel)
+        }
+    }
 
     $cfg.targets | Add-Member -NotePropertyName $script:selectedPack.id -NotePropertyValue $profileRoot -Force
     Save-Config $cfg

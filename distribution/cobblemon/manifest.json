@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-26 23:03:15",
-  "pack_name": "Cobblemon",
+  "version": "1.0.1",
+  "generated": "2026-10-29 19:10:23",
   "files": [
     {
       "size": 1086553,
@@ -143,13 +143,6 @@
       "filename": "biomereplacer-3.1-hippo-neo.jar"
     },
     {
-      "size": 23251,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__capturexp-neoforge-1.8.2-1.3.0.jar",
-      "path": "mods/capturexp-neoforge-1.8.2-1.3.0.jar",
-      "sha256": "74bcd889a5f3d01a7bf3bcf208affca1d36208514e3d03acd9669dcced39faf7",
-      "filename": "capturexp-neoforge-1.8.2-1.3.0.jar"
-    },
-    {
       "size": 361486,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__carryon-neoforge-1.21.1-2.2.6.13.jar",
       "path": "mods/carryon-neoforge-1.21.1-2.2.6.13.jar",
@@ -197,13 +190,6 @@
       "path": "mods/chipped-neoforge-1.21.1-4.0.2.jar",
       "sha256": "18ac6fd6b30db4922ccc6ee8bea5b113f69587505b7529834f37ace506427291",
       "filename": "chipped-neoforge-1.21.1-4.0.2.jar"
-    },
-    {
-      "size": 27225,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__cinematic_respawn-1.21.1-neoforge-1.4.1.jar",
-      "path": "mods/cinematic_respawn-1.21.1-neoforge-1.4.1.jar",
-      "sha256": "c6de94500c902f674b8d1237baa00642d9d805e80e58a3334e9ba8a1e088f9ae",
-      "filename": "cinematic_respawn-1.21.1-neoforge-1.4.1.jar"
     },
     {
       "size": 1163890,
@@ -297,13 +283,6 @@
       "filename": "cobblemon-legendary-structures-2.2.jar"
     },
     {
-      "size": 140986469,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__Cobblemon-neoforge-1.8.2+1.21.1.jar",
-      "path": "mods/Cobblemon-neoforge-1.8.2+1.21.1.jar",
-      "sha256": "43da1d268d5ee7f7f8a0f8f509efd5d198780dde676d1df2fa63e9cd902ebf11",
-      "filename": "Cobblemon-neoforge-1.8.2+1.21.1.jar"
-    },
-    {
       "size": 758403,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__cobblemon-perfect-partners-neoforge-1.2.1-yamali.jar",
       "path": "mods/cobblemon-perfect-partners-neoforge-1.2.1-yamali.jar",
@@ -358,13 +337,6 @@
       "path": "mods/cobblemonpokemonbadges-neoforge-0.1.1.jar",
       "sha256": "d83a258679132455eaf248e4a11c118f61a94e1f6e6446c6911bf51ec4b4f5db",
       "filename": "cobblemonpokemonbadges-neoforge-0.1.1.jar"
-    },
-    {
-      "size": 2812184,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__cobblemonraiddens-neoforge-0.13.4+1.21.1.jar",
-      "path": "mods/cobblemonraiddens-neoforge-0.13.4+1.21.1.jar",
-      "sha256": "03ece88fbad0fe428bbf2ed4d4621d76f40b37edfd12930ea3f331a6738e5603",
-      "filename": "cobblemonraiddens-neoforge-0.13.4+1.21.1.jar"
     },
     {
       "size": 699489,
@@ -456,13 +428,6 @@
       "path": "mods/coroutil-neoforge-1.21.0-1.3.8.jar",
       "sha256": "9b32bcf2c793d33b93b5d4739c0dc4b64231025c7dc5fe40732b66d7cf4b2826",
       "filename": "coroutil-neoforge-1.21.0-1.3.8.jar"
-    },
-    {
-      "size": 166057,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__counter-neoforge-1.8.2-1.9.2.jar",
-      "path": "mods/counter-neoforge-1.8.2-1.9.2.jar",
-      "sha256": "2d2b549b72860c6c18f33a4888a9ef212974c2a6770265057d932ea82f965ecc",
-      "filename": "counter-neoforge-1.8.2-1.9.2.jar"
     },
     {
       "size": 3481341,
@@ -724,13 +689,6 @@
       "filename": "fusion-1.3.16-neoforge-mc1.21.1.jar"
     },
     {
-      "size": 2392693,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__fzzy_config-0.7.7+1.21+neoforge.jar",
-      "path": "mods/fzzy_config-0.7.7+1.21+neoforge.jar",
-      "sha256": "26af871cacd134ce52610384bbdd362a018707444eb2d498e4833063f378cf85",
-      "filename": "fzzy_config-0.7.7+1.21+neoforge.jar"
-    },
-    {
       "size": 634531,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__geckolib-neoforge-1.21.1-4.9.3.jar",
       "path": "mods/geckolib-neoforge-1.21.1-4.9.3.jar",
@@ -757,13 +715,6 @@
       "path": "mods/GrandTeleport-NeoForge-1.21.1-neoforge-1.0.1.jar",
       "sha256": "a1eda38156d846b4019a3afa56f4271da78bf7d0171b7c5063ca7b27368730ab",
       "filename": "GrandTeleport-NeoForge-1.21.1-neoforge-1.0.1.jar"
-    },
-    {
-      "size": 9325132,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__guideme-21.1.20.jar",
-      "path": "mods/guideme-21.1.20.jar",
-      "sha256": "94139e34b8b4e025f1c3e56cc1c677d86b2b2f0bba2dca1c44003042993d16ed",
-      "filename": "guideme-21.1.20.jar"
     },
     {
       "size": 7132842,
@@ -827,13 +778,6 @@
       "path": "mods/igleelib-1.21.1-1.2.7.jar",
       "sha256": "d2e2d3773adcab56e91d3888cfb10b0591dc794b95cf4fd115e7da4a75359578",
       "filename": "igleelib-1.21.1-1.2.7.jar"
-    },
-    {
-      "size": 356782,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__incontrol-1.21-10.3.0.jar",
-      "path": "mods/incontrol-1.21-10.3.0.jar",
-      "sha256": "3776c11310008edaffdda0320c1a8436555ff59de36a6e3959452cbdefa98111",
-      "filename": "incontrol-1.21-10.3.0.jar"
     },
     {
       "size": 2540723,
@@ -941,13 +885,6 @@
       "filename": "matthiesen-core-neoforge-1.3.5.jar"
     },
     {
-      "size": 20316071,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__mega_showdown-neoforge-1.3.1+1.8.2+1.21.1-release.jar",
-      "path": "mods/mega_showdown-neoforge-1.3.1+1.8.2+1.21.1-release.jar",
-      "sha256": "4dfba52f5c3ca27d9c8a59e62710c30c7cb1e5685fc87a568b7f9a5ce3255367",
-      "filename": "mega_showdown-neoforge-1.3.1+1.8.2+1.21.1-release.jar"
-    },
-    {
       "size": 11976009,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__Mekanism-1.21.1-10.7.19.85.jar",
       "path": "mods/Mekanism-1.21.1-10.7.19.85.jar",
@@ -997,13 +934,6 @@
       "filename": "merequester-neoforge-1.21.1-1.5.0.jar"
     },
     {
-      "size": 327173,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__mezz_config-1.21.1-neoforge-0.6.8-standalone.jar",
-      "path": "mods/mezz_config-1.21.1-neoforge-0.6.8-standalone.jar",
-      "sha256": "182ad8ad757175b49d573512c8fac624ee526e8138e24b36f677b0f6466e20cb",
-      "filename": "mezz_config-1.21.1-neoforge-0.6.8-standalone.jar"
-    },
-    {
       "size": 131591,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__modefite-neoforge-1.0.1+1.21.1.jar",
       "path": "mods/modefite-neoforge-1.0.1+1.21.1.jar",
@@ -1016,13 +946,6 @@
       "path": "mods/modelfix-1.21-1.10.jar",
       "sha256": "ee774b72135450ef9db1c7a75837304f30d05c3541e3a348c4f5769ab0f04912",
       "filename": "modelfix-1.21-1.10.jar"
-    },
-    {
-      "size": 611043,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__modernfix-neoforge-5.27.26+mc1.21.1.jar",
-      "path": "mods/modernfix-neoforge-5.27.26+mc1.21.1.jar",
-      "sha256": "09f6842c63d14b3f1707f1f4a6f4602052f237f7efa9be135e41d3d97acf2a13",
-      "filename": "modernfix-neoforge-5.27.26+mc1.21.1.jar"
     },
     {
       "size": 2299162,
@@ -1207,13 +1130,6 @@
       "filename": "PickUpNotifier-v21.1.1-1.21.1-NeoForge.jar"
     },
     {
-      "size": 560265,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__Platform-neoforge-1.21.1-1.4.jar",
-      "path": "mods/Platform-neoforge-1.21.1-1.4.jar",
-      "sha256": "7202b0c4229476f8714defb7038d76904c951b18d2101820d34d21348b1c6db9",
-      "filename": "Platform-neoforge-1.21.1-1.4.jar"
-    },
-    {
       "size": 16685,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__playerxp-neoforge-1.1.2+1.21.1.jar",
       "path": "mods/playerxp-neoforge-1.1.2+1.21.1.jar",
@@ -1233,13 +1149,6 @@
       "path": "mods/Prism-1.21.1-neoforge-1.0.11.jar",
       "sha256": "b6a1e585416c48d7d9fa53fc12c67122ad1f3a6965202b51d4e2c643ffca61c2",
       "filename": "Prism-1.21.1-neoforge-1.0.11.jar"
-    },
-    {
-      "size": 1451117,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__puzzleslib-v21.1.65-mc1.21.1+neoforge.jar",
-      "path": "mods/puzzleslib-v21.1.65-mc1.21.1+neoforge.jar",
-      "sha256": "5317fe131954accbe884b079f75713d6f9024b291085314d6c23b3a697fc2771",
-      "filename": "puzzleslib-v21.1.65-mc1.21.1+neoforge.jar"
     },
     {
       "size": 2084581,
@@ -1319,13 +1228,6 @@
       "filename": "respackopts-4.14.0+1.21.1.forge.4.jar"
     },
     {
-      "size": 804288,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__rustlingspots-neoforge-5.0.1.jar",
-      "path": "mods/rustlingspots-neoforge-5.0.1.jar",
-      "sha256": "9a7e6b046397b493fb4ba4943831b9919860c152296d903e36e30a9a31ba7448",
-      "filename": "rustlingspots-neoforge-5.0.1.jar"
-    },
-    {
       "size": 8154,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__SafePastures.Neoforge.-1.1.2+1.21.1.jar",
       "path": "mods/SafePastures(Neoforge)-1.1.2+1.21.1.jar",
@@ -1345,13 +1247,6 @@
       "path": "mods/SereneSeasons-neoforge-1.21.1-10.1.0.9.jar",
       "sha256": "ce8cf6bd31f70b794fe97d88b4cd2beb45f83387fe20c8dcf39c92121ccaa723",
       "filename": "SereneSeasons-neoforge-1.21.1-10.1.0.9.jar"
-    },
-    {
-      "size": 20885,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__simpleballswap-neoforge-1.1.0.jar",
-      "path": "mods/simpleballswap-neoforge-1.1.0.jar",
-      "sha256": "36ece9306b7a3d76efc91d65800743da9c929b5b36f8ae92542e8f698e0ae99e",
-      "filename": "simpleballswap-neoforge-1.1.0.jar"
     },
     {
       "size": 1905514,
@@ -1382,13 +1277,6 @@
       "filename": "smarterfarmers-1.21-2.2.4-neoforge.jar"
     },
     {
-      "size": 472060,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__sodium-extra-neoforge-0.9.4+mc1.21.1.jar",
-      "path": "mods/sodium-extra-neoforge-0.9.4+mc1.21.1.jar",
-      "sha256": "655b4a25d3d1ccc0f53d0589c676f0a86e46843ae537749048b4b0edc33a0f6f",
-      "filename": "sodium-extra-neoforge-0.9.4+mc1.21.1.jar"
-    },
-    {
       "size": 1292934,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__sodium-neoforge-0.8.13+mc1.21.1.jar",
       "path": "mods/sodium-neoforge-0.8.13+mc1.21.1.jar",
@@ -1396,39 +1284,11 @@
       "filename": "sodium-neoforge-0.8.13+mc1.21.1.jar"
     },
     {
-      "size": 1257036,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__sophisticatedbackpacks-1.21.1-3.26.14.2222.jar",
-      "path": "mods/sophisticatedbackpacks-1.21.1-3.26.14.2222.jar",
-      "sha256": "0ab711d5c89cd13149571f96d30c45db1f7b65802d0f44a39975a060b71b2690",
-      "filename": "sophisticatedbackpacks-1.21.1-3.26.14.2222.jar"
-    },
-    {
       "size": 94059,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__sophisticatedbackpackscreateintegration-1.21.1-0.2.3.194.jar",
       "path": "mods/sophisticatedbackpackscreateintegration-1.21.1-0.2.3.194.jar",
       "sha256": "dcc40db2521e7b4cb46be241a0a83cf09bb5a96f358af48192c0168ca6be21cf",
       "filename": "sophisticatedbackpackscreateintegration-1.21.1-0.2.3.194.jar"
-    },
-    {
-      "size": 1819706,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__sophisticatedcore-1.21.1-1.5.17.2426.jar",
-      "path": "mods/sophisticatedcore-1.21.1-1.5.17.2426.jar",
-      "sha256": "6b1507ce51fe2a9d9175dc5feb7e39170634838d37f740d09a1d8d27e0510b06",
-      "filename": "sophisticatedcore-1.21.1-1.5.17.2426.jar"
-    },
-    {
-      "size": 121732,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__sophisticatedinventoryinteractions-1.21.1-0.1.14.224.jar",
-      "path": "mods/sophisticatedinventoryinteractions-1.21.1-0.1.14.224.jar",
-      "sha256": "e641fe6919d70502843c7163df9e0e80ce0c1302bbe62354f66f811c63b0e226",
-      "filename": "sophisticatedinventoryinteractions-1.21.1-0.1.14.224.jar"
-    },
-    {
-      "size": 1932851,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__sophisticatedstorage-1.21.1-1.6.8.2196.jar",
-      "path": "mods/sophisticatedstorage-1.21.1-1.6.8.2196.jar",
-      "sha256": "5bfcf7412f789d5783131e6e68201206f5cd6fbe1f340edc7d41676f38c08fb3",
-      "filename": "sophisticatedstorage-1.21.1-1.6.8.2196.jar"
     },
     {
       "size": 148042,
@@ -1466,13 +1326,6 @@
       "filename": "soundsbegone-neoforge-1.6.0+mc1.21.jar"
     },
     {
-      "size": 250158,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__spawnnotification-neoforge-1.8.2-2.3.0.jar",
-      "path": "mods/spawnnotification-neoforge-1.8.2-2.3.0.jar",
-      "sha256": "9070392fb1dfaffce301e48f1b037d5291df7d16a3f3a57b47ee481ac1f81946",
-      "filename": "spawnnotification-neoforge-1.8.2-2.3.0.jar"
-    },
-    {
       "size": 50696,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__studious-keybinds-neoforge-1.21.1-1.0.8-beta.1.jar",
       "path": "mods/studious-keybinds-neoforge-1.21.1-1.0.8-beta.1.jar",
@@ -1485,13 +1338,6 @@
       "path": "mods/supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
       "sha256": "d2ba7b839a2268e4e223457e813d11aa2476c3bf708a7bba691d8fc851778a4b",
       "filename": "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar"
-    },
-    {
-      "size": 562683,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__supermartijn642corelib-1.1.25-neoforge-mc1.21.jar",
-      "path": "mods/supermartijn642corelib-1.1.25-neoforge-mc1.21.jar",
-      "sha256": "0824bdd7cd5b5654eeb05dc9b62b42003b081b781009c38dc83ee1e106ca4ce2",
-      "filename": "supermartijn642corelib-1.1.25-neoforge-mc1.21.jar"
     },
     {
       "size": 81502,
@@ -1515,13 +1361,6 @@
       "filename": "Terralith_1.21.1_v2.6.2_Neoforge.jar"
     },
     {
-      "size": 332083,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__timcore-neoforge-1.8.2-1.36.1.jar",
-      "path": "mods/timcore-neoforge-1.8.2-1.36.1.jar",
-      "sha256": "4a41e142d88cf385ec740cd49d7ae771fd2c344808c4e1ee3fee4333dd8b1576",
-      "filename": "timcore-neoforge-1.8.2-1.36.1.jar"
-    },
-    {
       "size": 235345,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__TravelersTitles-1.21.1-NeoForge-5.1.3.jar",
       "path": "mods/TravelersTitles-1.21.1-NeoForge-5.1.3.jar",
@@ -1541,13 +1380,6 @@
       "path": "mods/tsfitemcore-1.0.0-neoforge.jar",
       "sha256": "08e6997f4ba0f086f3690ee850bd21282ab1887ddfa7201512be2e6b88c6777f",
       "filename": "tsfitemcore-1.0.0-neoforge.jar"
-    },
-    {
-      "size": 63875692,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__VanillaBackport-neoforge-1.21.1-1.2.jar",
-      "path": "mods/VanillaBackport-neoforge-1.21.1-1.2.jar",
-      "sha256": "d96b5ca9cb07129f77046129f09b5e61065e3976e7de9ee29673965ab7b05c35",
-      "filename": "VanillaBackport-neoforge-1.21.1-1.2.jar"
     },
     {
       "size": 380600,
@@ -1795,13 +1627,6 @@
       "filename": "chat_heads.json5"
     },
     {
-      "size": 131,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__cinematic_respawn.properties",
-      "path": "config/cinematic_respawn.properties",
-      "sha256": "6ec147387bf55e4cf2775bde580563b52f3bac9416e4f829a9e1c9f0f06072e9",
-      "filename": "cinematic_respawn.properties"
-    },
-    {
       "size": 132,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__cobbled_counter.json",
       "path": "config/cobbled_counter.json",
@@ -1856,13 +1681,6 @@
       "path": "config/cobblemon-battle-extras-server.json",
       "sha256": "6e3f0ed5aa64ae9843c1bb36c63f2122b726dc884d98f78d70dbbbde38c219f9",
       "filename": "cobblemon-battle-extras-server.json"
-    },
-    {
-      "size": 4025,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__cobblemon-battle-extras.json",
-      "path": "config/cobblemon-battle-extras.json",
-      "sha256": "fc87d9a53ebf3ecb1a7661fd314e619dc2a229cfaf5e1458d91769a1eb646ebe",
-      "filename": "cobblemon-battle-extras.json"
     },
     {
       "size": 391,
@@ -2236,13 +2054,6 @@
       "filename": "ftbxmodcompat.snbt"
     },
     {
-      "size": 1872,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__grand_teleport.properties",
-      "path": "config/grand_teleport.properties",
-      "sha256": "98e317e50b82b426229f8b3771b7b397187f6421150e6bb4196e59030b088a7f",
-      "filename": "grand_teleport.properties"
-    },
-    {
       "size": 559,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__guideme.toml",
       "path": "config/guideme.toml",
@@ -2283,13 +2094,6 @@
       "path": "config/iris-excluded.json",
       "sha256": "4d3264b58c502afaeca3f44e8d2db0843c54b8ba957afd21a2d450fe10dafefb",
       "filename": "iris-excluded.json"
-    },
-    {
-      "size": 281,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__iris.properties",
-      "path": "config/iris.properties",
-      "sha256": "b4e0266c9c89eaa9a2ae93699aca3148c2dba534d148e96ad8b29481eea575d4",
-      "filename": "iris.properties"
     },
     {
       "size": 7220,
@@ -2558,13 +2362,6 @@
       "filename": "overflowingbars-client.toml"
     },
     {
-      "size": 488,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__packetfixer.properties",
-      "path": "config/packetfixer.properties",
-      "sha256": "027ce151926b1317e4d8a5b3a51e2eb3470ed465d241ab23765114da549760c1",
-      "filename": "packetfixer.properties"
-    },
-    {
       "size": 306,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__particle_core_config.toml",
       "path": "config/particle_core_config.toml",
@@ -2691,13 +2488,6 @@
       "filename": "smarterfarmers-common.toml"
     },
     {
-      "size": 2136,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__sodium-extra-options.json",
-      "path": "config/sodium-extra-options.json",
-      "sha256": "05dae613cfb85e5c0a9bc430c83d6aed4d54376b54c73ffa02b9248fc6067d8c",
-      "filename": "sodium-extra-options.json"
-    },
-    {
       "size": 360,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__sodium-extra.properties",
       "path": "config/sodium-extra.properties",
@@ -2752,13 +2542,6 @@
       "path": "config/sophisticatedcore-common.toml",
       "sha256": "927b17e5b7848e88e5d37667703cfbfee6c1d5ceb187ff053bdee76efe9d6f7d",
       "filename": "sophisticatedcore-common.toml"
-    },
-    {
-      "size": 1597,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__sophisticatedinventoryinteractions-client.toml",
-      "path": "config/sophisticatedinventoryinteractions-client.toml",
-      "sha256": "bd050106d991b069e3a8555d08332be321f9db6462d60ec4881a95042fa3a121",
-      "filename": "sophisticatedinventoryinteractions-client.toml"
     },
     {
       "size": 778,
@@ -2936,13 +2719,6 @@
       "filename": "yacl.json5"
     },
     {
-      "size": 80,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__zfastnoise.mixin.properties",
-      "path": "config/zfastnoise.mixin.properties",
-      "sha256": "bcea9d0f7099ced5412bff50cd4da75bb3db79492c95735445aeabaa985ed20c",
-      "filename": "zfastnoise.mixin.properties"
-    },
-    {
       "size": 2405,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__zume.json5",
       "path": "config/zume.json5",
@@ -2976,13 +2752,6 @@
       "path": "config/cobbledollars/default_shop.json",
       "sha256": "79841608035b5d1bef1c633ca691ede254fef7f7d11ba83647b59784429b2595",
       "filename": "default_shop.json"
-    },
-    {
-      "size": 4100,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__cobblemon__main.json",
-      "path": "config/cobblemon/main.json",
-      "sha256": "c0ec28f54a2eb6b6729e9d7cd92bc42f9bfab5f10cff4ae14eaaeb56cff13b7b",
-      "filename": "main.json"
     },
     {
       "size": 2909,
@@ -3958,20 +3727,6 @@
       "filename": "miner_steel.json"
     },
     {
-      "size": 1349,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__paxi__datapacks__cobblemon-madenciler__data__cobbleworkers__loot_table__miner_rock.json",
-      "path": "config/paxi/datapacks/cobblemon-madenciler/data/cobbleworkers/loot_table/miner_rock.json",
-      "sha256": "f28f5939d8c3e5d9a1d8f7fad01bae3802341da01fa30de186c0f3f906f89fc7",
-      "filename": "miner_rock.json"
-    },
-    {
-      "size": 1364,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__paxi__datapacks__cobblemon-madenciler__data__cobbleworkers__loot_table__miner_steel.json",
-      "path": "config/paxi/datapacks/cobblemon-madenciler/data/cobbleworkers/loot_table/miner_steel.json",
-      "sha256": "dfb4273eb809bacf8598735199af8395a8545ef181c51b409ab45211e4854a97",
-      "filename": "miner_steel.json"
-    },
-    {
       "size": 121,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__paxi__datapacks__cobblemon-oyun-kurallari__pack.mcmeta",
       "path": "config/paxi/datapacks/cobblemon-oyun-kurallari/pack.mcmeta",
@@ -4103,27 +3858,6 @@
       "path": "config/rustlingspots/rustlingspots-client.json",
       "sha256": "a6f144e2faa530038ee546fbd4275cff2bc642093c5868cf7c689bf5fa842c2f",
       "filename": "rustlingspots-client.json"
-    },
-    {
-      "size": 198,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__rustlingspots-families.json",
-      "path": "config/rustlingspots/rustlingspots-families.json",
-      "sha256": "1a49b21537f23a3d7862e2818a3d9845cbc03514f9b7bd75f7db58e30933230d",
-      "filename": "rustlingspots-families.json"
-    },
-    {
-      "size": 146,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__rustlingspots-pokemon.json",
-      "path": "config/rustlingspots/rustlingspots-pokemon.json",
-      "sha256": "8ff108f50ccc317bdc61a5678e66fc6570824130955884db0043a5e41e54999c",
-      "filename": "rustlingspots-pokemon.json"
-    },
-    {
-      "size": 617,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__rustlingspots-server.json",
-      "path": "config/rustlingspots/rustlingspots-server.json",
-      "sha256": "53f4827263819bd8df634ab503ccc9a321e1b114093145c7ae1664a67f337c00",
-      "filename": "rustlingspots-server.json"
     },
     {
       "size": 62,
@@ -4651,13 +4385,6 @@
       "filename": "Cobblemon_Turkce_Kaynak_Paketi.zip"
     },
     {
-      "size": 23270833,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/resourcepacks__E19.Cobblemon.Minimap.Icons.zip",
-      "path": "resourcepacks/E19 Cobblemon Minimap Icons.zip",
-      "sha256": "8ccfa6d0558fe85c570539bcf082ceda5a9f47d4d1f4fa0ebdfd152edcb8aa0d",
-      "filename": "E19 Cobblemon Minimap Icons.zip"
-    },
-    {
       "size": 168408,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/resourcepacks__enchant.icons.1.21.v1.3.zip",
       "path": "resourcepacks/enchant icons 1.21 v1.3.zip",
@@ -4686,13 +4413,6 @@
       "filename": "RCT Trainers+ [1.7] v2.2.zip"
     },
     {
-      "size": 286613,
-      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/resourcepacks__SodiumTranslations.zip",
-      "path": "resourcepacks/SodiumTranslations.zip",
-      "sha256": "e733dd165333cf439bd443a31b8733e28d8d883a24055aff5a2f51ea9923638d",
-      "filename": "SodiumTranslations.zip"
-    },
-    {
       "size": 2731677,
       "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/datapacks__CobblemonMoreCosmetics.Release.v1.1.7-1.21.x.zip",
       "path": "datapacks/CobblemonMoreCosmetics Release v1.1.7-1.21.x.zip",
@@ -4705,7 +4425,420 @@
       "path": "datapacks/RCT-Badges-CobblemonPokemonBadges-0.15+1.1.2.zip",
       "sha256": "2f185e726bb4fd1acd3470ebe5f2b9af56330eefb5ee545a5856c60ee1856b32",
       "filename": "RCT-Badges-CobblemonPokemonBadges-0.15+1.1.2.zip"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__capturexp-neoforge-1.8.4-1.3.0.jar",
+      "size": 23252,
+      "sha256": "9e1f9813139451a8573ac7d22e7a2710c86ea026fcea9b389293d6474f876f54",
+      "filename": "capturexp-neoforge-1.8.4-1.3.0.jar",
+      "path": "mods/capturexp-neoforge-1.8.4-1.3.0.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__cinematic_respawn-1.21.1-neoforge-1.4.3.jar",
+      "size": 38210,
+      "sha256": "ea0cff0daf3949899020fd795fadf31a992696b33d20ee067773fab5f87b1b2d",
+      "filename": "cinematic_respawn-1.21.1-neoforge-1.4.3.jar",
+      "path": "mods/cinematic_respawn-1.21.1-neoforge-1.4.3.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__Cobblemon-neoforge-1.8.4+1.21.1.jar",
+      "size": 141635727,
+      "sha256": "89306baca7b4332fc4dcc448507b45ca0133254c70f77990a63c500ed9a7b863",
+      "filename": "Cobblemon-neoforge-1.8.4+1.21.1.jar",
+      "path": "mods/Cobblemon-neoforge-1.8.4+1.21.1.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__cobblemonraiddens-neoforge-0.13.5+1.21.1.jar",
+      "size": 2806727,
+      "sha256": "245a10a82cce38f6e70ff89e075663b7599722d033314960981112e63a3a4e58",
+      "filename": "cobblemonraiddens-neoforge-0.13.5+1.21.1.jar",
+      "path": "mods/cobblemonraiddens-neoforge-0.13.5+1.21.1.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__counter-neoforge-1.8.4-1.9.3.jar",
+      "size": 166006,
+      "sha256": "36c62f2e51740adf20cf85365cb5feda7a9f31d3614764a033eec49757412337",
+      "filename": "counter-neoforge-1.8.4-1.9.3.jar",
+      "path": "mods/counter-neoforge-1.8.4-1.9.3.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__fzzy_config-0.7.7+fix1+1.21+neoforge.jar",
+      "size": 2392720,
+      "sha256": "414782aba00502349da192c1affcd4cbaf653119ec26605453f1b0690b3f8cc5",
+      "filename": "fzzy_config-0.7.7+fix1+1.21+neoforge.jar",
+      "path": "mods/fzzy_config-0.7.7+fix1+1.21+neoforge.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__guideme-21.1.21.jar",
+      "size": 9329830,
+      "sha256": "b667183deb1049ec951b8c98e589144eb0de89226806f7f5bcd15ad0d9604197",
+      "filename": "guideme-21.1.21.jar",
+      "path": "mods/guideme-21.1.21.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__incontrol-1.21-10.3.1.jar",
+      "size": 357912,
+      "sha256": "ed80956fdc224d5a5284eabd92fcb20a3c0b559e23e011296ff29057f62613c7",
+      "filename": "incontrol-1.21-10.3.1.jar",
+      "path": "mods/incontrol-1.21-10.3.1.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__mega_showdown-neoforge-1.3.3+1.8.4+1.21.1-release.jar",
+      "size": 20312334,
+      "sha256": "58f00a27068bcdfdb2c7866b54ef818e7f7812911346b6e9b59b0ff0bb1956ac",
+      "filename": "mega_showdown-neoforge-1.3.3+1.8.4+1.21.1-release.jar",
+      "path": "mods/mega_showdown-neoforge-1.3.3+1.8.4+1.21.1-release.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__mezz_config-1.21.1-neoforge-0.6.9-standalone.jar",
+      "size": 345479,
+      "sha256": "deedd2c3cc30b142d1a50d4a82190970e33a70a86f89c9e5ba7eed8286087f9f",
+      "filename": "mezz_config-1.21.1-neoforge-0.6.9-standalone.jar",
+      "path": "mods/mezz_config-1.21.1-neoforge-0.6.9-standalone.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__modernfix-neoforge-5.27.27+mc1.21.1.jar",
+      "size": 614138,
+      "sha256": "7010aae2e837122fe8dabd5932358e2ba334fcbc62ca6530cb1cb00402d2c63b",
+      "filename": "modernfix-neoforge-5.27.27+mc1.21.1.jar",
+      "path": "mods/modernfix-neoforge-5.27.27+mc1.21.1.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__Platform-neoforge-1.21.1-1.4.2.jar",
+      "size": 550771,
+      "sha256": "56f63d73614e35841f6f8ac79d2eb2f7d8b9ff6414272eecac19274644c849ac",
+      "filename": "Platform-neoforge-1.21.1-1.4.2.jar",
+      "path": "mods/Platform-neoforge-1.21.1-1.4.2.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__puzzleslib-v21.1.66-mc1.21.1+neoforge.jar",
+      "size": 1451120,
+      "sha256": "cb02de7e1d4a133746ec7b43a64eddc2cb621122cdc49e134a15272f456c31f2",
+      "filename": "puzzleslib-v21.1.66-mc1.21.1+neoforge.jar",
+      "path": "mods/puzzleslib-v21.1.66-mc1.21.1+neoforge.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__rustlingspots-neoforge-6.0.jar",
+      "size": 823340,
+      "sha256": "e65a51f80a6ae6fce70382eb133e1554be1da34c3a218ebde46e0efcc7bb3386",
+      "filename": "rustlingspots-neoforge-6.0.jar",
+      "path": "mods/rustlingspots-neoforge-6.0.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__simpleballswap-neoforge-1.2.0.jar",
+      "size": 20890,
+      "sha256": "5eab3cb846e839a5efedd3a2a44573e585aface174e4a97f55926e723ec04168",
+      "filename": "simpleballswap-neoforge-1.2.0.jar",
+      "path": "mods/simpleballswap-neoforge-1.2.0.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__sodium-extra-neoforge-0.9.5+mc1.21.1.jar",
+      "size": 483373,
+      "sha256": "37c33efdee16fc515392fd422b6ec8769cbc1079f6a2eb6cff2072411d511faf",
+      "filename": "sodium-extra-neoforge-0.9.5+mc1.21.1.jar",
+      "path": "mods/sodium-extra-neoforge-0.9.5+mc1.21.1.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__sophisticatedbackpacks-1.21.1-3.26.17.2232.jar",
+      "size": 1256228,
+      "sha256": "0adf5d847a8956142f10608dc724939482dad3bde62d078ba51a1af73819ae2d",
+      "filename": "sophisticatedbackpacks-1.21.1-3.26.17.2232.jar",
+      "path": "mods/sophisticatedbackpacks-1.21.1-3.26.17.2232.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__sophisticatedcore-1.21.1-1.5.19.2434.jar",
+      "size": 1820184,
+      "sha256": "fe544662d105d9791c8a1db75f297351957d3e702546154f1493cc9869d4f2af",
+      "filename": "sophisticatedcore-1.21.1-1.5.19.2434.jar",
+      "path": "mods/sophisticatedcore-1.21.1-1.5.19.2434.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__sophisticatedinventoryinteractions-1.21.1-0.1.15.233.jar",
+      "size": 121639,
+      "sha256": "9a38d0a3e605edab6787d502904afa069bacbe5cfeac9f826066394c0bd1375e",
+      "filename": "sophisticatedinventoryinteractions-1.21.1-0.1.15.233.jar",
+      "path": "mods/sophisticatedinventoryinteractions-1.21.1-0.1.15.233.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__sophisticatedstorage-1.21.1-1.6.10.2206.jar",
+      "size": 1933124,
+      "sha256": "8277443959fbd9f2d0101bb13b75b4f35e9c3bc123854e4ece8ee7f287a5ad8d",
+      "filename": "sophisticatedstorage-1.21.1-1.6.10.2206.jar",
+      "path": "mods/sophisticatedstorage-1.21.1-1.6.10.2206.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__spawnnotification-neoforge-1.8.4-2.3.0.jar",
+      "size": 250158,
+      "sha256": "27633b944a8418617c413648e629e7b0aa465f270d0562c21ce22d529f35907f",
+      "filename": "spawnnotification-neoforge-1.8.4-2.3.0.jar",
+      "path": "mods/spawnnotification-neoforge-1.8.4-2.3.0.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__supermartijn642corelib-1.1.26-neoforge-mc1.21.jar",
+      "size": 591925,
+      "sha256": "cc84edb181251ac3db45239557198ba2229332e1f9d204c651ea80c83c5e3e22",
+      "filename": "supermartijn642corelib-1.1.26-neoforge-mc1.21.jar",
+      "path": "mods/supermartijn642corelib-1.1.26-neoforge-mc1.21.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__timcore-neoforge-1.8.4-1.36.1.jar",
+      "size": 331893,
+      "sha256": "ec97f4aaca998f3a724d72623b5fe1c3f294d83769570aca39c793394730e2d7",
+      "filename": "timcore-neoforge-1.8.4-1.36.1.jar",
+      "path": "mods/timcore-neoforge-1.8.4-1.36.1.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/mods__VanillaBackport-neoforge-1.21.1-1.2.2.jar",
+      "size": 63870495,
+      "sha256": "af66aa2458f21c691b5c0feb14439e15c72e14051ed592050df1b6bf8bdeb089",
+      "filename": "VanillaBackport-neoforge-1.21.1-1.2.2.jar",
+      "path": "mods/VanillaBackport-neoforge-1.21.1-1.2.2.jar"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__anubis-options.txt",
+      "size": 13681,
+      "sha256": "b5f249d9e8600f4749662ab50c5d86f5a44b89b91744fe8bfcb9af1f047bf979",
+      "filename": "anubis-options.txt",
+      "path": "config/anubis-options.txt"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__cinematic_respawn.properties",
+      "size": 131,
+      "sha256": "18e5b3cd8084904132bff533ea79bf009021ff7d0699dbfc097f0984ddf2efb1",
+      "filename": "cinematic_respawn.properties",
+      "path": "config/cinematic_respawn.properties"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__cobblemon-battle-extras.json",
+      "size": 4025,
+      "sha256": "08712f4564c6bdb69797472b6bec7c07526f8c5481e1181a80bb2483b66955ce",
+      "filename": "cobblemon-battle-extras.json",
+      "path": "config/cobblemon-battle-extras.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__grand_teleport.properties",
+      "size": 1872,
+      "sha256": "a78a2cd777486e1a47835fbda37176a438fc64b5507d4002313823fc6a9a62bd",
+      "filename": "grand_teleport.properties",
+      "path": "config/grand_teleport.properties"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__iris.properties",
+      "size": 281,
+      "sha256": "a398083c66b0cd4e685b9a85655938c85e7d5166303e8d1eaca381fc0156b020",
+      "filename": "iris.properties",
+      "path": "config/iris.properties"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__packetfixer.properties",
+      "size": 488,
+      "sha256": "f2e4c3b1210aaf7c252bc77c85a7c1ad8a922a806604934feb1b5b462d90dd0b",
+      "filename": "packetfixer.properties",
+      "path": "config/packetfixer.properties"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__sodium-extra-options.json",
+      "size": 2174,
+      "sha256": "0969ea2f575a0e11f4e2f4fbdde19a5e35a0e2d13dcff8811f39f73d5b5dcee9",
+      "filename": "sodium-extra-options.json",
+      "path": "config/sodium-extra-options.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__sophisticatedinventoryinteractions-client.toml",
+      "size": 1845,
+      "sha256": "b2a0e40f9e800c80d2e1750b1d2173b90cf7036cbb0b9f806e3dff946c54c734",
+      "filename": "sophisticatedinventoryinteractions-client.toml",
+      "path": "config/sophisticatedinventoryinteractions-client.toml"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__zfastnoise.mixin.properties",
+      "size": 80,
+      "sha256": "e2344870e4bd4dbedfaa2fec29062c0aefa75786c3069e2d6f7d0bd3a2674bc7",
+      "filename": "zfastnoise.mixin.properties",
+      "path": "config/zfastnoise.mixin.properties"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__cobblemon__main.json",
+      "size": 4127,
+      "sha256": "6ad5dc1b883b56003ef5a4d45a9c14bb0c6af1016298ad234bb71bd7b3f00b97",
+      "filename": "main.json",
+      "path": "config/cobblemon/main.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__paxi__datapacks__cobblemon-madenciler__data__cobbleworkers__loot_table__miner_rock.json",
+      "size": 5650,
+      "sha256": "a455c479f475e6552e2fccf425fdecf3f40ffd196ea88ade05a7565c3be037a3",
+      "filename": "miner_rock.json",
+      "path": "config/paxi/datapacks/cobblemon-madenciler/data/cobbleworkers/loot_table/miner_rock.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__paxi__datapacks__cobblemon-madenciler__data__cobbleworkers__loot_table__miner_steel.json",
+      "size": 5332,
+      "sha256": "87e7c77e381d8751adc5180e899f042cd1e184f941b08233ce46c87e124f55f8",
+      "filename": "miner_steel.json",
+      "path": "config/paxi/datapacks/cobblemon-madenciler/data/cobbleworkers/loot_table/miner_steel.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__rustlingspots-families.json",
+      "size": 255,
+      "sha256": "3075be787da4efd56edb93feee985cb8d9a04eec1674b035aea5542e262eafaf",
+      "filename": "rustlingspots-families.json",
+      "path": "config/rustlingspots/rustlingspots-families.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__rustlingspots-pokemon.json",
+      "size": 169,
+      "sha256": "e461d4f04810b45bd727ff357a10e7927a8b1a8b019fac52d324fec2bf54388c",
+      "filename": "rustlingspots-pokemon.json",
+      "path": "config/rustlingspots/rustlingspots-pokemon.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__rustlingspots-server.json",
+      "size": 659,
+      "sha256": "72f386fde7a8550f1dc0a506be7b25174e1d5c44fa844a57b22d5f9068725ae9",
+      "filename": "rustlingspots-server.json",
+      "path": "config/rustlingspots/rustlingspots-server.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__biome_tags__end.json",
+      "size": 38,
+      "sha256": "079b89f1b95b95b5e065eb3cd0dd9024f07cfb7dff103fc1f136f29812692a47",
+      "filename": "end.json",
+      "path": "config/rustlingspots/biome_tags/end.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__biome_tags__geode.json",
+      "size": 38,
+      "sha256": "079b89f1b95b95b5e065eb3cd0dd9024f07cfb7dff103fc1f136f29812692a47",
+      "filename": "geode.json",
+      "path": "config/rustlingspots/biome_tags/geode.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__biome_tags__underwater.json",
+      "size": 1358,
+      "sha256": "b2641b81bfc3acfd0c2266d071360661bca5b2d81ce2e7db4027eadd58abe8c7",
+      "filename": "underwater.json",
+      "path": "config/rustlingspots/biome_tags/underwater.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__families__end.json",
+      "size": 210,
+      "sha256": "9a237e68d584da30f50c310bd34bc53ba28c6341a731fc51ed913c6167441a39",
+      "filename": "end.json",
+      "path": "config/rustlingspots/families/end.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__families__geode.json",
+      "size": 62,
+      "sha256": "159f5d0e8eff576d73d6a1d8ad6cf27ce96fb12343c114ce9f475e55b9959abd",
+      "filename": "geode.json",
+      "path": "config/rustlingspots/families/geode.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__families__underwater.json",
+      "size": 51,
+      "sha256": "3cf2d42d4342c7d418a74e4eea8e810079679a838e891e440d7118ab5cc9b37e",
+      "filename": "underwater.json",
+      "path": "config/rustlingspots/families/underwater.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__loot__families__end.json",
+      "size": 438,
+      "sha256": "24acbedce2587183ef82c156d9324460fcade91be022c4017544f71b5a0b82ba",
+      "filename": "end.json",
+      "path": "config/rustlingspots/loot/families/end.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__loot__families__geode.json",
+      "size": 361,
+      "sha256": "b8e3f6719fae9a54bb97dd13303bb304bcdb18225c06b491202ed1b29d2a1cc9",
+      "filename": "geode.json",
+      "path": "config/rustlingspots/loot/families/geode.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__loot__families__underwater.json",
+      "size": 1197,
+      "sha256": "0aec96c1f5394e3cb08bedeee7fd7ba9729b089fa6986ddf76066811ff185023",
+      "filename": "underwater.json",
+      "path": "config/rustlingspots/loot/families/underwater.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__pokemon__families__cave.v4.2-default.json",
+      "size": 11271,
+      "sha256": "94a19a688ea61fe745d777f91bcd546f925df34ef60a7dec9390b46e62d12947",
+      "filename": "cave.v4.2-default.json",
+      "path": "config/rustlingspots/pokemon/families/cave.v4.2-default.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__pokemon__families__end.json",
+      "size": 1118,
+      "sha256": "1be4616c8191b62418268b3caab609c55e289245941a5eba40f66a535027b2cc",
+      "filename": "end.json",
+      "path": "config/rustlingspots/pokemon/families/end.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__pokemon__families__flying.v4.2-default.json",
+      "size": 6076,
+      "sha256": "ece559b4074a37eee4068995147c2d96e43e0243f5642047592763fee0e24600",
+      "filename": "flying.v4.2-default.json",
+      "path": "config/rustlingspots/pokemon/families/flying.v4.2-default.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__pokemon__families__geode.json",
+      "size": 1120,
+      "sha256": "8adeaf1dfda836c097873a50628db789c654225b349aa95e4739e9d8fae2e5aa",
+      "filename": "geode.json",
+      "path": "config/rustlingspots/pokemon/families/geode.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__pokemon__families__leaves.v4.2-default.json",
+      "size": 6980,
+      "sha256": "bbeeb83b461fb3fe4cdcd8f778a53fb19d19ee5537ad63384a87f9b0647f868f",
+      "filename": "leaves.v4.2-default.json",
+      "path": "config/rustlingspots/pokemon/families/leaves.v4.2-default.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__pokemon__families__sand.v4.2-default.json",
+      "size": 5219,
+      "sha256": "238ce3b2daaa4be2106138c1e1a2b858011c9ea755e71ab93555235068115d9e",
+      "filename": "sand.v4.2-default.json",
+      "path": "config/rustlingspots/pokemon/families/sand.v4.2-default.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__pokemon__families__snow.v4.2-default.json",
+      "size": 3753,
+      "sha256": "43977efb910c28a7cb1484787ebcad17dbb140b8956bc2589270c5d2bce43c80",
+      "filename": "snow.v4.2-default.json",
+      "path": "config/rustlingspots/pokemon/families/snow.v4.2-default.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__pokemon__families__soulflame.v4.2-default.json",
+      "size": 4031,
+      "sha256": "dc3ab124f2ba68727b91df56950ce38994276cc63cf591ac1ce35687e63ade16",
+      "filename": "soulflame.v4.2-default.json",
+      "path": "config/rustlingspots/pokemon/families/soulflame.v4.2-default.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/config__rustlingspots__pokemon__families__underwater.json",
+      "size": 11768,
+      "sha256": "ca17cf02eab684ecab011be6c0f619c172e2ee11bb6f8cee1a2ea3005d2fd555",
+      "filename": "underwater.json",
+      "path": "config/rustlingspots/pokemon/families/underwater.json"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/resourcepacks__E19.Cobblemon.Minimap.Icons.zip",
+      "size": 23411485,
+      "sha256": "501b9faafa4667a1a0cb78366d65bc19b4716b157a3bb06e248c2bf7cbfba019",
+      "filename": "E19 Cobblemon Minimap Icons.zip",
+      "path": "resourcepacks/E19 Cobblemon Minimap Icons.zip"
+    },
+    {
+      "url": "https://github.com/anubissxd/minecraft-servers/releases/download/cobblemon-pack/resourcepacks__SodiumTranslations.zip",
+      "size": 287133,
+      "sha256": "76f2257cbb8a5efa60bf7fdd940f7129141f89ebda8e5b9eb31f76ea224e0271",
+      "filename": "SodiumTranslations.zip",
+      "path": "resourcepacks/SodiumTranslations.zip"
     }
   ],
-  "version": "1.0.0"
+  "pack_name": "Cobblemon"
 }
